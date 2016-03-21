@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="test.js"></script>
+<style>
+*{margin:0;padding:0;}
+.test{height:30px;text-align:center;line-height:30px;}
+</style>
+</head>
+<body>
+<!-- 색변경 plugin 연습
+<ul>
+	<li class="test color1">001</li>
+	<li class="test color2">002</li>
+	<li class="test color3">003</li>
+</ul>
+<script type="text/javascript">
+(function($){
+	$.fn.highlight = function(options){
+		var settings = $.extend({
+			color : "blue",
+			backgroundColor : "yellow"
+		},options);
+
+		return this.css({
+			color : settings.color,
+			backgroundColor : settings.backgroundColor
+		});
+	};
+}(jQuery));
+$(function(){
+	//$(".color1").highlight();
+	$(".color2").highlight({
+		color : "red",
+		backgroundColor : "blue"
+	});
+});
+</script>
+-->
+
+<!-- click move 이벤트 연습
+<div class="api">111</div>
+
+table.data_table>caption+(colgroup>col[width]*3)+(thead>tr>th[scope=col]*3)+tbody>th[scope=row]+td*2
+
+<script type="text/javascript">
+(function($){
+	$.fn.spapi = function(option){
+		var element = $(this);
+		var defaults = {
+			distance: 300,
+			speed: 300
+		};
+	}
+
+	var opts = $.extend(true, {}, defaults, options);
+
+	element.on('click', function(){
+		element.animate({'margin-left' : opts.distance}, opts.speed);
+	});
+
+	$('#api').spapi({
+		speed: 500,
+		distance: 200
+	});
+}(jQuery));
+</script>
+-->
+
+<!-- 모바일 페이지 swipe -->
+<script type="text/javascript">
+<script>
+<!--
+$('div.ui-page').live("swipeleft", function(){
+	var nextpage = $(this).next('div[data-role="page"]');
+	if (nextpage.length > 0) {
+		$.mobile.changePage(nextpage, "slide", false, true);
+	}
+});
+$('div.ui-page').live("swiperight", function(){
+	var prevpage = $(this).prev('div[data-role="page"]');
+	if (prevpage.length > 0) {
+		$.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+	}
+});
+// -->
+</script>
+</script>
+</body>
+</html>
