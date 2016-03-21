@@ -1,0 +1,7 @@
+jQuery : 플러그인 개발
+http://www.nextree.co.kr/p9989/
+
+jquery mobile swiper change page
+http://jsfiddle.net/Gajotres/JB22E/3/
+http://www.java2s.com/Tutorials/jQuery_Mobile/Example/Page/Swipe_left_to_go_to_next_page.htm
+http://stackoverflow.com/questions/23797331/using-swipe-gestures-to-change-pages-in-multi-page-jquery-mobile-application

@@ -1,0 +1,81 @@
+\webapp\shared\m\js\ 공통 js
+
+tmon.common.main.js // 뒤로가기 버튼, 최상단 앱 다운로드 링크, 푸터에 있는 레이어 컨트롤, 푸터 영역 링크 이벤트, 이미지 레이지 로딩
+
+tmon.plugin.headerControl.js // 4차 카테고리 메뉴
+(
+브랜드 메뉴 활성화시 가로회전일 경우 메뉴가 화면을 벗어나 가려지는 현상.
+서브로나오는 .select 의 높이값을 정하고 overfolw-y:scroll 설정.
+)
+
+------------------------------------------------------------------------------------
+
+\webapp\shared\m\js\wear\ 공통 url plugin
+
+hammer.min.js // hammer multi touch plugin
+jquery.touch.js // jQueryTouch v0.0.6
+swiper.js // swiper plugin
+
+------------------------------------------------------------------------------------
+
+\webapp\shared\m\js\wear\ 공통 url
+
+tmon.wear.deal.js // Wear Deal
+
+tmon.wear.dealList.js // Wear Deal 상품리스트
+
+- 딜상세에서 뒤로 가기 했을때 리스트에서 미리 저장해 둔 scroll Top 값이 있는 경우 이동한다.
+
+- 옵션레이어 : filterLayer
+
+tmon.wear.dealRecent.js // Wear Deal 상세의 연관상품 , 최근 본 상품 (※ 차후 인터뷰 페이지 작업시 참고)
+
+tmon.wear.home.js // Wear Home main slide
+
+tmon.wear.inquiry.js // Wear Deal 상세 상품문의
+
+tmon.wear.main.js // header, footer, 개별페이지 관리.
+tmon.wear.mainCollection.js // Wear 3depth main sns 공유하기 - 분석필요
+tmon.wear.promotion.js // Wear 3depth main sns 공유하기 - 분석필요
+
+tmon.wear.ui.js // WearUI v1 - Scrolling Anchor, - Sliding Page
+
+------------------------------------------------------------------------------------
+
+\webapp\shared\m\js\wear_order\ 공통 url
+
+tmon.order.shoppingBag.js // 쇼핑백 관련
+
+쇼핑백 page : 상단 body의 scrolltop값이 _fixwrap 의 높이값(70px??) 만큼 이동하면 자신의 높이값을 절대값 70px로 고정시키고, 
+첫번째로 오는 자식 div의 class에 fix_header(position:fixed;)를 추가한다. else return.
+(최상위 .hdr_w 와 겹쳐지는 꼼수.)
+
+tmon.order.shoppingBagCommonItem.js // 쇼핑백 list 관련
+리스트 선택 checkbox, 리스트에서 삭제기능 등 아이템에 관한 전반적인 기능.
+
+tmon.order.shoppingBagCommonItemLayerCount.js // 쇼핑백 아이템 수량 관련.
+수량을 수정하고자 할때 팝업 옵션.
+
+tmon.order.shoppingBagCommonItemOptionChange.js // 쇼핑백 아이템 옵션 관련.
+쇼핑백에 담은 아이템의 옵션을 수정.
+
+tmon.order.invoice.js // 주문상세내용 작성
+
+------------------------------------------------------------------------------------
+
+\webapp\shared\m\js\wear_delivery\ 공통 url // 배송관련
+
+
+------------------------------------------------------------------------------------
+
+주문관련(주문결제, 주문배송, 쇼핑백) jsp파일은 티몬 공통파일 인것 같음.
+
+
+
+
+
+
+
+
+
+

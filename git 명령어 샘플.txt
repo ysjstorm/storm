@@ -1,0 +1,223 @@
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace (master)
+$ cd fe
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (release)
+$ cd tmon
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe/tmon (release)
+$ cd m
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe/tmon/m (release)
+$ ls
+Gruntfile.js  node_modules/  package.json  README.md  src/  template/
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe/tmon/m (release)
+$ grunt
+bash: grunt: command not found
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe/tmon/m (release)
+$ cd ~/
+
+sjyoon@tmon-sjyoon MINGW64 ~
+$ ls
+aaa.git/
+AppData/
+Application Data@
+bbb.git/
+Contacts/
+Cookies@
+Desktop/
+Documents/
+Downloads/
+Favorites/
+hsperfdata_sjyoon/
+IntelGraphicsProfiles/
+Links/
+Local Settings@
+Music/
+My Documents@
+NetHood@
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms
+ntuser.ini
+ntuser.pol
+Pictures/
+PrintHood@
+Recent@
+Saved Games/
+Searches/
+SendTo@
+Templates@
+Videos/
+시작 메뉴@
+
+sjyoon@tmon-sjyoon MINGW64 ~
+$ cd Desktop
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop
+$ ls
+desktop.ini                service_tmon_wear_ui/     소스분석 업무/
+download - 바로 가기.lnk*  service_tmon_wear_ui.zip  소프트웨어서약서.docx
+EditPlus 3.lnk*            STS - 바로 가기.lnk*      티몬 mobile버전.url
+git 사용법.txt             개발환경.txt              티몬 PC버전.url
+JIRA.url                   링크 검색오류 해결방안/
+Outlook 2013.lnk*          메일 연락처.txt
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop
+$ cd ..
+
+sjyoon@tmon-sjyoon MINGW64 ~
+$ cd Desktops
+bash: cd: Desktops: No such file or directory
+
+sjyoon@tmon-sjyoon MINGW64 ~
+$ cd Desktop
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop
+$ cd service_tmon_wear_ui
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui
+$ ls
+service_tmon_wear_ui/
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui
+$ cd service_tmon_wear_ui/
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui/service_tmon_wear_ui
+$ ls
+findbugs-exclude.xml  src/                  Tmon_Java_Checkstyle.xml
+pom.xml               target/
+settings.xml          tiles-config_2_1.dtd
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui/service_tmon_wear_ui
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui/service_tmon_wear_ui
+$ git branch
+fatal: Not a git repository (or any of the parent directories): .git
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui/service_tmon_wear_ui
+$ cd src
+
+sjyoon@tmon-sjyoon MINGW64 ~/Desktop/service_tmon_wear_ui/service_tmon_wear_ui/src
+$ cd ~/
+
+sjyoon@tmon-sjyoon MINGW64 ~
+$ cd d:
+
+sjyoon@tmon-sjyoon MINGW64 /d
+$ ls
+$RECYCLE.BIN/  EditPlus 3/                 TmonMail/   ysj/
+download/      System Volume Information/  workspace/
+
+sjyoon@tmon-sjyoon MINGW64 /d
+$ cd workspace/
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace (master)
+$ ls
+fe/  RemoteSystemsTempFiles/  Servers/
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace (master)
+$ cd fe
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (release)
+$ ls
+cdn/       javascript_plugin/  tmon_admin/  tmon_recruit/
+fe_utils/  tmon/               tmon_etc/
+g
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (release)
+$ git branch
+* release
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (release)
+$ git checkout -b feature/SDU-1111
+Switched to a new branch 'feature/SDU-1111'
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (feature/SDU-1111)
+$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch feature/SDU-1111 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/SDU-1111
+
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (feature/SDU-1111)
+$ git push --set-upstream origin feature/SDU-1111
+fatal: remote error: Insufficient permissions
+You cannot push to SDUUI/fe. Pushing requires write access and your access is
+read-only.
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (feature/SDU-1111)
+$ git add -A
+git
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (feature/SDU-1111)
+$ git commit -m "test commit"
+On branch feature/SDU-1111
+nothing to commit, working directory clean
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (feature/SDU-1111)
+$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch feature/SDU-1111 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/SDU-1111
+
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (feature/SDU-1111)
+$ git checkout -b wear-qa
+Switched to a new branch 'wear-qa'
+
+sjyoon@tmon-sjyoon MINGW64 /d/workspace/fe (wear-qa)
+$

@@ -1,0 +1,57 @@
+3/15 
+- 소스 수정됨.
+
+[레이어 팝업 common class]
+ly_wrapper // wrap
+ly_header // header
+ly_contents // content
+ly_footer // footer (버튼영역)
+ - 버튼 갯수 2개를 기본 base로 설정
+ - 버튼이 1개일때만 .one 클래스 설정.
+
+------------------------------------------------------------------------------------
+text 히든처리
+<i class="blind">
+- \webapp\WEB-INF\view\m\wear\common\wearSns.jsp
+
+<-- 명칭 -->
+promotion = prm
+
+///////////////////////////
+[-- deal (카테고리 브랜드) --]
+미디어쿼리 적용.
+lst_brd = 브랜드 리스트
+
+[-- deal (카테고리 list) --]
+deal_lst = 카테고리 리스트
+lnb_w = 리스트상 제목부 메뉴 [카테고리별]
+depth3_w = 상품 메뉴 [제품별]
+
+deal_filter = 검색 종목 / 검색옵션[브랜드별],
+
+※ 검색 상품이 없을시 error_num 활성화
+
+[-- deal (view) --]
+
+lst_thumb / #_wrapImageList = 제품 이미지 스크롤
+sumup = 브랜드명 / 상품명
+share_area = 상단 sns 공유하기
+detail_price = 상품가격
+--
+layer_info = 상품기본정보, 사이즈정보, 상품문의, 교환/환불정보 
+refund = 환불/교환정보
+--
+detail_another = 연관상품, 최근 본 상품
+
+///////////////////////////
+
+-css
+D:\workspace\fe\tmon\m\src\css - 머지폴더
+D:\workspace\fe\tmon\m\src\scss\page\wear - 작업파일 폴더 (작업완료시 로컬서버 확인을 위해 머지폴더 파일[wear.css]을 복사하여 확인한다.)
+
+- html
+D:\workspace\fe\tmon\m\src\html_build\04_wear\ - 머지폴더
+D:\workspace\fe\tmon\m\src\html_build\include\ui\wear\ - 머지폴더
+D:\workspace\fe\tmon\m\src\html\include\ui\wear - 작업파일 폴더
+
+@include sp-wear('filename');
