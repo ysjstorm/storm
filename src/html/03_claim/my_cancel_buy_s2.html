@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+	<title>TMON</title>
+	<link rel="stylesheet" href="../../css/m.css">
+</head>
+<body class="delivery_wrap">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+@@include('header_type2.html', {"title":"구매취소"})
+<hr>
+<div id="ct">
+	<div class="my_inr2">
+		<!-- 취소 상품 정보 -->
+		<div class="cl_cancel">
+			<form action="">
+				<div class="clbox_wrap">
+					<div class="clbox">
+						<h3 class="tit">취소 상품 정보</h3>
+						<table class="cltbl">
+							<caption>취소 상품 정보</caption>
+							<colgroup>
+								<col width="22%" /><col />
+							</colgroup>
+							<tr class="fst">
+								<th>상품명</th>
+								<td>[지용마미]여름상품 임부복 기획전</td>
+							</tr>
+							<tr>
+								<th>취소상품</th>
+								<td>41) 반팔 맥시셔링 원피스|블랙|Free(1개)</td>
+							</tr>
+							<tr class="fst">
+								<th>상품명</th>
+								<td>[지용마미]여름상품 임부복 기획전</td>
+							</tr>
+							<tr>
+								<th>취소상품</th>
+								<td>41) 반팔 맥시셔링 원피스|블랙|Free(1개)</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- 취소 금액 정보 -->
+				<div class="clbox_wrap">
+					<div class="clbox">
+						<h3 class="tit">취소 금액 정보</h3>
+						<table class="cltbl">
+							<caption>취소 금액 정보</caption>
+							<colgroup>
+								<col width="25%" /><col />
+							</colgroup>
+							<tr>
+								<th>취소금액</th>
+								<td><b class="amt"><em class="price">255,000</em>원</b></td>
+							</tr>
+							<tr>
+								<th>할인금액차감</th>
+								<td><b class="amt"><em class="price">-5,000</em>원</b></td>
+							</tr>
+							<tr>
+								<th>결제취소금액</th>
+								<td><b class="amt cl_point"><em class="price">243,000</em>원</b></td>
+							</tr>
+							<tr>
+								<th>적립금반환</th>
+								<td><b class="amt cl_point"><em class="price">7,000</em>원</b></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- 환불 계좌 정보 -->
+				<div class="clbox_wrap">
+					<div class="clbox">
+						<h3 class="tit">환불 계좌 정보</h3>
+						<table class="cltbl tt2">
+							<caption>환불 계좌 정보</caption>
+							<colgroup>
+								<col width="25%" /><col />
+							</colgroup>
+							<tr>
+								<th><label for="bnknm">은행명</label></th>
+								<td>
+									<div class="cl_selbox">
+										<select id="bnknm" disabled>
+										<option value="">은행을 선택하세요</option>
+										<option value="">우리은행</option>
+										<option value="">신한은행</option>
+										<option value="">외환은행</option>
+										</select>
+										<span class="ico_arr"></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="accnm">계좌번호</label></th>
+								<td>
+									<input type="text" id="accnm" title="계좌번호" class="cl_inpbox" disabled>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="ownnm">예금주</label></th>
+								<td>
+									<div class="own_wrap">
+										<input type="text" id="ownnm" title="예금주" class="cl_inpbox" disabled>
+										<span class="bt_authacc"><a href="#" title="계좌인증" class="bt_gry3">계좌인증</a></span>
+									</div>
+									<div>
+										<label for="figacc">
+											<input type="checkbox" id="figacc">
+											<i>이 정보를 <em class="cl_point">기본환불 계좌</em>로 설정</i>
+										</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<p class="tit_info">※ 위의 입력된 계좌로만 환불이 가능하니 정확히 확인해주세요.</p>
+								</td>
+							</tr>
+						</table>
+						<span class="flchk">
+							<label for="chgacc">
+								<input type="checkbox" id="chgacc">
+								<i>환불계좌 변경하기</i>
+							</label>
+						</span>
+					</div>
+				</div>
+				<div class="btm_btn">
+					<div class="btn_wrap">
+						<button type="button" class="bt_org2">구매취소하기</button>
+					</div>
+					<div class="btn_wrap">
+						<a href="#" class="bt_blu">취소</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+@@include('footer.html')
+<div class="tlbarwp">
+	<div class="tlbarinr">
+		<nav class="tlbar">
+			<a href="#" class="home"><i class="sp_tcm"></i>티몬 홈</a>
+			<a href="#" class="cate"><i class="sp_tcm"></i>카테고리</a>
+			<a href="#" class="srch"><i class="sp_tcm"></i>검색</a>
+			<a href="#" class="mytm on"><i class="sp_tcm"></i>마이티몬</a>
+		</nav>
+	</div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/markup_ui.js"></script>
+</body>
+</html>

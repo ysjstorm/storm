@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+$claim-color-point: #ff3800;
+
+@import "./claim/claim_layout.scss";
+@import "./claim/claim_common.scss";
+@import "./claim/claim_my_cancel.scss";
+@import "./claim/claim_my_refund.scss";
+@import "./claim/claim_my_exchange.scss";
+@import "./claim/claim_buylist.scss";
+@import "./claim/claim_cancellist.scss";
+@import "./claim/claim_cvs.scss";
+@import "./claim/claim_fastrefund.scss";
+@import "./claim/claim_layer.scss";
+@import "./claim/claim_ticket.scss";

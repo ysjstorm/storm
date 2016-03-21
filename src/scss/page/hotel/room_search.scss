@@ -1,0 +1,208 @@
+#roomSearchOptions {
+.room-options {
+    padding: 15px;
+    background-color: #444b5e;
+    .set_date {display: none;}
+    .input_uio {
+        position: relative;
+        width: 100%; height: 38px;
+        // overflow: hidden;
+        font-size: 14px; line-height: 38px;
+        cursor: pointer;
+        .lbl {
+            overflow: hidden;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: #fff;
+        }
+        .slt_name {
+            position: absolute;
+            top: 0; left: 0;
+            padding-left: 10px;
+            max-width: 80px;
+            font-weight: bold;
+            color: #333;
+        }
+        .slt {
+            position:absolute;
+            top: 0;
+            left: -50px;
+            height: 100%;
+            min-width: 100%;
+            margin-left: -1em;
+            padding-left: 100%;
+            padding-right: 50px;
+            border: none;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #a7a7a7;
+            cursor: pointer;
+            -webkit-appearance: none;
+            background-color: transparent;
+        }
+        .select-btn {
+            position: absolute;
+            top: 0; right: 0;
+            display: block;
+            border-left: 1px solid #e9ecec;
+            width: 36px; height: 38px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background-color: #f2f4f4;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            .arr {
+                position: absolute;
+                top: 15px; right: 11px;
+                display: block;
+                @include sp-mosaic('bu_arrow_down');
+                &.on{
+                    @include sp-mosaic('bu_arrow_up');
+                }
+            }
+        }
+    }
+}
+.people-per-room-options {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+    padding: 13px 15px;
+    .room-num {
+        border-bottom: 1px solid #d0d0d0;
+        padding: 10px;
+        font-weight: bold; font-size: 14px;
+    }
+    .room-option {
+        .people-select {
+            margin: 16px 10px;
+            &:first-child {
+                border-bottom: 1px solid #e6e6e6;
+                padding-bottom: 16px;
+            }
+        }
+        .age-select {
+            margin: 5px 0;
+            &:nth-child(2) { margin-top: 11px; }
+        }
+        .input_uio {
+            position: relative;
+            box-sizing: border-box;
+            height: 38px;
+            .lbl {
+                max-width: 48%;
+                font-size: 14px; line-height: 16px;
+                color: #41474d;
+                .desc {
+                    font-size: 13px;
+                    color: #959da6;
+                }
+                &.sub {
+                    position: absolute;
+                    right: 58%;
+                    // padding-left: 84px;
+                    font-size: 13px; line-height: 38px;
+                    color: #7e7e7e;
+                }
+            }
+            input, select, button {
+                border: 0;
+                -webkit-appearance: none;
+                background-color: transparent;
+            }
+            .slt-num-wp {
+                position: absolute;
+                top: -1px; right: 0px;
+                border: 1px solid #e1e1e1;
+                width: 48%; height: 36px;
+                border-radius: 2px;
+                line-height: 36px;
+                .slt-num {
+                    width: 1.2em;
+                    height: 36px;
+                    margin: 0 -.6em;
+                    padding: 0 50%;
+                    font-size: 14px;
+                    -webkit-box-sizing: content-box;
+                    box-sizing: content-box;
+                }
+                .slt-pm-btn {
+                    position: absolute;
+                    top: -1px;
+                    border: 1px solid #e1e1e1;
+                    width: 36px; height: 38px;
+                    font-size: 0;
+                    &.minus {
+                        border-radius: 2px 0 0 2px;
+                        left: -1px;
+                        span {
+                            @include sp-hotel('m_ico');
+                        &.disable {
+                            @include sp-hotel('m_disable_ico');
+                        }
+                        }
+                    }
+                    &.plus {
+                        border-radius: 0 2px 2px 0;
+                        right: -1px;
+                        span {
+                            @include sp-hotel('p_ico');
+                        &.disable {
+                            @include sp-hotel('p_disable_ico');
+                        }
+                        }
+                    }
+                }
+            }
+            .slt-wp {
+                position: absolute;
+                top: 0; right: 0px;
+                border: 1px solid #ebeeee;
+                width: 48%; height: 36px;
+                border-radius: 2px;
+                .default { color: #ccc;}
+                .slt {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 0 38px 0 0;
+                    width: 100%; height: 36px;
+                    text-indent: 28%;
+                    font-size: 13px;
+                }
+                .slt-btn {
+                    position: absolute;
+                    top: -1px; right: -1px;
+                    border: 1px solid #ebeeee;
+                    border-left: 1px solid #e9ecec;
+                    width: 36px; height: 38px;
+                    border-radius: 0 2px 2px 0;
+                    background-color: #f2f4f4;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    font-size: 0;
+                    .arr {
+                        position: absolute;
+                        top: 15px; right: 11px;
+                        display: block;
+                        @include sp-mosaic('bu_arrow_down');
+                        &.on{
+                            @include sp-mosaic('bu_arrow_up');
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .option-modify-btn {
+        width: 100%; height: 40px;
+        border-radius: 2px;
+        background: #12aec3;
+        text-align: center;
+        font-size: 15px;
+        color: #fff;
+    }
+}
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+.welfare_wp{
+	top:110px;
+	right:42px;
+	left:42px;
+	.welfare_list{
+		padding: 17px 20px 0;
+		li{
+			position: relative;
+			margin-top: 10px;
+			padding-left: 10px;
+			color:#7a838e;
+			font-size: 12px;
+			line-height: 1.4;
+			letter-spacing: -0.04em;
+			word-break: keep-all;
+			&:first-child{
+				margin-top: 0;
+			}
+			&:before{
+				position: absolute;
+				top:7px;
+				left:0;
+				width:3px;
+				height: 1px;
+				background-color: #6c7580;
+				content:"";
+			}
+		}
+	}
+	.bt_area{
+		padding: 30px 15px 20px;
+		display:flex;
+		[class^="bt_"]{
+			width:50%;
+			flex: 1;
+			-webkit-flex: 1;
+			height:42px;
+			line-height:42px;
+			font-size: 14px;
+			&:nth-child(1){
+				margin-right: 2.5px;
+			}
+			&:nth-child(2){
+				margin-left: 2.5px;
+			}
+		}
+	}
+}

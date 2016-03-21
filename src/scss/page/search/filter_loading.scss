@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* 텍스트형 로딩 - 속성 필터 목록 */
+$loading-txt-dot-color:#dfe2e6; // 로딩 dot 색상
+$loading-txt-dot-size:2px; // dot 크기
+$loading-txt-time-loop:1s; // 로딩바 루프 타임
+
+.loading_txt{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:40;
+
+	.loading_area{
+		display:table;
+		width:100%;
+		height:100%;
+	}
+
+	.loading_ct{
+		display:table-cell;
+		vertical-align:middle;
+		color:$loading-txt-dot-color;
+		text-align:center;
+		font-weight:bold;
+	}
+
+	.ico_dot{
+		display:inline-block;
+		width:$loading-txt-dot-size;
+		height:$loading-txt-dot-size;
+		margin-left:2px;
+		border-radius:50%;
+		background:$loading-txt-dot-color;
+	}
+}
+.loading_txt_en{
+	font-size:14px;
+	letter-spacing:0;
+}
+.loading_txt_ko{
+	padding-top:2px;
+	font-size:12px;
+}
+
+// dot의 타임라인이 동일하므로 반복으로 처리
+$dot-num:1;
+@for $dot-num from 1 through 3 {
+	.fade_dot#{$dot-num} {
+		animation:loading_fade_dot#{$dot-num} $loading-txt-time-loop infinite;
+		-webkit-animation:loading_fade_dot#{$dot-num} $loading-txt-time-loop infinite;
+	}
+}
+
+// dot 애니메이션 키프레임
+@keyframes loading_fade_dot1 {
+	0% {opacity:0;}
+	24.9% {opacity:0;}
+	25% {opacity:1;}
+}
+@keyframes loading_fade_dot2 {
+	0% {opacity:0;}
+	49.9% {opacity:0;}
+	50% {opacity:1;}
+}
+@keyframes loading_fade_dot3 {
+	0% {opacity:0;}
+	74.9% {opacity:0;}
+	75% {opacity:1;}
+}
+@-webkit-keyframes loading_fade_dot1 {
+	0% {opacity:0;}
+	24.9% {opacity:0;}
+	25% {opacity:1;}
+}
+@-webkit-keyframes loading_fade_dot2 {
+	0% {opacity:0;}
+	49.9% {opacity:0;}
+	50% {opacity:1;}
+}
+@-webkit-keyframes loading_fade_dot3 {
+	0% {opacity:0;}
+	74.9% {opacity:0;}
+	75% {opacity:1;}
+}
+
+/* 로고형 로딩 - 상세 검색 */
+$loading-logo-bg-color:#fff; // 로딩 배경 색상
+$loading-logo-border-color:#dfe2e6; // 로딩바 색상
+$loading-logo-size:36px; // 로딩 사이즈 - 짝수로 사이즈 설정
+$loading-logo-inner-size:10px; // 로딩바 안쪽 원 사이즈 - 짝수로 사이즈 설정
+$loading-logo-border-size:9px; // 로딩바 두께
+$loading-logo-time-loop:4s; // 로딩바 루프 타임
+
+.loading_logo{
+	position:fixed;
+	top:50%;
+	z-index:200;
+	width:100%;
+	height:$loading-logo-size;
+	margin-top:-22px - $loading-logo-size / 2;
+	padding-left:24%;
+	box-sizing:border-box;
+
+	.logo_position{
+		position:relative;
+		top:0;
+		width:$loading-logo-size;
+		height:$loading-logo-size;
+		margin:0 auto;
+		text-align:center;
+
+		&:after{
+			position:absolute;
+			left:50%;
+			top:50%;
+			width:$loading-logo-inner-size;
+			height:$loading-logo-inner-size;
+			-webkit-transform:translate(-50%, -50%);
+			transform:translate(-50%, -50%);
+			background:#dfe2e6;
+			border-radius:50%;
+			content:'';
+		}
+	}
+
+	.txt_area{
+		padding-top:40px;
+		font-size:11px;
+		color:#dfe2e6;
+		font-weight:bold;
+		letter-spacing:0;
+	}
+}
+
+.logo_spinner{
+	position:absolute;
+	top:0;
+	left:0;
+	height:$loading-logo-size;
+	width:$loading-logo-size;
+	border-radius:50%;
+
+	&:after{
+		position:absolute;
+		left:0;
+		top:0;
+		width:$loading-logo-size - $loading-logo-border-size * 2;
+		height:$loading-logo-size - $loading-logo-border-size * 2;
+		margin:$loading-logo-border-size;
+		background:$loading-logo-bg-color;
+		border-radius:50%;
+		content:'';
+	}
+
+	.sp_area{
+		position:absolute;
+		overflow:hidden;
+		top:0;
+		height:$loading-logo-size;
+		width:$loading-logo-size / 2;
+
+		.sp_circle{
+			position:absolute;
+			width:$loading-logo-size / 2;
+			height:$loading-logo-size;
+			background:$loading-logo-border-color;
+			border-radius:50%;
+			-webkit-border-radius:50%;
+		}
+
+		&.sp_right{
+			right:0;
+
+			.sp_circle{
+				right:0;
+				border-right:$loading-logo-size / 2 solid $loading-logo-bg-color;
+				animation:loading_spinner_right $loading-logo-time-loop infinite linear;
+				-webkit-animation:loading_spinner_right $loading-logo-time-loop infinite linear;
+			}
+		}
+
+		&.sp_left{
+			left:0;
+
+			.sp_circle{
+				left:0;
+				border-left:$loading-logo-size / 2 solid $loading-logo-bg-color;
+				animation:loading_spinner_left $loading-logo-time-loop infinite linear;
+				-webkit-animation:loading_spinner_left $loading-logo-time-loop infinite linear;
+			}
+		}
+	}
+}
+
+// logo spinner 키프레임
+@keyframes loading_spinner_right{
+	0% {transform:rotate(0deg)}
+	25% {transform:rotate(180deg)}
+	50% {transform:rotate(180deg)}
+	75% {transform:rotate(360deg)}
+	100% {transform:rotate(360deg)}
+}
+@keyframes loading_spinner_left{
+	0% {transform:rotate(0deg)}
+	25% {transform:rotate(0deg)}
+	50% {transform:rotate(180deg)}
+	75% {transform:rotate(180deg)}
+	100% {transform:rotate(360deg)}
+}
+@-webkit-keyframes loading_spinner_right{
+	0% {-webkit-transform:rotate(0deg)}
+	25% {-webkit-transform:rotate(180deg)}
+	50% {-webkit-transform:rotate(180deg)}
+	75% {-webkit-transform:rotate(360deg)}
+	100% {-webkit-transform:rotate(360deg)}
+}
+@-webkit-keyframes loading_spinner_left{
+	0% {-webkit-transform:rotate(0deg)}
+	25% {-webkit-transform:rotate(0deg)}
+	50% {-webkit-transform:rotate(180deg)}
+	75% {-webkit-transform:rotate(180deg)}
+	100% {-webkit-transform:rotate(360deg)}
+}
+
+/* 아이폰 6+ 해상도 대응 */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio : 3) {
+	body[data-useragent*="iPhone"][data-useragent*="OS 9_1"]{
+		.loading_logo{
+			padding-left:25%;
+		}
+	}
+}
+
+/* 갤럭시3 내장 브라우저 대응 */
+body[data-useragent*="Android 4"][data-useragent*="Mobile Safari/534.30"]{
+	.logo_spinner{
+		.sp_area{
+			.sp_circle{
+				animation:none;
+				-webkit-animation:none;
+				transform:rotate(180deg);
+				-webkit-transform:rotate(180deg);
+			}
+		}
+	}
+}

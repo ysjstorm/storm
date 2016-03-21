@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.component.title.type1{
+    position:relative;
+    padding-bottom:12px;
+
+    .tit{
+        font-weight:bold;
+        font-size:16px;
+        line-height:1em;
+        color:#000;
+        margin-right:45px;
+        height:16px;
+        word-break:break-all;
+        @include line-clamp(1,1);
+
+        em{
+            font-weight:bold;
+            color:#ff6948;
+            display: inline-block;
+            margin-right:10px;
+        }
+    }
+
+    &.has_not_btn_more{
+        .tit{
+            margin-right:0;
+        }
+    }
+}

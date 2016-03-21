@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+%sp-cvs {
+    background: url('../im/sp-cvs.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(212px/2) (150px/2);
+    -webkit-background-size:(212px/2) (150px/2);
+}
+
+@mixin sp-cvs($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-cvs, $filename);
+    @extend %sp-cvs;
+	@include sp-mosaic-base($sp-cvs, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-cvs: (
+    spritesheet_name: sp-cvs,
+    marker_cu: (offset_x: 0, offset_y: 0, width: 68px, height: 80px),
+    marker_cu_disable: (offset_x: -72px, offset_y: 0, width: 68px, height: 80px),
+    marker_cu_focus: (offset_x: -144px, offset_y: 0, width: 68px, height: 80px),
+    search-loupe: (offset_x: 0, offset_y: -84px, width: 68px, height: 66px),
+    search-loupe_active: (offset_x: -72px, offset_y: -84px, width: 68px, height: 66px),
+    search-remove: (offset_x: -144px, offset_y: -84px, width: 50px, height: 66px),
+);

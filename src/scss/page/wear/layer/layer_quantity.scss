@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.product_quantity{
+	padding:0 12px;
+	
+	li{
+		border-bottom:1px solid #dfe2e6;
+	}
+	label{
+		position:relative;
+		display:block;
+		width:100%;
+		height:50px;
+		padding:0 20px;
+		line-height:50px;
+		font-size:20px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.rdo_custom{
+		position:absolute;
+		top:50%;
+		right:20px;
+		margin-top:-10px;
+		margin-right:0;
+	}
+}

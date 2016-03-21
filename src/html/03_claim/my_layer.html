@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+	<title>TMON</title>
+	<link rel="stylesheet" href="../../css/m.css">
+    <!-- 레이어 확인용 스타일/스크립트 -->
+    <style>
+        html,body {
+            height: 100%;
+        }
+        .whattt {
+            display: block;
+            position: relative;
+            z-index: 3000;
+            padding: 15px 20px 10px;
+            font-size: 1.1em;
+            color: #fff;
+        }
+        .whattt .desc {
+            margin-left: 5px;
+            font-size: 0.9em;
+            color: #999;
+        }
+        .cl_layer {
+            position: relative !important;
+            margin: 0 0 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('dimmedbg').style.height = document.body.clientHeight+'px';
+        };
+    </script>
+    <!-- // 레이어 확인용 스타일/스크립트 -->
+</head>
+<body class="delivery_wrap">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+@@include('header_type2.html', {"title":"레이어"})
+<hr>
+<div id="ct">
+
+    <!-- 구매 취소 -->
+    <p class="whattt">구매취소 완료</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">구매 취소가 완료되었습니다.</p>
+                    <p class="txt">취소 완료 후 결제 수단에 따라<br>입금까지 약 1일 ~ 2주 소요될 수 있습니다.</p>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <p class="whattt">취소 요청 완료</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">취소 요청이 접수되었습니다.</p>
+                    <p class="subtit">취소 가능 상태인지 확인 후 처리될 예정입니다.</p>
+                    <p class="txt">이미 상품이 발송된 것으로 확인되면<br>취소 요청은 철회될 수 있습니다.</p>
+                    <p class="txt">이런 경우 다시 한 번 환불 요청을 접수해 주세요.</p>
+                    <div class="txt_wrap3">
+                        <p class="txt_hlp">취소 진행 상태는 [마이티몬]에서 확인해주세요.</p>
+                    </div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 교환 요청 완료 -->
+    <p class="whattt">교환 요청 완료 <span class="desc">물건발송 전 / 티몬택배 이용</span></p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">교환 요청이 접수되었습니다.</p>
+                    <p class="txt">
+                        <strong class="hl">현대택배</strong>
+                        배송 완료 후 1 ~ 3일 이내 택배기사 방문수거<br>
+                        <strong class="hl">편의점택배</strong>
+                        고객님이 가까운 편의점에 직접 접수
+                    </p>
+                    <p class="subtit">판매자가 교환 가능 상태 여부를 확인하여 처리하므로<br>완료까지 다소 시간이 걸릴 수 있는 점 양해 부탁드립니다.</p>
+                    <div class="txt_wrap2">
+                        <p class="txt_hlp">해외 직배송 상품의 경우<br>판매자와 별도 협의가 필요할 수 있습니다.</p>
+                        <p class="txt_hlp">배송 추적, 교환 진행 상태는 [마이티몬]에서 확인해 주세요.</p>
+                    </div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <p class="whattt">교환 요청 완료 <span class="desc">물건발송 전 / 티몬택배 이용X</span></p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">교환 요청이 접수되었습니다.</p>
+                    <p class="txt">상품을 보내지 않으신 경우,<br>판매자가 지정한 택배사를 통해 회수됩니다.</p>
+                    <p class="subtit">판매자가 교환 가능 상태 여부를 확인하여 처리하므로<br>완료까지 다소 시간이 걸릴 수 있는 점 양해 부탁드립니다.</p>
+                    <div class="txt_wrap2">
+                        <p class="txt_hlp">해외 직배송 상품의 경우<br>판매자와 별도 협의가 필요할 수 있습니다.</p>
+                        <p class="txt_hlp">배송 추적, 교환 진행 상태는 [마이티몬]에서 확인해 주세요.</p>
+                    </div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <p class="whattt">교환 요청 완료 <span class="desc">물건발송 후</span></p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">교환 요청이 접수되었습니다.</p>
+                    <p class="subtit">판매자가 교환 가능 상태 여부를 확인하여 처리하므로<br>완료까지 다소 시간이 걸릴 수 있는 점 양해 부탁드립니다.</p>
+                    <div class="txt_wrap2">
+                        <p class="txt_hlp">별도의 택배사 또는 화물수단을 통해 교환 진행시<br>교환 배송비 차액 발생 및 처리 일정이 지연될 수 있습니다.</p>
+                        <p class="txt_hlp">배송 추적, 교환 진행 상태는 [마이티몬]에서 확인해 주세요.</p>
+                    </div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 환불 요청 완료 -->
+    <p class="whattt">환불 요청 완료 <span class="desc">물건발송 전 / 티몬택배 이용</span></p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">환불 요청이 접수되었습니다.</p>
+                    <p class="txt">
+                        <strong class="hl">현대택배</strong>
+                        배송 완료 후 1 ~ 3일 이내 택배기사 방문수거<br>
+                        <strong class="hl">편의점택배</strong>
+                        고객님이 가까운 편의점에 직접 접수
+                    </p>
+                    <p class="subtit">반품 상품의 송장이 등록되면 익일 환불이 진행됩니다.</p>
+                    <div class="txt_wrap2">
+                        <p class="txt_hlp">단, 현금성 상품 등 일부 상품은 제외되며<br>해외 직배송 상품의 경우<br>판매자와 별도 협의가 필요할 수 있습니다.</p>
+                        <p class="txt_hlp">배송 추적, 환불 진행 상태는 [마이티몬]에서 확인해 주세요.</p>
+                    </div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <p class="whattt">환불 요청 완료 <span class="desc">물건발송 전 / 티몬택배 이용X</span></p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">환불 요청이 접수되었습니다.</p>
+                    <p class="txt">상품을 보내지 않으신 경우,<br>판매자가 지정한 택배사를 통해 회수됩니다.</p>
+                    <div class="txt_wrap1">
+                        <p class="txt_hlp">별도의 택배사 또는 화물수단을 통해 교환 진행시<br>교환 배송비 차액 발생 및 처리 일정이 지연될 수 있으<br>화물/설치 상품의 경우<br>판매자와 별도 협의가 필요할 수 있습니다.</p>
+                        <p class="txt_hlp">배송 추적, 환불 진행 상태는 [마이티몬]에서 확인해 주세요.</p>
+                    </div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <p class="whattt">환불 요청 완료 <span class="desc">물건발송 후</span></p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">환불 요청이 접수되었습니다.</p>
+                    <div class="txt_wrap2">
+                        <p class="txt_hlp">별도의 택배사 또는 화물수단을 통해 교환 진행시<br>교환 배송비 차액 발생 및 처리 일정이 지연될 수 있으<br>화물/설치 상품의 경우<br>판매자와 별도 협의가 필요할 수 있습니다.</p>
+                        <p class="txt_hlp">환불 진행 상태는 [마이티몬]에서 확인해 주세요.</p>
+                    </div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <p class="whattt">환불 요청 완료 <span class="desc">배송딜 외</span></p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont2">
+                    <span class="ico_layer_check"></span>
+                    <p class="tit">환불 요청이 접수되었습니다.</p>
+                    <p class="subtit">상품에 따라 환불 가능 여부 확인 작업에<br>다소 시간이 걸릴 수 있습니다.</p>
+                    <p class="txt_hlp">취소 진행 상태는 [마이티몬]에서 확인해 주세요.</p>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 반품 수거지 정보 -->
+    <p class="whattt">반품 수거지 정보</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">반품 수거지 정보</p>
+                    <p class="txt">환불 / 교환 요청시 입력해주신 주소로<br>택배사가 물품을 수거하러 갑니다.</p>
+                    <dl class="dl_wrap">
+                        <dt><span class="cl_point">이름</span></dt>
+                        <dd>김티몬</dd>
+                        <dt><span class="cl_point">연락처</span></dt>
+                        <dd>010-1234-5678</dd>
+                        <dt><span class="cl_point">수거지</span></dt>
+                        <dd>서울특별시 강남구 대치동<br>1004번지 동일타워 1층 티켓몬스터</dd>
+                    </dl>
+                </div>
+                <div class="btns">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 편의점 반품 접수 방법 -->
+    <p class="whattt">편의점 반품 접수 방법</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">편의점 반품 접수 방법</p>
+                    <dl class="dl_wrap">
+                        <dt style="padding-left:30px"><span class="cl_point">01</span></dt>
+                        <dd>가까운 편의점 방문 (CU / GS25)</dd>
+                        <dt style="padding-left:30px"><span class="cl_point">02</span></dt>
+                        <dd>쇼핑몰 거래 선택 후 편의점 반품번호 입력</dd>
+                        <dt style="padding-left:30px"><span class="cl_point">03</span></dt>
+                        <dd>무게 측정 후 운송장 출력하여 계산대 접수</dd>
+                    </dl>
+                </div>
+                <div class="btns">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 추가 공제금 안내 -->
+    <p class="whattt">추가 공제금 안내</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">추가 공제금 안내</p>
+                    <p class="txt">추가 배송비 차감, 할인 취소, 취소 수수료 공제 등<br>으로 인해 공제금이 발생될 수 있습니다.</p>
+                    <div class="dv_wrap">
+                        <p class="txt_hlp">공제 사유와 관련한 문의는 티몬 고객센터(1544-6240)<br>또는 1:1문의를 이용해주세요.</p>
+                        <div class="cl_btns">
+                            <div class="cl_btwrap3">
+                                <a href="#" class="bt_gry3">1:1 문의</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 환불 상세정보 -->
+    <p class="whattt">환불 상세정보</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">환불 상세정보</p>
+                    <dl class="dl_wrap2">
+                        <dt><strong>환불상품</strong></dt>
+                        <dd>뉴트로지나 바디딥클린 풀라인업 수분크림 모음</dd>
+                        <dt><strong>환불금액</strong></dt>
+                        <dd><strong class="cl_point">78,900원</strong></dd>
+                    </dl>
+                </div>
+                <div class="cl_btns_stretch">
+                    <button type="button" class="bt_blu">닫기</button>
+                </div>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 환불 계좌 입력하기 -->
+    <p class="whattt">환불 계좌 입력하기</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">환불 계좌 입력하기</p>
+                    <dl class="dl_wrap3">
+                        <dt>환불금액</dt>
+                        <dd>
+                            <strong class="price">78,900원</strong>
+                            <button type="button" class="bt_gry2 bt_ref1">환불내용 보기</button>
+                        </dd>
+                        <dt><label for="acc_bank">은행명</label></dt>
+                        <dd>
+                            <div class="cl_selbox">
+                                <select id="acc_bank">
+                                    <option value="">선택하세요</option>
+                                    <option>우리은행</option>
+                                    <option>신한은행</option>
+                                    <option>외환은행</option>
+                                </select>
+                                <span class="ico_arr"></span>
+                            </div>
+                        </dd>
+                        <dt><label for="acc_number">계좌번호</label></dt>
+                        <dd>
+                            <input type="text" name="num" title="계좌번호" class="inp_ref" id="acc_number">
+                            <p class="txt_info">‘-’없이 숫자만 입력</p>
+                        </dd>
+                        <dt><label for="acc_holder">예금주</label></dt>
+                        <dd class="bt_wrap">
+                            <input type="text" name="num" title="예금주" class="inp_ref" id="acc_holder">
+                            <button type="button" class="bt_gry2 bt_ref2">계좌인증 </button>
+                            <p class="txt_info">회원명과 동일한 계좌만 인증가능</p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="check_wrap">
+				    <label class="lbl"><input type="checkbox" class="cbx">이 정보를 기본 환불 계좌로 사용</label>
+			    </div>
+                <div class="cl_btns">
+                    <span class="cl_btwrap2"><button type="button" class="bt_org2">입력완료</button></span>
+                    <span class="cl_btwrap2"><button type="button" class="bt_blu">닫기</button></span>
+                </div>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 환불 계좌 입력하기 -->
+    <p class="whattt">우편번호 검색</p>
+    <div class="cl_layer">
+        <div class="layer_zipcode">
+            <div class="tit_dark">우편번호검색</div>
+
+            <!-- 도로명 검색 -->
+            <ul class="tab">
+            <li class="on"><button type="button">도로명주소</button></li>
+            <li><button type="button">지번주소</button></li>
+            </ul>
+            <div class="srch_wrap">
+                <div class="srch_keywrap">
+                    <div class="srch_keyword">
+                        <label for="zip1" class="srch_lb">시/도</label>
+                        <div class="cl_selbox">
+                            <select id="zip1" name="zip1">
+                            <option value="" selected>--시/도--</option>
+                            <option value="서울특별시">서울특별시</option>
+                            <option value="부산광역시">부산광역시</option>
+                            <option value="대구광역시">대구광역시</option>
+                            <option value="인천광역시">인천광역시</option>
+                            <option value="광주광역시">광주광역시</option>
+                            <option value="대전광역시">대전광역시</option>
+                            <option value="울산광역시">울산광역시</option>
+                            <option value="세종특별자치시">세종특별자치시</option>
+                            <option value="경기도">경기도</option>
+                            <option value="강원도">강원도</option>
+                            <option value="충청북도">충청북도</option>
+                            <option value="충청남도">충청남도</option>
+                            <option value="전라북도">전라북도</option>
+                            <option value="전라남도">전라남도</option>
+                            <option value="경상북도">경상북도</option>
+                            <option value="경상남도">경상남도</option>
+                            <option value="제주특별자치도">제주특별자치도</option>
+                            </select>
+                            <span class="ico_arr"></span>
+                        </div>
+                    </div>
+                    <div class="srch_keyword type2">
+                        <label for="zip2" class="srch_lb">시/군/구</label>
+                        <div class="cl_selbox">
+                            <select id="zip2" name="zip2">
+                            <option value="" selected>--시/군/구--</option>
+                            </select>
+                            <span class="ico_arr"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="srch_keyword">
+                    <label for="zip3" class="srch_lb">주소명</label>
+                    <input type="text" id="zip3" value="개포동" class="inp_keyword">
+                    <button type="button" class="bt_del"><em class="sp_srch">검색어 지우기</em></button>
+                    <button type="button" class="bt_srch">검색</button>
+                </div>
+                <div class="srch_method">
+                <strong>도로명 주소 검색방법</strong>
+                <ul>
+                <li>1. 도로명 입력 <span>(예: 올림픽로)</span></li>
+                <li>2. 도로명+건물번호 입력 <span>(예: 올림픽로 326)</span></li>
+                <li>3. 건물명 입력 <span>(예: 강남소방서)</span></li>
+                </ul>
+                </div>
+            </div>
+            <div class="result_wrap">
+                <p class="result_txt">검색결과: 0건</p>
+                <div class="inr">
+                    <table cellspacing="0" border="0" class="result_tbl">
+                    <caption>우편번호 검색결과</caption>
+                    <colgroup>
+                    <col style="width:20%"><col style="width:80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                    <th scope="col">우편번호</th>
+                    <th scope="col">주소</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td>
+                        <a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+                        <p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td>
+                        <a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+                        <p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td>
+                        <a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+                        <p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td>
+                        <a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+                        <p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <div class="inr empty">
+                        검색 결과가 없습니다.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 지번 검색 -->
+            <ul class="tab">
+            <li><button type="button">도로명주소</button></li>
+            <li class="on"><button type="button">지번주소</button></li>
+            </ul>
+            <div class="srch_wrap">
+                <fieldset>
+                <legend>도로명주소</legend>
+                    <p class="srch_how">검색하실 주소의 동/읍/면을 입력해 주세요. <span>(예: 논현동)</span></p>
+                    <div class="srch_keyword">
+                        <label for="zipcode" class="srch_lb">주소명</label>
+                        <input type="text" id="zipcode" value="개포동" class="inp_keyword">
+                        <button type="button" class="bt_del"><em class="sp_srch">검색어 지우기</em></button>
+                        <button type="button" class="bt_srch">검색</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="result_wrap">
+                <div class="inr empty">
+                    검색 결과가 없습니다.
+                </div>
+                <div class="inr">
+                    <table cellspacing="0" border="0" class="result_tbl">
+                    <caption>우편번호 검색결과</caption>
+                    <colgroup>
+                    <col style="width:20%"><col style="width:80%">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">135-010</th>
+                    <td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            <button type="button" class="bt_cls_w"><span class="blind">닫기</span></button>
+        </div>
+    </div>
+
+    <!-- 바코드 보기 : 에버랜드, 홈플러스 -->
+    <p class="whattt">바코드 보기</p>
+    <div class="cl_layer">
+        <div class="layer_headlined">
+            <div class="layer_out">
+                <div class="layer_inr">
+                    <div class="tit_dark">바코드 보기</div>
+                    <div class="barcode_area">
+                        <img src="../../img/@claim1.png" width="217" height="56" alt="바코드">
+                    </div>
+                    <div class="btns">
+                        <button type="button" class="bt_blu">확인</button>
+                    </div>
+                    <button type="button" class="bt_cls_w"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 배송 지연 안내-->
+    <p class="whattt">배송 지연 안내</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">배송 지연 안내</p>
+                    <p class="txt">이용에 불편을 끼쳐드려 죄송합니다.<br>판매자가 등록한 배송지연 내용 안내해 드립니다.</p>
+                    <dl class="dl_wrap2">
+                        <dt><strong>지연사유</strong></dt>
+                        <dd>작업 인력 부족</dd>
+                        <dt><strong>발송 예정일</strong></dt>
+                        <dd><em class="cl_point">2015-07-07</em></dd>
+                        <dt><strong>안내일</strong></dt>
+                        <dd>2015-07-06 17:19:25</dd>
+                    </dl>
+                </div>
+                <div class="btns">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 배송 지연 사과-->
+    <p class="whattt">배송 지연 사과</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">배송 지연에 사과 드립니다.</p>
+                    <p class="txt">불편을 겪으신 고객님께 배송지연의 보상으로<br>티몬적립금을 지급해 드립니다.</p>
+                    <dl class="dl_wrap2 type2">
+                        <dt><strong>적립금액</strong></dt>
+                        <dd><strong class="cl_point">5,000원</strong></dd>
+                        <dt><strong>유효기간</strong></dt>
+                        <dd>2015-07-07</dd>
+                    </dl>
+                </div>
+                <p class="txt2">지급내역은 <em class="txt_g">마이티몬&gt;적립금</em>에서 확인 가능합니다.</p>
+                <div class="btns">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 다회권 내역보기 -->
+    <p class="whattt">다회권 내역보기</p>
+    <div class="cl_layer">
+        <div class="layer_headlined">
+            <div class="layer_out">
+                <div class="layer_inr">
+                    <div class="tit_dark">사용내역</div>
+                    <div class="multi_wrap">
+                        <ul class="multi_lst">
+                            <li>사용 내역이 없습니다.</li>
+                            <li>2015-06-20 12:11 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                            <li>2015-06-20 10:57 <em class="cl_point">1회</em> 사용</li>
+                        </ul>
+                    </div>
+                    <div class="btns type2">
+                        <button type="button" class="bt_blu">확인</button>
+                    </div>
+                    <button type="button" class="bt_cls_w"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 우편번호 변경 안내 -->
+    <p class="whattt">우편번호 변경 안내</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont3">
+                    <p class="tit_norm">우편번호 변경 안내</p>
+                    <p class="txt">8월 1일부터 새우편번호가 사용됩니다.</p>
+                    <p class="txt">반품수거지를 새로 등록하면 새우편번호가 적용됩니다.</p>
+                </div>
+                <div class="txt_wrap2">
+                    <p class="txt_hlp">기존 반품수거지를 사용할 경우<br><span class="cl_point">반품배송이 1~2일 지연</span>될 수 있습니다.</p>
+                </div>
+                <div class="btns">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhereWear 환불(배송전) 확인 레이어 -->
+    <p class="whattt">WhereWear 환불(배송전) 확인 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont4">
+                    <p class="tit_cnf">Ticket 3 를 환불하게 되면,<br>발송 요청한 상품도 전체 취소됩니다.</p>
+                    <p class="txt">취소를 위한 진행을 하시겠습니까?</p>
+                </div>
+                <div class="cl_btns">
+                    <span class="cl_btwrap4"><button type="button" class="bt_org2">확인</button></span>
+                    <span class="cl_btwrap4"><button type="button" class="bt_blu">취소</button></span>
+                </div>
+                <p class="btns_add"></p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhereWear 환불(배송후) 확인 레이어 -->
+    <p class="whattt">WhereWear 환불(배송후) 확인 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont4">
+                    <p class="tit_cnf">Ticket 3 를 환불하게 되면,<br>주문 상품의 전체 반품이 필요합니다.</p>
+                    <p class="txt">환불을 위한 진행을 하시겠습니까?</p>
+                </div>
+                <div class="cl_btns">
+                    <span class="cl_btwrap4"><button type="button" class="bt_org2">확인</button></span>
+                    <span class="cl_btwrap4"><button type="button" class="bt_blu">취소</button></span>
+                </div>
+                <p class="btns_add"></p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhereWear 교환 확인 레이어 -->
+    <p class="whattt">WhereWear 교환 확인 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_out">
+            <div class="layer_inr">
+                <div class="cont4">
+                    <p class="tit_cnf">Ticket 3 상품의 교환은<br><span class="cl_point">제품하자</span>의 경우에만 가능합니다.<br><span class="cl_point">제품하자</span>가 아닌 경우,<br>교환이 거절 될 수 있습니다.</p>
+                    <p class="txt">교환을 위한 진행을 하시겠습니까?</p>
+                </div>
+                <div class="cl_btns">
+                    <span class="cl_btwrap4"><button type="button" class="bt_org2">확인</button></span>
+                    <span class="cl_btwrap4"><button type="button" class="bt_blu">취소</button></span>
+                </div>
+                <p class="btns_add"></p>
+                <button type="button" class="bt_cls"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+
+    <p class="whattt">환불요청 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_type2 layer_cncl" style="display:block">
+            <div class="layer_out"><div class="layer_inr">
+                <p class="tit tit_v3">선택하신 상품을<br><span class="hl">환불요청</span> 하시겠습니까?</p>
+                <div class="cont">
+                    <dl class="dtp2">
+                        <dt>결제취소금액</dt>
+                        <!-- [D] 숫자는 num클래스를 가지는 em으로 감쌉니다 -->
+                        <dd><em class="num">17,000</em>원</dd>
+                        <dt>적립금 반환</dt>
+                        <dd><em class="num">0</em>원</dd>
+                    </dl>
+                </div>
+                <div class="btns btns_v3">
+                    <div class="btnir"><button type="button" class="bt_org2">환불요청</button></div>
+                    <div class="btnir"><button type="button" class="bt_blu">취소</button></div>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="cls"><i class="spr_my">닫기</i></button>
+            </div></div>
+        </div>
+    </div>
+
+    <p class="whattt">유아탑승객 환불 요청 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_type2 layer_cncl" style="display:block">
+            <div class="layer_out"><div class="layer_inr" style="min-height:222px">
+                <div class="cont2">
+                    <i class="spr_my"></i>
+                    <p class="tit">유아탑승객은 환불요청 후<br>복구 불가능합니다.</p>
+                    <div class="txt">환불 후 추가하시려면[<span class="h1">탑승객 정보</span>]를 클릭하세요.</div>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="cls"><i class="spr_my">닫기</i></button>
+            </div></div>
+        </div>
+    </div>
+
+    <p class="whattt">유아탑승객 정보 삭제 경고 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_type2 layer_cncl" style="display:block">
+            <div class="layer_out"><div class="layer_inr" style="min-height:222px">
+                <div class="cont2">
+                    <i class="spr_my"></i>
+                    <p class="tit">삭제된 유아탑승객 정보는<br>복구가 불가능합니다.<br>선택하신 <span class="hl">유아탑승객을 삭제</span> 하시겠습니까?</p>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="cls"><i class="spr_my">닫기</i></button>
+            </div></div>
+        </div>
+    </div>
+
+
+    <p class="whattt">유아탑승객 정보 삭제 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_type2 layer_cncl" style="display:block;">
+            <div class="layer_out"><div class="layer_inr" style="min-height:222px">
+                <div class="cont2">
+                    <i class="spr_my"></i>
+                    <p class="tit">유아탑승객 정보가<br><span class="hl">삭제</span> 되었습니다.</p>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="cls"><i class="spr_my">닫기</i></button>
+            </div></div>
+        </div>
+    </div>
+
+    <p class="whattt">성인탑승객 제한 레이어</p>
+    <div class="cl_layer">
+        <div class="layer_type2 layer_cncl" style="display:block;">
+            <div class="layer_out"><div class="layer_inr" style="min-height:222px">
+                <div class="cont2">
+                    <i class="spr_my"></i>
+                    <p class="tit">성인탑승객 보다<br>유아탑승객이 많을 수 없습니다.<br>다시 선택해주세요.</p>
+                </div>
+                <div class="btns btns_v2">
+                    <button type="button" class="bt_blu">확인</button>
+                </div>
+                <p class="btns_add">고객센터 문의 : 1544-6240</p>
+                <button type="button" class="cls"><i class="spr_my">닫기</i></button>
+            </div></div>
+        </div>
+    </div>
+
+</div>
+<div id="dimmedbg" class="dimmedbg"></div>
+
+<div class="tlbarwp">
+	<div class="tlbarinr">
+		<nav class="tlbar">
+			<a href="#" class="home"><i class="sp_tcm"></i>티몬 홈</a>
+			<a href="#" class="cate"><i class="sp_tcm"></i>카테고리</a>
+			<a href="#" class="srch"><i class="sp_tcm"></i>검색</a>
+			<a href="#" class="mytm on"><i class="sp_tcm"></i>마이티몬</a>
+		</nav>
+	</div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/markup_ui.js"></script>
+</body>
+</html>

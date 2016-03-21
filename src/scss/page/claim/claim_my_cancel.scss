@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* claim my cancel ui */
+.cl_cancel {
+    input[type=checkbox] {
+        font-size: 2em;
+        margin: 0;
+    }
+    label > i {
+        padding-left: 3px;
+        vertical-align: middle;
+    }
+    .clbox_wrap {
+        padding: 15px 10px 10px;
+    }
+}

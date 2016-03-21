@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: Value Fashion</title>
+<link rel="stylesheet" href="../../css/wear.css"/>
+<link rel="stylesheet" href="../../css/l_w.css"/>
+</head>
+<body class="wear">
+
+@@include('mWhiteLayout-header.html')
+<div id="ct">
+	@@include('./ui/wear/order_top.html')
+	<div class="order_deal_lst">
+		<ul class="deal_lst2">
+			<li>
+				<div class="left_area">
+					<img src="http://d1.tmonc.net/~nbass/?314x334_woman_n_FFFFFF_100">
+				</div>
+				<div class="right_area">
+					<a href="" class="product_name">[MANGO] FRANCE SWEAT SHIRT WHITE FRANCE SWEAT SHIRT WHITE</a>
+					<div class="option_area">
+						<span class="option">화이트</span><span class="option">66</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="left_area">
+					<img src="http://d1.tmonc.net/~nbass/?314x334_woman_n_FFFFFF_100">
+				</div>
+				<div class="right_area">
+					<a href="" class="product_name">[MANGO] FRANCE SWEAT</a>
+					<div class="option_area">
+						<span class="option">화이트</span><span class="option">66</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="order_none">
+		<span>환불처리된 주문입니다.<br>다음에 다시 이용해 주세요.</span>
+	</div>
+	<div class="order_none">
+		<span>
+			아직 발송 요청 전입니다.<br>모든 상품을 담으신 후 발송요청 해 주세요.
+			<span class="btn_area">
+				<a href="#" class="btn">담은 상품 보기</a>
+				<a href="#" class="btn submit">쇼핑 계속 하기</a>
+			</span>
+		</span>
+	</div>
+	<div class="order_deal_lst detail">
+		<ul class="deal_lst2">
+			<li>
+				<div class="left_area">
+					<img src="http://d1.tmonc.net/~nbass/?314x334_woman_n_FFFFFF_100">
+				</div>
+				<div class="right_area">
+					<a class="product_name">[MANGO] FRANCE SWEAT SHIRT WHITE FRANCE SWEAT SHIRT WHITE</a>
+					<div class="option_area">
+						<span class="option">화이트</span><span class="option">66</span>
+						<span class="quantity"><em>1</em>개(취소요청 <em>1</em>개)</span>
+					</div>
+					<div class="price_area">
+						<span class="price"><strong>149,000</strong>원</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="left_area">
+					<img src="http://d1.tmonc.net/~nbass/?314x334_woman_n_FFFFFF_100">
+				</div>
+				<div class="right_area">
+					<a href="" class="product_name">[MANGO] FRANCE SWEAT</a>
+					<div class="option_area">
+						<span class="option">화이트</span><span class="option">66</span>
+						<span class="quantity"><em>2</em>개</span>
+					</div>
+					<div class="price_area">
+						<span class="price"><strong>149,000</strong>원</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="status">
+			<strong>배송완료</strong>
+			<a href="#" class="btn_tracking">배송조회</a>
+		</div>
+	</div>
+	<div class="order_title">
+		<h3>결제정보</h3>
+	</div>
+	@@include('./ui/wear/order_pay.html')
+	<div class="order_title">
+		<h3>배송지 정보</h3>
+		<button type="button" class="btn_modify fr">정보수정</button>
+	</div>
+	@@include('./ui/wear/order_dest.html')
+	@@include('./ui/wear/order_dest_input.html')
+	
+</div>
+@@include('mWhiteLayout-footer.html')
+
+</body>
+</html>

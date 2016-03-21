@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+$search-bar-height:86px;
+$search-bar-height-home:65px;
+
+
+.search_result{
+  padding-top:62px;
+}
+
+.search_result.noAssociatedKeyword{
+  padding-top:62px;
+}
+
+.search_result.associatedKeyword{
+	padding-top:88px;
+}
+
+// 상단 고정 검색바
+.search{
+  &._onScroll{
+	.hdr{
+	  border-bottom:1px solid #bababa;
+	}
+  }
+}
+.search{
+	.hdr{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:auto;
+		//height:$search-bar-height;
+		background:#fff;
+		border-bottom:1px solid #bababa;
+		text-align:left;
+	}
+	.search_area{
+		padding:15px 15px 17px 49px;
+
+		&.home{
+			padding-left:15px;
+		}
+		&.on{
+			.del{
+			  display:block;
+			}
+		}
+	}
+	.search_bar{
+		position:relative;
+		padding-right:50px;
+
+		.inp{
+			width:100%;
+			height:29px;
+			padding:0 20px 0 5px;
+			border-style: solid;
+			border-width:0 0 2px;
+			border-color:$search-point-color;
+			border-radius:0;
+			font-size:19px;
+		  	color:#000;
+			-webkit-appearance:none;
+			line-height:19px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+
+			&::-webkit-search-cancel-button{
+				display:none
+			}
+
+		  	&.on{
+			  	font-weight:bold;
+		  	}
+		}
+		.go{
+			position:absolute;
+			top:-4px;
+			right:0;
+			width:38px;
+			height:38px;
+			background:$search-point-color;
+			border-radius:20px;
+
+			&:after{
+				@include sp-search('ico_search');
+
+				display:block;
+				position:absolute;
+				top:10px;
+				left:10px;
+				content:'';
+			}
+		}
+		.del{
+		  	display:none;
+			position:absolute;
+			top:0;
+			right:50px;
+			width:20px;
+			height:20px;
+
+			&:after{
+				@include sp-search('ico_search_del');
+
+				display:block;
+				position:absolute;
+				top:5px;
+				left:5px;
+				content:'';
+			}
+		}
+	}
+
+	// 이전 페이지 가기 버튼
+	.top{
+		.prv{
+			top:5px;
+			left:1px;
+		  	padding:14px;
+
+			&:after{
+				@include sp-search('ico_search_back');
+				display:block;
+				content:'';
+			}
+		}
+	}
+}

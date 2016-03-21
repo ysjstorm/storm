@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+.ticket_notice.only_tkt_main {
+	position: relative;
+	height: 175px;
+	box-sizing: border-box;
+	
+	.wear_deco_area {
+		.skyblue {
+			top: -18px;
+			left: -65px;
+		}
+		.bluish_green {
+			top: -50px;
+			right: -130px;
+		}
+		.pink {
+			left: -5px;
+			bottom: -73px;
+		}
+		.blue {
+			bottom: 5px;
+			right: -33px;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.lst_tkt{
+	@include after();
+	li{
+		float:left;
+		box-sizing: border-box;
+		img{
+			width:100%;
+		}
+	}
+	@media screen and (min-width: 480px){
+		li{
+			width:50%;
+			padding-left:1px;
+			&:nth-child(2n-1){
+				padding-right:1px;
+				padding-left:0;
+			}
+		}
+	}
+}
+
+.relation_deal{
+	h4{
+		text-align:center;
+		i{
+			overflow: hidden;
+			line-height:999px;
+			vertical-align:top;
+		}
+		&.t_arrival i{
+			margin:60px 0 32px;
+			@include sp-wear('txt_newarrival');
+		}
+		&.t_chance i{
+			margin:24px 0 32px;
+			@include sp-wear('txt_lastchance');
+		}
+	}
+	.deal_lst4{
+		overflow:hidden;
+		margin: 0 15px;
+		//overflow-x:auto;
+		//width:100%;
+		ul{
+			overflow:hidden;
+			//min-width:200%;
+			//padding:0 12px 0 13px;
+		}
+		li{
+			display:inline-block;
+			float:left;
+			//padding:0 3px 0 2px;
+			width:137px;
+			
+		}
+	}
+	.line1{
+		position:relative;
+		margin-top:30px;
+		text-align: center;
+		&:before{
+			position:absolute;
+			top:20px;
+			left:15px;
+			right:15px;
+			border-top:2px solid #ebebeb;
+			content:'';
+		}
+		&:after{
+			position:relative;
+			@include sp-wear('ticket5-triangle');
+			content:'';
+		}
+	}
+	.line2{
+		margin:40px 0;
+		@include after();
+		&:before{
+			@include sp-wear('ticket5-triangle2');
+			content:'';
+		}
+		&:after{
+			float:right;
+			transform:rotate(180deg);
+			-webkit-transform:rotate(180deg);
+			@include sp-wear('ticket5-triangle2');
+			content:'';
+		}
+	}
+}

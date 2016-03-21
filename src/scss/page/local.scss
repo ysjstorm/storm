@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// common
+@import "./local/common";
+
+// local_top
+@import "./local/local_top";
+@import "./local/submenu";
+@import "./local/gps_off";
+@import "./local/no_deal";
+
+// 딜 리스트
+@import "./common/loading_deal_list";
+@import "./deallist/deal_item";
+@import "./local/deal_list";
+@import "./local/banner";
+
+// 딜 정렬 레이어
+@import "./common/ly_sort";
+
+// 즐겨찾기 레이어
+@import "./local/ly_favorite";
+
+// collection
+@import "./local/collection_top";
+@import "./common/ly_collection_share";
+
+// 지역선택화면
+@import "./local/select_loc";
+
+// 레이아웃은 항상 최하단에 위치하게 해주세요
+@import "./local/layout";

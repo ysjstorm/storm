@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+// 구매내역
+.my_his_nav {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0 -1px 4px 2px rgba(0, 0, 0, .3);
+
+    ul {
+        position: relative;
+        overflow: hidden;
+        width: 101%;
+    }
+
+    li {
+        float: left;
+        width: 25%;
+
+        a {
+            display: block;
+            position: relative;
+            height: 45px;
+            font-weight: bold;
+            font-size: .95em;
+            color: #000;
+            text-align: center;
+            line-height: 45px
+        }
+
+        &.on a {
+            color: #fa5a44;
+            box-shadow: inset 0 -4px #fa5a44
+        }
+    }
+}
+
+.my_his_sec {
+    margin-top: 6px;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.my_his_title {
+    position: relative;
+    height: 29px;
+    padding: 10px 12px 6px;
+    border-top: 1px solid #222;
+    -webkit-box-shadow: 0 em(-.5px, 14px) 0 0 #222;
+    box-shadow: 0 em(-.5px, 14px) 0 0 #222;
+    background-color: #f6f6f6;
+}
+
+.my_his_tx1 {
+    position: relative;
+    top: -1px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1;
+    color: #222;
+
+    .num {
+        font-size: 13px;
+    }
+}
+
+.my_his_tx2 {
+    position: relative;
+    top: -3px;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #717171;
+}
+
+.my_his_det {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    margin-top: em(-15.5px, 11px);
+    padding: 0 11px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 3;
+
+    &:after {
+        @include sp-mosaic('my_his_det');
+        margin-left: 6px;
+        vertical-align: middle;
+        content: '';
+    }
+}
+
+.my_his_item {
+    padding: 12px 0 10px 12px;
+    font-size: em(13.5px, 14px);
+
+    .item_txt {
+        display: block;
+    }
+
+    em {
+        position: relative;
+        top: -2px;
+        font-size: 11px;
+    }
+}
+
+.my_caution {
+    padding: 10px 0;
+    font-size: .85em;
+    color: #999;
+    text-align: center;
+}
+
+// 환불계좌
+.my_add_acnt {
+    padding: 10px;
+    background-color: #fbfbfc;
+    border-bottom: 1px solid #cbcbcc;
+    text-align: center;
+
+    .go {
+        display: block;
+        height: 31px;
+        margin-top: 15px;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#eaeaea));
+        border: 1px solid #ababab;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 31px;
+    }
+
+    .tx {
+        padding-top: 14px;
+        font-weight: bold;
+        font-size: 1.15em;
+        color: #222;
+    }
+
+    .hl {
+        color: #ff2a00;
+    }
+
+    .tx2 {
+        font-size: .9em;
+        color: #222;
+    }
+}
+
+.my_comp_pnt {
+    position: relative;
+    z-index: 5;
+    padding: 13px 15px 8px 64px;
+    min-height: 39px;
+    background-color: #e9effb;
+    border-bottom: 1px solid #cdd3e0;
+    font-size: .95em;
+    color: #212224;
+    line-height: 1.25em;
+
+    .tx strong {
+        display: block;
+    }
+
+    .hl {
+        color: #1a85d7;
+    }
+
+    .dtl {
+        display: inline-block;
+        margin-left: -6px;
+        padding: 6px;
+        font-size: .95em;
+        color: #747577;
+    }
+
+    .dtl:after {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin-left: 2px;
+        border: solid #a9abaf;
+        border-width: 0 1px 1px 0;
+        -webkit-transform: rotate(-45deg);
+        vertical-align: 1px;
+        content: '';
+    }
+
+    .ico_pnt {
+        position: absolute;
+        top: 15px;
+        left: 17px;
+        padding: 10px 8px 8px 10px;
+        background-color: #9bc7ee;
+        border-radius: 50%;
+
+        &:after {
+            @include sp-mosaic("my_comp_pnt");
+            vertical-align: top;
+            content: '';
+        }
+    }
+}
+
+// 배송지연
+.my_comp_pnt2 {
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    min-height: 39px;
+    padding: 17px 15px 5px 68px;
+    background-color: #ffecdd;
+    border-bottom: 1px solid #fbbd87;
+    font-size: .95em;
+    color: #212224;
+    line-height: 1.25;
+
+    .ico_pnt2 {
+        @include sp-mosaic("my_comp_pnt2");
+        position: absolute;
+        top: 15px;
+        left: 17px;
+    }
+
+    .hl {
+        color: #f34d1c;
+    }
+
+    .tx2 {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .tx3 {
+        padding-top: 4px;
+        font-size: .85em;
+        color: #7e7e7e;
+    }
+
+    .tx4 {
+        padding-top: 6px;
+        font-weight: bold
+    }
+
+    .tx4:before {
+        display: block;
+        width: 100%;
+        height: 9px;
+        padding-right: 20px;
+        border-top: 1px solid #fdccb6;
+        content: '';
+    }
+
+    .dtl {
+        display: inline-block;
+        margin: -3px 0 0 -6px;
+        padding: 6px;
+        font-size: .95em;
+        color: #747577;
+    }
+
+    .dtl:after {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin-left: 2px;
+        border: solid #a9abaf;
+        border-width: 0 1px 1px 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        vertical-align: 1px;
+        content: '';
+    }
+}
+
+/* EAN 패키지 할인 버튼 */
+.btn_hotel_pkg{
+    position:relative;
+    display:inline-block;
+    width:100%;
+    height:31px;
+    border:1px solid #f96a57;
+    border-radius:2px;
+    background:#fff;
+    line-height:31px;
+    font-size:.9285em;// 13px/14px
+    text-align:center;
+    box-sizing:border-box;
+
+    &:after{
+        @include sp-mosaic("bu_pkg_more_arrow");
+
+        display:inline-block;
+        margin-left:6px;
+        vertical-align:3px;
+        content:'';
+    }
+
+    span{
+        color:#fa5a44;
+
+        &:before{
+            content:"'";
+        }
+        &:after{
+            margin-right:5px;
+            content:"'";
+        }
+    }
+}

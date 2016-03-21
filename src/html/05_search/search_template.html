@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: Search</title>
+<link rel="stylesheet" href="../../css/search.css"/>
+	<script src="../../js/lib/jquery-2.1.3.min.js"></script>
+	<script src="../../js/search/iscroll.js"></script>
+	<script src="../../js/search/jquery.owl.carousel.js"></script>
+</head>
+<body class="search search_result">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+
+	<!-- 상단 공통 검색바 -->
+	@@include('ui/search/search_header.html')
+	<!-- //상단 공통 검색바 -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="ct">
+		<!-- 최근검색어(검색 내역 없을 경우) -->
+		<!--@@include('ui/search/search_latest_no.html')-->
+		<!-- 내가 구매한 상품 -->
+		@@include('ui/search/bought_product.html')
+		<!-- EAN 통합검색 -->
+		@@include('ui/search/search_ean.html')
+		<!-- 검색 카테고리 1 -->
+		@@include('ui/search/search_category.html')
+		<!-- 검색 필터 1 -->
+		@@include('ui/search/search_filter_1.html')
+		<!-- 검색결과없음 -->
+		@@include('ui/search/search_result_no.html')
+		<!-- 검색결과 딜 리스트(호텔 타입, 롤링배너 포함) -->
+		@@include('ui/search/search_result_deal_list.html')
+		<!-- 인기 검색어 1단 -->
+		@@include('ui/search/search_popular_keyword1.html')
+		<!-- 인기 검색어 2단 -->
+		@@include('ui/search/search_popular_keyword2.html')
+		<!-- 로딩 -->
+		@@include('ui/search/search_loading.html')
+		<!-- 추천상품 -->
+		@@include('ui/search/search_recommand.html')
+	</div>
+	<!-- //컨텐츠 영역 -->
+	<!-- TOP 버튼 -->
+	@@include('ui/common/top_btn.html');
+	<!-- [D] test script -->
+	<!-- TODO :: UI 이전 완료 후 정리 -->
+	<script>
+		$('body').append('<style>.guide{position:fixed;bottom:0;left:0;z-index:1000} .guide em{display:inline-block;width:60px;height:60px;margin-right:1px;background:rgba(0,0,0,.5);font-size:.85em;color:#fff;text-align:center;line-height:60px}</style> <div class="guide"><em>i &#8596; a</em></div>');
+		$('.guide em').click(function() {
+			if($('html').hasClass('i')) {
+				$('html').removeClass('i').addClass('a');
+			} else {
+				$('html').addClass('i').removeClass('a');
+			}
+		})
+
+		$(".crslinr").css({"width": $(".crslinr .itm").length * 128});
+//		$('.search_cate:eq(0) .itm').click(function() { $(this).addClass('on').siblings().removeClass('on'); })
+//		$('.search_sort .sel').click(function() { $(this).parent().toggleClass('open'); })
+//		$('.search_sort .opts a').click(function() { $(this).addClass('cur').siblings().removeClass(); })
+//
+//		$itmcnt = $('.crslinr .itm').length;
+//		$('#carousel .crslinr').css({width: 128*$itmcnt+'px'});
+//		window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+//		function loaded() {
+//			var myScroll = new iScroll('carousel', {hScrollbar:false,onBeforeScrollStart:null});
+//		}
+
+//		var owltab = $('#owlcarousel');
+//		owltab.owlCarousel({
+//			items:3,
+//			nav:false,
+//			dots:false
+//		});
+//		$('.search_cate:eq(1) .prv').click(function() {
+//			owltab.trigger('prev.owl.carousel');
+//		})
+//		$('.search_cate:eq(1) .nxt').click(function() {
+//			owltab.trigger('next.owl.carousel');
+//		})
+//		$('#owlevent').owlCarousel({
+//			items:1,
+//			autoHeight:false,
+//			dots:false
+//		});
+		// 연관 검색어
+		$(".btn_toggle_assoc_keywords").on('click', function(e){
+			$(".assoc_keywords").toggleClass("on");
+		})
+
+		// 검색헤더 보더추가
+//		var chkScrollStatus = function(e){
+//			var nChkPos = $(".assoc_keywords").outerHeight();
+//			var nCurrentPos = $(this).scrollTop();
+//			console.log("체크높이"+nChkPos);
+//			console.log("현재위치 : "+nCurrentPos)
+//			if(nCurrentPos > nChkPos){
+//				$("body").addClass("_onScroll");
+//				$(".hdr").css({"border-bottom":"1px solid #bababa"});
+//			}else{
+//				$("body").removeClass("_onScroll");
+//				$(".hdr").css({"border-bottom":"none"});
+//			}
+//		};
+//
+//		$(window).on('scroll', chkScrollStatus)
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+$rgb_bd: #e4e4e4; // border color
+$rgb_txt: #151719; // text color
+
+.local_top {
+	position: relative;
+	background: #fff;
+	border-bottom: 1px solid $rgb_bd;
+	line-height: 45px;
+	
+	.where {
+		height: 45px;
+		padding: 0 185px 0 15px;
+		@include txt_bold(13, $rgb_txt);
+	}
+	button {
+		position: absolute;
+		top: 0;
+		height: 45px;
+		border-left: 1px solid $rgb_bd;
+		@include txt_bold(13, $rgb_txt);
+		
+		&:before {
+			content: "";
+			margin-right: 5px;
+			vertical-align: top;
+		}
+	}
+	.btn_here {
+		right: 91px;
+		width: 82px;
+		
+		&:before {
+			@include sp-local("ic_here");
+		}
+	}
+	.btn_select_loc {
+		right: 0;
+		width: 90px;
+		
+		&:before {
+			@include sp-local("ic_select_loc");
+		}
+	}
+}

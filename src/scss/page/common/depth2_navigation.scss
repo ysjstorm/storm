@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+.top_depth2 {
+  &:before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    box-shadow: 0 -1px 4px 2px rgba(0,0,0,.25);
+    content: '';
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: #fff;
+    content: '';
+  }
+
+  position: relative;
+  height: 45px;
+  z-index:10;
+  border-top:1px solid #dbdbdb;
+  background-color: #fff;
+  overflow:hidden;
+  box-shadow:0 6px 5px -5px rgba(0, 0, 0, 0.25);
+  .snb {
+    overflow: hidden;
+    overflow-x: scroll;
+    position: relative;
+    z-index: 10;
+    a {
+      display: inline-block;
+      position: relative;
+      float: left;
+      height: 45px;
+      padding: 0 15px;
+      font-size: 1.1em;
+      color: #333;
+      line-height: 46px;
+      &.on {
+        color: #fa5a44;
+        &:after {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: #fa5a44;
+          content: '';
+        }
+      }
+    }
+  }
+  .snbwp {
+    position: relative;
+    width: 200%;
+  }
+  .bt {
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    width: 44px;
+    height: 45px;
+    .icon_left,
+    .icon_right {
+      margin-top: 2px;
+      margin-left: 10px;
+      vertical-align: top;
+      font-size:0;
+      overflow:hidden;
+    }
+  }
+  .prv {
+    left: 0;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#fff), color-stop(50%, #fff), to(rgba(255, 255, 255, .1)));
+    text-align: left;
+    .icon_left{
+      margin-left: 10px;
+      @include sp-common('depth2-icon_arrow_list_left');
+    }
+  }
+  .nxt {
+    right: 0;
+    background: -webkit-gradient(linear, 100% 0, 0 0, from(#fff), color-stop(50%, #fff), to(rgba(255, 255, 255, .1)));
+    text-align: right;
+    .icon_right{
+      margin-right: 10px;
+      @include sp-common('depth2-icon_arrow_list_right');
+    }
+  }
+}

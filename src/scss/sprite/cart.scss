@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+%sp-cart {
+    background: url('../im/sp-cart.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(681px/2) (267px/2);
+    -webkit-background-size:(681px/2) (267px/2);
+}
+
+@mixin sp-cart($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-cart, $filename);
+    @extend %sp-cart;
+	@include sp-mosaic-base($sp-cart, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-cart: (
+    spritesheet_name: sp-cart,
+    bt_del: (offset_x: -481px, offset_y: -36px, width: 24px, height: 24px),
+    icon_coupon_dc: (offset_x: -342px, offset_y: -36px, width: 77px, height: 57px),
+    icon_important_gray: (offset_x: -509px, offset_y: -36px, width: 20px, height: 20px),
+    icon_important_org: (offset_x: -533px, offset_y: -36px, width: 20px, height: 20px),
+    icon_mart: (offset_x: -423px, offset_y: -36px, width: 54px, height: 38px),
+    icon_mascot: (offset_x: 0, offset_y: 0, width: 160px, height: 160px),
+    logo_wear: (offset_x: 0, offset_y: -164px, width: 145px, height: 103px),
+    mo_19: (offset_x: -164px, offset_y: 0, width: 174px, height: 118px),
+    wear_tit: (offset_x: -342px, offset_y: 0, width: 339px, height: 32px),
+);

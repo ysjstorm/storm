@@ -1,0 +1,768 @@
+@charset "UTF-8";
+
+// 티켓상품
+.my_tickets {
+    .cltbl + & {
+        margin-top: 10px;
+    }
+
+    // 프리덤딜 직원제시쿠폰
+    .frd_cpn {
+        text-align: center;
+
+        .cpn_header {
+            display: block;
+            width: 100%;
+            height: 37px;
+            line-height: 37px;
+            border: 1px solid #6f727b;
+            border-bottom: 0;
+            border-radius: 3px 3px 0 0;
+            color: #fff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: #7c7f89;
+            vertical-align: top;
+
+            .ico_arr {
+                @include sp-mosaic('ico_frd_arr_up');
+                margin-left: 7px;
+            }
+        }
+
+        .cpn_info {
+            padding: 20px 0;
+            border: 1px solid #ddd;
+            border-top: 0;
+            border-radius: 0 0 3px 3px;
+
+            strong {
+                font-size: 1.2em;
+                color: #000;
+            }
+
+            p {
+                margin-top: 2px;
+                color: #828282;
+            }
+        }
+
+        .ico_attn {
+            @include sp-mosaic('ico_frd_attn');
+            margin-right: 3px;
+            vertical-align: middle;
+        }
+
+        .btn_use {
+            display: inline-block;
+            width: 160px;
+            height: 31px;
+            margin-top: 14px;
+            border-radius: 14px;
+            line-height: 31px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: -.02em;
+            background-color: #1ad0c5;
+        }
+
+        // 닫혀있을 때
+        &.fold {
+            .cpn_info {
+                display: none;
+            }
+
+            .cpn_header {
+                border: 1px solid #6f727b;
+                border: 0;
+                border-radius: 3px;
+                background-color: #fa5a44;
+
+                .ico_arr {
+                    @include sp-mosaic('ico_frd_arr_dn');
+                }
+            }
+        }
+    }
+}
+
+.my_ticket {
+    position: relative;
+    min-height: 50px;
+    margin: 9px 0;
+    padding-top: 19px;
+    background-color: #ecedef;
+    border: solid #d4d5d7;
+    border-width: 0 1px 1px;
+    border-radius: 4px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    &:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        z-index: 10;
+        width: 100%;
+        height: 18px;
+        border: solid rgba(0, 0, 0, .1);
+        border-width: 1px 1px 0;
+        border-radius: 4px 4px 0 0;
+        content: '';
+    }
+
+    .my_ticket_tit {
+        display: block;
+        font-weight: bold;
+        font-size: 1.25em;
+        color: #4a4c55;
+        text-align: center;
+
+        a {
+            display: block;
+            font-weight: bold;
+            color: #4a4c55;
+
+            span {
+                display: inline-block;
+                overflow: hidden;
+                padding: 14px 12px 12px;
+            }
+        }
+
+    }
+
+    .my_ticket_no {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -1px;
+        left: -1px;
+        height: 19px;
+        background-color: #7c7f89;
+        border-radius: 4px 4px 0 0;
+        font-size: .85em;
+        color: #fff;
+        line-height: 19px;
+        text-indent: 64px;
+
+        .txt_no {
+            font-size: .9em;
+            letter-spacing: 0;
+            vertical-align: 1px;
+        }
+    }
+
+    .my_ticket_detail {
+        position: relative;
+        padding: 10px 13px;
+        border-top: 1px dotted #d6d7da;
+        font-size: .85em;
+        color: #8e939b;
+        letter-spacing: 0;
+
+        span {
+            margin-left: 4px;
+            font-weight: bold;
+            color: #4a4c55;
+        }
+    }
+
+    .my_ticket_date {
+        display: block;
+        color: #8e939b;
+        letter-spacing: 0;
+    }
+
+    .my_ticket_count {
+
+        &:only-child {
+            padding: 0;
+        }
+
+        span {
+            margin: 0;
+            font-weight: normal;
+
+            &:nth-child(1) strong {
+                color: #ff2a00;
+            }
+
+            &:not(:first-child):before {
+                margin: 0 6px 0 3px;
+                font-size: .9em;
+                color: #d9dadc;
+                content: '|';
+            }
+        }
+
+        .hl {
+            margin-left: 4px;
+            letter-spacing: 0;
+        }
+    }
+
+    .btn_ticket_detail {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        margin-top: -13px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 0 8px;
+        line-height: 23px;
+        border: 1px solid #caced6;
+        background-color: #f6f6f7;
+        color: #393939;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .my_ticket_status {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        z-index: 10;
+        height: 19px;
+        padding: 0 10px 0 9px;
+        background: #e8451f;
+        border-radius: 4px 0 0;
+        font-weight: bold;
+        font-size: .75em;
+        color: #fff;
+        line-height: 19px;
+        text-indent: 0;
+    }
+
+    .my_ticket_barcode {
+        padding-bottom: 12px;
+        font-size: .85em;
+        font-weight: bold;
+        text-align: center;
+
+        a {
+            display: inline-block;
+        }
+
+        .inr {
+            display: inline-block;
+            padding: 8px 75px;
+            background-color: #fff;
+            border: 1px solid #bdbdbd;
+            box-shadow: 0 1px #e0e1e3;
+
+            &:before {
+                @include sp-mosaic('ico_barcode');
+                margin: 0 8px 2px 0;
+                vertical-align: middle;
+                content: '';
+            }
+        }
+    }
+
+    // 프리덤딜 free 아이콘
+    .frd_label {
+        position: relative;
+        top: 2px;
+        display: inline-block;
+        width: 45px;
+        height: 20px;
+        margin-right: 2px;
+        border-radius: 9px;
+        color: #fff;
+        font-size: .6em;
+        font-weight: bold;
+        line-height: 20px;
+        letter-spacing: -.01em;
+        text-align: center;
+        vertical-align: top;
+        background-color: #fc542e;
+    }
+
+    &.end {
+        border-color: #dadde2;
+
+        .my_ticket_tit {
+            min-height: 52px;
+            color: #c0c0c0;
+
+            span {
+                display: inline-block;
+                position: relative;
+                padding: 14px 12px 12px;
+                text-decoration: line-through;
+            }
+        }
+
+        .my_ticket_no {
+            background-color: #b1b3ba;
+        }
+
+        .my_ticket_detail,
+        .my_ticket_detail .hl,
+        .my_ticket_date {
+            color: #b1b3bd;
+        }
+
+        .my_ticket_status {
+            background-color: #9397a4;
+        }
+
+        .my_ticket_barcode {
+            .inr {
+                color: #c0c0c0;
+                background-color: #ecedef;
+
+                &:before {
+                    @include sp-mosaic('ico_barcode_end');
+                }
+            }
+        }
+
+        .my_ticket_count span {
+            color: #b1b3bd;
+        }
+    }
+
+    &.wait {
+        padding-top: 0;
+        border-color: #dadde2;
+
+        .my_ticket_tit {
+            min-height: 52px;
+            color: #c0c0c0;
+
+            span {
+                display: inline-block;
+                position: relative;
+                padding: 14px 12px 12px;
+            }
+        }
+    }
+}
+
+// 숙박딜
+.my_ticket_stay {
+    position: relative;
+    height: 29px;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    border: 1px solid #7c7f89;
+    background-color: #f9f9f9;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#f9f9f9));
+    text-align: center;
+
+    // 티켓 번호
+    .no {
+        font-size: 1.6em;
+        color: #7c7f89;
+        letter-spacing: 0;
+
+        sup {
+            font-size: .85rem;
+            letter-spacing: 0;
+            vertical-align: 9px;
+        }
+
+        s {
+            text-decoration: line-through;
+        }
+    }
+
+    // 업체확인 중
+    strong {
+        font-size: 1rem;
+        color: #7c7f89;
+        line-height: 29px;
+
+        .cl_point {
+            margin-left: 13px;
+        }
+    }
+
+    &.end {
+        border-color: #dadde2;
+
+        .no {
+            color: #c1c1c1;
+
+            s {
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
+/*탑승권 환불*/
+.my.prch {
+    padding:0 !important;background-color:#fff;margin-bottom:-6px;
+
+    .passenger_info {
+        padding: 0 0 20px
+    }
+    .depart {
+        padding: 15px;
+        background: #fcfbfb;
+        border-bottom: 1px solid #e4e4e8
+    }
+    .depart .deal_name {
+        font-size: 13px;
+        font-weight: bold;
+        color: #363940
+    }
+    .depart .deal_desc {
+        padding-top: 8px;
+        font-size: 11px;
+        color: #6a6c71
+    }
+    .inner_content {
+        padding: 10px 17px
+    }
+    .btn_infant {
+        position: relative;
+        display: inline-block;
+        width: 108px;
+        height: 28px;
+        line-height: 25px;
+        font-size: 12px;
+        color: #363940;
+        text-align: center;
+        border: 1px solid #dfe2e6
+    }
+    .btn_infant .ico_plus {
+        position: relative;
+        top: 1px;
+        left: -3px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-position: -151px -119px
+    }
+    .lst_passenger .passenger {
+        margin-top: 10px;
+        padding: 12px;
+        border: 1px solid #cdcdcd;
+        background: #fcfbfb
+    }
+    .lst_passenger .tit_category {
+        height: 27px;
+        font-size: 15px;
+        line-height: 27px;
+        font-weight: bold;
+        color: #363940
+    }
+    .lst_passenger .passenger_btn {
+        float: right;
+        display: inline-block;
+        width: 48px;
+        height: 27px;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 23px;
+        border: 1px solid #cdcdcd;
+        border-radius: 2px;
+        background: #fff
+    }
+    .lst_passenger .passenger_btn.delete {
+        margin-right: 4px;
+        text-align: center
+    }
+    .lst_passenger .passenger_btn.complete {
+        overflow: hidden;
+        border: 1px solid #fa5a44;
+        color: #fa5a44;
+        font-size: 13px
+    }
+    .lst_passenger .passenger_btn .ico_p_chk {
+        display: inline-block;
+        margin: 0 3px;
+        width: 10px;
+        height: 10px;
+        background-position: -170px -120px
+    }
+    .lst_passenger .passenger .passenger_desc {
+        overflow: hidden;
+        margin-top: 6px;
+        font-size: 0
+    }
+    .lst_passenger .passenger dt {
+        float: left;
+        margin-top: 6px;
+        width: 108px;
+        height: 28px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #6a6c71
+    }
+    .lst_passenger .passenger dt em {
+        font-size: 10px;
+        color: #999
+    }
+    .lst_passenger .passenger dd {
+        overflow: hidden;
+        margin-top: 6px;
+        height: 28px
+    }
+    .lst_passenger .selwp {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 28px;
+        margin-right: 8px;
+        border: 1px solid #cacaca;
+        background: #fff
+    }
+    .lst_passenger .selwp.disabled {
+        background: #fcfbfb
+    }
+    .lst_passenger .selwp select {
+        position: relative;
+        padding-bottom: 3px;
+        z-index: 10;
+        width: 100%;
+        height: 26px;
+        background: transparent;
+        border: 0;
+        padding-left: 3px;
+        letter-spacing: -1px;
+        font-size: 13px;
+        color: #363940;
+        vertical-align: top;
+        -webkit-appearance: none
+    }
+    .lst_passenger .selwp .spr_ct {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        width: 26px;
+        height: 26px;
+        border-left: 1px solid #cacaca;
+        background-color: #f9f8f8;
+        background-position: -115px -50px
+    }
+    .lst_passenger .selwp.disabled .spr_ct {
+        background-position: -115px -120px
+    }
+    .lst_passenger .inpwp {
+        overflow: hidden
+    }
+    .lst_passenger .inpwp .selwp {
+        float: right;
+        margin-right: 0;
+        width: 49%
+    }
+    .lst_passenger .passenger_txt {
+        padding-left: 7px;
+        width: 49%;
+        height: 28px;
+        line-height: 28px;
+        font-size: 13px
+    }
+    .lst_passenger .passenger_txt[disabled] {
+        background: #fcfbfb
+    }
+    .lst_passenger .passenger_txt:first-child {
+        float: left
+    }
+    .lst_passenger .passenger_txt:last-child {
+        float: right
+    }
+    .passenger_info .passenger_nt {
+        position: relative;
+        padding-left: 18px;
+        font-size: 0.8em
+    }
+    .passenger_info .passenger_nt .spr_ct {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        background-position: -90px 0;
+        vertical-align: middle
+    }
+    .passenger_info .passenger_nt strong {
+        font-weight: normal;
+        color: #f73d18
+    }
+    .passenger_info .passenger_nt .link_nt {
+        margin-left: 6px;
+        color: #f7350f;
+        text-decoration: underline
+    }
+    .passenger_info .passenger_nt .link_nt:after {
+        display: inline-block;
+        position: relative;
+        margin-left: 4px;
+        border-style: solid;
+        border-width: 4px 0 4px 4px;
+        border-color: transparent #f73d18;
+        content: ''
+    }
+    .passenger_info .plst li:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        height: 2px;
+        width: 2px;
+        background-color: #868c93
+    }
+    .passenger_info .wrap_passenger_nt {
+        overflow: hidden;
+        padding: 0 17px
+    }
+    .passenger_info .passenger_nt {
+        margin-top: 18px;
+        padding: 15px 0;
+        border-top: 1px solid #ededf1;
+        font-size: 1em
+    }
+    .passenger_info * {
+        box-sizing: border-box
+    }
+}
+.my{
+    .passenger_info{
+        .h_pass_nt {
+            position: relative;
+            padding-left: 21px;
+            font-size: 0.9em;
+            color: #f73d18
+        }
+        .h_pass_nt .spr_ct {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background-position: -90px 0;
+            vertical-align: middle
+        }
+        .plst {
+            padding: 0 21px
+        }
+        .plst li {
+            position: relative;
+            margin-top: 10px;
+            padding-left: 8px;
+            font-size: 0.85em;
+            color: #999
+        }
+        .plst li:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            height: 2px;
+            width: 2px;
+            background-color: #868c93;
+        }
+        .plst li strong {
+            font-weight: normal;
+            color: #363940
+        }
+        .btn_area {
+            margin-top: 12px;
+            text-align: center
+        }
+        .btn_area .bt_gry {
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            border-color: #b6bbc6 #a6acb7 #989ea9;
+            background-color: #e7e9ee;
+            font-size: 1em;
+            text-align: center;
+            box-shadow: 0 1px #ccc
+        }
+    }
+}
+
+
+/* 항공딜 탑승객 환불 요청 */
+.passenger_claim{
+    .it_all{
+        overflow:hidden;position:relative;height:33px;line-height:33px;
+        .ipc {
+            position: absolute;
+            top: 0;
+            left: -20px
+        }
+        .lbl {
+            display: inline-block;
+            width: 35px;
+            height: 30px;
+            font-weight: bold;
+            color: #444
+        }
+        .lbl .no {
+            margin-left: 2px;
+            font-weight: bold;
+            color: #ff4300
+        }
+        .lbl .spr_ct {
+            position: relative;
+            width: 22px;
+            height: 20px;
+            margin: 0 5px 0 5px;
+            background-position: -250px -44px;
+            vertical-align: -4px;
+        }
+        .lbl.on .spr_ct{
+            background-position:-276px -44px;
+        }
+    }
+}
+
+.passenger_claim{
+    .tbl_dl1.ticket_info dt {
+        color: #000
+    }
+    .tbl_dl1.ticket_info:last-of-type {
+        padding-top: 0;
+        border-top: none;
+        margin-bottom: 18px !important
+    }
+    .tbl_dl1 dd.tb_refund_passenger {
+        margin-top: 30px;
+        padding: 0
+    }
+    .tb_refund_passenger table {
+        border-collapse: collapse;
+        border-top: 1px solid #999ca4
+    }
+    .tb_refund_passenger th {
+        border-bottom: 1px solid #dfe2e6;
+        text-align: left;
+        line-height: 33px;
+        font-size: 11px;
+        color: #8f9198;
+        background: #fafafa
+    }
+    .tb_refund_passenger td {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-bottom: 1px solid #eeeef0
+    }
+    .tb_refund_passenger tr:last-of-type td {
+        border-bottom: 1px solid #dfe2e6
+    }
+}
+
+.clbox_wrap{
+    .warn_infant{
+        margin:20px 0 0px;
+        color:#999;
+        font-size:12px;
+        text-align:center
+    }
+}

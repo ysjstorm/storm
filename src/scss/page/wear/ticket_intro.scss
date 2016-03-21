@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+.tkt_intro {
+	position: relative;
+	max-width: 1075px;
+	min-width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	.gallery {
+		position: relative;
+		width: 100%;
+		height: 300px;
+		margin-top: 31px;
+		overflow: hidden;
+		text-align: center;
+		opacity: 0;
+		
+		li {
+			display: inline-block;
+			float: left;
+			position: relative;
+			margin: 0 7px 0 8px;
+			width: 254px;
+			height: 270px;
+			border: 1px solid #000;
+			box-shadow: 5px 5px 0 #000;
+			vertical-align: middle;
+			overflow: hidden;
+			
+			a {
+				&, & img {
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+				.detail {
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 20px;
+					margin: 0 auto;
+					text-align: center;
+					line-height: 1.5;
+					z-index: 5;
+					
+					em.br_name {
+						display: block;
+						color: #999;
+					}
+				}
+			}
+			&.small {
+				width: 191px;
+				height: 203px;
+				margin-top: 50px;
+				box-shadow: 3px 3px 0 #000;
+			    overflow: hidden;
+			}
+		}
+		&.only {
+			width: 279px !important;
+			margin: auto;
+			
+			li {
+				float: !important;
+				position: static;
+				margin: 0 auto;
+			}
+		}
+	}
+	
+	.ticket_notice {
+		margin-top: -3px;
+		padding-top: 0;
+		
+		.btn{
+			display: block;
+			margin: 10px auto 0;
+		}
+	}
+	
+	.wear_deco_area {
+		.skyblue {
+			top: 55px;
+			left: -20px;
+		}
+		.bluish_green {
+			top: 60px;
+			right: -70px;
+		}
+		.pink {
+			left: 0;
+			bottom: 85px;
+		}
+		.blue {
+			bottom: 90px;
+			right: -45px;
+		}
+	}
+}

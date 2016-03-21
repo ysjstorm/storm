@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+#hotelInfos {
+    a { color: inherit; }
+
+    #hotelImages{
+        width:100%;
+        height:180px;
+        background-size:cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        img{
+            display:block;
+            width:100%;
+            margin-top:-15%;
+        }
+    }
+
+    .info-box {
+        padding: 24px 18px 0;
+        background-color: #fff;
+        text-align: center;
+        .tit {
+            padding: 14px 0;
+            font-size: 20px; line-height: 16px;
+            color: #2b2f33;//#575e66;
+        }
+        .tit.h_tit {color: #000;}
+        .summery {
+            padding: 0 20px;
+            .exp {
+                display: -webkit-box;
+                overflow: hidden;
+                margin: 14px 0;
+                font-size: 13px;
+                font-weight: lighter;
+                color: #6c7580;
+                white-space: normal;
+                word-wrap: break-word;
+                -webkit-line-clamp: 2;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                .ico-lst {
+                    display: inline-block;
+                    font-size: 0; line-height: 0; color: transparent;
+                    li {
+                        float: left;
+                        margin-right: 14px;
+                        display: inline-block;
+                        &:last-child { margin-right: 0; }
+                    }
+                    .ico1 { @include sp-hotel('room_ico_1'); }
+                    .ico130 { @include sp-hotel('room_ico_130'); }
+                    .ico131 { @include sp-hotel('room_ico_131'); }
+                    .ico132 { @include sp-hotel('room_ico_132'); }
+                    .ico133 { @include sp-hotel('room_ico_133'); }
+                    .ico136 { @include sp-hotel('room_ico_136'); }
+                    .ico143 { @include sp-hotel('room_ico_143'); }
+                    .ico144 { @include sp-hotel('room_ico_144'); }
+                    .ico146 { @include sp-hotel('room_ico_146'); }
+                    .ico2015 { @include sp-hotel('room_ico_2015'); }
+                    .ico2026 { @include sp-hotel('room_ico_2026'); }
+                    .ico2057 { @include sp-hotel('room_ico_2057'); }
+                    .ico2166 { @include sp-hotel('room_ico_2166'); }
+                    .ico2168 { @include sp-hotel('room_ico_2168'); }
+                    .ico2403 { @include sp-hotel('room_ico_2403'); }
+                    .ico2405 { @include sp-hotel('room_ico_2405'); }
+                    .ico2575 { @include sp-hotel('room_ico_2575'); }
+                }
+                .remainder {
+                    font-size: 20px; line-height: 24px;
+                    color: #6c7580;
+                }
+            }
+        }
+        .details {
+            position: relative;
+            .btn {
+                position: relative;
+                border: 1px solid #12aec3;
+                height:43px;
+                margin: 13px 0 40px;
+                padding: 0 18px;
+                border-radius: 2px;
+                font-size: 16px;
+                line-height: 43px;
+                color: #12aec3;
+            }
+            .lyr {
+                position: fixed; z-index: 150;
+                top: 50%; left: 50%;
+                display: none;
+                box-sizing: border-box;
+                margin-top: -200px;
+                margin-left: -153px;
+                width: 306px; height: 400px;
+                overflow: hidden;
+                -webkit-overflow-scrolling: touch;
+                background-color: #fff;
+                text-align: left;
+                .inner-hotel-details-lyr,
+                .inner-amenity-details-lyr{
+                    padding: 21px 15px;
+                    position:relative;
+                    overflow-y: auto;
+                    height:358px;
+                }
+                .close-btn {
+                    position: absolute;
+                    top: 10px; right: 12px;
+                    padding: 10px;
+                    line-height: 16px;
+                    i {
+                        @include sp-hotel('room_info_lyr_close_btn');
+                        font-size: 0;
+                    }
+                }
+                .tit {
+                    padding: 25px 0 3px;
+                    max-width: 280px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 15px;
+                    &:first-child { padding-top: 4px; }
+                    .stars {
+                        margin: 12px 0 0;
+                        font-size: 13px;
+                        color: #ffc716;
+                        .star {
+                            position: relative;
+                            top: 1px;
+                            display: inline-block;
+                            @include sp-hotel('info_stars');
+                            width: 0;
+                            text-indent: -9999px;
+                            &.star50 { width: 72px; }
+                            &.star45 { width: 67px; }
+                            &.star40 { width: 57px; }
+                            &.star35 { width: 52px; }
+                            &.star30 { width: 42px; }
+                            &.star25 { width: 37px; }
+                            &.star20 { width: 27px; }
+                            &.star15 { width: 22px; }
+                            &.star10 { width: 12px; }
+                            &.star5 { width: 7px; }
+                        }
+                    }
+                    .place-info {
+                        margin: 16px 0 0;
+                        font-size: 13px;
+                        color: #6c7580;
+                    }
+                }
+                .hotel-name {
+                    font-size: 16px;
+                    .sub_tit{
+                        margin-top:10px;
+                        font:{
+                            size:14px;
+                            weight:bold;
+                        }
+                    }
+                }
+                .content {
+                    position: relative;
+                    border-bottom: 1px solid #dfe2e6;
+                    padding: 8px 8px 20px;
+                    font-size: 13px; font-weight: lighter;
+                    color: #6c7580;
+                    em { font-weight: normal; }
+                    &.last { border-bottom: 0; }
+                    .sub_tit{
+                        margin-bottom:5px;
+                        font:{
+                            size:14px;
+                            weight:bold;
+                        }
+                    }
+                }
+            }
+        }
+        &.hotel-details .details {
+            .btn {
+                &:first-child {
+                    margin-right: 4.5px;
+                    &:before {
+                        @include sp-hotel('ico_hotel_detail');
+                        position: relative;
+                        top: 2px;
+                        margin-right: 4px;
+                        content: '';
+                    }
+                }
+                &:first-child + button {
+                    &:before {
+                        @include sp-hotel('ico_hotel_map');
+                        position: relative;
+                        top: 2px;
+                        margin-right: 4px;
+                        content: '';
+                    }
+                }
+            }
+        }
+        &.hotel-details .details {border-bottom: 1px solid #ccc;}
+        &.amenity-details {padding-bottom:18px;}
+    }
+
+    .alert-ftr {
+        padding: 23px 20px;
+        background-color: #e9e9e9;
+        font-size: 11px;
+        color: #959da6;
+    }
+}

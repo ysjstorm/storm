@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/**
+* 기본형 (SDU-948)
+*/
+.app_d_inr{	
+	&.t_default{
+		position: fixed;
+	    top: 0;
+	    bottom: 0;
+	    z-index: 250;
+	    width: 100%;
+		&:before{
+			position:fixed;
+			top:-100px;
+			bottom:-100px;
+			right:0;
+			left:0;
+			background:rgba(0,0,0,.65);
+			content:'';
+		}
+		.btns{
+			text-align:center;
+			position: absolute;
+		    top: 50%;
+		    left: 0;
+		    right: 0;
+		    margin-top: -60px;
+		}
+		.btn-run{
+			position:relative;
+		}
+		.btn-later{
+			position:relative;
+		}
+		.run{
+			position:relative;
+			@include sp-common('appdimmedlayer-bt_tmapp');
+		}
+		.later{
+			position:relative;
+			@include sp-common('appdimmedlayer-bt_tmapp2');
+		}
+	}
+}

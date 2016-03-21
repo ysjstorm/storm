@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.ly_wrapper{
+	.order_guide_lst{	
+		padding:15px 20px;
+	
+		li{
+			position:relative;
+			margin-top:18px;
+			padding-left:8px;
+			font-size:1.08em;
+			color:#333;
+			line-height:18px;
+			
+			strong{
+				font-weight:normal;
+				color:#fe3b57;
+			}
+			
+			&:first-child{
+				margin-top:0;
+			}
+			
+			&:before{
+				content:'';
+				display:block;
+				position:absolute;
+				top:7px;
+				left:0;
+				width:2px;
+				height:2px;
+				background-color:#666;
+			}
+			
+		}//li
+		
+	}//.order_guide_lst
+	
+}

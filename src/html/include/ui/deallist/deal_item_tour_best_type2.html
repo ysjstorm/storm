@@ -1,0 +1,24 @@
+<@@element class="deal_item @@class">
+	<a href="#" class="deal_item_anchor">
+		<div class="deal_item_rank">@@txt_deal_rank_num</div>
+		<div class="deal_item_thumb">
+			<img src="http://d1.tmonc.net/~nbass/?322x330_donut_y_FFFFFF_100" width="322" height="330" alt="딜 썸네일">
+		</div>
+
+		<div class="deal_item_body">
+			@@include('ui/deallist/deal_item_body_top_tour_type1.html', {
+				"txt_deal_item_title" : "@@txt_deal_item_title"
+			})
+			@@include('ui/deallist/deal_item_body_bottom.html', {
+				"txt_deal_item_discount" : "@@txt_deal_item_discount",
+				"txt_deal_item_price" : "@@txt_deal_item_price",
+				"subclass_deal_item_discount" : "@@subclass_deal_item_discount",
+				"subclass_deal_item_price" : "@@subclass_deal_item_price"
+			})
+		</div>
+
+		@@include('ui/deallist/deal_item_footer_type2.html', {
+			"txt_deal_item_ftrr" : "@@txt_deal_item_ftrr"
+		})
+	</a>
+</@@element>

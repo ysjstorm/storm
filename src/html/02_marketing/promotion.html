@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: 프로모션</title>
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<link rel="stylesheet" href="../../css/m.css">
+</head>
+<body class="promotion_wrap">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+<!-- 프로모션 헤드 영역 (쿠폰 O) -->
+<div class="prmt_header">
+	<img src="../../img/benefit/@bg_header.jpg" width="600" height="" alt="" class="header_bg"><!-- [D] 프로모션 헤드 배경 이미지 // 등록 이미지 : 가로사이즈 600px, 세로사이즈 가변형 -->
+	<h1>헤딩 타이틀 / 프로모션 메인 타이틀</h1><!-- [D] 대체 텍스트 필수 입력 -->
+	<div class="prmt_coupon fcb">
+		<i class="pop_i"></i>
+		<span class="sticker everynight">매일자정</span>
+		<strong class="tit">전 상품 카트할인전용</strong><!-- [D] 쿠폰 메인 타이틀 -->
+		<p class="dcPrice"><em>20,000</em><span class="won">원</span></p>
+		<span class="terms">10만원 이상 구매 시</span><!-- [D] 쿠폰 부가 설명 텍스트 -->
+		<button type="button" class="bt_dw">쿠폰다운받기<i></i></button>
+	</div>
+</div>
+
+<!-- 프로모션 헤드 영역 (쿠폰 X) -->
+<div class="prmt_header">
+	<img src="../../img/benefit/@bg_header2.jpg" width="600" height="" alt="" class="header_bg">
+	<h1>헤딩 타이틀 / 프로모션 메인 타이틀</h1>
+</div>
+
+<!-- 그룹 쿠폰 영역 #01 -->
+<div class="prmt_cont" style="background:url(../../img/benefit/@bg_repeat.jpg)"><!-- [D] 반복되는 이미지 배경 -->
+	<h2>카트에 담으면 최대 25% 할인
+		<p>더 강력한 혜택으로 돌아왔다!</p></h2>
+
+	<!-- 세트 쿠폰 #01 (쿠폰 2단 / 컬러 배경 쿠폰) -->
+	<h3 style="color:#ff5001">전체 카테고리 대상</h3><!-- [D] 세트 쿠폰 파트 - 메인 타이틀 -->
+	<div class="colm1">
+		<div class="prmt_coupon fcw" style="background:#ff5001"><!-- [D] 컬러 배경에 흰색 폰트인 경우 fcw 클래스 추가 & background 값(원하는 컬러로 변경) 추가 -->
+			<i class="pop_i"></i>
+			<span class="sticker app">누구나</span>
+			<strong class="tit">전 상품 카트할인전용</strong>
+			<p class="dcPrice"><em>20,000</em><span class="won">원</span></p>
+			<span class="terms">10만원 이상 구매 시</span>
+			<button type="button" class="bt_dw"></button><!-- [D] 레이어 텍스트(마감 부연설명) 노출 시에는 버튼 내 텍스트 미노출 -->
+			<div class="cp_sdout"><strong>조기마감</strong><span>쿠폰조기마감. 텍스트 수정</span></div><!-- [D] 쿠폰 마감시에 해당 라인 노출 -->
+		</div>
+	</div>
+	<p class="cpTerms" style="border-top-color:#ff7f01;border-bottom-color:#ff7f01;color:#ff7f01"><!-- [D] 설명문구영역 / 삭제가능영역 / 라인 및 폰트 컬러 변경 가능 -->
+		지역/패션&middot뷰티/쇼핑/컬쳐/여행&middot레져<br>
+		(도서 및 일부 상품 제외)
+	</p>
+
+	<!-- 세트 쿠폰 #02 (카드사 2단 / 컬러 배경 쿠폰) -->
+	<h3 style="color:#ff5001">카드사 카트 쿠폰</h3>
+	<div class="colm2 cards_colm">
+		<div class="prmt_coupon fcw" style="background:#ff5001"><!-- [D] 컬러 배경에 흰색 폰트인 경우 fcw 클래스 추가 & background 값(원하는 컬러로 변경) 추가 -->
+			<i class="pop_i"></i>
+			<span class="sticker every">누구나</span>
+			<strong class="tit">전 상품 카트할인전용</strong>
+			<p class="dcPrice"><em>20,000</em><span class="won">원</span></p>
+			<span class="terms">10만원 이상 구매 시</span>
+			<button type="button" class="bt_dw"></button><!-- [D] 레이어 텍스트(마감 부연설명) 노출 시에는 버튼 내 텍스트 미노출 -->
+			<div class="cp_sdout"><strong>조기마감</strong><span>쿠폰조기마감. 텍스트 수정</span></div><!-- [D] 쿠폰 마감시에 해당 라인 노출 -->
+		</div>
+		<div class="prmt_coupon fcw" style="background:#ff5001">
+			<i class="cdlg lot">롯데카드</i>
+			<!-- [D] 카드사 로고 정리
+				lot//롯데카드
+				kb//kb국민카드
+				nh//nh농협카드
+				hd//현대카드
+				wr//우리카드
+				ibk//ibk기업은행
+				bc//비씨카드
+				ss//삼성카드
+				hnsk//하나sk카드
+				ct//씨티카드
+				jb//jb카드
+				sh//신한카드
+			-->
+			<p class="dcPrice"><em>10,000</em><span class="won">원</span></p>
+			<span class="terms">4만원 이상 구매 시</span>
+			<button type="button" class="bt_dw">쿠폰다운받기<i></i></button>
+		</div>
+	</div>
+	<p class="cpTerms">
+		지역/패션&middot뷰티/쇼핑/컬쳐/여행&middot레져<br>
+		(도서 및 일부 상품 제외)
+	</p>
+</div>
+
+<!-- 그룹 쿠폰 영역 #01_1 -->
+<div class="prmt_cont" style="background:#ffdf08 url(../../img/benefit/@bg_norepeat.jpg) no-repeat 50% 0"><!-- [D] 반복되지 않는 이미지 배경 & 배경컬러 -->
+	<h2><img src="../../img/benefit/@h2.png" width="320" height="" alt="카트에 담으면 최대 25% 할인"></h2>
+
+	<!-- 세트 쿠폰 #01 (쿠폰 2단 / 흰색 배경 쿠폰) -->
+	<h3 style="color:#ff5001">전체 카테고리 대상</h3>
+	<div class="colm2">
+		<div class="prmt_coupon fcb"><!-- [D] 흰색 배경에 검은색 폰트인 경우 fcb 클래스 추가 & background 값은 추가히지 않음 -->
+			<i class="pop_i"></i>
+			<span class="sticker cart_dc">카트쿠폰</span>
+			<strong class="tit">전 상품 카트할인전용</strong>
+			<p class="dcPrice"><em>20,000</em><span class="won">원</span></p>
+			<span class="terms">10만원 이상 구매 시</span>
+			<button type="button" class="bt_dw">쿠폰다운받기<i></i></button>
+		</div>
+		<div class="prmt_coupon fcb">
+			<i class="pop_i"></i>
+			<span class="sticker cart_dc">카트쿠폰</span>
+			<strong class="tit">전 상품 카트할인전용</strong>
+			<p class="dcPrice"><em>20,000</em><span class="won">원</span></p>
+			<span class="terms">10만원 이상 구매 시</span>
+			<span class="bt_dwdn"></span>
+			<div class="cp_sdout"><strong>마감</strong><span>매 정시마다 선착순 발급</span></div>
+		</div>
+	</div>
+	<p class="cpTerms">
+		지역/패션&middot뷰티/쇼핑/컬쳐/여행&middot레져<br>
+		(도서 및 일부 상품 제외)
+	</p>
+</div>
+
+<!-- 그룹 쿠폰 영역 #02 -->
+<div class="prmt_cont" style="background:#e8e8ff">
+	<h2>생활/주방 한정수량 할인쿠폰
+		<p>매일 아침 11시! 생활/주방 카테고리 할인</p></h2>
+
+	<!-- 세트 쿠폰 #01 (단일 쿠폰) -->
+	<h3 style="color:#3900c9">전체 카테고리 대상</h3>
+	<div class="colm1 cards_colm">
+		<div class="prmt_coupon fcw" style="background:#be72ea">
+			<span class="sticker card_dc">카드사 쿠폰</span>
+			<i class="cdlg kb">kb국민카드</i>
+			<p class="dcPrice"><em>20,000</em><span class="won">원</span></p>
+			<span class="terms">10만원 이상 구매 시</span><!-- [D] 쿠폰 부가 설명 텍스트 -->
+			<button type="button" class="bt_dw">쿠폰다운받기<i></i></button>
+		</div>
+	</div>
+
+	<!-- 세트 쿠폰 #02 (카드사 3단)-->
+	<div class="colm3 cards_colm">
+		<div class="prmt_coupon fcw" style="background:#be72ea">
+			<i class="cdlg nh">nh농협카드</i>
+			<p class="dcPrice"><em>10,000</em><span class="won">원</span></p>
+			<span class="terms">4만원 이상 구매 시</span>
+			<span class="bt_dwdn">쿠폰다운완료</span>
+		</div>
+		<div class="prmt_coupon fcw" style="background:#be72ea">
+			<i class="cdlg hd">현대카드</i>
+			<p class="dcPrice"><em>10,000</em><span class="won">원</span></p>
+			<span class="terms">4만원 이상 구매 시</span>
+			<button type="button" class="bt_dw">쿠폰다운완료</button>
+			<div class="cp_sdout"><strong>마감</strong></div>
+		</div>
+		<div class="prmt_coupon fcw" style="background:#be72ea">
+			<i class="cdlg wr">우리카드</i>
+			<p class="dcPrice"><em>10,000</em><span class="won">원</span></p>
+			<span class="terms">4만원 이상 구매 시</span>
+			<button type="button" class="bt_dw">쿠폰다운받기<i></i></button>
+		</div>
+	</div>
+
+	<!-- 세트 쿠폰 #03 (3단)-->
+    <div class="colm3">
+        <div class="prmt_coupon fcw" style="background:#be72ea">
+            <i class="pop_i"></i>
+            <strong class="tit">전 상품 카트할인전용</strong>
+            <p class="dcPrice"><em>10,000</em><span class="won">원</span></p>
+            <span class="terms">4만원 이상 구매 시</span>
+            <span class="bt_dwdn">쿠폰다운완료</span>
+        </div>
+        <div class="prmt_coupon fcw" style="background:#be72ea">
+            <i class="pop_i"></i>
+            <strong class="tit">전 상품 카트할인전용</strong>
+            <p class="dcPrice"><em>10,000</em><span class="won">원</span></p>
+            <span class="terms">4만원 이상 구매 시</span>
+            <button type="button" class="bt_dw">쿠폰다운완료</button>
+            <div class="cp_sdout"><strong>마감</strong></div>
+        </div>
+        <div class="prmt_coupon fcw" style="background:#be72ea">
+            <i class="pop_i"></i>
+            <strong class="tit">전 상품 카트할인전용</strong>
+            <p class="dcPrice"><em>10,000</em><span class="won">원</span></p>
+            <span class="terms">4만원 이상 구매 시</span>
+            <button type="button" class="bt_dw">쿠폰다운받기<i></i></button>
+        </div>
+    </div>
+	<p class="cpTerms">
+		지역/패션&middot뷰티/쇼핑/컬쳐/여행&middot레져<br>
+		(도서 및 일부 상품 제외)
+	</p>
+	<!-- 꼭 알아두세요 #01_2 // prmt_cont 내에 위치한 경우 -->
+	<div class="attn" style="background:#e8e8ff">
+		<div class="btn_area">
+			<button type="button" class="btn_toggle" style="background:#fff">꼭 알아두세요<i class="ico_a"></i><i class="arr"></i></button>
+		</div>
+		<ul class="lst_notice" style="color:#000"><!-- [D] 폰트컬러값 지정 가능 -->
+		<li><i>&middot;</i>쿠폰유효기간 : 발급일 당일 자정까지 사용 가능<br>(매일 ID당 1회 선착순 발급/타 쿠폰과 중복사용 불가)</li>
+		<li><i>&middot;</i>적용 카테고리 : 각 쿠폰에 등록된 상품만 적용 가능 (일부 상품 제외)</li>
+		<li><i>&middot;</i>이지웰페어 복지몰 상품, 현금성 상품, 실시간 항공권, 기프트샵 상품, 도서 상품, 그 외 일부 카트 담기가 불가한 상품 등은 카트할인쿠폰 적용 대상에서 제외</li>
+		<li><i>&middot;</i>환불/부분환불/취소/무통장 미 입금 시 쿠폰 회수 후, 나머지 금액이 환불됩니다.</li>
+		<li><i>&middot;</i>배송비를 제외한 금액으로 할인 적용됩니다.</li>
+		<li><i>&middot;</i>해당 이벤트는 예산 소진 시 조기 종료될 수 있습니다.</li>
+		</ul>
+	</div>
+</div>
+
+<div class="prmt_cont" style="background:#e8e8ff">
+    <div class="inr">
+        <a href=""#"></a>
+    </div>
+</div>
+
+<!-- sns 공유하기 -->
+<div class="share_sns" style="background:#feffc8">
+	<h3 style="color:#ff5001">이 좋은 혜택 친구에게도 알려주세요!</h3>
+	<button type="button" class="sns_katalk"><i></i>카카오톡으로 공유하기</button>
+	<button type="button" class="sns_kastory"><i></i>카카오스토리로 공유하기</button>
+	<button type="button" class="sns_facebook"><i></i>페이스북으로 공유하기</button>
+	<button type="button" class="sns_band"><i></i>밴드로 공유하기</button>
+</div>
+
+<!-- 꼭 알아두세요 #01 // prmt_cont 밖에 위치한 경우 -->
+<div class="attn" style="background:#e94723">
+	<div class="btn_area">
+		<button type="button" class="btn_toggle fcw" style="background:#ff8850">꼭 알아두세요<i class="ico_a"></i><i class="arr"></i></button><!-- [D] 흰색 폰트일 경우 fcw 추가 -->
+	</div>
+	<ul class="lst_notice" style="color:#f5f1c7"><!-- [D] 폰트컬러값 지정 가능 -->
+	<li><i>&middot;</i>쿠폰유효기간 : 발급일 당일 자정까지 사용 가능<br>(매일 ID당 1회 선착순 발급/타 쿠폰과 중복사용 불가)</li>
+	<li><i>&middot;</i>적용 카테고리 : 각 쿠폰에 등록된 상품만 적용 가능 (일부 상품 제외)</li>
+	<li><i>&middot;</i>이지웰페어 복지몰 상품, 현금성 상품, 실시간 항공권, 기프트샵 상품, 도서 상품, 그 외 일부 카트 담기가 불가한 상품 등은 카트할인쿠폰 적용 대상에서 제외</li>
+	<li><i>&middot;</i>환불/부분환불/취소/무통장 미 입금 시 쿠폰 회수 후, 나머지 금액이 환불됩니다.</li>
+	<li><i>&middot;</i>배송비를 제외한 금액으로 할인 적용됩니다.</li>
+	<li><i>&middot;</i>해당 이벤트는 예산 소진 시 조기 종료될 수 있습니다.</li>
+	</ul>
+</div>
+
+<!-- 하단 추가 이미지 영역 -->
+<div class="bt_addimg">
+	<img src="../../img/benefit/@img_bottom.png" width="600" height="" alt="">
+	<p class="blind">대체 텍스트 들어가는 영역 - 어드민에서 이미지 등록시, 이미지 내용을 설명하는 대체 텍스트 필수 입력</p>
+</div>
+
+<!-- 다른 기획전으로 이동 -->
+<div class="other_prmt_location">
+    <div class="inr">
+        <strong class="tit">
+            <img src="../../img/benefit/@img_rc_title.png" width="100%" alt="타이틀이미지">
+        </strong>
+        <a href="#promotionLinked" class="fcw" style="background:#2cb3b8;border-bottom:2px solid #289195;border-right:2px solid #289195;">
+            <span class="thmb"><img src="../../img/benefit/@img_rc_thmb.png" width="82" height="74"></span>
+            <em class="title">타이틀 입력(기획전 어쩌고 저쩌고 긴거)</em>
+        </a>
+        <a href="#promotionLinked" class="fcw" style="background:#2cb3b8;border-bottom:2px solid #289195;border-right:2px solid #289195;">
+            <span class="thmb"><img src="../../img/benefit/@img_rc_thmb.png" width="82" height="74"></span>
+            <em class="title hasChild">타이틀 입력(기획전 어쩌고 저쩌고 긴거)</em>
+            <span class="description">서브타이틀 어쩌고 저쩌고</span>
+        </a>
+        <a href="#promotionLinked" class="fcw" style="background:#2cb3b8;border-bottom:2px solid #289195;border-right:2px solid #289195;">
+            <span class="thmb"><img src="../../img/benefit/@img_rc_thmb.png" width="82" height="74"></span>
+            <em class="title hasChild">타이틀 입력(기획전 어쩌고 저쩌고 긴거)</em>
+            <span class="description">서브타이틀 어쩌고 저쩌고</span>
+        </a>
+    </div>
+</div>
+
+<!-- 꼭 알아두세요. 토글 관련 스크립트 -->
+<script type="text/javascript">
+$(function(){
+	$('.btn_area').on('click touchend', '.btn_toggle', function(e){
+		e.preventDefault();
+
+		var $this = $(this),
+			lst = $this.parent().siblings('.lst_notice');
+
+		$this.toggleClass('on');
+		lst.slideToggle(300);
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.pop_wrapper {
+	position:relative;
+	width: 100%;
+	background-color: #fff;
+}
+
+.pop_header {
+	position: relative;
+	height: 56px;
+	border-bottom: 2px solid #000;
+
+	h3 {
+		text-align:center;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 56px;
+	}
+
+	.btn_detail_cancel {
+		position:absolute;
+		top:0;
+		right:0;
+		display: block;
+		width: 56px;
+		height:56px;
+
+		&:before {
+			@include sp-wear('btn_pop_close');
+
+			position:absolute;
+			display: block;
+			top:50%;
+			left:50%;
+			margin-top:-10px;
+			margin-left:-10px;
+			content: ' ';
+		}
+	}
+}
+
+.pop_footer {
+	overflow: hidden;
+	position: absolute;
+	margin: 0 auto;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}

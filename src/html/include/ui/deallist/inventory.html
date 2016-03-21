@@ -1,0 +1,125 @@
+<div class="inven">
+	<ul style="">
+		<li>
+			<a href="#">
+				<!-- <span class="stk">
+					<i class="plan">기획전</i>
+				</span> -->
+				<span class="txt">
+					<!-- <span class="desc">최대 1,000원 할인쿠폰</span> -->
+					<em class="tit">
+						<span class="innr">여름 패션의 완성 샌달 기획전</span>
+						<span class="arrow"></span>
+					</em>
+					<p class="price_info">
+						<i class="prmt_discount">즉시할인가</i>
+						<i class="common_plan">공동기획가</i>
+						<i class="tmon_price">티몬가</i>
+						<i class="num">52</i>
+						<i class="per">%</i>
+						<i class="price">1,256,000</i>
+						<i class="won">원</i>
+					</p>
+				</span>
+
+				<img class="inven_bg" src="http://d1.tmonc.net/~nbass/?720x430_donut_n_FFB4B4_100" alt=""/>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<!-- <span class="stk">
+                    <i class="plan">기획전</i>
+                </span> -->
+				<span class="txt">
+					<!-- <span class="desc">최대 1,000원 할인쿠폰</span> -->
+					<em class="tit">
+						<span class="innr">여름 패션의 완성 샌달 기획전</span>
+						<span class="arrow"></span>
+					</em>
+					<p class="price_info">
+						<i class="prmt_discount">즉시할인가</i>
+						<i class="common_plan">공동기획가</i>
+						<i class="tmon_price">티몬가</i>
+						<i class="num">52</i>
+						<i class="per">%</i>
+						<i class="price">1,256,000</i>
+						<i class="won">원</i>
+					</p>
+				</span>
+
+				<img class="inven_bg" src="http://d1.tmonc.net/~nbass/?720x430_donut_n_FFB4B4_100" alt=""/>
+			</a>
+		</li>
+	</ul>
+	<span class="pgn">
+		<em>2</em>
+		<span>/17</span>
+	</span>
+</div>
+<div class="inven">
+	<ul>
+	<li>
+		<a href="#">
+			<span class="stk">
+				<i class="plan">기획전</i>
+			</span>
+			<span class="txt">
+				<span class="desc">최대 1,000원 할인쿠폰</span>
+				<em class="tit">
+					<span class="innr">여름 패션의 완성 샌달 기획전</span>
+					<span class="arrow"></span>
+				</em>
+				<!-- <p class="price_info">
+					<i class="num">52</i>
+					<i class="per">%</i>
+					<i class="price">1,256,000</i>
+					<i class="won">원</i>
+				</p> -->
+			</span>
+
+			<img class="inven_bg" src="http://d1.tmonc.net/~nbass/?720x430_donut_n_FFB4B4_100" alt=""/>
+		</a>
+	</li>
+	</ul>
+	<span class="pgn">
+		<em>2</em>
+		<span>/17</span>
+	</span>
+</div>
+<div class="inven">
+	<ul>
+		<li>
+			<a href="#">
+				<span class="stk">
+					<i class="event">이벤트</i>
+				</span>
+				<span class="txt">
+					<em class="tit">
+						<span class="innr">여름 패션의 완성 샌달 기획전</span>
+						<span class="arrow"></span>
+					</em>
+				</span>
+
+				<img class="inven_bg" src="http://d1.tmonc.net/~nbass/?720x430_donut_n_FFB4B4_100" alt=""/>
+			</a>
+		</li>
+	</ul>
+	<span class="pgn">
+		<em>2</em>
+		<span>/17</span>
+	</span>
+</div>
+<script>
+	$(function(){
+		// UI 확인용 스크립트
+		function setListItem(){
+			var nListLen = $('.inven li').length;
+			var nWrapWidth = $(window).width()*nListLen;
+			var nListWidth = 100/nListLen+"%";
+			$('.inven ul').css({"width":nWrapWidth});
+			$('.inven li').css({"width":nListWidth})
+		}
+		setListItem();
+		$(window).resize(setListItem)
+	})
+</script>

@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+// 상품 헤더
+.prod_header {
+	position: relative;
+	.chk_type {
+		input[type="checkbox"] {
+			position: absolute;
+			left: -32px;
+			top: 15px;
+		}
+		.all_chk{
+			position:relative;
+			color:#16181a;
+			font-size: 13px;
+			font-weight:bold;
+			vertical-align: top;
+			line-height: 22px;
+			letter-spacing: $cart-space;
+		}
+	}
+	.bt_toggle{
+		button {
+			position: absolute;
+			right:5px;
+			top:22px;
+			display: block;
+			width:14px;
+			height:14px;
+			&:after{
+				position: absolute;
+				left:2px;
+				top:3px;
+				display: block;
+				content:"";
+				width:10px;
+				height:10px;
+				box-sizing:border-box;
+				border-left: 1px solid #fa5a44;
+				border-bottom: 1px solid #fa5a44;
+				transform:rotate(135deg);
+				-webkit-transform:rotate(135deg);
+			}
+		}
+		&:after{
+			display: block;
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			height:1px;
+			background-color: #e4e7ea;
+			content:"";
+		}
+	}
+	&.head_bundle{
+		.all_chk{
+			color:#073190;
+		}
+		.all_chk:after{
+			position: absolute;
+			top:0;
+			right:-32px;
+			content:"";
+			vertical-align: top;
+			@include sp-cart('icon_mart');
+		}
+		.bt_toggle{
+			button:after{
+				border-color:#073190;
+			}
+		}
+	}
+}
+.ct_prod_wp {
+	&.close {
+		.bt_toggle {
+			button {
+				&:after {
+					top:-4px;
+					transform: rotate(315deg);
+					-webkit-transform: rotate(315deg);
+				}
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

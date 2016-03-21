@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+.order_deal_lst{
+	padding:0 15px;
+	background-color:#fff;
+
+	.deal_lst2 li .right_area {
+		.product_name, .option_area {
+			padding-right: 1px;
+		}
+	}
+	.status{
+		height:30px;
+		margin:0 -15px;
+		padding:0 15px;
+		background-color:#fbfbfb;
+		font-size:0.9em;
+		line-height:30px;
+		
+		strong{
+			float:left;
+			font-weight:500;
+			color:#fe3b57;
+		}//strong
+		
+		.btn_tracking{
+			position:relative;
+			float:right;
+			padding-right:11px;
+			color:#999;
+			
+			&:after{
+				content:'';
+				display:block;
+				position:absolute;
+				top:12px;
+				right:1px;
+				width:5px;
+				height:5px;
+				border:solid #999;
+				border-width:1px 1px 0 0;
+				-webkit-transform:rotate(45deg);
+				transform:rotate(45deg);
+			}
+			
+		}//.btn_tracking
+		
+	}//.status
+	
+	.order_date{
+		height:39px;
+		margin:0 -15px;
+		padding:0 15px;
+		border-bottom:1px solid #ddd;
+		font-size:0.9em;
+		color:#333;
+		line-height:39px;
+		
+		.date{
+			float:left;
+			letter-spacing:-0.01em;
+		}//.date
+		
+		.btn_order_detail{
+			position:relative;
+			float:right;
+			padding-right:12px;
+			font-weight:500;
+			
+			&:after{
+				content:'';
+				display:block;
+				position:absolute;
+				top:16px;
+				right:1px;
+				width:6px;
+				height:6px;
+				border:solid #333;
+				border-width:1px 1px 0 0;
+				-webkit-transform:rotate(45deg);
+				transform:rotate(45deg);
+			}
+		}//.btn_order_detail
+		
+	}//.order_date
+	
+	&.numbering{
+	
+		li{
+			.num{
+				position:absolute;
+				top:15px;
+				left:0;
+				font-size:1.2em;
+				font-weight:100;
+			}//.num
+			
+			.left_area{
+				left:20px;
+			}//.left_area
+			
+			.right_area{
+				margin-left:125px;
+			}//.right_area
+		
+		}//li
+		
+	}//&.numbering
+	
+	&.detail{
+	
+		li {
+			.right_area{
+				.price_area{
+					margin-bottom:0;
+				}//.price_area
+				
+			}//.right_area
+			
+		}//li
+		
+	}//&.detail
+}
+
+.btn_deal_more{
+	width:100%;
+	
+	span{
+		display:block;
+		height:30px;
+		border:1px solid #ddd;
+		background-color:#fcfcfc;
+		font-size:1em;
+		font-weight:bold;
+		color:#bbb;
+		line-height:28px;
+		text-align:center;
+		box-sizing:border-box;
+	}
+}//.btn_deal_more

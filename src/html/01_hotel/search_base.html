@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+    <title>TMON :: 고객센터 :: 자주 묻는 질문</title>
+    <link rel="stylesheet" href="../../css/m.css">
+</head>
+<body>
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+@@include('header_type2.html', {"title":"호텔·숙박 검색"})
+<hr>
+<div id="hotel_search">
+    @@include('hotel/search_info.html')
+    @@include('hotel/deal_list_recommendations.html')
+    @@include('hotel/search_filter.html')
+    @@include('hotel/deal_list_header2.html')
+    @@include('hotel/deal_list_hotel.html')
+</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    $('.option-tab').on('click', '.tab', function() {
+        var btnStatus = $(this).attr('data-link');
+
+        switch (btnStatus) {
+            case 'filter-options':
+                $(this).closest('.option-tab').removeClass('tab2_active');
+                $(this).closest('.option-tab').addClass('tab1_active');
+                $('.sort-options').hide();
+                $('.filter-options').show();
+                break;
+            case 'sort-options':
+                $(this).closest('.option-tab').removeClass('tab1_active');
+                $(this).closest('.option-tab').addClass('tab2_active');
+                $('.filter-options').hide();
+                $('.sort-options').show();
+                break;
+        }
+    });
+
+    initTopBtn();
+
+    function initTopBtn() {
+        var welFilterOptions = $(".filter-options"),
+            welFilterOptionsBtn = $(".filter.btn_box");
+
+        var onScrollTop = function(){
+            if($(window).scrollTop() > welFilterOptions.height()/6){
+                welFilterOptionsBtn.fadeIn(500);
+            }else{
+                welFilterOptionsBtn.fadeOut(500);
+            }
+        };
+
+        $(window).bind('scroll', onScrollTop);
+        onScrollTop();
+    }
+</script>
+</body>
+</html>

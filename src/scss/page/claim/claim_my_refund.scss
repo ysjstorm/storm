@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/* claim my refund ui */
+.cl_refund {
+    input[type=checkbox] {
+        font-size: 2em;
+        margin: 0;
+    }
+    label {
+        padding-left: 3px;
+        vertical-align: middle;
+    }
+    .clbox_wrap {
+        padding: 15px 10px 10px;
+    }
+    .subinfo_wrap {
+        padding-left: 10px;
+    }
+    .way_wrap {
+        margin: 15px 0;
+        text-align: center;
+        font-size: 1em;
+    }
+    .sendq1_wrap,.sendq2_wrap,.sendq3_wrap {
+        padding: 12px 0;
+        text-align: center;
+        .d_btns_wrap {
+            overflow: hidden;
+            margin: 12px 10px 0;
+            a {
+                width: 100%;
+                height: 33px;
+                font-size: 1em;
+                line-height: 33px;
+            }
+        }
+    }
+    .sendq1_wrap {
+        border: 1px solid #eeeef0;
+        background-color: #f8f8f8;
+        .rdo_wrap {
+            margin-top: 12px;
+            vertical-align: middle;
+            input[type=radio] {
+                margin-top: 0;
+                margin-right: 5px;
+            }
+            label:first-child {
+                margin-right: 40px;
+            }
+        }
+    }
+    .sendq2_wrap {
+        border: 1px solid #eeeef0;
+        border-top: 0;
+        display: none;
+        label {
+            padding: 0;
+        }
+        .inp_wrap {
+            overflow: hidden;
+            padding: 0 35px;
+            &:first-child {
+                margin-bottom: 6px;
+            }
+        }
+        .btn_wrap {
+            padding: 0 35px;
+            .bt_gry3 {
+                margin-top: 6px;
+                width: 100%;
+                height: 28px;
+                line-height: 28px;
+            }
+        }
+    }
+    .sendq3_wrap {
+        font-size: .9em;
+        padding-bottom: 0;
+    }
+    .cm_dash {
+        float: left;
+        width: 6px;
+        height: 28px;
+        margin-right: 4px;
+        line-height: 28px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .cm_inp, .cm_inp2, .cm_inp3 {
+        float: left;
+        margin-right: 4px;
+        width: 100%;
+        label {
+            display: none;
+        }
+        input:read-only {
+            background-color: #eeeef0;
+        }
+    }
+    .cm_inp {
+        width: 65px;
+    }
+    .cm_inp2 {
+        width: 65px;
+        .cl_inpbox {
+            text-align: center;
+        }
+    }
+    .cm_srchzip {
+        float: left;
+        width: 50px;
+        .bt_gry3 {
+            width: 100%;
+            height: 28px;
+            line-height: 26px;
+            text-align: center;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+}

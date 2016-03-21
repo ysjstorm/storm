@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// import scss
+@import "./mixins/mixins";
+@import "./sprite/mixins";
+@import "./sprite/common";
+@import "./sprite/deallist";
+@import "./sprite/cvs";
+@import "./common/reset";
+@import "./common/layout";
+@import "./common/common";
+
+// 편의점 UI 
+@import "./page/cvs/search";
+@import "./page/cvs/map";
+@import "./page/cvs/list";
+@import "./page/cvs/tab";
+@import "./page/cvs/info";
+
+// Layout (레이아웃 파일들은 항상 마지막에 있게 해주세요.)
+@import "./page/cvs/layout";
+@import "./common/shared_layout";

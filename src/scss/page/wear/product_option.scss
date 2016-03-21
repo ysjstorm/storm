@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.sel_opts{
+	overflow:hidden;
+	padding:23px 10px 3px;
+
+	dt{
+		width:74px;
+		float:left;
+		padding-bottom:20px;
+		font-size:13px;
+		color:#333;
+		line-height:30px;
+	}
+	dd{
+		margin-right:-10px;
+		padding-bottom:10px;
+		padding-left:74px;
+	}
+
+	&.sold_out{
+		dt{
+			color:#999;
+		}
+	}
+}
+.opts_lst{
+	overflow:hidden;
+
+	li{
+		float:left;
+		padding-bottom:10px;
+		padding-right:10px;
+	}
+}

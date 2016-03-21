@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.collection_banner {
+	position: relative;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	text-align: center;
+	.img_area{
+		width:100%;
+		overflow:hidden;
+		img{
+			float:left;
+			
+			width:100%;
+		}
+	}
+	
+	//img {
+	//	width: 100%;
+	//	height: auto;
+	//	vertical-align: bottom;
+	//}
+	.share_area {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		.share_ly {
+			display: none;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.8);
+			
+			.btn_share_group {
+				position: absolute;
+				bottom:70px;
+				width: 100%;
+				
+				li {
+					display: inline-block;
+					margin: 0 3px;
+				}
+				&:before {
+					content: "이 콜렉션을 친구들에게도 공유해보세요!";
+					display: block;
+					position: relative;
+					margin-bottom: 15px;
+					font-size: 15px;
+					color: #fff;
+				}
+			}
+			&.open {
+				display: block;
+			}
+		}
+		.btn_share {
+			position: absolute;
+			left: 50%;
+			bottom: -20px;
+			margin-left: -19px;
+		}
+	}
+}

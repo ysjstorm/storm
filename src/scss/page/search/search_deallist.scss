@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+.search {
+    .deal_list {
+        @include deal-item;
+
+        // 상단 좌측 레이블
+        .deal_item_lbll {
+            @include clearfix;
+            // type1: 실시간 예약
+            // type2: 긴급모객
+            // type3: 오늘오픈
+            // type4: 오늘마감
+            // type5: 바로사용
+            // type6: 무료배송
+            @for $i from 1 through 6 {
+                &_type#{$i} {
+                    @include sp-search('deallist_lbll_type#{$i}');
+                    @include ir;
+                    float: left;
+                }
+            }
+        }
+
+        // 상단 우측 레이블
+        .deal_item_lblr {
+            // type1 : 티몬클릭!
+            &_type1 {
+                @include sp-search('deallist_lblr_type1');
+                @include ir;
+            }
+        }
+
+        .deal_item_mask {
+            // type1: 로딩
+            // type2: 매진
+            // type3: 미성년자 열람 제한
+            // type4: PC전용상품
+            &.type1 {
+                background-color: #fff;
+
+                &:after {
+                    @include sp-search('deallist_mask_type1');
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: ( -60px / 4 ) 0 0 ( -100px / 4 );
+                    content: " ";
+                }
+            }
+            &.type2 {
+                background-color: rgba(4, 133, 126, .8);
+
+                &:after {
+                    @include sp-search('deallist_mask_type2');
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: ( -136px / 4 ) 0 0 ( -132px / 4 );
+                    content: " ";
+                }
+            }
+            &.type3 {
+                background-color: #000;
+
+                &:after {
+                    @include sp-search('deallist_mask_type3');
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: ( -114px / 4 ) 0 0 ( -114px / 4 );
+                    content: " ";
+                }
+            }
+            &.type4 {
+                top: auto;
+                bottom: 0;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: rgba(1,133,163,.8);
+
+                &:after {
+                    @include sp-search('deallist_mask_type4');
+                    vertical-align: middle;
+                    content: " ";
+                }
+            }
+        }
+
+        // page/hotel/search_list.css 참고
+        .star_grade {
+            i {
+                @include sp-search("deallist_hotel_star");
+                vertical-align: top;
+            }
+            &.g0 {
+                display: none;
+            }
+            // 5단위로 5부터 50까지
+            @for $i from 1 through 10 {
+                $grade: $i * 5;
+                &.g#{$grade} i {
+                    width: #{$grade}px;
+                }
+            }
+            span {
+                margin-left: 4px;
+                vertical-align: top;
+                font-size: 10px;
+                line-height: 1;
+                letter-spacing: -0.02em;
+                color: #ffc716;
+            }
+        }
+
+        // 프리덤딜
+        .deal_item_freedom {
+            @include line-clamp(2, 1.43em);
+            padding-left: 49px;
+            text-indent: -49px;
+            font-size: 1.4em;
+            color: #333;
+
+            &_lbl {
+                @include ir;
+                display: inline-block;
+                width: 45px;
+                height: 20px;
+                margin-right: 4px;
+                text-align: center;
+                line-height: 20px;
+                border-radius: 10px;
+                text-indent: 0;
+                background-color: #fc542e;
+                &:after {
+                    @include sp-search("deallist_bottom_freedom");
+                    position: relative;
+                    top: -1px;
+                    vertical-align: middle;
+                    content: "";
+                }
+            }
+        }
+
+        // 프로모션 / 기획전 배너
+        .deal_item_banner {
+            &_list {
+                overflow: hidden;
+                width: 100%;
+                white-space: nowrap;
+
+                li {
+                    display: inline-block;
+                    width: 100%;
+                    white-space: normal;
+                }
+                li + li {
+                    margin-left: -2px;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.wrap_deal_list+.custom_theme{
+    border-top:1px solid #dfe2e6;
+}

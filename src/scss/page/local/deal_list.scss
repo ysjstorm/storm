@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.deal_list {
+	@include deal-item(
+		$deal-item-root-font-size: 10px,
+		$deal-item-height: 16.4em,
+		$deal-item-margin: 0 0 1em,
+		$deal-item-thumbnail-width: 12.5em,
+		$deal-item-thumbnail-height: 13.2em,
+		$deal-item-body-padding: 1.5em 1em,
+		$deal-item-body-top-height: 4.2em,
+		$deal-item-body-top-bottom-top: auto,
+		$deal-item-location-display: inline-block,
+		$deal-item-location-color: #00968e,
+		$deal-item-distance-display: inline-block,
+		$deal-item-distance-color: #00968e,
+		$deal-item-title-margin: 0 0 0.4em,
+		$deal-item-title-lines: 1,
+		$deal-item-title-first-child-margin-top: 0,
+		$deal-item-discount-line-height: 1.3,
+		$deal-item-footer-left: 0,
+		$deal-item-footer-height: 3.1em,
+		$deal-item-footer-left-color: #999,
+		$deal-item-footer-border-top: 0.1em solid #f4f4f4
+	);
+
+	.deal_item {
+		border-bottom: 1px solid #d6d6d6;
+		
+		&_mask {
+			// type1: 로딩
+			// type2: 매진
+			// type3: 미성년자 열람 제한
+			// type4: PC전용상품
+			&.type1 {
+				background-color: #fff;
+	
+				&:after {
+					@include sp-local('deallist_mask_type1');
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: ( -60px / 4 ) 0 0 ( -100px / 4 );
+					content: " ";
+				}
+			}
+			&.type2 {
+				background-color: rgba(4, 133, 126, .8);
+	
+				&:after {
+					@include sp-local('deallist_mask_type2');
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: ( -136px / 4 ) 0 0 ( -132px / 4 );
+					content: " ";
+				}
+			}
+			&.type3 {
+				background-color: #000;
+	
+				&:after {
+					@include sp-local('deallist_mask_type3');
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: ( -114px / 4 ) 0 0 ( -114px / 4 );
+					content: " ";
+				}
+			}
+			&.type4 {
+				top: auto;
+				bottom: 3.2em;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				background-color: rgba(1,133,163,.8);
+	
+				&:after {
+					@include sp-local('deallist_mask_type4');
+					vertical-align: middle;
+					content: " ";
+				}
+			}
+		}
+		&_freedom {
+			@include line-clamp(2, 18px);
+			margin-top: 20px;
+			padding-left: 52px;
+			text-indent: -52px;
+			font-size: 1.4em;
+			color: #333;
+	
+			&_lbl {
+				@include ir;
+				display: inline-block;
+				width: 45px;
+				height: 20px;
+				margin-right: 7px;
+				text-align: center;
+				line-height: 20px;
+				border-radius: 10px;
+				text-indent: 0;
+				background-color: #fc542e;
+				&:after {
+					@include sp-local("deallist_bottom_freedom");
+					position: relative;
+					top: -1px;
+					vertical-align: middle;
+					content: "";
+				}
+			}
+		}
+		&_body {
+			position: relative;
+			
+			&_bottom {
+				left: 0;
+				bottom: 15px;
+				width: 100%;
+				padding: 0 10px;
+				box-sizing: border-box;
+			}
+		}
+		&_lbll {
+			top: auto;
+			left: auto;
+			right: 15px;
+			bottom: 0;
+			
+			em {
+				float: left;
+				margin-left: 0.8em;
+				font-size: 1.12em;
+			}
+		}
+	}
+	
+	&_wrap h4 {
+		display: none;
+	}
+}

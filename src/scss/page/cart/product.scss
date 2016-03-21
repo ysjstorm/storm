@@ -1,0 +1,280 @@
+@charset "utf-8";
+// 카트 common
+.prod {
+	position: relative;
+	border-bottom: 1px solid #e4e7ea;
+	.chk_type {
+		position: absolute;
+		left: -32px;
+		top: 18px;
+	}
+	.prod_tit{
+		position: relative;
+		min-height: 59px;
+		.prod_thumb {
+			width: 87px;
+			height:59px;
+			position: absolute;
+			left:-102px;
+			top:0;
+			background-size: 87px 59px;
+			background-position: 50% 0;
+			background-repeat: no-repeat;
+			//pc 전용 상품
+			.txt_pc{
+				position: absolute;
+				top:0;
+				right:0;
+				display:table;
+				width:100%;
+				height:100%;
+				text-align: center;
+				i{
+					position: relative;
+					z-index: 2;
+					display: table-cell;
+					vertical-align: middle;
+					color:#fff;
+					font-size: 13px;
+				}
+				&:after{
+					position: absolute;
+					top:0;
+					left:0;
+					z-index: 1;
+					display: block;
+					width:100%;
+					height:100%;
+					background-color: #000;
+					opacity:.5;
+					content:"";
+				}
+			}
+			//19금 상품
+			&.mo_19{
+				@include sp-cart('mo_19');
+			}
+			&:after{
+				position:absolute;
+				top:0;
+				left:0;
+				content:"";
+				width:100%;
+				height:100%;
+				box-sizing:border-box;
+				border:1px solid rgba(221,221,221,0.3);
+			}
+		}
+		.prod_name {
+			display: block;
+			overflow:hidden;
+			word-break:break-all;
+			padding: 3px 0;
+			font-size: 13px;
+			font-weight:bold;
+			color: #16181a;
+			letter-spacing: $cart-space;
+		}
+	}
+	.item {
+		border-bottom: 1px solid #e4e7ea;
+		&:last-child {
+			border-bottom: none;
+		}
+		&.item_dimmed {
+			position: relative;
+			&:before {
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom:1px;
+				left: 0;
+				z-index: 1;
+				box-sizing: border-box;
+				width: 100%;
+				background-color: #fff;
+				content: "";
+				opacity: .7;
+			}
+			&:last-child{
+				&:before{
+					bottom:0;
+				}
+			}
+			.bt_del,.op_select,[class^="op_txt_"] {
+				z-index: 2;
+			}
+		}
+		.op_name {
+			overflow:hidden;
+			margin-bottom: 8px;
+			color: #656b73;
+			font-size: 12px;
+			letter-spacing: $cart-space;
+			.ico_more_sale,[class^="out_"] {
+				display: inline-block;
+				height: 16px;
+				padding: 3px 4px 0 4px;
+				box-sizing:border-box;
+				background-color: #000;
+				color: #fff;
+				text-align: center;
+				font-size: 11px;
+				font-weight: 500;
+				line-height: 1;
+			}
+			span{
+				position: relative;
+				display: inline;
+				padding-left:7px;
+				margin-right: 3px;
+				word-break: break-all;
+				line-height:16px;
+				&:before{
+					position: absolute;
+					left:0;
+					top:2px;
+					display: block;
+					content:"";
+					width:1px;
+					height:12px;
+					background-color: #656b73;
+				}
+			}
+			[class^="out_"] + span ,
+			span:first-child{
+				padding-left: 0;
+			}
+			[class^="out_"] + span:before ,
+			span:first-child:before{
+				display: none;
+			}
+		}
+		.info {
+			@include after;
+			position: relative;
+			min-height: 25px;
+			padding-right: 30px;
+			.bt_cnt {
+				float: left;
+			}
+			.op_txt_msg {
+				line-height: 25px;
+				&:after{
+					top: 7px;
+					left: 0;
+				}
+			}
+			.price {
+				float: right;
+				height: 25px;
+				vertical-align: middle;
+				text-align: right;
+				color: #656b73;
+				p {
+					font-size: 12px;
+					line-height: 25px;
+					vertical-align: middle;
+				}
+				.num {
+					font-size: 13px;
+					letter-spacing: -0.02em;
+				}
+				.dc {
+					color: #1ebcd1;
+					font-size: 11px;
+					letter-spacing:-0.02em;
+					&.d_show{
+						line-height: 1;
+						+ p {
+							line-height:1.3;
+						}
+					}
+					.won{
+						font-size: 10px;
+					}
+				}
+			}
+			.bt_del {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		@media all and (max-width:320px){
+			.op_name{
+				margin-bottom: 4px;
+			}
+			.bt_cnt, .price{
+				margin-top: 4px;
+			}
+			.price ~ .bt_del{
+				top:auto;
+				bottom:0;
+			}
+		}
+		.op_select {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 25px;
+			padding:6px 0 0 10px;
+			margin: 10px 0 2px;
+			border: 1px solid #fa5a44;
+			box-sizing: border-box;
+			line-height: 1;
+			color: #fa5a44;
+			font-size: 12px;
+			&:after {
+				display: block;
+				position: absolute;
+				top: 8px;
+				right: 10px;
+				width: 6px;
+				height: 6px;
+				border-right: 1px solid #fa5a44;
+				border-bottom: 1px solid #fa5a44;
+				transform: rotate(45deg);
+				-webkit-transform: rotate(-45deg);
+				content: "";
+			}
+		}
+		.op_txt_mo,.op_txt_out {
+			margin-top: 6px;
+		}
+		.in_stock {
+			display: block;
+		}
+	}
+	// 구매 불가 시 하이라이트
+	&.highlight{
+		&:before{
+			position: absolute;
+			top:-1px;
+			right:-10px;
+			bottom:-1px;
+			left:-42px;
+			box-sizing:border-box;
+			content:"";
+			border:1px solid #ff0000;
+			animation-name: highlight_fade;
+			animation-duration: 4s;
+			animation-fill-mode: forwards;
+		}
+	}
+	//Chrome, Safari, Opera
+	@-webkit-keyframes highlight_fade {
+		from {opacity: 10;}
+		to {opacity: 0;}
+	}
+	@keyframes highlight_fade {
+		from {opacity: 10;}
+		to {opacity: 0;}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// import scss
+@import "./mixins/mixins";
+@import "./sprite/mixins";
+@import "./sprite/common";
+@import "./sprite/deallist";
+@import "./sprite/search";
+@import "./common/reset";
+@import "./common/layout";
+@import "./common/common";
+
+// 검색 UI
+@import "./page/search";
+

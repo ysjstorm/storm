@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/**
+ * 컴포넌트는 일반 컴포넌트(타이틀, 추천딜리스트..)와 dynamic_ui 컴포넌트 두종류로 구분됩니다.
+ *
+ * 일반 컴포넌트
+ *  - 신규의 경우 디렉토리 생성하고 하위에 컴포넌트 타입을 확장하실 수 있습니다.
+ *  - 타입은 따로 식별명자를 사용하지 않고 type1, 2, 3...과 같은 식으로 확장합니다.
+ *
+ * dynamic_ui 컴포넌트
+ * - 기획의도에 따라 동적으로 위치나 다른 컴포넌트의 하위에서 사용될 수 있는 컴포넌트로 식별자로 고유 네임을 사용하여 확장합니다.
+ */
+
+// title 컴포넌트
+@import "./custom_theme/components/title/type1";
+//@import "./custom_theme/components/title/type2";
+//@import "./custom_theme/components/title/type3";
+
+// recommend_deal_list 컴포넌트
+@import "./custom_theme/components/recommend_deal_list/common";
+@import "./custom_theme/components/recommend_deal_list/type1";
+@import "./custom_theme/components/recommend_deal_list/type2";
+@import "./custom_theme/components/recommend_deal_list/type3";
+@import "./custom_theme/components/recommend_deal_list/type4";
+
+// dynamic_ui 컴포넌트
+@import "./custom_theme/components/dynamic_ui/btn_more_recommend_deal_list";
+//@import "./custom_theme/components/dynamic_ui/고유 식별자명";
+//@import "./custom_theme/components/dynamic_ui/고유 식별자명";
+
+
+// 커스텀테마 layout
+@import "./custom_theme/layout/custom_theme_layout";
+@import "./custom_theme/layout/slick";

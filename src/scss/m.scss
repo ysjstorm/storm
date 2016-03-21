@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// import scss
+@import "./mixins/mixins";
+@import "./sprite/mixins";
+@import "./sprite/mosaic";
+@import "./sprite/hotel";
+@import "./sprite/deallist";
+@import "./sprite/common";
+@import "./common/reset";
+@import "./common/layout";
+@import "./common/common";
+@import "./page/customer";
+@import "./page/mart";
+@import "./page/hotel";
+@import "./page/claim";
+
+// Layout (레이아웃 파일들은 항상 마지막에 있게 해주세요.)
+@import "./common/shared_layout";

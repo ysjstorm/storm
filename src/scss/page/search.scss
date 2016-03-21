@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+$search-point-color:#fa5a44;
+
+// 검색 UI
+@import "./search/search_header";
+// 연관 검색어
+@import "./search/associate_keywords";
+// 자동완성
+@import "./search/search_auto_complete";
+// 최근 검색어
+@import "./search/search_latest";
+// 내가 구매한 상품
+@import "./search/bought_product";
+// EAN 통합검색
+@import "./search/search_ean";
+// 검색 카테고리 1
+@import "./search/search_category_1";
+// 검색 필터 1
+@import "./search/search_filter_1";
+// 검색 필터 2
+@import "./search/search_filter_2";
+// 검색결과 없음
+@import "./search/search_result_no1";
+// 검색결과 없음2
+@import "./search/search_result_no2";
+// 검색결과 없음3
+@import "./search/search_result_no3";
+// 검색결과 딜 리스트(호텔 타입, 롤링배너 포함)
+@import "./search/search_result_deal_list";
+// 인기 검색어
+@import "./search/search_popular_keyword";
+// 로딩
+@import "./search/search_loading";
+// 추천상품
+@import "./search/search_recommand";
+// 테마 검색
+@import "./search/search_theme";
+// 에러
+@import "./search/search_obstacle";
+
+// 검색 홈 UI
+@import "./search/search_home";
+
+// plugin
+@import "./search/plugin/carousel";
+
+// 딜리스트
+@import "./deallist/deal_item";
+@import "./search/search_deallist";
+
+//로딩 이미지
+@import "search/filter_loading";
+
+// 커스텀 테마
+@import "./search/custom_theme";
+
+// 레이아웃은 항상 최 하단에 위치해 주세요.
+@import "./search/layout";

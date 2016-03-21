@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.order_none{
+	height:185px;
+	background-color:#fff;
+	font-weight:500;
+	color:#999;
+	line-height:180px;
+	text-align:center;
+	
+	span{
+		display:inline-block;
+		line-height:18px;
+		vertical-align:middle;
+	}//span
+	
+	.btn_area{
+		display:block;
+		margin-top:20px;
+		
+		.btn{
+			width:137px;
+			height:30px;
+		}
+	}//.btn_area
+}
+
+.order_notice{
+	font-size:0.85em;
+	color:#999;
+	line-height:16px;
+	
+	a{
+		color:#999;
+		text-decoration:underline;
+	}
+}

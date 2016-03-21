@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+%sp-mosaic {
+    background: url('../im/sp-mosaic.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(544px/2) (520px/2);
+    -webkit-background-size:(544px/2) (520px/2);
+}
+
+@mixin sp-mosaic($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-mosaic, $filename);
+    @extend %sp-mosaic;
+	@include sp-mosaic-base($sp-mosaic, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-mosaic: (
+    spritesheet_name: sp-mosaic,
+    bg_cal_input: (offset_x: -238px, offset_y: -404px, width: 72px, height: 76px),
+    btn_cal_arrow_left: (offset_x: -522px, offset_y: -232px, width: 14px, height: 22px),
+    btn_cal_arrow_right: (offset_x: -522px, offset_y: -258px, width: 14px, height: 22px),
+    btn_keyword_reset: (offset_x: -492px, offset_y: -446px, width: 26px, height: 26px),
+    btn_layer_close: (offset_x: -292px, offset_y: -194px, width: 28px, height: 28px),
+    btn_layer_close_dark: (offset_x: -260px, offset_y: -194px, width: 28px, height: 28px),
+    btn_search_clear: (offset_x: -324px, offset_y: -194px, width: 28px, height: 28px),
+    bu_arrow_down: (offset_x: -424px, offset_y: -300px, width: 24px, height: 14px),
+    bu_arrow_up: (offset_x: -452px, offset_y: -300px, width: 24px, height: 14px),
+    bu_category_shortcut_arrow: (offset_x: -538px, offset_y: -284px, width: 6px, height: 12px),
+    bu_pkg_more_arrow: (offset_x: -538px, offset_y: -312px, width: 6px, height: 10px),
+    button_cart: (offset_x: -420px, offset_y: -356px, width: 38px, height: 38px),
+    button_cart_disabled: (offset_x: -228px, offset_y: -194px, width: 28px, height: 28px),
+    category-nav_arrow: (offset_x: -522px, offset_y: -104px, width: 16px, height: 26px),
+    category-nav_top_arrow: (offset_x: -492px, offset_y: -204px, width: 26px, height: 16px),
+    category-nav_visual1: (offset_x: -522px, offset_y: 0, width: 22px, height: 34px),
+    category-nav_visual2: (offset_x: -492px, offset_y: -170px, width: 26px, height: 30px),
+    category-nav_visual3: (offset_x: -522px, offset_y: -38px, width: 22px, height: 32px),
+    cl_box_exc: (offset_x: 0, offset_y: -496px, width: 24px, height: 24px),
+    cl_selbox2_arr: (offset_x: -324px, offset_y: -356px, width: 44px, height: 44px),
+    cl_selbox_arr: (offset_x: -406px, offset_y: -232px, width: 52px, height: 52px),
+    claim_ico_chk_orange: (offset_x: -522px, offset_y: -210px, width: 20px, height: 18px),
+    claim_ico_plus: (offset_x: -522px, offset_y: -158px, width: 20px, height: 20px),
+    claim_refdel0: (offset_x: -236px, offset_y: -232px, width: 166px, height: 64px),
+    claim_sel_disable: (offset_x: -436px, offset_y: -170px, width: 52px, height: 52px),
+    deal-list-checkbox_checked: (offset_x: -180px, offset_y: -356px, width: 44px, height: 44px),
+    deal-list-checkbox_default: (offset_x: -228px, offset_y: -356px, width: 44px, height: 44px),
+    deal-list-checkbox_disabled: (offset_x: -276px, offset_y: -356px, width: 44px, height: 44px),
+    deal-list-layer_visual: (offset_x: -82px, offset_y: -404px, width: 76px, height: 88px),
+    deal-list_soldout: (offset_x: 0, offset_y: 0, width: 224px, height: 228px),
+    fni_banner_after: (offset_x: -536px, offset_y: -386px, width: 6px, height: 10px),
+    fni_banner_before: (offset_x: -462px, offset_y: -446px, width: 26px, height: 26px),
+    fni_nav1: (offset_x: -462px, offset_y: -232px, width: 48px, height: 44px),
+    fni_nav2: (offset_x: -372px, offset_y: -356px, width: 44px, height: 44px),
+    header_visual1: (offset_x: -162px, offset_y: -404px, width: 72px, height: 86px),
+    header_visual2: (offset_x: 0, offset_y: -404px, width: 78px, height: 88px),
+    header_visual3: (offset_x: -372px, offset_y: -170px, width: 60px, height: 54px),
+    ico_barcode: (offset_x: -350px, offset_y: -300px, width: 38px, height: 20px),
+    ico_barcode_end: (offset_x: -308px, offset_y: -300px, width: 38px, height: 20px),
+    ico_cancel_none: (offset_x: -126px, offset_y: -232px, width: 106px, height: 104px),
+    ico_frd_arr_dn: (offset_x: -522px, offset_y: -354px, width: 18px, height: 12px),
+    ico_frd_arr_up: (offset_x: -522px, offset_y: -370px, width: 18px, height: 12px),
+    ico_frd_attn: (offset_x: -522px, offset_y: -134px, width: 20px, height: 20px),
+    ico_layer_check: (offset_x: 0, offset_y: -232px, width: 122px, height: 120px),
+    million: (offset_x: 0, offset_y: -356px, width: 176px, height: 44px),
+    my_comp_pnt: (offset_x: -236px, offset_y: -300px, width: 36px, height: 36px),
+    my_comp_pnt2: (offset_x: -314px, offset_y: -404px, width: 72px, height: 72px),
+    my_his_det: (offset_x: -522px, offset_y: -386px, width: 10px, height: 16px),
+    my_his_item: (offset_x: -522px, offset_y: -74px, width: 18px, height: 26px),
+    notify-deal-detail_arrow: (offset_x: -522px, offset_y: -312px, width: 12px, height: 22px),
+    option-list_arrow: (offset_x: -392px, offset_y: -300px, width: 28px, height: 16px),
+    option-select_arrow: (offset_x: -522px, offset_y: -338px, width: 22px, height: 12px),
+    pick-more_arrow: (offset_x: -522px, offset_y: -284px, width: 12px, height: 24px),
+    pick_visual1: (offset_x: -228px, offset_y: 0, width: 140px, height: 190px),
+    pick_visual2: (offset_x: -390px, offset_y: -404px, width: 68px, height: 72px),
+    pick_visual3: (offset_x: -372px, offset_y: 0, width: 146px, height: 166px),
+    purchase_count_visual: (offset_x: -276px, offset_y: -300px, width: 28px, height: 28px),
+    select-number-radio_off: (offset_x: -462px, offset_y: -356px, width: 38px, height: 38px),
+    select-number-radio_on: (offset_x: -462px, offset_y: -404px, width: 38px, height: 38px),
+    timeout_arrow: (offset_x: -522px, offset_y: -182px, width: 16px, height: 24px),
+);

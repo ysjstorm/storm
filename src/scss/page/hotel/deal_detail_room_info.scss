@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+// hotel common
+.dim {
+    position: fixed; z-index: 101;
+    top: 0; left: 0;
+    display: none;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,.4);
+}
+
+#roomInfos {
+.room-search-options {
+    border-bottom: 1px solid #dfe2e6;
+    padding: 19px 0 15px;
+    width: 100%;
+    background-color: #fff;
+    font-size: 0;
+    .option-select {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 6px 24px 6px 14px;
+        width: 49.99999%;
+        text-align: center;
+        .option {
+            font-size: 14px;
+            color: #41474d;
+            .num {
+                vertical-align: -1px;
+                font-size: 17px;
+                font-weight: bold;
+                color: #fa5a44;
+            }
+            .detail {
+                font-size: 13px;
+                font-weight: 300;
+                color: #959da6;
+                .num {
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: #959da6;
+                }
+            }
+            .date-ico {
+                vertical-align: -2px;
+                @include sp-hotel('room_search_ico_date');
+            }
+            .people-ico {
+                vertical-align: -2px;
+                @include sp-hotel('room_search_ico_bed');
+            }
+        }
+        .arr {
+            position: absolute;
+            top: 14px; right: 15px;
+            @include sp-hotel('room_search_info_arr');
+        }
+        &:last-child { border-left: 1px solid #dfe2e6; }
+    }
+}
+
+.room-search-results {
+    .no-room-search-result{
+        background-color:#F0F0F0;
+        padding:85px 0;
+        .tit{
+            color:#a0a0a0;
+            text-align:center;
+            line-height:23px;
+            font:{
+                size:18px;
+            }
+        }
+    }
+    .list-item {
+        position: relative;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dfe2e6;
+        margin-top: 10px;
+        padding: 22px 20px;
+        width: 100%;
+        background-color: #fff;
+        .room-info {
+            position: relative;
+            padding-left: 95px;
+            &:first-child {
+                border-bottom: 1px solid #dfe2e6;
+            }
+            .img {
+                position: absolute;
+                top: 0; left: 0;
+                width: 75px; height: 75px;
+                border-radius: 38px;
+                background-position: center center;
+                background-size: cover;
+            }
+            .img_detail._btnViewRoomImage{
+                display:block;
+                height:75px;
+                cursor: pointer;
+            }
+            .rest-info {
+                margin-bottom: 5px;
+                font-size: 11px;
+                color: #12aec3;
+            }
+            .type-name {
+                margin-bottom: 15px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                max-width: 276px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                font-size: 17px;
+            }
+            .price-info {
+                .high-rate {
+                    margin-bottom: 4px;
+                    padding-left: 2px;
+                    height: 14px;
+                    font-size: 11px;
+                    letter-spacing: -0.07em;
+                    color: #c2c7cc;
+                    span {
+                        font-size: 12px;
+                        text-decoration: line-through;
+                    }
+                }
+                .row-rate {
+                    margin-bottom: 4px;
+                    vertical-align: top;
+                    font-weight: bold; font-size: 16px; line-height: 20px;
+                    color: #16181a;
+                    span { font-size: 19px; font-weight: bold; }
+                }
+                .rate-info {
+                    margin-bottom: 15px;
+                    padding-left: 2px;
+                    font-size: 11px;
+                    color: #c2c7cc;
+                }
+            }
+            .reserve-btn {
+                position: absolute;
+                bottom: 21px; right: 0;
+                border-radius: 2px;
+                padding: 12px 16px 13px;
+                background-color: #fa5a44;
+                font-size: 16px;
+                color: #fff;
+            }
+            .reserve-info {
+                margin-top: 19px;
+                font-size: 13px;
+                color: #fa5a44;
+            }
+            .details-summery {
+                margin-top: 4px;
+                font-size: 13px;
+                color: #959da6;
+            }
+            .show-details-btn {
+                margin-top: 10px;
+                border: 1px solid #c2c7cc;
+                padding: 8px 16px;
+                font-size: 12px; line-height: 12px;
+                color: #959da6;
+                .arr {
+                    margin-left: 2px;
+                    @include sp-hotel('room_info_arr');
+                }
+            }
+            .lyr {
+                position: fixed; z-index: 150;
+                top: 50%; left: 50%;
+                background-color: #fff;
+            }
+            .result-lyr {
+                display: none;
+                box-sizing: border-box;
+                margin-top: -200px;
+                margin-left: -153px;
+                width: 306px;
+                -webkit-overflow-scrolling: touch;
+
+                &.img_detail {
+                    margin-top: -150px;
+
+                    .inner-result-lyr {
+                        overflow: hidden;
+                        padding: 0;
+                        height: auto;
+
+                        img{
+                            vertical-align: top;
+                        }
+
+                        .content {
+                            padding: 0;
+                        }
+
+                        .roomInfoSlider{
+                            overflow:hidden;
+                            position:relative;
+                            height:205px;
+                        }
+
+                        .tit {
+                            padding: 15px 15px;
+                            overflow:hidden;
+                            width: 240px;
+                            white-space:nowrap;
+                            text-overflow:ellipsis;
+                        }
+                    }
+                }
+
+                .inner-result-lyr{
+                    padding: 21px 15px;
+                    position:relative;
+                    height:358px;
+                    overflow-y:auto;
+
+                    .tit {
+                        padding: 4px 0 14px;
+                        font-size: 16px;
+                    }
+                    .content {
+                        padding: 12px 8px;
+                        font-size: 13px; font-weight: lighter;
+                        color: #6c7580;
+                        strong, em {
+                            position: relative;
+                            font-weight: normal;
+                            // &::before {
+                            //     position: absolute;
+                            //     top: 0; left: -7px;
+                            //     content: '·';
+                            // }
+                        }
+                    }
+                }
+                .close-btn {
+                    position: absolute;
+                    top:10px; right:12px;
+                    padding: 8px;
+                    line-height: 17px;
+                    i {
+                        @include sp-hotel('room_info_lyr_close_btn');
+                        font-size: 0;
+                    }
+                }
+            }
+            .no-result-lyr {
+                display: none;
+                margin-top: -104px;
+                margin-left: -150px;
+                width: 300px;
+                border-radius: 2px;
+                text-align: center;
+                .inner-no-result-lyr{
+                    position:relative;
+                    .tit {
+                        padding: 16px;
+                        border-top-right-radius: 2px;
+                        border-top-left-radius: 2px;
+                        background-color: #12aec3;
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                    .close-btn {
+                        position: absolute;
+                        top: 6px; right: 10px;
+                        padding: 10px;
+                        i {
+                            @include sp-hotel('room_info_lyr_nc_close_btn');
+                            font-size: 0;
+                        }
+                    }
+                    .content {
+                        padding: 28px 20px;
+                        font-size: 17px;
+                        color: #6c7580;
+                        .confirm-btn {
+                            margin-top: 20px;
+                            border-radius: 2px;
+                            width: 125px; height: 39px;
+                            background-color: #12aec3;
+                            font-size: 15px;
+                            color: #fff;
+                        }
+                    }
+
+                }
+            }
+        }
+        &:last-child { margin-bottom: 10px; }
+    }
+}
+}

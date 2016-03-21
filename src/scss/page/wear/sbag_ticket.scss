@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+.sbag_ticket{
+	position:relative;
+	//min-height:134px;
+	padding:17px 15px 20px 106px;
+	background-color:#000;
+	background-size:100%;
+	background-position:50% 50%;
+	box-sizing:border-box;
+	background-image:url(../img/wear/bg_shoppingbag.jpg);
+	
+	.des{
+		display:none;
+	}
+	
+	.dim{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background-color:#000;
+		opacity:.7;
+	}//.dim
+	
+	.ticket_box{
+		position:absolute;
+		top:20px;
+		left:20px;
+		width:65px;
+		height:57px;
+		border:1px solid #fe3b57;
+		
+		&.add{
+			color:#fe3b57;
+			font-size:1.9em;
+			line-height:52px;
+			text-align:center;
+			
+			em{
+				margin-left:4px;
+				font-weight:bold;
+				font-size:1.4em;
+				vertical-align:middle;
+			}//em
+			
+		}//&.add
+		
+		&.logo5{
+			
+			i{
+				position:absolute;
+				top:50%;
+				left:50%;
+				margin:-15px 0 0 -25px;
+				@include sp-wear("shoppingbag_ticket3_logo");
+				overflow:hidden;
+				line-height:100em;
+				vertical-align:middle;
+			}//i
+			
+		}//&.logo5
+		
+	}//.ticket_box
+	
+	.explain{
+		font-size:0.9em;
+		color:#fff;
+		
+		em{
+			font-size:1.1em;
+			font-weight:bold;
+		}
+		
+	}//.explain
+	
+	.btn{
+		width:155px;
+		height:30px;
+		margin-top:12px;
+		font-size:1em;
+		
+		&.disable{
+			color:#999;
+			background-color:#666;
+			cursor:default;
+		}//&.disable
+		
+	}//.btn_bag_ticket
+	
+	.thum_lst{
+		overflow:hidden;
+		padding-top:7px;
+		height:38px;
+		@include after;
+		
+		li{
+			position:relative;
+			float:left;
+			width:38px;
+			height:38px;
+			margin:0 10px 5px 0;
+			
+			figure{
+				position:absolute;
+				top:0;
+				left:0;
+				overflow:hidden;
+				width:100%;
+				height:100%;
+				border-radius:50%;
+				background-position:50% 50%;
+				background-size:cover;
+				background-repeat:no-repeat;
+				
+				img{
+					border-radius:50%;
+				}
+				
+			}//figure
+			
+			.btn_delete{
+				position:absolute;
+				top:-2px;
+				right:-5px;
+				width:17px;
+				height:17px;
+				border-radius:50%;
+				background-color:#fff;
+				overflow:hidden;
+				line-height:100em;
+				vertical-align:middle;
+				
+				&:before{
+					content:'';
+					display:block;
+					position:absolute;
+					top:4px;
+					left:8px;
+					width:1px;
+					height:9px;
+					background-color:#000;
+					-webkit-transform:rotate(45deg);
+					transform:rotate(45deg);
+				}
+				
+				&:after{
+					content:'';
+					display:block;
+					position:absolute;
+					top:4px;
+					left:8px;
+					width:1px;
+					height:9px;
+					background-color:#000;
+					-webkit-transform:rotate(135deg);
+					transform:rotate(135deg);
+				}
+			}//.btn_delete
+			
+			&.empty{
+				border:1px solid #535353;
+				border-radius:50%;
+				box-sizing:border-box;
+				
+				figure, .btn_delete{
+					display:none;
+				}
+			}//&.empty
+			
+		}//li
+		
+	}//.thum_lst
+	
+}
+
+@media screen and (max-width:320px){
+	
+	.sbag_ticket{
+		padding:{
+			left:82px;
+			right:10px;
+		};
+		
+		.ticket_box{
+			left:10px;
+			width:60px;
+			height:52px;
+			
+			&.add{
+				line-height:48px;
+			}
+			
+		}//.ticket_box
+		
+		.thum_lst{
+		
+			li{
+				margin-right:5px;
+			}//li
+			
+		}//.thum_lst
+		
+	}//.sbag_ticket
+}
+
+@media screen and (min-width:321px) and (max-width:365px){
+	
+	.sbag_ticket{
+		padding:{
+			left:90px;
+			right:12px;
+		};
+		
+		.ticket_box{
+			left:12px;
+		}//.ticket_box
+		
+		.thum_lst{
+		
+			li{
+				margin-right:5px;
+			}//li
+			
+		}//.thum_lst
+		
+	}//.sbag_ticket
+}
+

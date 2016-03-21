@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* 투어 딜 공통요소 */
+
+$tour-deal-tit-height:78px;
+
+// 딜 타이틀
+.tit_tour_deal{
+	height:$tour-deal-tit-height;
+	padding-top:32px;
+	text-align:center;
+	font-size:20px;
+	color:#16181a;
+	letter-spacing:-1px;
+	box-sizing:border-box;
+
+	span{
+		color:#fa5a44;
+	}
+}
+
+// 딜 썸네일 border
+@mixin deal-tour-thumb-border(
+	$deal-thumb-border-color: rgba(0,0,0,.05)
+){
+	&:after{
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index:50;
+		border:1px solid $deal-thumb-border-color;
+		display:block;
+		content:'';
+	}
+}

@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+.search_sort {
+  position: relative;
+  z-index: 10;
+  height: 40px;
+  .keyword {
+    padding: 0 15px;
+    color: #333;
+    .hl {
+      margin-right: 3px;
+      font-weight: bold;
+      color: #ff5d35;
+      line-height: 40px;
+      &:before {
+        color: #ff5d35;
+        content: '"';
+      }
+      &:after {
+        color: #ff5d35;
+        content: '"';
+      }
+    }
+  }
+  .bywhat {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    .sel {
+      position: relative;
+      width: 93px;
+      height: 26px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      color: #333;
+      font-size: .95em;
+      text-align: left;
+      text-indent: 6px;
+      &:after {
+        display: block;
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        width: 0;
+        height: 0;
+        border: 3px solid;
+        border-color: transparent #333 #333 transparent;
+        content: '';
+      }
+    }
+    .opts {
+      display: none;
+      position: absolute;
+      top: 31px;
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #999;
+      box-sizing: border-box;
+      a {
+        display: block;
+        position: relative;
+        width: 135px;
+        height: 38px;
+        padding-left: 6px;
+        border-top: 1px solid #f4f4f4;
+        color: #888;
+        font-size: .95em;
+        line-height: 38px;
+        &:first-child {
+          border: 0;
+        }
+        &.cur {
+          color: #ff6948;
+          &:after {
+            display:block;
+            position: absolute;
+            @include sp-search('ico_check_orange');
+            top: 16px;
+            right: 11px;
+            content:'';
+          }
+        }
+      }
+    }
+    &.open {
+      .sel {
+        border-color: #999;
+      }
+      .opts {
+        display: block;
+      }
+    }
+  }
+  &.srch_sel {
+    z-index: 20;
+    padding: 0 15px;
+  }
+  &.srch_sel2 {
+    z-index: 15;
+    padding: 0 15px;
+    .bylocal {
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      .opts {
+        width: 200px;
+        a {
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+  .bylocal {
+    position: relative;
+    right: 0;
+    left: 0;
+    .sel {
+      width: 100%;
+      height: 30px;
+      background-image: linear-gradient(0, #f8f8f8, #fbfbfb, #fff);
+      border: 1px solid #cecece;
+      border-bottom: 1px solid #a1a1a1;
+      text-indent: 7px;
+      &:after {
+        display: block;
+        position: absolute;
+        bottom: 7px;
+        right: 10px;
+        border: 4px solid;
+        border-color: #ff6948 transparent transparent transparent;
+        content: '';
+      }
+      &:disabled {
+        color: #adafb3;
+        &:after {
+          border-top-color: #a5a7ac;
+        }
+      }
+      .cnt {
+        margin-left: 4px;
+        font-size: .75em;
+        color: #999;
+        letter-spacing: 0;
+      }
+    }
+    .opts {
+      width: 100%;
+      top: 40px;
+      left: 0;
+      background-color: #fff;
+      .opts_lst {
+        height: 230px;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      a {
+        width: 100%;
+        height: 39px;
+        padding-left: 9px;
+        border-bottom: 1px solid #f4f4f4;
+        font-size: .95em;
+        box-sizing: border-box;
+        .cnt {
+          margin-left: 3px;
+          font-size: 0.75em;
+          letter-spacing: 0;
+        }
+      }
+      .l_more {
+        display: block;
+        width: 100%;
+        border-top: 1px solid #d1d1d1;
+      }
+      .more {
+        width: 100%;
+        height: 14px;
+        background: #f7f7f7;
+        border: solid #fff;
+        border-width: 1px 0;
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 5px;
+          left: 50%;
+          border: 4px solid;
+          border-color: #999 transparent transparent transparent;
+        }
+      }
+    }
+    &.open .sel {
+      border-color: #999;
+    }
+  }
+  .bylocal2 {
+    padding-right: 4px;
+    .opts {
+      z-index: 110;
+    }
+  }
+  .bylocal3 {
+    padding-left: 4px;
+    .opts {
+      left: auto;
+      z-index: 120;
+      width: 200px;
+    }
+  }
+  .loc {
+    position: absolute;
+    top: 6px;
+    right: 111px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    &:after{
+      display:inline-block;
+      margin:0 auto;
+      vertical-align: middle;
+      content:'';
+      @include sp-search('ico_location_orange');
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// 카트 전체 선택
+.ct_header{
+	background-color: #fff;
+	border-bottom: 1px solid #dfe2e6;
+	.chk_type{
+		input[type="checkbox"]{
+			vertical-align: top;
+		}
+	}
+	.all_chk{
+		margin-left: 6px;
+		color:#16181a;
+		font-size: 13px;
+		font-weight:bold;
+		vertical-align: top;
+		line-height: 22px;
+		letter-spacing: $cart-space;
+		.cnt{
+			display: inline-block;
+			vertical-align: -1px;
+			font-weight: 800;
+			font-size: 14px;
+			letter-spacing: 0;
+			.num{
+				font-weight: 800;
+				color:#ff6651;
+			}
+		}
+	}
+}

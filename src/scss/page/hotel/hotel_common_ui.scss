@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+@mixin clearBoth {
+  clear:both;
+  content:"";
+  display:block;
+}
+// 체크인/체크아웃 데이터 피커 UI
+#set_date {
+    margin-bottom: 10px;
+
+    .calendar_wrap{
+        margin-bottom:2px;
+
+        // 날짜 읿력필드
+        .cal_input {
+            margin-bottom:1px;
+            position: relative;
+            width: 100%;
+            height: 38px;
+            cursor: pointer;
+            line-height: 38px;
+            border-radius: 2px;
+            overflow: hidden;
+            font-size: 1em;
+            background-color: #fff;
+
+            &.on{
+                border-radius:2px 2px 0 0;
+                border-bottom:1px solid #e9ecec;
+            }
+            &.on + #_checkInCalendarWrap,
+            &.on + #_checkOutCalendarWrap{
+                .ly_calendar{
+                    border-radius: 0 0 2px 2px;
+                }
+            }
+            .inner_cal_input {
+                width: 100%;
+                height: 36px;
+                position:relative;
+                .desc {
+                    position:absolute;
+                    left:10px;
+                    color: #333;
+                    font-size: 14px;
+                    font-weight: bold;
+                    z-index:10;
+                }
+                .date {
+                    position: absolute;
+                    color: #a7a7a7;
+                    border: none;
+                    right: 50px;
+                    top: 10px;
+                    cursor: pointer;
+                    text-align: right;
+                    font:{
+                        size:12px;
+                    }
+                }
+                .bg_cal_input {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    @include sp-hotel('bg_cal_input');
+                    .btn_cal_toggle {
+                        position: absolute;
+                        right: 11px;
+                        top: 15px;
+                        display: block;
+                        @include sp-hotel('bu_arrow_down');
+                        &.on{
+                            @include sp-hotel('bu_arrow_up');
+                        }
+                    }
+                }
+            }
+        }
+
+        // 캘린더 레이어
+        .ly_calendar {
+            display:none;
+            top:-1px;
+            position:relative;
+            padding:20px 10px;
+            background-color: #fff;
+
+            .btn_last,
+            .btn_next{
+                display:block;
+                position:absolute;
+                top:13px;
+                width:20px;
+                height:20px;
+                padding:5px;
+                text-indent: -9999px;
+            }
+
+            .btn_last{
+                left:18px;
+                .desc{
+                    position:absolute;
+                    left:12px;
+                    top:10px;
+                    @include sp-hotel(btn_cal_arrow_left);
+                }
+            }
+
+            .btn_next{
+                right:18px;
+                .desc{
+                    position:absolute;
+                    left:12px;
+                    top:10px;
+                    @include sp-hotel(btn_cal_arrow_right);
+                }
+            }
+
+            .cal_header{
+                margin-bottom:25px;
+                color:#333;
+                text-align:center;
+                font:{
+                    size:17px;
+                    weight:bold;
+                }
+            }
+
+            .cal_day_list{
+                margin-bottom:10px;
+
+                .day{
+                    float:left;
+                    width:14.2%;
+                    height:35px;
+                    color:#333;
+                    text-align: center;
+                    font:{
+                        family: "돋움", dotum, Arial, sans-serif;
+                        size:12px;
+                        weight:bold;
+                    }
+                }
+
+                &:after{
+                    @include clearBoth;
+                }
+            }
+
+            .cal_date_list{
+                li{
+                    position:relative;
+                    float:left;
+                    width:14.2%;
+                    height:35px;
+                    text-align:center;
+                    box-sizing:border-box;
+
+                    button{
+                        width:100%;
+                        height:100%;
+                        color:#333;
+                        font:{
+                            family: "돋움", dotum, Arial, sans-serif;
+                        }
+
+                        .date{
+                            display:block;
+                            width:100%;
+                            font:{
+                                size:12px;
+                            }
+                        }
+                    }
+
+                    &.sun,
+                    &.sat,
+                    &.holiday{
+                        .date{
+                            color:#f00;
+                        }
+                    }
+
+                    &.past{
+                        .date{
+                            color:#c6c6c6;
+                        }
+                    }
+
+                    &.today{
+                        button{
+                            outline:1px solid #000;
+                        }
+                        &.chk_in_day{
+                            button{
+                                outline:none;
+                            }
+                        }
+                        .date{
+
+                        }
+                    }
+
+                    .txt_chk_in,
+                    .txt_chk_out{
+                        display:none;
+                        color:#fff;
+                        font:{
+                            size:11px;
+                        }
+                    }
+
+                    &.chk_in_day, &.chk_out_day,
+                    &.chk_in_day.past, &.chk_out_day.past, {
+                        background:#2cbfb5;
+
+                        .date,
+                        .status{
+                            color:#fff;
+                        }
+                        .status{
+                            font:{
+                                size:9px;
+                            }
+                        }
+                    }
+
+                    &.chk_in_day{
+                        &:after{
+                            position: absolute;
+                            right: -3px;
+                            top: 0;
+                            display: block;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-width: 17px 0 18px 8px;
+                            border-style: solid;
+                            border-color: #d5f2f0 transparent #d5f2f0 #2cbfb5;
+                            z-index: 10;
+                        }
+                        .txt_chk_in{
+                            display:block;
+                        }
+                        .txt_chk_out{
+                            display:none;
+                        }
+                    }
+
+                    &.chk_out_day{
+                        &:before{
+                            position: absolute;
+                            left: -5px;
+                            top: 0;
+                            display: block;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-width: 17px 8px 18px 0;
+                            border-style: solid;
+                            border-color: #d5f2f0 #2cbfb5 #d5f2f0 transparent;
+                            z-index: 10;
+                        }
+                        .txt_chk_in{
+                            display:none;
+                        }
+                        .txt_chk_out{
+                            display:block;
+                        }
+                    }
+
+                    &.sat.chk_in_day{
+                        &:after{
+                            border-color: #fff transparent #fff #2cbfb5;
+                        }
+                    }
+
+                    &.sun.chk_out_day{
+                        &:before{
+                            border-color: #fff #2cbfb5 #fff transparent;
+                        }
+                    }
+
+                    &.one_day + .chk_out_day{
+                        overflow:hidden;
+                    }
+
+                    &.stay_in{
+                        .date{
+                            background:#d5f2f0;
+                        }
+                    }
+
+                    &.stay_in{
+                        background:#d5f2f0;
+                    }
+
+                    &.chk_in_day{
+                        &.today{
+                            .date{
+                                background:none;
+                            }
+                        }
+                    }
+                }
+
+                &:after{
+                    @include clearBoth;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+// 연관 검색어
+.assoc_keywords{
+  position:relative;
+  overflow:hidden;
+  z-index:100;
+  padding:0px 15px 8px;
+  background-color:#fff;
+  @include after();
+  .tit{
+    position:absolute;
+    left:15px;
+    font:{
+      size:13px;
+    }
+    color:#ff5d35;
+  }
+  .wrap_keywords{
+    margin-left:30px;
+    height:18px;
+    overflow:hidden;
+    margin-right:53px;
+    @include after();
+    .list_keywords{
+      li{
+        float:left;
+        a{
+          line-height:18px;
+          font:{
+            size:13px;
+          }
+          color:#666;
+          &:after{
+            content:",";
+            display:inline;
+            padding-right:4px;
+          }
+        }
+        &:last-child{
+          a{
+            &:after{
+              content:"";
+              display:inline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn_toggle_assoc_keywords{
+    position:absolute;
+    right:15px;
+    top:-7px;
+    text-indent:-9999px;
+    width:38px;
+    height:30px;
+    .ico{
+      position:absolute;
+      left:50%;
+      top:12px;
+      display:block;
+      margin-left:-6px;
+      @include sp-search('ico_arrow_under_gray_associate_keywords');
+    }
+  }
+
+  &.on{
+    padding:0px 15px 17px;
+    .wrap_keywords{
+      height:auto;
+      .list_keywords{
+        li{
+          width:50%;
+          margin-bottom:5px;
+          &:before{
+            position:absolute;
+            content:"·";
+            display:inline-block;
+            color:#777;
+            line-height:1;
+            font-size:20px;
+            margin-top:-4px;
+          }
+          a{
+            display:block;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            padding-left:10px;
+            padding-bottom:6px;
+            margin-right:10px;
+            line-height:1;
+            &:after{
+              content:"";
+              display:inline;
+            }
+          }
+          &:nth-child(9),
+          &:nth-child(10){
+            margin-bottom:0;
+            a{
+              padding-bottom:0;
+            }
+          }
+        }
+      }
+    }
+    .btn_toggle_assoc_keywords{
+      bottom:10px;
+      top:initial;
+      .ico{
+        @include sp-search('ico_arrow_up_gray_associate_keywords');
+      }
+    }
+  }
+}

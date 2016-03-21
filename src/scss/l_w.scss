@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+// mWhiteLayout 을 위한 관련 scss 를 모아놓은 scss 입니다. l_w.css 는 단독으로 사용되지 않고, 항상 다른 css 와 함께 사용됩니다.
+// import scss
+@import "./mixins/mixins";
+@import "./sprite/mixins";
+@import "./sprite/common";
+
+// mWhiteLayout - 헤더
+@import "./page/common/mWhiteLayout-header";
+// mWhiteLayout - 푸터
+@import "./page/common/mWhiteLayout-footer";
+// mWhiteLayout - depth3 내비게이션
+@import "./page/common/mWhiteLayout-depth3_navigation";
+// mWhiteLayout - depth4 내비게이션
+@import "./page/common/mWhiteLayout-depth4_navigation";
+// 반투명 블랙배경 drawer
+@import "./page/common/mWhiteLayout-drawer";
+
+/* white layout 기본 */
+.l_w{
+	&.bg2{
+	  	background:#fff;
+	}
+	
+	.app_header_ui_wrap{
+		z-index:200;
+	}
+	
+	.replace_border_on_header{
+		display:block;
+		position:relative;
+		height:2px;
+		z-index:200;
+		&:before{
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			height:2px;
+			background:#000;
+			content:'';
+		}
+	}
+}

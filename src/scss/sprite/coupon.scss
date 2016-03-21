@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+%sp-coupon {
+    background: url('../im/sp-coupon.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(326px/2) (308px/2);
+    -webkit-background-size:(326px/2) (308px/2);
+}
+
+@mixin sp-coupon($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-coupon, $filename);
+    @extend %sp-coupon;
+	@include sp-mosaic-base($sp-coupon, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-coupon: (
+    spritesheet_name: sp-coupon,
+    bg_arw_b: (offset_x: -132px, offset_y: -256px, width: 12px, height: 6px),
+    bg_arw_btm_r: (offset_x: -236px, offset_y: -220px, width: 14px, height: 26px),
+    bg_arw_cu_r: (offset_x: -272px, offset_y: -220px, width: 12px, height: 22px),
+    bg_arw_r: (offset_x: -288px, offset_y: -220px, width: 10px, height: 18px),
+    bg_arw_r2: (offset_x: -302px, offset_y: -220px, width: 10px, height: 18px),
+    bg_arw_rb: (offset_x: -254px, offset_y: -220px, width: 14px, height: 26px),
+    bg_banner_page_l: (offset_x: -112px, offset_y: -268px, width: 16px, height: 36px),
+    bg_banner_page_r: (offset_x: -92px, offset_y: -268px, width: 16px, height: 36px),
+    bg_mem_1st: (offset_x: -220px, offset_y: -110px, width: 106px, height: 106px),
+    bg_mem_gold: (offset_x: 0, offset_y: 0, width: 106px, height: 106px),
+    bg_mem_new: (offset_x: -220px, offset_y: 0, width: 106px, height: 106px),
+    bg_mem_silver: (offset_x: -110px, offset_y: -110px, width: 106px, height: 106px),
+    bg_mem_vip: (offset_x: 0, offset_y: -110px, width: 106px, height: 106px),
+    bg_mem_vvip: (offset_x: -110px, offset_y: 0, width: 106px, height: 106px),
+    btn_coupon_download: (offset_x: -92px, offset_y: -220px, width: 36px, height: 44px),
+    btn_layer_close: (offset_x: -168px, offset_y: -220px, width: 32px, height: 32px),
+    btn_layer_close_card: (offset_x: -132px, offset_y: -220px, width: 32px, height: 32px),
+    ico_layer_notice: (offset_x: -204px, offset_y: -220px, width: 28px, height: 28px),
+    ico_notice: (offset_x: 0, offset_y: -220px, width: 88px, height: 88px),
+);

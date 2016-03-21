@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// 공통 UI
+@import "./hotel/hotel_common_ui.scss";
+// 상세 검색 (검색 중간) 페이지
+@import "./hotel/detail_search.scss";
+@import "./hotel/detail_search_recommendations.scss";
+// 검색 결과 및 재검색 페이지
+@import "./hotel/search_filter.scss";
+@import "./hotel/search_list.scss";
+// 딜 상세 페이지
+@import "./hotel/deal_detail_info_slider.scss";
+@import "./hotel/deal_detail_room_info.scss";
+@import "./hotel/room_search.scss";
+@import "./hotel/deal_detail_info.scss";
+@import "./hotel/deal_detail_ean_pkg_info.scss";
+// 딜상세 레이어
+@import "./hotel/package_noti"; // 앱에서만 사용(ean 패키지 딜)

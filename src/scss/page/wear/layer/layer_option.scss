@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.ly_contents{
+	.opts_area{
+		
+		.sel_opts{
+			padding:0 20px 20px;
+		
+			dt{
+				padding:20px 0 15px;
+				float:none;
+				font-size:15px;
+				line-height:normal;
+			}
+			dd{
+				padding-left:0;
+				padding-bottom:0;
+			}
+		}
+		
+		.opts_lst{
+			li{
+				padding-bottom:5px;
+			}
+		}
+	}
+}
+
+.ly_footer{
+	
+	&.one{
+		padding:15px;
+		
+		.btn{
+			width:100%;
+			margin:0;
+		}
+	}
+}

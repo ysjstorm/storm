@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.ticket-top_banner {
+	position: relative;
+	height: 32px;
+	padding: 11px 15px;
+	background: #fafafa;
+	border-bottom: 1px solid #ddd;
+	
+	.noti {
+		margin-bottom: 1px;
+		font-size: 0.8em;
+		color: #666;
+	}
+	.count_ticket {
+		font: {
+			size: 1.2em;
+			weight: bold;
+		}
+		
+		strong {
+			color: #fe3b57;
+		}
+	}
+	.btn {
+		position: absolute;
+		top: 11px;
+		right: 15px;
+		width: 122px;
+		height: 28px;
+		border-width: 2px !important;
+		line-height: 28px !important;
+	}
+	.wear_deco_area {
+		z-index: 0;
+		
+		div {
+			-webkit-transform: rotate(135deg);
+			transform: rotate(135deg);
+		}
+		.skyblue {
+			bottom: -40px;
+			left: -55px;
+		}
+		.bluish_green {
+			top: -50px;
+			left: 170px;
+			border-left: none;
+		}
+		.pink {
+			left: -18px;
+			top: -104px;
+		}
+		.blue {
+			display: none;
+		}
+	}
+}

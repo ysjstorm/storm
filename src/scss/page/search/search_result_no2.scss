@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// 딜 없을 경우
+.search{
+	.deal_none{
+		padding:80px 0 60px;
+		font-size:1.2em;
+		color:#666;
+		text-align:center;
+		line-height:1.7em;
+
+		.hl{
+			display:block;
+			color:#ff5d35;
+			&:before, &:after{
+				padding:0 1px;
+				content:"'";
+			}
+		}
+	}
+}

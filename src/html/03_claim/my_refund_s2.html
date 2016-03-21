@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+	<title>TMON</title>
+	<link rel="stylesheet" href="../../css/m.css">
+</head>
+<body class="delivery_wrap">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+@@include('header_type2.html', {"title":"환불요청"})
+<hr>
+<div id="ct">
+	<div class="my_inr2">
+		<!-- 환불 상품 정보 -->
+		<div class="cl_refund">
+			<form action="">
+            <!-- 환불 상품 정보 (단일) -->
+            <div class="clbox_wrap">
+                <div class="clbox">
+                    <h3 class="tit">환불 상품 정보</h3>
+                    <div class="dl_wrap">
+                        <dl class="tbl_dl2">
+                            <dt>상품명</dt>
+                            <dd>시리얼 최저가 기획전</dd>
+                            <dt>환불상품</dt>
+                            <dd>선택08 - 아몬드 푸레이크900g(1개)</dd>
+                            <dt>환불금액</dt>
+                            <dd><b class="amt2 cl_point"><em class="price">7,500</em>원</b></dd>
+                            <dt><label for="cq">환불사유</label></dt>
+                            <dd>
+                                <select id="cq" class="sel">
+                                    <option value="">선택해주세요.</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <div class="rsn_wrap">
+                                    <label for="cn">
+                                        <textarea id="cn" class="cl_txtarea" placeholder="상세 사유를 입력해 주세요."></textarea>
+                                    </label>
+                                    <p class="cnt">0 / 50</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- 환불 상품 정보 (묶음) -->
+			<div class="clbox_wrap">
+				<div class="clbox">
+					<h3 class="tit">환불 상품 정보</h3>
+                    <div class="dl_wrap">
+                        <dl class="tbl_dl2">
+                            <dt>상품명</dt>
+                            <dd>시리얼 최저가 기획전</dd>
+                            <dt>환불상품</dt>
+                            <dd>선택08 - 아몬드 푸레이크900g(1개)</dd>
+                            <dt>환불금액</dt>
+                            <dd><div class="amt_lft cl_point"><em class="price">7,500</em>원</div></dd>
+                            <dt><label for="cq1">환불사유</label></dt>
+                            <dd>
+                                <select id="cq1" class="sel">
+                                    <option value="">선택해주세요.</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <div class="rsn_wrap">
+                                    <label for="cn1">
+                                        <textarea id="cn1" class="cl_txtarea" placeholder="상세 사유를 입력해 주세요."></textarea>
+                                    </label>
+                                    <p class="cnt">0 / 50</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="tbl_dl2">
+                            <dt>상품명</dt>
+                            <dd>시리얼 최저가 기획전</dd>
+                            <dt>환불상품</dt>
+                            <dd>선택08 - 아몬드 푸레이크900g(1개)</dd>
+                            <dt>환불금액</dt>
+                            <dd><div class="amt_lft cl_point"><em class="price">7,500</em>원</div></dd>
+                            <dt><label for="cq2">환불사유</label></dt>
+                            <dd>
+                                <select id="cq2" class="sel">
+                                    <option value="">선택해주세요.</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <div class="rsn_wrap">
+                                    <label for="cn2">
+                                        <textarea id="cn2" class="cl_txtarea" placeholder="상세 사유를 입력해 주세요."></textarea>
+                                    </label>
+                                    <p class="cnt">0 / 50</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+				</div>
+			</div>
+ 			<!-- 환불 상세 정보 -->
+			<div class="clbox_wrap">
+				<div class="clbox">
+					<h3 class="tit">환불 상세 정보</h3>
+					<table class="cltbl">
+						<caption>환불 상세 정보</caption>
+						<colgroup>
+							<col width="25%" /><col />
+						</colgroup>
+						<tr>
+							<th>환불예정액</th>
+							<td><b class="amt2 cl_point"><em class="price">255,000</em>원</b></td>
+						</tr>
+					</table>
+                    <!-- 물건 보냄: Y -->
+                    <div class="info1_wrap">
+                        <p class="info1">※ 환불차감 예정금액은 <span class="cl_point">0원</span> 입니다.</p>
+                        <p class="info1">&nbsp;&nbsp;&nbsp;&nbsp;다만 <span class="cl_point">판매자 확인 후 변경 될 수 있으니 꼭 확인</span> 후 요청주세요.</p>
+                    </div>
+                    <!-- 물건 보냄: N -->
+                    <div class="info1_wrap">
+                        <p class="info1"><span class="cl_point">※ 배송비를 동봉하지 말아주세요.</span></p>
+                        <p class="info1">&nbsp;&nbsp;&nbsp;&nbsp;변심에 의한 환불일 경우 배송비 2,500원은 환불금액에서 차감됩니다.</p>
+                    </div>
+                    <div class="info1_wrap">
+                        <p class="info1"><span class="cl_point">[무료반품 진행중]</span></p>
+                        <p class="info1">고객님의 단순변심으로 인해 발생한 반품배송비도 티몬이 부담합니다</p>
+                    </div>
+                    <div class="info1_wrap">
+                        <p class="info1">
+                            ※ 화물/설치, 냉장/냉동/신선, 해외배송 상품의 경우 <span class="cl_point">고객님 부담으로<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;환불금액에서 반품배송비가 차감</span>되어 환불됩니다.
+                        </p>
+                    </div>
+                </div>
+			</div>
+            <!-- 반품 방법 -->
+            <div class="clbox_wrap">
+                <div class="clbox">
+                    <h3 class="tit">반품 방법</h3>
+                    <div class="way_wrap">
+                        <!-- 선택 전 -->
+                        <b><span class="cl_point">현대택배(1588-2121)</span>또는<br><span class="cl_point">편의점택배(1577-1287)</span>를 통해 반품이 가능합니다.<br></b>
+                        <!-- 현대택배 -->
+                        <b>상품 반품은 티몬 지정 택배인<br><span class="cl_point">현대택배(1588-2121)</span>를 통해 진행됩니다.<br></b>
+                        <!-- 지정 택배 -->
+                        <b>해당 상품의 반품은<br><span class="cl_point">판매자가 지정한 택배사</span>를 통해 진행됩니다.<br></b>
+                    </div>
+                    <div class="sendq1_wrap">
+                        <div>상품을 판매자에게 먼저 보내셨습니까?</div>
+                        <div class="rdo_wrap">
+                            <label for="sq1"><input type="radio" id="sq1">예</label>
+                            <label for="sq2"><input type="radio" id="sq2">아니오</label>
+                        </div>
+                    </div>
+                    <!-- 현대택배 -->
+                    <div class="sendq2_wrap">
+                        <div> <!-- Y -->
+                            <div class="inp_wrap">
+                                <label for="sq3_y"></label>
+                                <div class="cl_selbox">
+                                    <select id="sq3_y">
+                                    <option value="">택배사 선택</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    </select>
+                                    <span class="ico_arr"></span>
+                                </div>
+                            </div>
+                            <div class="inp_wrap">
+                                <input type="text" class="cl_inpbox" placeholder="운송장번호 ('-'없이 숫자만 입력)">
+                            </div>
+                            <!--<div class="btn_wrap">
+                                <a href="#" title="운송장번호 인증" class="bt_gry3">운송장번호 인증</a>
+                            </div>-->
+                            <div class="info1_wrap">
+                                <p class="info1">택배사와 송장번호 입력 시 <span class="cl_point">배송 추적 및 빠른 환불</span>이 가능합니다.</p>
+                            </div>
+                        </div>
+                        <div> <!-- N -->
+                            <div class="info1_wrap">
+                                <p class="info1">상품 반품은 <span class="cl_point">현대택배(1588-2121)</span>를 통해 진행됩니다.<br>배송 완료 후 1~3일 내에 택배기사님이 방문할 예정입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 현대택배 + 편의점택배 -->
+                    <div class="sendq2_wrap">
+                        <div> <!-- Y -->
+                            <div class="inp_wrap">
+                                <label for="sq4_1"></label>
+                                <div class="cl_selbox">
+                                    <select id="sq4_1">
+                                        <option value="">택배사 선택</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                    <span class="ico_arr"></span>
+                                </div>
+                            </div>
+                            <div class="inp_wrap">
+                                <input type="text" class="cl_inpbox" placeholder="운송장번호 ('-'없이 숫자만 입력)">
+                            </div>
+                            <div class="info1_wrap">
+                                <p class="info1">반품시 받은 <span class="cl_point">운송장번호(반송장번호) 를 기재</span>해 주세요.</p>
+                            </div>
+                        </div>
+                        <div> <!-- N -->
+                            <div class="inp_wrap">
+                                <label for="sq4_2"></label>
+                                <div class="cl_selbox">
+                                    <select id="sq4_2">
+                                    <option value="">반품 방법 선택</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    </select>
+                                    <span class="ico_arr"></span>
+                                </div>
+                            </div>
+                            <div class="info1_wrap">
+                                <!-- 선택 전 -->
+                                <div class="subinfo_wrap">
+                                    <ul class="lst">
+                                        <li>현대택배&nbsp;&nbsp;<span class="cl_inf">배송 완료 후 1~3일 이내 택배기사 방문 수거</span></li>
+                                        <li>편의점반품&nbsp;&nbsp;<span class="cl_inf">고객님이 편한 시간에 편의점에 직접 접수</span></li>
+                                    </ul>
+                                </div>
+                                <!-- 현대택배 -->
+                                <p class="info1">상품 반품은 <span class="cl_point">현대택배(1588-2121)</span>를 통해 진행됩니다.<br>배송 완료 후 1~3일 내에 택배기사님이 방문할 예정입니다.</p>
+                                <!-- 판매자 지정 택배사 -->
+                                <div>
+                                    <p class="info1">접수 후 발송되는 <span class="cl_point">편의점 반품 번호 SMS</span>를 갖고<br>가까운 편의점을 방문해 주세요.<br><span class="cl_inf">※ 중량 5kg, BOX 세변의 합 140cm 미만인 경우에만 접수가 가능<br/>이를 초과하는 경우 현대택배로 변경 해 주세요.</span></p>
+                                    <div class="d_btns_wrap">
+                                        <a href="#" title="편의점 반품 접수 방법" class="bt_gry">편의점 반품 접수 방법</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 판매자 지정 택배사 -->
+                    <div class="sendq2_wrap">
+                        <div>
+                            <p class="info1"><span class="cl_point">반드시 판매자와 협의하여 처리해 주세요.</span><br>별도의 택배사 또는 화물 수단을 통해 반품 수거가 진행 중이신 경우<br>반품 배송비에 차액 발생 및 처리 일정이 지연 될 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 반품 수거지 정보 -->
+            <div class="clbox_wrap">
+                <div class="clbox">
+                    <h3 class="tit">반품 수거지 정보</h3>
+                    <table class="cltbl">
+                        <caption>반품 수거지 정보</caption>
+                        <colgroup>
+                            <col width="25%" /><col />
+                        </colgroup>
+                        <tr>
+                            <th>이름</th>
+                            <td>김티몬</td>
+                        </tr>
+                        <tr>
+                            <th>연락처</th>
+                            <td>010-1234-5678</td>
+                        </tr>
+                        <tr>
+                            <th>수거지</th>
+                            <td>
+                                <div>
+                                    <em class="lbl_no">지번</em><span class="info3">서울시 강남구 대치동</span>
+                                </div>
+                                <div>
+                                    <em class="lbl_st">도로명</em><span class="info3">서울시 강남구 테헤란로123</span>
+                                </div>
+                                <div class="info3">
+                                    1004번지 동일타워 1층 티켓몬스터
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="info1_wrap">
+                        <p class="info1">※ 택배기사님이 <span class="cl_point">반품할 상품을 수거하러 가는 주소</span>로 환불요청 이후에는</p>
+                        <p class="info1">&nbsp;&nbsp;&nbsp;&nbsp;수거지 변경이 불가합니다.</p>
+                    </div>
+                    <div class="top_btn">
+                        <span>
+                            <button type="button" class="bt_gry">수정</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 반품 수거지 정보 (수정모드) -->
+            <div class="clbox_wrap">
+                <div class="clbox">
+                    <h3 class="tit">반품 수거지 정보</h3>
+                    <div class="dl_wrap">
+                        <dl class="tbl_dl3">
+                            <dt><label for="cm1">이름</label></dt>
+                            <dd><div class="cm_inp"><input type="text" id="cm1" class="cl_inpbox"></div></dd>
+                            <dt><label for="cm2">연락처</label></dt>
+                            <dd>
+                                <div class="cm_inp">
+                                    <div class="cl_selbox">
+                                        <select id="cm2">
+                                            <option value="010">010</option>
+                                        </select>
+                                        <span class="ico_arr"></span>
+                                    </div>
+                                </div>
+                                <div class="cm_inp">
+                                    <label for="cm3"></label>
+                                    <input type="text" id="cm3" class="cl_inpbox">
+                                </div>
+                                <div class="cm_dash">-</div>
+                                <div class="cm_inp">
+                                    <label for="cm4"></label>
+                                    <input type="text" id="cm4" class="cl_inpbox">
+                                </div>
+                            </dd>
+                            <dt><label for="cm5">수거지</label></dt>
+                            <dd>
+                                <div class="cm_inp2">
+                                    <label for="cm6"></label>
+                                    <input type="text" id="cm6" class="cl_inpbox" readonly>
+                                </div>
+                                <div class="cm_srchzip">
+                                    <a href="#" title="우편번호 검색" id="cm5" class="bt_gry3">우편번호</a>
+                                </div>
+                            </dd>
+                            <dt></dt>
+                            <dd>
+                                <div>
+                                    <em class="lbl_no">지번</em>
+                                    <span class="info3">서울시 강남구 대치동</span>
+                                </div>
+                                <div>
+                                    <em class="lbl_st">도로명</em>
+                                    <span class="info3">서울시 강남구 테헤란로123</span>
+                                </div>
+                                <div class="cm_inp3">
+                                    <label for="cm8"></label>
+                                    <input type="text" id="cm8" class="cl_inpbox" value="1004번지 동일타워 1층 티켓몬스터">
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="info1_wrap">
+                        <p class="info1">※ 택배기사님이 <span class="cl_point">반품할 상품을 수거하러 가는 주소</span>로 환불요청 이후에는</p>
+                        <p class="info1">&nbsp;&nbsp;&nbsp;&nbsp;수거지 변경이 불가합니다.</p>
+                    </div>
+                    <div class="top_btn">
+                        <span>
+                            <button type="button" class="bt_gry">취소</button>
+                            <button type="button" class="bt_org2">저장</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 반품 수거지 정보 (편의점택배) -->
+            <div class="clbox_wrap">
+                <div class="clbox">
+                    <h3 class="tit">반품 수거지 정보</h3>
+                    <div class="sendq3_wrap">
+                        <div>고객님께서 직접 가까운 편의점(CU/GS25)으로<br>4일내(주말, 공휴일 포함) 접수해 주세요.</div>
+                        <div class="d_btns_wrap">
+                            <a href="#" title="편의점 반품 접수 방법" class="bt_gry">편의점 반품 접수 방법</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 반품시 주의사항 -->
+            <div class="clbox_wrap">
+                <div class="clbox">
+                    <h3 class="tit">반품시 주의사항</h3>
+                    <div class="lst_wrap">
+                        <ul class="lst">
+                            <li>상품이 사용/손상/훼손된 경우에는 반품이 불가능합니다.</li>
+                            <li>추가 문의사항은 티몬 고객센터(1544-6240) 또는 1:1 게시판을 이용해주세요.</li>
+                        </ul>
+                    </div>
+                    <div class="lst_wrap">
+                        <ul class="lst">
+                            <li>반품 상품은 지정 택배사 직원 또는 해당 판매업체에서 직접 수거할<br>예정입니다.</li>
+                            <li>단순 변심 / 사이즈 불만에 의한 반품 요청일 경우, 배송 조건에 따라<br><span class="cl_point">반품 배송비</span>를 부담하셔야 합니다.</li>
+                            <li><span class="cl_point">반품 배송비는 환불 금액에서 자동 차감</span>합니다.(단,착불상품 제외)</li>
+                            <li>무료배송, 조건부 무료배송 상품인 경우 <span class="cl_point">[최초 배송비 + 반품 배송비]</span>가<br>차감되고, 선결제 상품은 <span class="cl_point">[반품배송비]</span>만 차감됩니다.</li>
+                            <li>다른 택배사를 통해 상품을 보내셨거나 (또는 보내실 예정인 경우)<br>다른 추가 문의사항이 있으시면 고객센터(1544-6240) 또는 1:1<br>게시판으로 문의주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			<div class="btm_btn">
+				<div class="btn_wrap">
+					<button type="button" class="bt_org2">환불요청하기</button>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" class="bt_blu">취소</a>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+@@include('footer.html')
+<div class="tlbarwp">
+	<div class="tlbarinr">
+		<nav class="tlbar">
+			<a href="#" class="home"><i class="sp_tcm"></i>티몬 홈</a>
+			<a href="#" class="cate"><i class="sp_tcm"></i>카테고리</a>
+			<a href="#" class="srch"><i class="sp_tcm"></i>검색</a>
+			<a href="#" class="mytm on"><i class="sp_tcm"></i>마이티몬</a>
+		</nav>
+	</div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/markup_ui.js"></script>
+</body>
+</html>

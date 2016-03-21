@@ -1,0 +1,85 @@
+<div class="recent recommendations">
+    <h1 class="tit">최근검색 여행지</h1>
+    <ul>
+        <li class="recent-item item">
+            <a href="">
+                <em>보스니아 헤르체고비나</em> (전체), Bosnia and Herzegovina
+                <br>
+                <span class="target-date"> 2015.05.20 ~ 2015.05.22 </span>
+            </a>
+        </li>
+        <li class="recent-item item">
+            <a href="">
+                <em>베니스</em> Venice
+                <br>
+                <span class="target-date"> 2015.05.20 ~ 2015.05.22 </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="popular recommendations">
+    <h1 class="tit">인기 여행지</h1>
+    <ul>
+        <li class="popular-item item collapsable _size1 open">
+            <button class="region-type"> 국내 <span class="arr"></span> </button>
+            <ul class="region-list">
+                <li class="region"> <a href=""> 서울 </a> </li>
+            </ul>
+        </li>
+        <li class="popular-item item collapsable open">
+            <button class="region-type"> 일본 <span class="arr"></span> </button>
+            <ul class="region-list">
+                <li class="region"> <a href=""> 서울 </a> </li>
+                <li class="region"> <a href=""> 경기 </a> </li>
+            </ul>
+        </li>
+        <li class="popular-item item collapsable ">
+            <button class="region-type"> 중화권 <span class="arr"></span> </button>
+            <ul class="region-list">
+                <li class="region"> <a href=""> 서울 </a> </li>
+                <li class="region"> <a href=""> 경기 </a> </li>
+                <li class="region"> <a href=""> 강원 </a> </li>
+            </ul>
+        </li>
+        <li class="popular-item item collapsable open">
+            <button class="region-type"> 동남아 <span class="arr"></span> </button>
+            <ul class="region-list">
+                <li class="region"> <a href=""> 서울 </a> </li>
+                <li class="region"> <a href=""> 경기 </a> </li>
+                <li class="region"> <a href=""> 강원 </a> </li>
+                <li class="region"> <a href=""> 충청 </a> </li>
+                <li class="region nc"> 내용없음 </li>
+            </ul>
+        </li>
+        <li class="popular-item item collapsable open">
+            <button class="region-type"> 남태평양 <span class="arr"></span> </button>
+            <ul class="region-list">
+                <li class="region"> <a href=""> 서울 </a> </li>
+                <li class="region"> <a href=""> 경기 </a> </li>
+                <li class="region"> <a href=""> 강원 </a> </li>
+                <li class="region"> <a href=""> 충청 </a> </li>
+                <li class="region"> <a href=""> 전라 </a> </li>
+                <li class="region nc"> 내용없음 </li>
+            </ul>
+        </li>
+        <li class="popular-item item collapsable open">
+            <button class="region-type"> 미주&middot;유럽 <span class="arr"></span> </button>
+            <ul class="region-list">
+                <li class="region"> <a href=""> 서울 </a> </li>
+                <li class="region"> <a href=""> 경기 </a> </li>
+                <li class="region"> <a href=""> 강원 </a> </li>
+                <li class="region"> <a href=""> 충청 </a> </li>
+                <li class="region"> <a href=""> 전라 </a> </li>
+                <li class="region"> <a href=""> 부산 </a> </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script>
+$(document).ready(function (){
+    $('.popular-item.collapsable').on('click', function (e){
+        $(e.delegateTarget).toggleClass('open');
+    })
+})
+</script>

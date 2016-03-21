@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.ean_pkg_noti{
+    padding:13px 0;
+    border-bottom:1px solid #c2c7cc;
+    background-color:#fff;
+    text-align:center;
+    .noti_txt_wrap{
+        line-height:1em;
+        font-size:12px;
+        letter-spacing:-1px;
+        .ico_ean_pkg_noti{
+            margin-right:3px;
+            vertical-align:-2px;
+            display:inline-block;
+            @include sp-hotel('ico_ean_pkg_noti');
+        }
+        .noti_txt{
+            color:#6c7580;
+            text-align:center;
+        }
+    }
+}

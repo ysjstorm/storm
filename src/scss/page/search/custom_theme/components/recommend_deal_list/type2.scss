@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.component.recommend_deal_list.type2{
+  padding:0 10px 17px 15px;
+
+  .lst{
+    overflow: hidden;
+  }
+
+  .deal_item{
+    float:left;
+    width: 50%;
+    height: 252px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    .no_item{
+      text-align: center;
+      border: 1px solid #dfe2e6;
+      line-height: 250px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .no_deal_item{
+      @include sp-search('ico_no_product');
+    }
+  }
+
+  .deal_item_anchor{
+    height:250px;
+    display:block;
+    margin-right:5px;
+    border: 1px solid #dfe2e6;
+  }
+
+  .deal_item_body_top{
+    white-space: normal;
+    text-overflow: initial;
+  }
+
+  .deal_item_body{
+    height:85px;
+  }
+}

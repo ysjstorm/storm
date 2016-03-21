@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+.app_dwld {
+  position: relative;
+  height: 65px;
+  padding: 0 14px;
+  background-color: #fff;
+  border-bottom: 1px solid #df421f;
+  z-index:100;
+
+  .app_dwld_tx {
+    display: table;
+    overflow: hidden;
+    height: 65px;
+    color: #555;
+    line-height: 64px;
+    letter-spacing: -.05em;
+
+    p {
+      display: table-cell;
+      font-weight: bold;
+      font-size: 1.05em;
+      color: #333;
+      line-height: 1.3em;
+      letter-spacing: -.05em;
+      vertical-align: middle;
+
+      .hl {
+        color: #ff542f
+      }
+    }
+    span {
+      display: block;
+      font-size: .9em;
+    }
+  }
+
+  .app_dwld_bn {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    height: 33px;
+    padding: 0 16px;
+    background-color: #fff;
+    border: 1px solid #ff6948;
+    border-radius: 18px;
+    color: #ff542f;
+    line-height: 33px;
+    text-align: center;
+
+    .icon_app_down {
+      @include sp-common('appdownlayer-icon_app_down');
+      margin-right: 6px;
+      vertical-align: -2px;
+    }
+  }
+
+  .app_dwld_cls {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: none;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    font-size: 0;
+    color: transparent;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      width: 13px;
+      height: 1px;
+      margin-left: -6px;
+      background-color: #b3b3b3;
+      content: '';
+    }
+
+    &:before {
+      -webkit-transform: rotate(45deg);
+    }
+    &:after {
+      -webkit-transform: rotate(-45deg);
+    }
+  }
+}
+
+
+ 

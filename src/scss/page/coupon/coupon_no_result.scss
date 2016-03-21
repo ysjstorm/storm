@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.coupon_no_result{
+	padding: 65px 0 93px;
+	text-align: center;
+	
+	strong{
+		display: block;
+		margin-top: 15px;
+		font-size: 18px;
+	}
+	
+	p{
+		margin-top: 5px;
+		color: #6c7580;
+	}
+	
+	&:before{
+		content:"";
+		@include sp-coupon("ico_notice");
+	}
+}

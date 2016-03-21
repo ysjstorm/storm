@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>티몬 모바일</title>
+	<link href="../../css_php/m.css" rel="stylesheet" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="../../css/shared.css"/>
+	<script src="../../js/lib/jquery-2.1.3.min.js"></script>
+</head>
+<body class="" ondragstart="return false;">
+<div id="ClickTaleDiv" style="display: none;"></div>
+<div id="runapp_layer" class="app_landing" style="display:none;"> <!-- [D] 앱 다운로드 레이어 -->
+	<div class="wp">
+		<span class="btout"><a href="javascript:;" id="runapp" class="bt"><img src="http://img1.tmon.kr/m/bt_tmapp.png" width="100%" alt="티몬 앱으로 보기"></a></span>
+		<span class="btout"><button type="button" id="runapp_close" class="bt"><img src="http://img1.tmon.kr/m/bt_tmapp2.png" width="100%" alt="나중에 받기"></button></span>
+	</div>
+</div>
+<div id="ly_report" class="lyr lyr_report" style="display:none;top: 50px;">
+	<form name="report_form" id="report_form" method="post" action="/reviewAndTalk/report" enctype="multipart/form-data" target="ifmReviewProcess">
+	<input type="hidden" id="review_srl" name="review_srl" value="">
+	<input type="hidden" id="report_reason" name="report_reason" value="">
+	    <div class="lyrinr">
+	        <h1 class="lyrhd">신고하기</h1>
+	        <div class="lyrct">
+	            <div class="report">
+	                <p class="txt">신고 사유를 선택해주세요. <br>신고 내용은 이용약관 및 정책에 의해 처리됩니다. </p>
+	                <ul class="chk_lst">
+	                    <li><input type="radio" name="report_reason_rd" id="rdo_g1v1" class="blind" value="1"><label for="rdo_g1v1"><span class="rdo"></span> 부적절한 홍보 또는 비방글</label></li>
+	                    <li><input type="radio" name="report_reason_rd" id="rdo_g1v2" class="blind" value="2"><label for="rdo_g1v2"><span class="rdo"></span> 욕설 또는 무의미한 단어의 반복</label></li>
+	                    <li><input type="radio" name="report_reason_rd" id="rdo_g1v3" class="blind" value="3"><label for="rdo_g1v3"><span class="rdo"></span> 음란성 또는 청소년에게 부적합한 내용</label></li>
+	                    <li><input type="radio" name="report_reason_rd" id="rdo_g1v4" class="blind" value="4"><label for="rdo_g1v4"><span class="rdo"></span> 명예훼손 및 저작권 침해 등</label>
+	                        <input type="text" name="report_txt" id="report_txt" disabled="disabled" title="저작권 원본주소 입력" value="저작권 원본의 주소를 입력해주세요."></li>
+	                </ul>
+	            </div>
+	        </div>
+	        <div class="lyrbt">
+	            <button onclick="javascript:report_submit();" type="button" class="btcyn">신고완료</button>
+	        </div>
+	        <button onclick="javascript:openReport();" type="button" class="lyrqt"><em class="sp_tcm">레이어닫기</em></button>
+	    </div>
+	</form>
+</div>
+<!-- app_header_ui_wrap -->
+<div class="app_header_ui_wrap">
+	<!-- APP Down Link -->
+	@@include('./ui/common/app_down_link.html')
+	<!--// APP Down Link -->
+
+	<!-- Header -->
+	@@include('./ui/common/app_header.html')
+	<!--// Header -->
+
+	<!-- Depth-1 Menu -->
+	@@include('./ui/common/depth1.html')
+	<!--// Depth-1 Menu -->
+</div>
+<!--// app_header_ui_wrap -->
+<div id="ct">
+	<section id="ct" class="invenType">
+		<!-- depth_menu -->
+		<div class="depth_menu _fixHeader" data-fixtop="0">
+			<!-- Depth-2 Menu -->
+			@@include('./ui/common/depth2.html')
+			<!--// Depth-2 Menu -->
+
+			<!-- Depth-3 Menu -->
+			@@include('./ui/common/depth3.html')
+			<!--// Depth-3 Menu -->
+		</div>
+		<!--// depth_menu -->
+
+		@@include('./ui/deallist/inventory.html')
+		@@include('./ui/deallist/image_banner.html')
+		@@include('./ui/common/depth3_type2.html')
+
+	</section>
+</div>
+
+<div class="tlbarwp">
+	<div class="tlbarinr" id="bottomNavi">
+		<nav class="tlbar">
+			<!-- [D] 선택된 메뉴 a에 on클래스 추가 -->
+			<a href="http://m.ticketmonster.co.kr" onclick="hideCategoryInfoLayer()" class="home" tl:area="MBCA" tl:ord="1"><i class="sp_tcm"></i>티몬 홈</a>
+			<a href="/category" class="cate on" tl:area="MBCA" tl:ord="2"><i class="sp_tcm"></i>카테고리</a>
+			<a href="/search" class="srch" tl:area="MBCA" tl:ord="3"><i class="sp_tcm"></i>검색</a>
+			<a href="/mytmon/list" class="mytm" tl:area="MBCA" tl:ord="4"><i class="sp_tcm"></i>마이티몬</a>
+			<div class="tlbar_tip" id="catInfoLayer" style="display:none;">
+				티몬 상품을 <strong class="hl">카테고리</strong>별로<br>빠르게 확인할 수 있어요.
+				<button type="button" class="clse" id="catInfoClose">레이어 닫기</button>
+			</div>
+		</nav>
+		<div class="tlbtn">
+		</div>
+	</div>
+</div>
+
+<!-- 정렬 최신순 레이어 -->
+@@include('./ui/common/ly_sort.html')
+<!--// 정렬 최신순 레이어 -->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap" class="fancybox-ie"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

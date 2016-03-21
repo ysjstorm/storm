@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.coupon_tab{
+	
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	
+	li{
+		float: left;
+		width: 50%;
+		height: 40px;
+		border-top: 1px solid #dfe2e6;
+		border-right: 1px solid #dfe2e6;
+		border-bottom: 1px solid #fa5a44;
+		background-color: #fafafa;
+		text-align: center;
+		box-sizing: border-box;
+		
+		&:first-child{
+			border-left: 1px solid #dfe2e6;
+			
+			&.on{
+				margin-left: 0;
+			}
+		}
+		
+		&.on{
+			border-top: 1px solid #fa5a44;
+			border-left: 1px solid #fa5a44;
+			border-right: 1px solid #fa5a44;
+			border-bottom: 0;
+			margin-left: -1px;
+			background-color: #fff;
+			
+			button{
+				color: #fa5a44;
+			}
+		}
+		
+		button{
+			display: block;
+			height: 100%;
+			width: 100%;
+			font-size: 17px;
+			font-weight: 500;
+			color: #959da6;
+		}//button
+		
+	}//li
+	
+}

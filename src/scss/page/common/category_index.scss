@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+.cate_index{
+	padding:2px 0 25px;
+	
+	.cate_sec{
+		margin:0 17px;
+		padding:14px 0 0 0;
+		border-bottom:1px solid #c2c7cc;
+		
+		&:last-child{
+			border-bottom:0;
+		}//.cate_sec:last-child
+		
+	}//.cate_sec
+	
+	.cate_tit{
+		padding:0 0 0 10px;
+		color:#2b2f33;
+		letter-spacing:-0.2px;
+	}//.cate_tit
+	
+	ul{
+		overflow:hidden;
+		padding:5px 0 10px;
+	}
+	
+	li{
+		position:relative;
+		float:left;
+		width:50%;
+		
+		a{
+			display:block;
+			height:36px;
+			padding-left:35px;
+			color:#575e66;
+			line-height:37px;
+			letter-spacing: -0.2px;
+			
+			i{
+				position:absolute;
+				top:8px;
+				left:10px;
+				width:19px;
+				height:19px;
+				
+				&.i_new{
+					position:static;
+					margin:-3px 0 0 4px;
+					vertical-align:middle;
+					@include sp-common('category_index_new2');
+				}
+				
+				&.i_1000000{
+				  	// 여성패션
+					@include sp-common('category_index_001');
+				}
+				&.i_2000000{
+				  	// 남성/유니섹스패
+					@include sp-common('category_index_002');
+				}
+				&.i_3000000{
+				  	// 여성브랜드패션
+					@include sp-common('category_index_003');
+				}
+				&.i_4000000{
+				  	// 남성브랜드패션
+					@include sp-common('category_index_004');
+				}
+				&.i_5000000{
+				  	// 스포츠패션
+					@include sp-common('category_index_005');
+				}
+				&.i_6000000{
+				  	// 뷰티
+					@include sp-common('category_index_006');
+				}
+				&.i_7000000{
+				  	// 식품/건강
+					@include sp-common('category_index_007');
+				}
+				&.i_8000000{
+				  	// 출산/유아동
+					@include sp-common('category_index_008');
+				}
+				&.i_9000000{
+				  	// 생활/주방
+					@include sp-common('category_index_009');
+				}
+				&.i_10000000{
+				  	// 가구/홈/데코
+					@include sp-common('category_index_010');
+				}
+				&.i_12000000{
+				  	// 가전/디지털
+					@include sp-common('category_index_011');
+				}
+				&.i_14000000{
+				  	// 도서/교육/문구/취미
+					@include sp-common('category_index_012');
+				}
+				&.i_13000000{
+				  	// 레포츠/자동차
+					@include sp-common('category_index_013');
+				}
+				&.i_11000000{
+				  	// 반려동물
+					@include sp-common('category_index_014');
+				}
+				&.i_15000000{
+				  	// 국내여행/레저
+					@include sp-common('category_index_015');
+				}
+				&.i_16000000{
+				  	// 해외여행
+					@include sp-common('category_index_016');
+				}
+				&.i_18000000{
+				  	// 지역할인쿠폰
+					@include sp-common('category_index_017');
+				}
+				&.i_17000000{
+				  	// 컬쳐
+					@include sp-common('category_index_018');
+				}
+				
+			}//i
+			
+		}//a
+		
+		&.direct{
+			float:none;
+			clear:both;
+			width:auto;
+			padding:8px 10px 10px;
+			
+			a{
+				height:39px;
+				padding-left:0;
+				border:1px solid #c2c7cc;
+				line-height:39px;
+				text-align:center;
+				
+				img{
+					vertical-align: middle;
+				}
+			}
+		}
+		
+	}//li
+	
+	.cate_no_depth{
+		margin:0 17px;
+		border-bottom:1px solid #c2c7cc;
+		
+		a{
+			display:block;
+			height:41px;
+			line-height:43px;
+			
+			.cate_tit{
+				float:left;
+				font-size:1.1em;
+				color:#12aec3;
+				
+				.i_new{
+					margin:-3px 0 0 5px;
+					vertical-align:middle;
+					@include sp-common('category_index_new');
+				}//.i_new
+				
+			}//.cate_tit
+			
+			.shortcut{
+				float:right;
+				padding:0 10px 0 0;
+				font-size:0.95em;
+				color:#91d1dc;
+				
+				i{
+					margin:-3px 0 0 5px;
+					vertical-align:middle;
+					@include sp-common('category_index_shortcut');
+				}
+				
+			}//.shortcut
+			
+		}//a
+		
+		&.on{
+			margin-top:-1px;
+			border-top:1px solid #b9dde0;
+			border-bottom:1px solid #b9dde0;
+			background-color:#eff7f8;
+		}//.on
+		
+	}//.cate_no_depth
+
+	.cate_recomm{
+		margin:0 17px;
+		padding-bottom:5px;
+
+		ul{
+			padding-top:17px;
+			padding-bottom:0;
+		}
+
+		li{
+			width:25%;
+			padding-left:4px;
+			box-sizing:border-box;
+
+			&:first-child{
+				padding-left:0;
+			}
+		}
+
+		a{
+			height:37px;
+			padding-left:0;
+			border:1px solid #fa5a44;
+			border-radius:2px;
+			font-size:13px;
+			text-align:center;
+			color:#fa5a44;
+
+			&:after{
+				@include sp-common('arrow_category_recommend');
+
+				margin-left:10px;
+				margin-top:15px;
+				vertical-align:top;
+				content:'';
+			}
+		}
+	}
+}

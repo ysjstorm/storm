@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.map_cvs{
+	.marker{
+		&.cu{
+			@include sp-cvs('marker_cu');
+			&.focus{
+				@include sp-cvs('marker_cu_focus');
+			}
+			&.disable{
+				@include sp-cvs('marker_cu_disable');
+			}	
+		}
+	}
+	.bt_search{
+		position:absolute;
+		top:15px;
+		left:10px;
+		overflow:hidden;
+		border:1px solid #ee4e37;
+		border-radius: 1.1px;
+		-webkit-border-radius:1.1px;
+		background:rgba(250, 90, 68, 0.95);
+		color: #fff;
+		font-size:13px;
+		padding:7px 8px 5px;
+		letter-spacing:-0.05em;
+		font-weight:bold;		
+	}
+}

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.tmon_coupon{
+
+	.coupon_member{
+		margin-top: 15px;
+		padding: 0 15px;
+		
+		&.logout{
+			margin-top: 10px;
+		}
+		
+	}//.coupon_member
+	
+	.coupon_section{
+		margin-top: 10px;
+		padding: 0 15px 20px;
+		border: solid #e0e3e5;
+		border-width: 1px 0;
+		background-color: #fff;
+		
+		h3{
+			margin: 25px 0 15px;
+			font-size: 20px;
+			font-weight: 500;
+			text-align: center;
+		}
+		
+		.coupon_sort{
+			margin: 11px 0 7px;
+		}
+
+		.w_coupon_lst{
+			&.fixed{
+				position:fixed;
+				top:0;
+				left:15px;
+				right:15px;
+				z-index:10;
+				background-color:#fff;
+				padding-top:17px;
+				opacity:0.95;
+			}
+		}
+		
+		.coupon_lst{
+			li{
+				margin-bottom: 5px;
+				
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		
+	}//.coupon_section
+	
+	.coupon_bottom{
+		margin: 10px 0;
+	}
+	
+	// 레이어팝업 공통 레이아웃
+	.layer_wrp{
+		position:fixed;
+		top:50%;
+		right:30px;
+		left:30px;
+		z-index:20;
+		-webkit-transform:translateY(-50%);
+		transform:translateY(-50%);
+		border-radius:2px;
+		background:#fff;
+		box-shadow:0 2px 5px rgba(0,0,0,.4);
+	}
+	
+	.layer_dimmed{
+		position:fixed;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index:10;
+		background:rgba(0,0,0,.6);
+	}
+}

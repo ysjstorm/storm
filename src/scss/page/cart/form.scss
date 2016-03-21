@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+// cheackbox type
+.chk_type{
+	input[type="checkbox"]{
+		display:inline-block;
+		position: relative;
+		width:22px;
+		height:22px;
+		margin: 0;
+		border: 1px solid #fa5a44;
+		box-sizing:border-box;
+		background: #fff;
+		-webkit-border-radius:0;
+		-webkit-appearance:none;
+		&:after{
+			display:block;
+			width:9px;
+			height:14px;
+			margin:0 auto;
+			box-sizing: border-box;
+			border-right:2px solid #fff;
+			border-bottom:2px solid #fff;
+			transform:rotate(45deg);
+			-webkit-transform:rotate(45deg);
+			content:"";
+		}
+	}
+	input[type="checkbox"]:checked {
+		background-color: #fa5a44;
+	}
+}
+[class$="_bundle"]{
+	&.chk_type,.chk_type {
+		input[type="checkbox"] {
+			border: 1px solid #073190;
+		}
+		input[type="checkbox"]:checked {
+			background-color: #073190;
+		}
+	}
+}
+.chk_disabled{
+	input[type="checkbox"]{
+		border: 1px solid #dfe2e6;
+	}
+	input[type="checkbox"]:checked {
+		background-color: #dfe2e6;
+	}
+}
+
+// 수량 버튼
+.bt_cnt{
+	position: relative;
+	display: inline-block;
+	width:70px;
+	height:25px;
+	border: 1px solid #b7bfc8;
+	text-align: left;
+	&:after,&:before{
+		display: block;
+		position: absolute;
+		content:"";
+	}
+	&:after{
+		right:0;
+		top:0;
+		width:23px;
+		height:23px;
+		border-left: 1px solid #b7bfc8;
+	}
+	&:before{
+		right:8px;
+		top:9px;
+		border-width: 5px 4px;
+		border-style: solid;
+		border-color:#fff;
+		border-top-color:#959da6;
+	}
+	.quantity{
+		display: block;
+		width:45px;
+		height:23px;
+		padding-right:10px;
+		box-sizing:border-box;
+		line-height: 23px;
+		letter-spacing:-0.05em;
+		font-size: 13px;
+		color:#16181a;
+		text-align: right;
+	}
+}
+//삭제 버튼
+.bt_del{
+	position: relative;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #b7bfc8;
+	&:before{
+		display: block;
+		@include sp-cart('bt_del');
+		width:13px;
+		height:13px;
+		content: "";
+		margin: 0 auto;
+	}
+}
+// button | w auto, h 47
+.bt_area, .bt_wrap{
+	[class^="bt_"]{
+		display: inline-block;
+		box-sizing:border-box;
+		height:47px;
+		font-size: 16px;
+		text-align: center;
+		line-height: 47px;
+	}
+	.bt_continue{
+		border:1px solid #fa5a44;
+		background-color: #fff;
+		color:#fa5a44;
+	}
+	.bt_submit{
+		background-color: #fa5a44;
+		color:#fff;
+	}
+}
+
+
+
+

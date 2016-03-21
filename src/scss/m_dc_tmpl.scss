@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/* reset */
+.tmde-summary .inr, .tmde-review .inr{padding:5px}
+.tmde-template{overflow:hidden;width:100%}
+.tmde-template.loaded{border:0}
+.tmde-template:after{display:block;clear:both;content:''}
+.tmde-template *{letter-spacing:-1px}
+.tmde-template .tmde-figure{display:inline-block;position:relative;vertical-align:top}
+.tmde-template .tmde-template-colmn{position:relative;min-height:145px;padding:10px;border-bottom:1px solid #ccc;box-sizing:border-box}
+.tmde-template .tmde-template-colmn:after{display:block;clear:both;content:''}
+.tmde-template .tmde-opt-thmb{display:block;position:absolute;top:10px;right:10px;width:125px;height:125px;line-height:0;font-size:0;background:url(../img/deal_contents/thmb.png) repeat}
+.tmde-template .tmde-opt-info{display:block;margin-right:125px}
+.tmde-template .tmde-opt-label{display:block;position:relative;top:-7px;font-size:18px;font-weight:600;color:#ff6948}
+.tmde-template .tmde-opt-subject{display:-webkit-box;overflow:hidden;position:relative;margin-top:-8px;line-height:100%;font-style:normal;font-weight:700;font-size:16px;color:#333;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.tmde-template .tmde-opt-detail{display:-webkit-box;position:relative;overflow:hidden;margin-top:2px;line-height:14px;font-size:12px;color:#646464;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.tmde-template .tmde-opt-price{display:block;position:absolute;bottom:10px;left:10px}
+.tmde-template .tmde-opt-price:after{display:block;clear:both;content:''}
+.tmde-template .tmde-price{float:left}
+.tmde-template .tmde-price-condition:after{display:block;clear:both;content:''}
+.tmde-template .tmde-origin-price{display:inline-block;position:relative;top:2px;margin-top:18px;font-size:12px;line-height:18px;font-weight:400;color:#b7b7b7}
+.tmde-template .tmde-origin-price .line{display:block;position:absolute;top:50%;left:-1px;width:104%;height:1px;margin-top:-1px;background-color:#b7b7b7}
+.tmde-template .tmde-origin-price .tmde-figure{top:0;font-size:14px;font-weight:normal;letter-spacing:0}
+.tmde-template .tmde-tmon-price{display:inline-block;margin-right:3px;font-size:12px;font-weight:400;color:#ff6948}
+.tmde-template .tmde-discount-per{float:left;margin:19px 10px 0 0;line-height:30px;font-size:18px;font-weight:600;color:#ff6948;vertical-align:top}
+.tmde-template .tmde-discount-per .tmde-figure{top:3px;font-size:28px}
+.tmde-template .tmde-discount-price{display:block;margin-top:0;line-height:20px;font-size:16px;color:#333}
+.tmde-template .tmde-discount-price .tmde-figure{top:0;font-size:18px;font-weight:600}
+.tmde-template .tmde-spot-discount{display:block;width:150px;height:23px;margin:6px 0 0 -2px;background:url(../img//deal_contents/sp_m_dealSummary.png) no-repeat;background-size:150px 23px;*zoom:1}
+.tmde-template .tmde-spot-discount:after{display:block;clear:both;content:''}
+.tmde-template .tmde-spot-discount .tmde-spot{float:left;width:66px;height:19px;padding:4px 0 0 0;line-height:16px;font-size:11px;font-weight:400;color:#fff;vertical-align:top;text-align:center}
+.tmde-template .tmde-spot-discount .tmde-spot .tmde-figure{top:0;font-size:12px;letter-spacing:0}
+.tmde-template .tmde-spot-discount .tmde-spot-price{float:left;width:79px;height:21px;padding:3px 0 0 5px;line-height:18px;font-size:12px;font-weight:400;color:#fff55a;vertical-align:top}
+.tmde-template .tmde-spot-discount .tmde-spot-price .tmde-figure{top:-1px;font-size:14px;letter-spacing:0}
+
+.tmde-template.column2 .tmde-template-colmn,
+.tmde-template.column3 .tmde-template-colmn{float:left;width:50%;min-height:300px;padding:5px;margin-left:-1px;border-left:1px solid #ccc}
+.tmde-template.column2 .tmde-template-colmn:last-child,
+.tmde-template.column3 .tmde-template-colmn:last-child{width:50%}
+.tmde-template.column2 .tmde-opt-thmb,
+.tmde-template.column3 .tmde-opt-thmb{float:none;position:static;width:100%;height:auto}
+.tmde-template.column2 .tmde-opt-thmb img,
+.tmde-template.column3 .tmde-opt-thmb img{width:100%}
+.tmde-template.column2 .tmde-opt-info,
+.tmde-template.column3 .tmde-opt-info{float:none;width:100%;min-height:140px;margin:0;padding-top:8px}
+.tmde-template.column2 .tmde-opt-label,
+.tmde-template.column3 .tmde-opt-label{position:static}
+.tmde-template.column2 .tmde-opt-subject,
+.tmde-template.column3 .tmde-opt-subject{margin-top:2px}
+.tmde-template.column2 .tmde-opt-detail,
+.tmde-template.column3 .tmde-opt-detail{margin-top:5px}
+.tmde-template.column2 .tmde-opt-price,
+.tmde-template.column3 .tmde-opt-price{left:5px;bottom:5px}
+
+/* review */
+.tmde-review .tmde-review-template{padding-top:25px}
+.tmde-review .tmde-opt-info{text-align:center}
+.tmde-review .tmde-opt-info .tmde-opt-label{display:block;font-size:34px;color:#ff5001}
+.tmde-review .tmde-opt-info .tmde-opt-subject{display:block;position:relative;margin-bottom:15px;font-style:normal;font-size:30px;font-weight:700;color:#333;letter-spacing:-2px}
+
+.tmde-review .tmde-template{position:relative;padding:10px;margin-top:5px;border:0;box-sizing:border-box;background-color:#f4f4f4}
+.tmde-review .tmde-template.image{width:100%;min-height:186px;padding:0}
+.tmde-review .tmde-template.image.first{margin-top:10px}
+.tmde-review .tmde-template.image .tmde-image-area{float:left;width:100%;text-align:center;font-size:0;line-height:0}
+.tmde-review .tmde-template.image .tmde-image-area img{margin:0 auto}
+.tmde-review .tmde-template .tmde-component-option,
+.tmde-review .tmde-template .tmde-component-option button{z-index:10}
+
+.tmde-review .tmde-template .tmde-text-area,
+.tmde-review .tmde-template .tmde-image-area{overflow:hidden;width:100%}
+.tmde-review .tmde-template .tmde-image-area{padding:0;font-size:0;line-height:0}
+.tmde-review .tmde-template .tmde-text-area{width:100%;padding:10px 10px;box-sizing:border-box}
+
+.tmde-review .tmde-template.mix{width:100%;padding:0}
+.tmde-review .tmde-template.mix:after{display:block;clear:both;content:''}
+.tmde-review .tmde-template.mix .tmde-image-area{position:relative;float:left;width:50%}
+.tmde-review .tmde-template.mix-image .tmde-text-area{width:50%}
+.tmde-review .tmde-template.mix-text .tmde-text-area{float:left;width:50%}
+
+.tmde-review .tmde-template .tmde-sub-subject{display:block;position:relative;font-size:18px;font-weight:600}
+.tmde-review .tmde-template .tmde-sub-description{position:relative;margin-top:5px;line-height:16px;font-size:12px;font-weight:200}
+.tmde-review .tmde-template.mix .tmde-sub-subject{display:block;position:relative;font-size:16px;font-weight:400}
+.tmde-review .tmde-template.mix .tmde-sub-description{position:relative;margin-top:5px;line-height:14px;font-size:12px;font-weight:200}
+
+.tmde-review .tmde-spot-discount{width:225px;height:24px;margin:0 auto 4px;background:url(../img/deal_contents/sp_dealSummary.png) no-repeat 0 -72px;background-size:225px 151px;*zoom:1}
+.tmde-review .tmde-spot-discount:after{display:block;clear:both;content:''}
+.tmde-review .tmde-spot-discount .tmde-figure{display:inline-block;position:relative;vertical-align:top;*vertical-align:middle}
+.tmde-review .tmde-spot-discount .tmde-spot{float:left;width:50px;height:21px;padding:3px 0 0 4px;font-size:12px;color:#fff;font-weight:400;text-align:center}
+.tmde-review .tmde-spot-discount .tmde-spot-price{float:left;position:relative;width:170px;height:23px;padding-top:1px;font-size:14px;text-align:right;color:#fff55a}
+.tmde-review .tmde-spot-discount .tmde-spot-price .tmde-add-spot{position:absolute;top:3px;right:90px;margin-right:15px;font-size:12px;color:#fff}
+.tmde-review .tmde-spot-discount .tmde-spot-price .tmde-add-spot .tmde-figure{top:-1px;font-size:14px;font-weight:800}
+.tmde-review .tmde-spot-discount .tmde-spot-price .tmde-add-spot-price{position:absolute;top:1px;right:15px}
+.tmde-review .tmde-spot-discount .tmde-spot-price .tmde-add-spot-price .tmde-figure{top:-1px;font-size:16px;font-weight:800}
+
+.tmde-review .tmde-spot-per{background-position:0 -100px}
+.tmde-review .tmde-spot-per .tmde-spot{height:20px;padding-top:4px;font-weight:800;color:#ff5001;vertical-align:bottom}
+.tmde-review .tmde-spot-per .tmde-spot .tmde-figure{top:-4px;font-size:16px}
+.tmde-review .tmde-spot-per .tmde-spot-price{}
+.tmde-review .tmde-spot-per .tmde-spot-price .tmde-add-spot{color:#959595}
+.tmde-review .tmde-spot-per .tmde-spot-price .tmde-add-spot .line{display:block;position:absolute;top:50%;left:-1px;width:104%;height:1px;margin-top:-1px;background-color:#959595}
+.tmde-review .tmde-spot-per .tmde-spot-price .tmde-add-spot-price{color:#333}
+
+.tmde-review .tmde-spot-tmon{width:168px;margin-bottom:4px;background-position:0 -127px}
+.tmde-review .tmde-spot-tmon .tmde-spot{width:56px;height:21px;padding:3px 0 0 2px;color:#fff}
+.tmde-review .tmde-spot-tmon .tmde-spot-price{width:110px;color:#fff}
+
+.tmde-review .tmde-template .tmde-review-table{position:relative;text-align:center}
+.tmde-reivew .tmde-template .tmde-review-table table{margin:0 auto}

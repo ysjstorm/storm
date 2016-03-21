@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.home_latest{
+  	height:218px;
+  	padding-top:62px;
+  	z-index:10;
+	overflow-y:hidden;
+  	background-color:#fff;
+	.search_latest{
+		margin-top:0;
+	}
+}
+.home_theme{
+	overflow-y:hidden;
+  	z-index:20;
+	background-color:#f6f6f6;
+
+  	&.split_theme_keyword{
+	  padding-top:62px;
+	}
+  	&.theme_keyword{
+	  border-top:1px solid #b0b0b0;
+	}
+}
+.ios,
+.android{
+  &.app {
+	.home_theme {
+	  bottom: 0 !important;
+	}
+  }
+}

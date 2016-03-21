@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.wear_deco_area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+	
+	div {
+		position: absolute;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	.skyblue {
+		width: 130px;
+		height: 4px;
+		background: #73b3ff;
+	}
+	.bluish_green {
+		width: 130px;
+		height: 130px;
+		border-left: 4px solid #4dd2de;
+		border-bottom: 4px solid #4dd2de;
+	}
+	.pink {
+		width: 4px;
+		height: 130px;
+		background: #fe3b57;
+	}
+	.blue {
+		width: 60px;
+		height: 60px;
+		border-left: 4px solid #0046a6;
+		border-bottom: 4px solid #0046a6;
+	}
+}

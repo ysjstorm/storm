@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.component.recommend_deal_list.type4 {
+  position: relative;
+  padding: 0 0 15px;
+  height: auto;
+  overflow-y: hidden;
+
+  .lst {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+  }
+
+  .deal_item {
+    display: block;
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  .deal_item_anchor {
+    margin: 0 auto;
+    display: block;
+    width: 97.5%;
+    border: 1px solid #dfe2e6;
+  }
+
+  .deal_item_thumb {
+    height: 130px;
+  }
+
+  .deal_item_body_top {
+    @include line-clamp(1, 17px);
+  }
+
+  .deal_item_body {
+    height: 68px;
+  }
+}

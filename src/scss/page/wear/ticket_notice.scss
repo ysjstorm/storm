@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.ticket_notice {
+	padding: 22px 0 29px;
+	text-align: center;
+	
+	.noti {
+		font-size: 15px;
+		line-height: 25px;
+		color: #666;
+	}
+	.count_ticket {
+		font: {
+			size: 25px;
+			weight: bold;
+		}
+		line-height: 36px;
+		
+		strong {
+			color: #fe3b57;
+		}
+	}
+	.btn {
+		width: 220px;
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+// 에러
+.search_obs{
+	width:283px;
+	margin:0 auto;
+	padding:75px 0 25px 0;
+	text-align:center;
+	&:before{
+		@include sp-search('bg_search_obs');
+		display:inline-block;
+		overflow:hidden;
+		content:'';
+	}
+	.title{
+		display:inline-block;
+		font-size:1.4em;
+		color:#333;
+	}
+	.obs_txt{
+		padding:10px 0 15px 0;
+		font-size:1em;
+		color:#666;
+		line-height:1.45em;
+	}
+	> a{
+		display:inline-block;
+		height:25px;
+		color:#fff;
+		line-height:27px;
+		font-weight:bold;
+		border-radius:2px;
+	}
+	> a.btn_reflash{
+		width:71px;
+		margin-right:2px;
+		background:#ff6948;
+		border:1px solid #ff6948;
+	}
+	> a.btn_prev{
+		width:50px;
+		background:#888;
+		border:1px solid #888;
+	}
+}

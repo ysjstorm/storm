@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.order_addr{
+	//margin:0 15px;
+	padding-bottom:15px;
+	background-color:#fff;
+	
+	.addr_box{
+		margin:0 15px;
+		padding:12px 0 12px 28px;
+		border-bottom:1px solid #ddd;
+		
+		.radio_box{
+			margin-left:-28px;
+			font-size:1.08em;
+		    font-weight:500;
+		}//.radio_box
+		
+		.detail{
+			margin-top:8px;
+		
+			li{
+				position:relative;
+				margin-bottom:2px;
+				padding-left:48px;
+				
+				&:last-child{
+					margin-bottom:0;
+				}//&:last-child
+				
+				strong{
+					position:absolute;
+					top:1px;
+					left:0;
+					font-weight:500;
+					color:#333;
+				}//strong
+				
+				p{
+					color:#666;
+					word-break:break-word;
+					
+					a{
+						color:#666;
+					}//a, 아이폰 전화번호 인식 컬러
+					
+				}//p
+				
+			}//li
+			
+		}//.detail
+		
+		.addr_input_form{
+			display:none;
+			margin-top:10px;
+		}//.addr_input_form
+		
+		._toggle_input{
+			visibility: hidden;
+			position:absolute;
+			z-index:-1;
+			
+			&:checked + .radio_box{
+				.rdo_custom{
+					border-color: #fe3b57;
+					
+					&:after {
+						background-color: #fe3b57;
+					}
+				}
+			}
+			
+			&:checked ~ .addr_input_form{
+				display:block;
+			}
+		}//._toggle_input
+		
+	}//.addr_box
+
+	.memo_box {
+		margin: 0 15px;
+	}
+}

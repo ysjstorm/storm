@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+	<title>TMON :: Value Fashion</title>
+	<link rel="stylesheet" href="../../css/wear.css"/>
+	<link rel="stylesheet" href="../../css/l_w.css"/>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/wear/tmon.wear.ui.js"></script>
+	<script type="text/javascript" src="../../js/wear/tmon.wear.sbag.js"></script>
+	<script>
+		$(function(){
+			new WearUI();
+			new WearShoppingBag();
+		});
+	</script>
+</head>
+<body class="wear l_w">
+@@include('mWhiteLayout-header.html')
+<div id="ct" class="bd">
+	<div class="sbag">
+		<fieldset about="일반상품">
+			<div>
+				<div id="__anc_norm" class="scrolling_anchor">
+					<div class="anc">
+						<div class="anc-outer">
+							<div class="anc-inner">
+								<div class="tit"><strong>일반상품</strong></div>
+								<div class="sub">결제 예정 금액 <em class="point">303,000</em>원</div>
+							</div>
+							<div class="anc-inner">
+								<div class="cnt">11</div>
+							</div>
+							<div class="anc-inner anc-ico">
+								<div class="ico"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="__v_norm" class="cnt-norm">
+				<div class="order_title">
+					<label class="check_box chk_tit"><input type="checkbox"><span class="checkbox_custom"></span>전체선택</label>
+				</div>
+				@@include('./ui/wear/sbag_product_list.html')
+				@@include('./ui/wear/sbag_total.html')
+			</div>
+		</fieldset>
+		<fieldset about="TICKET3 상품">
+			<div>
+				<div id="__anc_tkt" class="scrolling_anchor">
+					<div class="anc">
+						<div class="anc-outer">
+							<div class="anc-inner">
+								<div class="tit"><strong>TICKET3 상품</strong></div>
+							</div>
+							<div class="anc-inner">
+								<div class="cnt">3</div>
+							</div>
+							<div class="anc-inner anc-ico">
+								<div class="ico"></div>
+							</div>
+						</div>
+					</div>
+					<div id="extra" class="ct-area">
+						@@include('./ui/wear/sbag_ticket.html')
+					</div>
+				</div>
+			</div>
+			<div id="__v_tkt" class="cnt-tkt">
+				@@include('./ui/wear/sbag_ticket_list.html')
+			</div>
+		</fieldset>
+	</div>
+</body>
+</html>

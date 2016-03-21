@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.local{
+	position: relative;
+	
+	&.show-ly_sort {
+		position: fixed;
+		top: auto;
+		left: 0;
+		right: 0;
+		margin-top: 0;
+		backface-visibility: hidden;
+	}
+	.ly_sort {
+		position: relative;
+		z-index: 202;
+	}
+	.submenu_bg {
+		display: none;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		z-index: 200;
+		
+		&_top {
+			top: 0;
+			height: 155px;
+		}
+		&_bottom {
+			top: 155px;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.6);
+		}
+	}
+
+	.fixed_area {
+		-o-transition: transform 0.5s ease-in-out;
+		-moz-transition: transform 0.5s ease-in-out;
+		-webkit-transition: transform 0.5s ease-in-out;
+		transition: transform 0.5s ease-in-out;
+	}
+	// 상단 고정될 경우
+	&.fixed {
+		.fixed_area {
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			z-index:210;
+			
+			&.slide_up {
+				transform: translateY(-100%);
+			}
+			&.slide_down {
+				transform: translateY(0);
+			}
+		}
+		.submenu_bg {
+			&_bottom {
+				top:($sub-1dp-padding-top * 2) + $sub-1dp-height;
+			}
+		}
+	}
+
+	&.app{
+		.submenu_bg {
+			&_bottom {
+				top:99px;
+			}
+		}
+	}
+}
+.android.app {
+	.ly_collection_share .inner {
+		padding-bottom: 146px;
+	}
+}

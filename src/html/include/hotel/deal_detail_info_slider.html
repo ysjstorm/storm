@@ -1,0 +1,60 @@
+<div class="hotel_detail">
+    <!-- 호텔 상세 내용 -->
+    <div class="hotel-summery">
+        <div class="hotel-info">
+            <div class="grade g50">
+                <strong>등급</strong>
+                <span>(5성)</span>
+            </div>
+            <p class="name"> 그랜드 인터컨티넨탈 파르나스(Grand Intercontinental Parnas Hotel, Seoul) 제목이 길면 점점</p>
+        </div>
+        <div class="price-info">
+            <div class="price-detail">
+                <p class="high-rate"> <span>1,408,000</span> 원 </p>
+                <p class="row-rate"> <span>1,248,000</span> 원 <span class="rate-info">(&nbsp;1박&nbsp;&nbsp;&nbsp;평균가&nbsp;)</span> </p>
+            </div>
+            <div class="ean-pkg-tag">
+                <div class="tag-txt">
+                    <span class="tit">투어상품구매혜택</span>
+                </div>
+            </div>
+        </div>
+        <div class="place-info">
+            <span class="loc-ico"></span> 서울 강남
+        </div>
+    </div>
+    <!--// 호텔 상세 내용 -->
+    <!-- 호텔 상세 이미지 -->
+    <div class="hotel-images">
+        <ul id="_hotelImageSlider" class="flick-image-list">
+            <li class="list-item">
+                <div class="img" style="background-image: url('http://d1.tmonc.net/~nbass/?360x290_woman_n_FFB4B4_100')"></div>
+            </li>
+            <li class="list-item">
+                <div class="img" style="background-image: url('http://d1.tmonc.net/~nbass/?360x200_jelly_n_FFB4B4_100')"></div>
+            </li>
+            <li class="list-item">
+                <div class="img" style="background-image: url('http://d1.tmonc.net/~nbass/?420x290_man_n_FFB4B4_100')"></div>
+            </li>
+            <li class="list-item">
+                <div class="img" style="background-image: url('http://d1.tmonc.net/~nbass/?280x290_woman_n_FFB4B4_100')"></div>
+            </li>
+            <li class="list-item">
+                <div class="img" style="background-image: url('http://d1.tmonc.net/~nbass/?360x290_donut_n_FFB4B4_100')"></div>
+            </li>
+        </ul>
+        <div class="pager">3&nbsp;/&nbsp;40</div>
+    </div>
+    <!--// 호텔 상세 이미지 -->
+</div>
+<script>
+$(document).ready(function (){
+    var welPager = $("#_hotelImageSlider ~ .pager");
+    $("#_hotelImageSlider").tmonSlider({
+        flexible : true,
+        counter : function (e){
+            welPager.html(e.current+'&nbsp;/&nbsp;'+e.total);
+        }
+    });
+});
+</script>

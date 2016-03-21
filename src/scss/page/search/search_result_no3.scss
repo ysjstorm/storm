@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// 검색 결과 없음
+.search_rst_none_simple{
+  padding:25px 20px 35px;
+  color:#363940;
+  background-color:#FFFFFF;
+  text-align:center;
+  &:before{
+    @include sp-search('ico_result_no');
+    display:inline-block;
+    content:'';
+  }
+  h2 {
+    word-break: break-all;
+    margin-top: 10px;
+    line-height: 19px;
+    font-size: 16px;
+    span {
+      color: #fa5a44;
+    }
+  }
+
+  &+.custom_theme{
+    border-top:1px solid #dfe2e6;
+  }
+}

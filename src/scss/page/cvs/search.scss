@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.search_input{
+	position:relative;
+	margin:10px 10px 0;
+	border:1px solid #dfe2e6;
+	padding-right:59px;
+	height:35px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background:#fff;
+	input{
+		border:0;
+		height:33px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		width:100%;
+		padding:10px;
+	}
+	.btn_group{
+		position:absolute;
+		top:0;
+		right:0;
+		button{
+			float:left;
+			&.btn_remove{
+				@include sp-cvs('search-remove');
+			}
+			&.btn_search{
+				@include sp-cvs('search-loupe');
+				&.active{
+					@include sp-cvs('search-loupe_active');
+				}
+			}
+			i{
+				overflow:hidden;
+				line-height:999px;
+				vertical-align:top;
+				width:1px;
+				height:1px;
+				visibility:hidden;
+				font-size:0;
+			}
+		}
+	}
+}

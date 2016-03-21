@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.no_deal {
+	.submenu {
+		height: 186px;
+	}
+	.no_deal_noti {
+		position: relative;
+		top: 30px;
+		text-align: center;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			top: -83px;
+			right: 0;
+			width: 97px;
+			height: 53px;
+			z-index: 1;
+		}
+		p {
+			font-size: 15px;
+			color: #6c7580;
+			line-height: 21px;
+			
+			&:before {
+				content: "";
+				position: relative;
+				top: 2px;
+				margin-right: 5px;
+				@include sp-local("ic_gps_noti");
+			}
+		}
+		em {
+			color: #fa6a56;
+		}
+	}
+	.btn_sort {
+		border-color: #dfe2e6;
+		color: rgba(149, 157, 166, 0.6);
+		
+		&:after {
+			opacity: 0.5;
+		}
+	}
+	.deal_list_wrap {
+		padding-bottom: 30px;
+		
+		h4 {
+			display: block;
+			padding: 25px 15px 8px;
+			@include txt_bold(13, #151719);
+		}
+	}
+}

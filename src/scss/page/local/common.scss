@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@mixin txt_bold($size, $color) {
+	font-size: $size + px;
+	font-weight: bold;
+	color: $color;
+}
+
+.local{
+	
+	.br {
+		display: block;
+	}
+}

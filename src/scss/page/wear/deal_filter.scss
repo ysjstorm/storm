@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.deal_filter{
+	@include after;
+	
+	.num{
+		float:left;
+		font-size:1.08em;
+		line-height:29px;
+		
+		em{
+			margin-right:2px;
+			color:#fe3b57;
+			letter-spacing: 0;
+		}//em
+		
+	}//.num
+	
+	.sort_area{
+		float:right;
+		font-size:0;
+		
+		.select_box{
+		
+			.select_dp{
+				//width:89px;
+				height:29px;
+				margin-left:5px;
+				padding:0 36px 0 9px;
+				border-color:#ccc;
+				font-size:14px;
+				color:#666;
+				text-align:left;
+				box-sizing:border-box;
+				font-size:14px;
+				
+				&:after {
+					right:10px;
+				}
+				
+			}//.select_dp
+			
+		}//.select_box
+		
+		.btn_filter{
+			height:29px;
+			margin-left:5px;
+			padding:0 10px 0 7px;
+			border:1px solid #ccc;
+			font-size:14px;
+			color:#666;
+			line-height:28px;
+			text-align:left;
+			vertical-align:top;
+			box-sizing:border-box;
+			
+			&:before{
+				content:'';
+				margin-right:4px;
+				@include sp-wear("btn_filter");
+			}
+			
+			&.br{
+				padding:0 10px;
+				
+				&:before{
+					content:none;
+				}
+			}
+		}//.btn_filter
+		
+	}//.sort_area
+	
+}

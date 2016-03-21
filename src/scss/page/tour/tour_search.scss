@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+// 여행 검색
+.tour_search{
+	padding-top:2px;
+	background:#fff;
+	border-bottom:1px solid #d6d7d9;
+
+	[class^="search_area_"]{
+		@include after;
+
+		position:relative;
+		height:62px;
+		margin:0 20px;
+		border-top:1px solid #e6e7e8;
+
+		&:first-child{
+			border-top:0;
+		}
+
+		h3{
+			//float:left;
+            position: absolute;
+            left: 0;
+			font-size:16px;
+			color:#16181a;
+			line-height:62px;
+
+			&:before{
+				margin-right:6px;
+				vertical-align:middle;
+				content:'';
+			}
+		}
+
+		.btn_location{
+			position:absolute;
+			top:16px;
+			right:0;
+
+			li{
+				float:left;
+				margin-left:6px;
+
+				&:first-child{
+					margin-left:0;
+				}
+			}
+
+			a{
+				$btn-location-height: 28px;
+
+				display:block;
+				width:68px;
+				height:$btn-location-height;
+				text-align:center;
+				font-size:15px;
+				color:#f75b42;
+				line-height:$btn-location-height;
+				border: {
+					color: #f75b42;
+					width: 1px;
+					style: solid;
+					radius:$btn-location-height / 2 + 1;
+				}
+
+				&:after{
+					@include sp-tour('arr-search-region');
+
+					margin-top:-1px;
+					margin-left:8px;
+					vertical-align:middle;
+					content:'';
+				}
+			}
+		}
+	}
+
+	// 호텔 검색
+	@at-root .search_area_hotel{
+		h3{
+			&:before{
+				@include sp-tour('ico-search-hotel');
+
+				margin-top:-4px;
+			}
+		}
+	}
+
+	// 항공권 검색
+	@at-root .search_area_air{
+		h3{
+			&:before{
+				@include sp-tour('ico-search-air');
+
+				margin-top:-2px;
+			}
+		}
+	}
+}

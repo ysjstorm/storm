@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: Search</title>
+<link rel="stylesheet" href="../../css/search.css"/>
+</head>
+<body class="search search_home associatedKeyword">
+	<!-- 상단 공통 검색바 -->
+	@@include('ui/search/search_header_home.html')
+	<!-- //상단 공통 검색바 -->
+
+	<div class="skip"><a href="#ct">본문 바로가기</a></div>
+
+	<!-- 컨텐츠 영역 -->
+	<div id="ct">
+		<div class="home_latest">
+			<!-- 최근 검색어 -->
+			@@include('ui/search/search_latest.html')
+		</div>
+		<div class="home_theme">
+			<!-- 테마 검색 -->
+			@@include('ui/search/search_theme.html')
+		</div>
+	</div>
+	<!-- //컨텐츠 영역 -->
+</body>
+<script type="text/javascript" src="../../js/lib/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../../js/search/slick.min.js"></script>
+<!-- [D] 마크업 확인용 테스트 스크립트입니다. -->
+<script type="text/javascript">
+var keywordList_length;
+var $keywordCate = $('.theme_cate_lst > li');
+var keywordCate_idx;
+
+$(document).ready(function(){
+	$('.keyword_flick').slick({
+		infinite: false,
+		centerMode: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		variableWidth: false,
+		centerPadding: '0'
+	}).on('afterChange', function(event, slick, currentSlide){
+		keywordList_length = $(this).find('.keyword_lst_wrp').length - 1;
+
+		$('.theme_cate_lst > li').removeClass('on');
+		$('.ico_pg').removeClass('on');
+		if (currentSlide == 0) {
+			keywordCate_idx = 0;
+		} else if (currentSlide == keywordList_length) {
+			keywordCate_idx = 3;
+		} else if (currentSlide == keywordList_length - 1) {
+			keywordCate_idx = 2;
+		} else if (currentSlide > 0 || currentSlide < keywordList_length - 1) {
+			keywordCate_idx = 1;
+
+			var theme_idx = currentSlide - 1;
+		}
+		$keywordCate.eq(keywordCate_idx).addClass('on');
+
+		if (keywordCate_idx == 1) {
+			$keywordCate.eq(keywordCate_idx).find('.ico_pg').eq(theme_idx).addClass('on');
+		} else {
+			$keywordCate.eq(keywordCate_idx).find('.ico_pg').addClass('on');
+		}
+
+		if (keywordCate_idx != 1) {
+			$('.theme_date').show();
+		} else {
+			$('.theme_date').hide();
+		}
+	});
+	$("body").attr("data-userAgent", navigator.userAgent);
+});
+</script>
+</html>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.delivery_wrap {
+    height: auto;
+    min-height: 100%;
+    background-color: #d8d8d8;
+
+    #ct {
+        padding-bottom: 6px;
+    }
+
+    .dimmed {
+        position: fixed;
+    }
+}
+
+.my_inr,
+.my_inr2,
+.my_pdr,
+.my_pdr2 {
+    position: relative;
+    top: 6px;
+    margin: 0 6px 6px;
+}
+
+.my_inr2,
+.my_pdr,
+.my_pdr2 {
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 0 -1px #b2b2b2;
+    background-color: #fff;
+}
+
+.my_pdr,
+.my_pdr2 {
+    margin: 0 5px 6px;
+    padding: 15px 10px;
+
+    .btm_btn {
+        margin: 24px -10px 0;
+        padding-bottom: 0;
+    }
+}
+
+.my_pdr2 {
+    padding: 15px 14px;
+}

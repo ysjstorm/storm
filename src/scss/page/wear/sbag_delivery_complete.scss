@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.sbag_delivery_complete {
+	padding: 78px 15px 0;
+	background: #f1f1f1;
+	text-align: center;
+	
+	h3 {
+		position: relative;
+		margin-bottom: 7px;
+		padding-top: 78px;
+		font-size: 16px;
+		color: #333;
+		
+		i {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -32px;
+			@include sp-wear('shoppingbag-bg_delivery_complete');
+		}
+	}
+	p {
+		margin-bottom: 17px;
+		font-size: 12px;
+		line-height: 17px;
+		color: #999;
+		
+		span {
+			display: block;
+		}
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+	.btn {
+		width: 195px;
+		font-size: 13px;
+	}
+}

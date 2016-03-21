@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.sbag_total{
+	
+	.price{
+		margin-bottom:8px;
+		color:#333;
+		line-height:18px;
+		@include after;
+		
+		dt{
+			float:left;
+			font-size:12px;
+			letter-spacing:-0.01em;
+		}
+		
+		dd{
+			float:right;
+			font-size:12px;
+			letter-spacing:-0.01em;
+			
+			em{
+				font-weight:bold;
+			}
+		}
+		
+		&.total{
+			margin-top:20px;
+			color:#fe3b57;
+			line-height:32px;
+			
+			dt{
+				font-size:15px;				
+			}
+			
+			dd{
+				font-size:23px;
+			}
+			
+			em{
+				margin-right:-2px;
+				
+			}
+		}//&.total
+		
+	}//.price
+	
+	.btn{
+		margin-top:4px;
+	}
+}

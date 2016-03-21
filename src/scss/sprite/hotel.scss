@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+%sp-hotel {
+    background: url('../im/sp-hotel.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(472px/2) (430px/2);
+    -webkit-background-size:(472px/2) (430px/2);
+}
+
+@mixin sp-hotel($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-hotel, $filename);
+    @extend %sp-hotel;
+	@include sp-mosaic-base($sp-hotel, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-hotel: (
+    spritesheet_name: sp-hotel,
+    adult: (offset_x: 0, offset_y: -140px, width: 114px, height: 114px),
+    arrow_down_active: (offset_x: -448px, offset_y: -304px, width: 18px, height: 12px),
+    arrow_down_inactive: (offset_x: -448px, offset_y: -272px, width: 18px, height: 12px),
+    arrow_down_normal: (offset_x: -448px, offset_y: -288px, width: 18px, height: 12px),
+    bg_cal_input: (offset_x: -118px, offset_y: -140px, width: 72px, height: 76px),
+    btn_cal_arrow_left: (offset_x: -448px, offset_y: -188px, width: 14px, height: 22px),
+    btn_cal_arrow_right: (offset_x: -448px, offset_y: -214px, width: 14px, height: 22px),
+    btn_keyword_reset: (offset_x: -198px, offset_y: -398px, width: 26px, height: 26px),
+    btn_range_filter: (offset_x: -322px, offset_y: -74px, width: 54px, height: 54px),
+    btn_recomm_left: (offset_x: -194px, offset_y: -140px, width: 70px, height: 70px),
+    btn_recomm_right: (offset_x: -322px, offset_y: 0, width: 70px, height: 70px),
+    bu_arrow_down: (offset_x: -448px, offset_y: -170px, width: 24px, height: 14px),
+    bu_arrow_up: (offset_x: -448px, offset_y: -152px, width: 24px, height: 14px),
+    chk_off: (offset_x: -322px, offset_y: -132px, width: 48px, height: 48px),
+    chk_on: (offset_x: -322px, offset_y: -184px, width: 48px, height: 48px),
+    clean_btn: (offset_x: -260px, offset_y: -346px, width: 36px, height: 36px),
+    close: (offset_x: -86px, offset_y: -258px, width: 82px, height: 32px),
+    down-arr: (offset_x: -448px, offset_y: -240px, width: 20px, height: 12px),
+    ico_ean_pkg_noti: (offset_x: -108px, offset_y: -398px, width: 26px, height: 26px),
+    ico_hotel_detail: (offset_x: 0, offset_y: -398px, width: 32px, height: 32px),
+    ico_hotel_map: (offset_x: -364px, offset_y: -294px, width: 26px, height: 32px),
+    info_stars: (offset_x: -136px, offset_y: -110px, width: 150px, height: 24px),
+    loc_ico: (offset_x: -448px, offset_y: -64px, width: 22px, height: 30px),
+    logo_ean: (offset_x: -136px, offset_y: 0, width: 182px, height: 74px),
+    m_disable_ico: (offset_x: -138px, offset_y: -398px, width: 26px, height: 26px),
+    m_ico: (offset_x: -168px, offset_y: -398px, width: 26px, height: 26px),
+    new: (offset_x: -222px, offset_y: -220px, width: 82px, height: 32px),
+    now: (offset_x: 0, offset_y: -258px, width: 82px, height: 32px),
+    p_disable_ico: (offset_x: -416px, offset_y: -346px, width: 26px, height: 26px),
+    p_ico: (offset_x: -280px, offset_y: -78px, width: 26px, height: 26px),
+    pconly: (offset_x: -136px, offset_y: -78px, width: 140px, height: 28px),
+    rdo_checked: (offset_x: -396px, offset_y: -312px, width: 36px, height: 28px),
+    rdo_off: (offset_x: -156px, offset_y: -346px, width: 48px, height: 48px),
+    rdo_on: (offset_x: -396px, offset_y: -156px, width: 48px, height: 48px),
+    recomm_hotel_more: (offset_x: -448px, offset_y: -320px, width: 10px, height: 16px),
+    reserve: (offset_x: -118px, offset_y: -220px, width: 100px, height: 32px),
+    room_ico_1: (offset_x: -104px, offset_y: -346px, width: 48px, height: 48px),
+    room_ico_130: (offset_x: 0, offset_y: -346px, width: 48px, height: 48px),
+    room_ico_131: (offset_x: -396px, offset_y: -260px, width: 48px, height: 48px),
+    room_ico_132: (offset_x: -396px, offset_y: -104px, width: 48px, height: 48px),
+    room_ico_133: (offset_x: -396px, offset_y: -52px, width: 48px, height: 48px),
+    room_ico_136: (offset_x: -312px, offset_y: -294px, width: 48px, height: 48px),
+    room_ico_143: (offset_x: -208px, offset_y: -294px, width: 48px, height: 48px),
+    room_ico_144: (offset_x: -156px, offset_y: -294px, width: 48px, height: 48px),
+    room_ico_146: (offset_x: -104px, offset_y: -294px, width: 48px, height: 48px),
+    room_ico_2015: (offset_x: -52px, offset_y: -294px, width: 48px, height: 48px),
+    room_ico_2026: (offset_x: -268px, offset_y: -140px, width: 48px, height: 48px),
+    room_ico_2057: (offset_x: -208px, offset_y: -346px, width: 48px, height: 48px),
+    room_ico_2166: (offset_x: -52px, offset_y: -346px, width: 48px, height: 48px),
+    room_ico_2168: (offset_x: -260px, offset_y: -294px, width: 48px, height: 48px),
+    room_ico_2403: (offset_x: 0, offset_y: -294px, width: 48px, height: 48px),
+    room_ico_2405: (offset_x: -396px, offset_y: -208px, width: 48px, height: 48px),
+    room_ico_2575: (offset_x: -396px, offset_y: 0, width: 48px, height: 48px),
+    room_info_arr: (offset_x: -462px, offset_y: -320px, width: 8px, height: 16px),
+    room_info_lyr_close_btn: (offset_x: -378px, offset_y: -346px, width: 34px, height: 34px),
+    room_info_lyr_nc_close_btn: (offset_x: -340px, offset_y: -346px, width: 34px, height: 34px),
+    room_search_ico_bed: (offset_x: -36px, offset_y: -398px, width: 32px, height: 30px),
+    room_search_ico_date: (offset_x: -72px, offset_y: -398px, width: 32px, height: 30px),
+    room_search_info_arr: (offset_x: -448px, offset_y: -98px, width: 18px, height: 30px),
+    search-collapse-arr-down: (offset_x: -448px, offset_y: -32px, width: 24px, height: 28px),
+    search-collapse-arr-up: (offset_x: -448px, offset_y: 0, width: 24px, height: 28px),
+    search_btn: (offset_x: -300px, offset_y: -346px, width: 36px, height: 36px),
+    soldout: (offset_x: 0, offset_y: 0, width: 132px, height: 136px),
+    sort_arrow: (offset_x: -448px, offset_y: -132px, width: 22px, height: 16px),
+    star_deal_search_list: (offset_x: -172px, offset_y: -258px, width: 98px, height: 18px),
+    up-arr: (offset_x: -448px, offset_y: -256px, width: 20px, height: 12px),
+);

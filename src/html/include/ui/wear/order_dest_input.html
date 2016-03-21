@@ -1,0 +1,49 @@
+<div class="order_dest_input">
+	<ul class="addr_input_form">
+		<li>
+			<strong><label for="receiveName">수령인</label></strong>
+			<span class="input_box"><input type="text" id="receiveName" /></span>
+		</li>
+		<li>
+			<strong><label for="receiveNumber">연락처</label></strong>
+			<div class="num">
+				<div class="select_box">
+					<span class="select_dp">010</span>
+					<select id="receiveNumber" title="전화번호 앞자리">
+						<option>010</option>
+						<option>011</option>
+						<option>016</option>
+					</select>
+				</div>
+				<span class="input_box left"><input type="text"  id="receiveNumber2" title="전화번호 가운데 자리" /></span>
+				<span class="bar">-</span>
+				<span class="input_box right"><input type="text"  id="receiveNumber3" title="전화번호 뒷자리" /></span>
+			</div>
+			<div class="security">
+				<label class="check_box"><input type="checkbox" id="securityNumChk"><span class="checkbox_custom"></span>안심번호 사용</label>
+				<button type="button" class="btn_guide">안내</button>
+			</div>
+		</li>
+		<li>
+			<strong><label for="receiveAddr">주소</label></strong>
+			<div class="post">
+				<label for="postCode" class="blind">우편번호</label>
+				<span class="input_box left"><input type="text" id="postCode" title="우편번호 앞자리" /></span>
+				<button type="button" class="btn">우편번호</button>
+			</div>
+			<span class="input_box"><input type="text" id="receiveAddr" title="주소" /></span>
+			<span class="input_box"><input type="text" title="상세주소" /></span>
+		</li>
+	</ul>
+	<section class="memo_box">
+		<div class="title">
+			<strong><label for="shippingMemo">배송 메모를 입력해 주세요.</label></strong>
+			<span class="text_num"><em>5</em>/50</span>
+		</div>
+		<textarea name="" id="shippingMemo" cols="30" rows="10"></textarea>
+	</section>
+	<div class="btn_area">
+		<button type="submit" class="btn submit">확인</button>
+		<button type="button" class="btn sub">취소</button>
+	</div>
+</div>

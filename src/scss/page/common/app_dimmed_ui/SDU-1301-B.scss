@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.app_d_inr{
+	&.t_sdu1301_b{
+		position:fixed;
+		top:auto;
+		bottom:72px;
+		right:15px;
+		left:15px;
+		height:165px;
+		text-align:center;
+		background:#fff;
+		border-radius:3.1px;
+		-webkit-border-radius:3.1px;
+		box-shadow:0 5px 13px 0 rgba(0,0,0,.45);
+		z-index: 250;
+		.inr_wrap{
+			width:278px;
+			margin:0 auto;
+			padding-top:20px;
+			&:before{
+				@include sp-appdimmed('sdu_1301_tmony2');
+				float:left;
+				margin-left:13px;
+				content:'';
+			}
+			.txt_cc{
+				float:left;
+				padding:14px 0 0 12px;
+				.reviewer,.star{
+					display:none;
+				}
+				.review{
+					overflow:hidden;
+					line-height:999px;
+					vertical-align: top;
+					@include sp-appdimmed('sdu_1301_review2');
+				}
+				p.comm{
+					&:before{
+						@include sp-appdimmed('sdu_1301_comm2');
+						content:'';
+					}
+				}
+				
+			}
+		}
+		.run{
+			@include sp-appdimmed('bt_run2');
+		}
+		.later{
+			position:absolute;
+			top:16px;
+			right:15px;
+			@include sp-appdimmed('bt_close');
+		}
+	}
+}

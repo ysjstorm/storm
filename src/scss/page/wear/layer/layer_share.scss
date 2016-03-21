@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.share_area{
+    .share_ks{
+	  @include sp-wear('share_kakaostory');
+	}
+	
+	.share_tw{
+	  @include sp-wear('share_twitter');
+	}
+	
+	.share_fb{
+	  @include sp-wear('share_facebook');
+	}
+	
+	.share_kt{
+	  @include sp-wear('share_kakaotalk');
+	}
+	
+	.btn_share{
+		position: relative;
+		display: inline-block;
+		width:39px;
+		height:39px;
+		overflow:hidden;
+		border-radius:50%;
+		background-color:#000;
+		vertical-align:middle;
+		
+		&:after{
+			content:'';
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin:-10px 0 0 -12px;
+			@include sp-wear('detail_btn_share');
+		}
+	}
+	
+	.share_ly.open + .btn_share{
+		&:after{
+			margin:-9.5px 0 0 -7.5px;
+			@include sp-wear('share_cancel');
+		}
+	}
+	
+	#_toggleShowShare{
+		visibility: hidden;
+		z-index:-1;
+		position: absolute;
+		
+		&:checked ~.btn_share:after {
+			@include sp-wear('share_cancel');
+		}
+	}
+}

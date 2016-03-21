@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.deal_load {
+  height: 130px;
+  padding-top: 27px;
+  color: #999;
+  text-align: center;
+  &:before {
+    display: block;
+    width: 90px;
+    height: 38px;
+    margin: 0 auto;
+    background: url(../img/img_loading.gif) no-repeat 0 0;
+    background-size: 90px 38px;
+    content: '';
+  }
+  .tx {
+    padding: 3px 0 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #666;
+  }
+}
+
+.search_loading {
+  padding: 20px;
+  text-align: center;
+  .bg_tmony{
+    margin:0 auto;
+    .type1 {
+      display: inline-block;
+      width: 64px;
+      height: 65px;
+      background: url(../img/search/tmony_loading1.gif) no-repeat;
+      background-size: 100% auto;
+    }
+    .type2 {
+      display: inline-block;
+      width: 61px;
+      height: 73px;
+      background: url(../img/search/tmony_loading2.gif) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  .txt_area {
+    margin: 4px 0;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ff806f;
+  }
+}
+
+.dimmed_search_detail{
+  .search_loading{
+    position:relative;
+    margin-top:50%;
+  }
+}

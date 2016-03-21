@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+    <title>TMON :: 구매내역</title>
+    <link rel="stylesheet" href="../../css/m.css">
+</head>
+<body class="delivery_wrap">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+@@include('header_type2.html', {"title":"구매내역"})
+<hr>
+<div id="ct">
+    <div class="my_his_nav">
+        <ul>
+        <!-- [D] 선택된 메뉴 li에 on클래스 추가 -->
+        <li class="on"><a href="#">전체</a></li>
+        <li><a href="#">배송상품</a></li>
+        <li><a href="#">티켓상품</a></li>
+        <li><a href="#">웨어웨어</a></li>
+        </ul>
+    </div>
+
+    <!-- 환불계좌 -->
+    <div class="my_add_acnt">
+        <p class="tx"><span class="hl">환불계좌 문제</span>로 처리가 지연되고 있습니다.</p>
+        <p class="tx2">환불 받으실 계좌를 등록해주세요.</p>
+        <a href="#" class="go">환불계좌 등록하기</a>
+    </div>
+    <!-- // 환불계좌 -->
+
+    <!-- 배송지연 적립금 -->
+    <div class="my_comp_pnt">
+        <span class="ico_pnt"></span>
+        <p class="tx"><strong>가나다라마바사가나다라마바사아자차카 외 3건의</strong><span class="hl">배송지연 보상 적립금</span>을 상세정보 페이지에서 받으실 수 있습니다.</p>
+        <a href="" class="dtl">배송지연 보상 안내</a>
+    </div>
+    <!-- // 배송지연 적립금 -->
+
+    <!-- 배송지연 보상 -->
+    <div class="my_comp_pnt2">
+        <span class="ico_pnt2"></span>
+        <p class="tx2">배송이 지연되어 죄송합니다.</p>
+        <p class="tx3">자세한 내용은 각 상세정보 화면에서 확인하실 수 있습니다.</p>
+        <p class="tx4">대상상품 : <span class="hl">배송지연 상품명 배송지연 상품명</span> 외 <span class="hl">12</span>건</p>
+        <a href="#" class="dtl">배송지연 상품 확인하기</a>
+    </div>
+    <!-- // 배송지연 보상 -->
+
+	<div class="my_inr">
+        <!-- 빠른 배송 & 바로 환불 링크 -->
+        <a href="#" class="fni_banner">빠른 배송 &amp; 바로 환불</a>
+
+        <!-- 구매내역 -->
+        <section class="my_his_sec">
+            <header class="my_his_title">
+                <h3 class="my_his_tx1">주문번호 <span class="num">849326365</span></h3>
+                <span class="my_his_tx2">구매일 2015.04.24</span>
+                <a href="#" class="my_his_det">상세정보</a>
+            </header>
+            <a href="#" class="my_panel_arw">
+                <div class="my_his_item">
+                    <span class="item_txt">베스킨라빈스31 카푸치노블라스트</span>
+                    <em class="cl_point">사용완료</em>
+                </div>
+            </a>
+            <a href="#" class="my_panel_arw">
+                <div class="my_his_item">
+                    <span class="item_txt">디링크듀얼밴드 기가와이파이공유기</span>
+                    <em class="cl_point">배송준비중</em>
+                </div>
+            </a>
+            <a href="#" class="my_panel_arw">
+                <div class="my_his_item">
+                    <span class="item_txt">어벤져스 스페셜 패키지</span>
+                    <em class="cl_point">환불완료</em>
+                </div>
+            </a>
+        </section>
+
+        <section class="my_his_sec">
+            <header class="my_his_title">
+                <h3 class="my_his_tx1">주문번호 849216365</h3>
+                <span class="my_his_tx2">구매일 2015.03.05</span>
+                <a href="#" class="my_his_det">상세정보</a>
+            </header>
+            <a href="#" class="my_panel_arw">
+                <div class="my_his_item">
+                    <span class="item_txt">[1+1] 매직Q옷걸이압축팩행사</span>
+                    <em class="cl_point">배송완료</em>
+                </div>
+            </a>
+        </section>
+        <div class="spinner_area"><div class="spinner"></div></div>
+        <p class="my_caution">모바일에서는 최근 6개월 이내<br>구매 내역만 확인 하실 수 있습니다.</p>
+    </div>
+</div>
+@@include('footer.html')
+<div class="tlbarwp">
+    <div class="tlbarinr">
+        <nav class="tlbar">
+            <a href="#" class="home"><i class="sp_tcm"></i>티몬 홈</a>
+            <a href="#" class="cate"><i class="sp_tcm"></i>카테고리</a>
+            <a href="#" class="srch"><i class="sp_tcm"></i>검색</a>
+            <a href="#" class="mytm on"><i class="sp_tcm"></i>마이티몬</a>
+        </nav>
+    </div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/markup_ui.js"></script>
+</body>
+</html>

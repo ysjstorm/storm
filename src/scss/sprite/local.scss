@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+%sp-local {
+    background: url('../im/sp-local.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(276px/2) (238px/2);
+    -webkit-background-size:(276px/2) (238px/2);
+}
+
+@mixin sp-local($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-local, $filename);
+    @extend %sp-local;
+	@include sp-mosaic-base($sp-local, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-local: (
+    spritesheet_name: sp-local,
+    btn_close: (offset_x: -204px, offset_y: -172px, width: 28px, height: 28px),
+    btn_close_favorite: (offset_x: -172px, offset_y: -172px, width: 28px, height: 28px),
+    btn_favorite_delete: (offset_x: 0, offset_y: -204px, width: 34px, height: 34px),
+    deallist_bottom_freedom: (offset_x: -136px, offset_y: -118px, width: 58px, height: 18px),
+    deallist_mask_type1: (offset_x: 0, offset_y: -140px, width: 100px, height: 60px),
+    deallist_mask_type2: (offset_x: 0, offset_y: 0, width: 132px, height: 136px),
+    deallist_mask_type3: (offset_x: -136px, offset_y: 0, width: 114px, height: 114px),
+    deallist_mask_type4: (offset_x: -104px, offset_y: -140px, width: 140px, height: 28px),
+    ic_btn_share: (offset_x: -72px, offset_y: -204px, width: 26px, height: 28px),
+    ic_btn_sort: (offset_x: -254px, offset_y: -72px, width: 18px, height: 20px),
+    ic_favorite_off: (offset_x: -138px, offset_y: -172px, width: 30px, height: 28px),
+    ic_favorite_on: (offset_x: -104px, offset_y: -172px, width: 30px, height: 28px),
+    ic_gps_noti: (offset_x: -38px, offset_y: -204px, width: 30px, height: 30px),
+    ic_here: (offset_x: -254px, offset_y: 0, width: 22px, height: 32px),
+    ic_select_loc: (offset_x: -254px, offset_y: -36px, width: 22px, height: 32px),
+);

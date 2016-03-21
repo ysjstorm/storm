@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.coupon_sort{
+	
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	
+	.total{
+		float: left;
+		font-weight: 500;
+		line-height: 30px;
+		
+		em{
+			color: #fa5a44;
+		}
+		
+	}//.total
+	
+	.uio_select_box{
+		float: right;	
+	}//.uio_select_box
+}

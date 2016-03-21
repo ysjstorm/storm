@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+// 옵션 아이콘
+.op_icon{
+	[class^="ico_"]{
+		display: inline-block;
+		height:18px;
+		padding: 3.5px 4px 0;
+		margin-right: 2px;
+		vertical-align: top;
+		box-sizing:border-box;
+		line-height: 1;
+		letter-spacing: -0.075em;
+		text-align: center;
+		font-size: 10px;
+	}
+	.ico_ctsale{
+		border: 1px solid #0c5cff;
+		color:#0c5cff;
+	}
+	.ico_deadline{
+		border: 1px solid #0896ff;
+		color:#0390f9;
+	}
+	.ico_welfare{
+		border: 1px solid #22ac38;
+		color:#22ac38;
+	}
+}

@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+// 체크박스 포함 타이틀
+.chk_tit{
+	font-weight:500;
+	
+	.checkbox_custom{
+		margin-right:10px;
+	}
+}//.chk_tit
+
+// 폼 하단 (쇼핑백 일반상품, 발송요청)
+.form_btm{
+	padding:17px 0 20px;
+	border-top:4px solid #000;
+	
+	.btn{
+		height:45px;
+		font-size:1.2em;
+		line-height:45px;
+	}//.btn
+	
+}//.form_btm
+
+// 주소입력폼 (발송요청, 주문상세)
+.addr_input_form{
+	li{
+		position:relative;
+		margin-bottom:10px;
+		padding-left:48px;
+	
+		&:last-child{
+			margin-bottom:0;
+		}//&:last-child
+		
+		strong{
+			position:absolute;
+			top:7px;
+			left:0;
+			font-weight:500;
+			color:#333;
+		}//strong
+		
+		.input_box{
+			margin-bottom:5px;
+			
+			&.left{
+				float:left;
+				width:45%;
+			}//&.left
+			
+			&.right{
+				float:right;
+				width:45%;
+			}//&.right
+			
+		}//.input_box
+		
+		.bar{
+			float:left;
+			width:10%;
+			height:29px;
+			color:#666;
+			line-height:26px;
+			text-align:center;
+		}//.bar
+		
+		.num{
+			position:relative;
+			padding-left:72px;
+			@include after;
+			
+			.select_box{
+				position:absolute;
+				top:0;
+				left:0;
+				
+				.select_dp{
+					height:29px;
+					width:67px;
+					border:1px solid #aaa;
+					box-sizing:border-box;			
+				}//.select_dp
+				
+			}//.select_box
+			
+		}//.num
+		
+		.security{
+			margin:5px 0 15px;
+			line-height:18px;
+			@include after;
+			
+			.check_box{
+				float:left;
+				color:#666;
+				
+				.checkbox_custom{
+					margin-right:10px;
+				}
+				
+			}//.check_box
+			
+			.btn_guide{
+				position:relative;
+				float:right;
+				padding-right:12px;
+				font-size:0.9em;
+				color:#999;
+				line-height:18px;
+				
+				&:after{
+					content:'';
+					display:block;
+					position:absolute;
+					top:6px;
+					right:1px;
+					width:5px;
+					height:5px;
+					border:solid #999;
+					border-width:1px 1px 0 0;
+					-webkit-transform:rotate(45deg);
+					transform:rotate(45deg);
+				}
+				
+			}//.btn_guide
+			
+		}//.security
+		
+		.post{
+			position:relative;
+			@include after;
+			
+			.btn{
+				height:29px;
+				width:67px;
+				margin-left: 8px;
+				font-size:0.9em;
+				line-height:28px;
+				letter-spacing:-0.01em;
+			}//.btn_post
+			
+		}//.post
+	
+	}//li
+	
+}//.addr_input_form

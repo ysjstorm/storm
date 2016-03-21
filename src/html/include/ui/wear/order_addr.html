@@ -1,0 +1,75 @@
+<div class="order_addr">
+	<section class="addr_box">
+		<label for="addr1" class="radio_box"><input type="radio" name="requestAddr" id="addr1" /><i class="rdo_custom"></i>황선숙</label>
+		<ul class="detail">
+			<li>
+				<strong>연락처</strong>
+				<p>010-9365-4525</p>
+			</li>
+			<li>
+				<strong>주소</strong>
+				<p>431-060 경기 안양시 동안구 관양동 동편마을 3단지 308동 1102호</p>
+			</li>
+		</ul>
+	</section>
+	<section class="addr_box">
+		<label for="addr2" class="radio_box"><input type="radio" name="requestAddr" id="addr2" /><i class="rdo_custom"></i>황선숙</label>
+		<ul class="detail">
+			<li>
+				<strong>연락처</strong>
+				<p>010-9365-4525</p>
+			</li>
+			<li>
+				<strong>주소</strong>
+				<p>135-280 서울시 강남구 대치동 1004 동일타워1층</p>
+			</li>
+		</ul>
+	</section>
+	<section class="addr_box">
+		<input type="radio" name="requestAddr" id="addr3" class="_toggle_input" />
+		<label for="addr3" class="radio_box"><i class="rdo_custom"></i>새로입력</label>
+		<ul class="addr_input_form">
+			<li>
+				<strong><label for="receiveName">수령인</label></strong>
+				<span class="input_box"><input type="text" id="receiveName" /></span>
+			</li>
+			<li>
+				<strong><label for="receiveNumber">연락처</label></strong>
+				<div class="num">
+					<div class="select_box">
+						<span class="select_dp">010</span>
+						<select id="receiveNumber" title="전화번호 앞자리">
+							<option>010</option>
+							<option>011</option>
+							<option>016</option>
+						</select>
+					</div>
+					<span class="input_box left"><input type="text"  id="receiveNumber2" title="전화번호 가운데 자리" /></span>
+					<span class="bar">-</span>
+					<span class="input_box right"><input type="text"  id="receiveNumber3" title="전화번호 뒷자리" /></span>
+				</div>
+				<div class="security">
+					<label class="check_box"><input type="checkbox" id="securityNumChk"><span class="checkbox_custom"></span>안심번호 사용</label>
+					<button type="button" class="btn_guide">안내</button>
+				</div>
+			</li>
+			<li>
+				<strong><label for="receiveAddr">주소</label></strong>
+				<div class="post">
+					<label for="postCode" class="blind">우편번호</label>
+					<span class="input_box left"><input type="text" id="postCode" title="우편번호 앞자리" /></span>
+					<button type="button" class="btn">우편번호</button>
+				</div>
+				<span class="input_box"><input type="text" id="receiveAddr" title="주소" /></span>
+				<span class="input_box"><input type="text" title="상세주소" /></span>
+			</li>
+		</ul>
+	</section>
+	<section class="memo_box">
+		<div class="title">
+			<strong><label for="shippingMemo">배송 메모를 입력해 주세요.</label></strong>
+			<span class="text_num"><em>5</em>/50</span>
+		</div>
+		<textarea name="" id="shippingMemo" cols="30" rows="10"></textarea>
+	</section>
+</div>

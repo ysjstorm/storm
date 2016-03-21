@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.order_title{
+	line-height:21px;
+	@include after;
+	
+	h3{
+		float:left;
+		font-size:14px;
+		font-weight:bold;
+	}//h3
+	
+	.msg{
+		margin-left:9px;
+		font-size:0.9em;
+		color:#999;
+	}//.msg
+	
+	.btn_modify{
+		font-size:0.9em;
+		color:#999;
+		line-height:21px;
+		text-decoration:underline;
+	}//.btn_modify
+	
+	.btn_ly_return{
+		position:relative;
+		padding-right:18px;
+		font-size:0.9em;
+		color:#333;
+		line-height:21px;
+		
+		&:after{
+			content:'?';
+			display:block;
+			position:absolute;
+			top:4px;
+			right:0;
+			width:13px;
+			height:13px;
+			padding-right:1px;
+			border:1px solid #333;
+			border-radius:50%;
+			font-size:0.75em;
+			color:#333;
+			line-height:1.18em;
+			text-align:center;
+			box-sizing:border-box;
+		}
+		
+	}//.btn_ly_return
+}

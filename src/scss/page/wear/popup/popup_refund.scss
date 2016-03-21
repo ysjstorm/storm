@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+.refund_info{
+	padding:0 15px 30px;
+}
+
+.refund_info *{
+	letter-spacing: 0 !important;
+}
+
+.refund{
+	h4{
+		padding-top:25px;
+		padding-bottom:2px;
+		font-size:14px;
+		color:#333;
+	}
+	dl{
+		padding-bottom:1px;
+	}
+	dt{
+		padding-top:7px;
+		padding-bottom:4px;
+		font-size:11px;
+		color:#666;
+	}
+	dd{
+		position:relative;
+		padding-bottom:3px;
+		padding-left:10px;
+		font-size:11px;
+		color:#999;
+		line-height:17px;
+
+		&:before{
+			@include sp-wear('refund_bul1');
+
+			position:absolute;
+			top:7px;
+			left:3px;
+			display:block;
+			content:'';
+		}
+	}
+	small{
+		color: #999;
+		display: block;
+		font-size: 11px;
+
+		span{
+			font-size: 14px;
+		}
+	}
+}
+
+.refund_guide{
+	dl{
+		dd:last-child{
+			margin-top: 5px;
+
+			&:before{
+				background-image: none !important;
+			}
+		}
+	}
+}
+
+.refund_fee{
+	h4{
+		padding-bottom:7px;
+		font-size:14px;
+		color:#333;
+	}
+	table{
+		width:100%;
+		border-top:1px solid #ddd;
+		font-size:11px;
+		margin-bottom: 5px;
+		table-layout:fixed;
+	}
+	th{
+		padding-left:10px;
+		color:#666;
+		text-align:left;
+		background:#fafafa;
+		border-bottom:1px solid #ddd;
+	}
+	td{
+		min-height:19px;
+		padding:6px 0 6px 20px;
+		color:#999;
+		text-align:left;
+		line-height:16px;
+		border-bottom:1px solid #ddd;
+	}
+}
+
+.refund_criterion{
+	dl{
+		margin-bottom: 5px;
+
+		&:last-child{
+			margin-top: 20px;
+		}
+	}
+}

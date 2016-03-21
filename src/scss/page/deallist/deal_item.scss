@@ -1,0 +1,592 @@
+@charset "UTF-8";
+
+// -------------------------------------------
+// 개별 딜
+// 비공통요소에 대한 스타일은 개별 서비스에서 작성한다
+// -------------------------------------------
+// 참고: 마크업 인클루드 형태
+// -------------------------------------------
+// @@include('ui/deallist/deal_item.html', {
+//     "element" : "li",
+//     "class" : "",
+//     "txt_deal_item_lbll" : "레이블 좌측",
+//     "txt_deal_item_lblr" : "레이블 우측",
+//     "txt_deal_item_mask" : "이미지 마스크",
+//     "txt_deal_item_location" : "",
+//     "txt_deal_item_distance" : "",
+//     "txt_deal_item_title" : "딜 제목",
+//     "txt_deal_item_subtitle" : "딜 부제목",
+//     "txt_deal_item_discount" : "할인형태",
+//     "txt_deal_item_price" : "딜 가격",
+//     "txt_deal_item_ftrl" : "딜 하단 왼쪽",
+//     "txt_deal_item_ftrr" : "딜 하단 오른쪽",
+//     "subclass_deal_item_lbll" : "",
+//     "subclass_deal_item_lblr" : "",
+//     "subclass_deal_item_mask" : "",
+//     "subclass_deal_item_discount" : "",
+//     "subclass_deal_item_price" : "",
+//     "subclass_deal_item_ftrl" : "",
+//     "subclass_deal_item_ftrr" : ""
+// })
+
+@mixin deal-item(
+    $deal-item-root-font-size: 10px,
+    $deal-item-height: 13.3em,
+    $deal-item-margin: 0 0 0.4em,
+    $deal-item-background-color: #fff,
+    $deal-item-thumbnail-width: 13em,
+    $deal-item-thumbnail-height: 13.3em,
+    $deal-item-mask-zindex: 1,
+    $deal-item-label-zindex: 2,
+    $deal-item-label-sticker-color: #a725c8,
+    $deal-item-label-label-color: #008ee0,
+    $deal-item-body-padding: 0.8em 1.5em 2.5em,
+    $deal-item-body-top-height: ( 7em - 0.8em ),
+    $deal-item-body-top-bottom-top: 7em,
+    $deal-item-location-display: block,
+    $deal-item-location-font-size: 1.12em,
+    $deal-item-location-color: #008cc7,
+    $deal-item-distance-display: block,
+    $deal-item-distance-font-size: 1.12em,
+    $deal-item-distance-color: #008cc7,
+    $deal-item-title-margin: 1px 0 0,
+    $deal-item-title-font-size: 1.7em,
+    $deal-item-title-line-height: 1.2em,
+    $deal-item-title-lines: 2,
+    $deal-item-title-color: #333,
+    $deal-item-title-first-child-margin-top: 7px,
+    $deal-item-subtitle-font-size: 1.19em,
+    $deal-item-subtitle-color: #5c6470,
+    $deal-item-discount-font-size: 1.68em,
+    $deal-item-discount-line-height: 2.44,
+    $deal-item-discount-color: #ff5d35,
+    $deal-item-percent-font-size: 2.66em,
+    $deal-item-percent-line-height: 1,
+    $deal-item-percent-sign-font-size: 1.995em,
+    $deal-item-price-margin: 0 0 0 7px,
+    $deal-item-price-font-size: 1.68em,
+    $deal-item-price-color: #333,
+    $deal-item-price-txt-font-size: 0.83em,
+    $deal-item-price-info-font-size: 0.65em,
+    $deal-item-price-info-color: #333,
+    $deal-item-price-first-child-margin: 0,
+    $deal-item-price-cover-top: 2px,
+    $deal-item-price-cover-left: 1px,
+    $deal-item-price-cover-font-size: 0.662em,
+    $deal-item-price-cover-color: #999,
+    $deal-item-footer-left: $deal-item-thumbnail-width,
+    $deal-item-footer-right: 0,
+    $deal-item-footer-bottom: 0,
+    $deal-item-footer-height: 2.5em,
+    $deal-item-footer-padding-horizontal: 15px,
+    $deal-item-footer-left-font-size: 1.12em,
+    $deal-item-footer-left-color: #333,
+    $deal-item-footer-right-color: #999,
+    $deal-item-footer-right-width: 66px,
+    $deal-item-footer-border-top: 1px solid #f4f4f4,
+    $deal-item-footer-color-purple: #a725c8
+){
+    .deal_item {
+        height: $deal-item-height;
+        margin: $deal-item-margin;
+        font-size: $deal-item-root-font-size;
+        background-color: $deal-item-background-color;
+
+        &_anchor {
+            // 앵커
+            overflow: hidden;
+            position: relative;
+            display: block;
+            width: inherit;
+            height: inherit;
+        }
+
+        // 레이블
+        @include deal-item-label(
+            $deal-item-label-zindex: $deal-item-label-zindex,
+		    $deal-item-label-sticker-color: $deal-item-label-sticker-color,
+		    $deal-item-label-label-color: $deal-item-label-label-color
+        );
+
+        // 썸네일
+        @include deal-item-thumb(
+            $deal-item-thumbnail-width: $deal-item-thumbnail-width,
+            $deal-item-thumbnail-height: $deal-item-thumbnail-height
+        );
+
+        // 썸네일 마스크
+        @include deal-item-mask(
+            $deal-item-thumbnail-width: $deal-item-thumbnail-width,
+            $deal-item-thumbnail-height: $deal-item-thumbnail-height,
+            $deal-item-mask-zindex: $deal-item-mask-zindex
+        );
+
+        // 딜 바디
+        @include deal-item-body(
+            $deal-item-thumbnail-width: $deal-item-thumbnail-width,
+            $deal-item-thumbnail-height: $deal-item-thumbnail-height,
+            $deal-item-body-padding: $deal-item-body-padding,
+            $deal-item-body-top-height: $deal-item-body-top-height,
+            $deal-item-body-top-bottom-top: $deal-item-body-top-bottom-top
+        );
+
+        // ---------------------------------------
+        // 딜 바디 상단
+        // ---------------------------------------
+
+        // 장소
+        @include deal-item-location(
+            $deal-item-location-display: $deal-item-location-display,
+            $deal-item-location-font-size: $deal-item-location-font-size,
+            $deal-item-location-color: $deal-item-location-color
+        );
+        
+        // 거리
+        @include deal-item-distance(
+            $deal-item-distance-display: $deal-item-distance-display,
+            $deal-item-distance-font-size: $deal-item-distance-font-size,
+            $deal-item-distance-color: $deal-item-distance-color
+        );
+
+        // 제목
+        @include deal-item-title(
+            $deal-item-title-margin: $deal-item-title-margin,
+            $deal-item-title-font-size: $deal-item-title-font-size,
+            $deal-item-title-line-height: $deal-item-title-line-height,
+            $deal-item-title-lines: $deal-item-title-lines,
+            $deal-item-title-color: $deal-item-title-color,
+            $deal-item-title-first-child-margin-top: $deal-item-title-first-child-margin-top
+        );
+
+        // 부제목
+        @include deal-item-subtitle(
+            $deal-item-subtitle-font-size: $deal-item-subtitle-font-size,
+            $deal-item-subtitle-color: $deal-item-subtitle-color
+        );
+
+        // ---------------------------------------
+        // 딜 바디 하단
+        // ---------------------------------------
+
+        // 할인형태
+        @include deal-item-discount(
+            $deal-item-discount-font-size: $deal-item-discount-font-size,
+            $deal-item-discount-line-height: $deal-item-discount-line-height,
+            $deal-item-discount-color: $deal-item-discount-color,
+            $deal-item-percent-font-size: $deal-item-percent-font-size,
+            $deal-item-percent-line-height: $deal-item-percent-line-height
+        );
+
+        // percent sign(%)
+        @include deal-item-percent(
+            $deal-item-percent-sign-font-size: $deal-item-percent-sign-font-size,
+            $deal-item-discount-color: $deal-item-discount-color
+        );
+
+        // 가격
+        @include deal-item-price(
+            $deal-item-price-margin: $deal-item-price-margin,
+            $deal-item-price-font-size: $deal-item-price-font-size,
+            $deal-item-price-color: $deal-item-price-color,
+            $deal-item-price-first-child-margin: $deal-item-price-first-child-margin
+        );
+
+        &_price {
+            // 정상가
+            @include deal-item-price-cover(
+                $deal-item-price-cover-top: $deal-item-price-cover-top,
+                $deal-item-price-cover-left: $deal-item-price-cover-left,
+                $deal-item-price-cover-font-size: $deal-item-price-cover-font-size,
+                $deal-item-price-cover-color: $deal-item-price-cover-color
+            );
+
+            // 원 텍스트
+            @include deal-item-price-txt(
+                $deal-item-price-txt-font-size: $deal-item-price-txt-font-size
+            );
+
+            // 1박평균
+            @include deal-item-price-info(
+                $deal-item-price-info-font-size: $deal-item-price-info-font-size,
+                $deal-item-price-info-color: $deal-item-price-info-color
+            );
+        }
+
+        // ---------------------------------------
+        // 딜 푸터
+        // ---------------------------------------
+        @include deal-item-footer(
+            $deal-item-thumbnail-width: $deal-item-thumbnail-width,
+            $deal-item-footer-left: $deal-item-footer-left,
+            $deal-item-footer-right: $deal-item-footer-right,
+            $deal-item-footer-bottom: $deal-item-footer-bottom,
+            $deal-item-footer-height: $deal-item-footer-height,
+            $deal-item-footer-border-top: $deal-item-footer-border-top
+        );
+
+        &_footer {
+            // 색상 관련 속성은 푸터의 좌우에 상관없이 쓸 수 있게 이곳에 선언
+            // 호텔 '무료취소'에 사용하는 보라색
+            .purple {
+                color: $deal-item-footer-color-purple;
+            }
+        }
+
+        @include deal-item-footer-left(
+            $deal-item-footer-padding-horizontal: $deal-item-footer-padding-horizontal,
+            $deal-item-footer-left-font-size: $deal-item-footer-left-font-size,
+            $deal-item-footer-left-color: $deal-item-footer-left-color,
+            $deal-item-footer-right-width: $deal-item-footer-right-width
+        );
+
+        @include deal-item-footer-right(
+            $deal-item-footer-padding-horizontal: $deal-item-footer-padding-horizontal,
+            $deal-item-footer-right-color: $deal-item-footer-right-color,
+            $deal-item-footer-right-width: $deal-item-footer-right-width
+        );
+    }
+}
+
+// ---------------------------------------
+// 영역별 mixin
+// ---------------------------------------
+
+// ---------------------------------------
+// 딜 레이블
+// ---------------------------------------
+@mixin deal-item-label(
+    $deal-item-label-zindex: 2,
+    $deal-item-label-sticker-color: #a725c8,
+    $deal-item-label-label-color: #008ee0
+){
+    &_lbll {
+        // 좌측 상단 레이블
+        z-index: $deal-item-label-zindex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        &_sticker {
+	        color: $deal-item-label-sticker-color;
+        }
+        &_label {
+        	color: $deal-item-label-label-color;
+        }
+    }
+    &_lblr {
+        // 우측 상단 레이블
+        z-index: $deal-item-label-zindex;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+// ---------------------------------------
+// 딜 썸네일
+// ---------------------------------------
+@mixin deal-item-thumb(
+    $deal-item-thumbnail-width: 13em,
+    $deal-item-thumbnail-height: 13.3em
+){
+    &_thumb {
+        // 썸네일 이미지 래퍼
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $deal-item-thumbnail-width;
+        height: $deal-item-thumbnail-height;
+
+        img {
+            display: block;
+            width: $deal-item-thumbnail-width;
+            height: $deal-item-thumbnail-height;
+        }
+    }
+}
+
+// ---------------------------------------
+// 딜 썸네일 마스크
+// ---------------------------------------
+@mixin deal-item-mask(
+    $deal-item-thumbnail-width: 13em,
+    $deal-item-thumbnail-height: 13.3em,
+    $deal-item-mask-zindex: 1
+){
+    &_mask {
+        z-index: $deal-item-mask-zindex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $deal-item-thumbnail-width;
+        height: $deal-item-thumbnail-height;
+    }
+}
+
+// ---------------------------------------
+// 딜 바디
+// ---------------------------------------
+@mixin deal-item-body(
+    $deal-item-thumbnail-width: 13em,
+    $deal-item-thumbnail-height: 13.3em,
+    $deal-item-body-padding: 0.8em 1.5em 2.5em,
+    $deal-item-body-top-height: ( 7em - 0.8em ),
+    $deal-item-body-top-bottom-top: 7em
+){
+    &_body {
+        height: $deal-item-thumbnail-height;
+        margin-left: $deal-item-thumbnail-width;
+        padding: $deal-item-body-padding;
+        box-sizing: border-box;
+
+        &_top {
+            min-height: $deal-item-body-top-height;
+        }
+        &_bottom {
+            position: absolute;
+            top: $deal-item-body-top-bottom-top;
+        }
+    }
+}
+
+// ---------------------------------------
+// 딜 장소
+// ---------------------------------------
+@mixin deal-item-location(
+	$deal-item-location-display: block,
+    $deal-item-location-font-size: 1.12em,
+    $deal-item-location-color: #008cc7
+){
+    &_location {
+        // 장소
+        display: $deal-item-location-display;
+        font-size: $deal-item-location-font-size;
+        color: $deal-item-location-color;
+        
+        &:before {
+        	@include sp-deallist("ic_location");
+        	content: "";
+        	position: relative;
+        	top: 1px;
+        	margin-right: 3px;
+        }
+        &+.deal_item_distance {
+        	height: 9px;
+        	margin-left: 0.4em;
+        	padding-left: 0.4em;
+        	border-left: 1px solid #e5e5e5;
+        	line-height: 0.9;
+        }
+    }
+}
+
+// ---------------------------------------
+// 딜 거리
+// ---------------------------------------
+@mixin deal-item-distance(
+    $deal-item-distance-display: block,
+    $deal-item-distance-font-size: 1.12em,
+    $deal-item-distance-color: #008cc7
+){
+    &_distance {
+        // 거리
+        display: $deal-item-distance-display;
+        font-size: $deal-item-distance-font-size;
+        color: $deal-item-distance-color;
+    }
+}
+
+// ---------------------------------------
+// 딜 제목
+// ---------------------------------------
+@mixin deal-item-title(
+    $deal-item-title-margin: 1px 0 0,
+    $deal-item-title-padding-bottom: 0,
+    $deal-item-title-font-size: 1.7em,
+    $deal-item-title-line-height: 1.2em,
+    $deal-item-title-lines: 2,
+    $deal-item-title-color: #333,
+    $deal-item-title-first-child-margin-top: 7px
+){
+    &_title {
+        // 제목
+        @include line-clamp($deal-item-title-lines, $deal-item-title-line-height);
+        margin: $deal-item-title-margin;
+        padding-bottom: $deal-item-title-padding-bottom;
+        font-size: $deal-item-title-font-size;
+        color: $deal-item-title-color;
+
+        &:first-child {
+            margin-top: $deal-item-title-first-child-margin-top;
+        }
+    }
+}
+
+// ---------------------------------------
+// 딜 부제목
+// ---------------------------------------
+@mixin deal-item-subtitle(
+    $deal-item-subtitle-font-size: 1.19em,
+    $deal-item-subtitle-color: #5c6470
+){
+    &_subtitle {
+        // 부제목
+        @include ellipsis;
+        display: block;
+        font-size: $deal-item-subtitle-font-size;
+        color: $deal-item-subtitle-color;
+    }
+}
+
+// ---------------------------------------
+// 딜 할인형태
+// ---------------------------------------
+@mixin deal-item-discount(
+    $deal-item-discount-font-size: 1.68em,
+    $deal-item-discount-line-height: 2.44,
+    $deal-item-discount-color: #ff5d35,
+    $deal-item-percent-font-size: 2.66em,
+    $deal-item-percent-line-height: 1
+){
+    &_discount {
+        line-height: $deal-item-discount-line-height;
+        font-size: $deal-item-discount-font-size;
+        color: $deal-item-discount-color;
+
+        // 할인율 표시하는 경우
+        &.percent {
+            font-size: $deal-item-percent-font-size;
+            line-height: $deal-item-percent-line-height;
+        }
+    }
+}
+
+// percent sign (%)
+@mixin deal-item-percent(
+    $deal-item-percent-sign-font-size: 1.995em,
+    $deal-item-discount-color: #ff5d35
+){
+    &_percent {
+        font-size: $deal-item-percent-sign-font-size;
+        color: $deal-item-discount-color;
+    }
+}
+
+// 가격
+@mixin deal-item-price(
+    $deal-item-price-margin: 0 0 0 7px,
+    $deal-item-price-font-size: 1.68em,
+    $deal-item-price-color: #333,
+    $deal-item-price-first-child-margin: 0
+){
+    &_price {
+        // 가격
+        display: inline-block;
+        margin: $deal-item-price-margin;
+        font-size: $deal-item-price-font-size;
+        color: $deal-item-price-color;
+        font-weight: bold;
+
+        &:first-child {
+            margin: $deal-item-price-first-child-margin;
+        }
+    }
+}
+
+// 정상가
+@mixin deal-item-price-cover(
+    $deal-item-price-cover-top: 2px,
+    $deal-item-price-cover-left: 1px,
+    $deal-item-price-cover-font-size: 0.662em,
+    $deal-item-price-cover-color: #999
+){
+    &_cover {
+        position: relative;
+        top: $deal-item-price-cover-top;
+        left: $deal-item-price-cover-left;
+        display: block;
+        text-decoration: line-through;
+        font-size: $deal-item-price-cover-font-size;
+        color: $deal-item-price-cover-color;
+    }
+}
+
+// 원 텍스트
+@mixin deal-item-price-txt(
+    $deal-item-price-txt-font-size: 0.83em
+){
+    &_txt {
+        font-size: $deal-item-price-txt-font-size;
+    }
+}
+
+// 가격뒤 보조 텍스트
+// 호텔의 경우: (1박평균)
+@mixin deal-item-price-info(
+    $deal-item-price-info-font-size: 0.65em,
+    $deal-item-price-info-color: #333
+){
+    &_info {
+        font-size: $deal-item-price-info-font-size;
+        color: $deal-item-price-info-color;
+        font-weight: normal;
+    }
+}
+
+// ---------------------------------------
+// 딜 푸터
+// ---------------------------------------
+@mixin deal-item-footer(
+    $deal-item-thumbnail-width: 13em,
+    $deal-item-footer-left: $deal-item-thumbnail-width,
+    $deal-item-footer-right: 0,
+    $deal-item-footer-bottom: 0,
+    $deal-item-footer-height: 2.5em,
+    $deal-item-footer-border-top: 1px solid #f4f4f4
+){
+    &_footer {
+        // 딜 푸터
+        position: absolute;
+        right: $deal-item-footer-right;
+        left: $deal-item-footer-left;
+        bottom: $deal-item-footer-bottom;
+        height: $deal-item-footer-height;
+        border-top: $deal-item-footer-border-top;
+        line-height: $deal-item-footer-height;
+    }
+}
+
+// 딜 푸터 좌측
+@mixin deal-item-footer-left(
+    $deal-item-footer-padding-horizontal: 15px,
+    $deal-item-footer-right-width: 66px,
+    $deal-item-footer-left-font-size: 1.12em,
+    $deal-item-footer-left-color: #333
+){
+    &_ftrl {
+        @include ellipsis;
+        position: absolute;
+        top: 0;
+        left: $deal-item-footer-padding-horizontal;
+        right: $deal-item-footer-right-width;
+        font-size: $deal-item-footer-left-font-size;
+        color: $deal-item-footer-left-color;
+        text-align: left;
+    }
+}
+
+// 딜 푸터 우측
+@mixin deal-item-footer-right(
+    $deal-item-footer-padding-horizontal: 15px,
+    $deal-item-footer-right-color: #999,
+    $deal-item-footer-right-width: 66px
+){
+    &_ftrr {
+        position: absolute;
+        top: 0;
+        right: $deal-item-footer-padding-horizontal;
+        width: $deal-item-footer-right-width;
+        color: $deal-item-footer-right-color;
+        text-align: right;
+    }
+}

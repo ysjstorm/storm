@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+%sp-appdimmed {
+    background: url('../im/sp-appdimmed.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(886px/2) (482px/2);
+    -webkit-background-size:(886px/2) (482px/2);
+}
+
+@mixin sp-appdimmed($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-appdimmed, $filename);
+    @extend %sp-appdimmed;
+	@include sp-mosaic-base($sp-appdimmed, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-appdimmed: (
+    spritesheet_name: sp-appdimmed,
+    bt_close: (offset_x: -844px, offset_y: -78px, width: 36px, height: 36px),
+    bt_later: (offset_x: -560px, offset_y: -216px, width: 226px, height: 36px),
+    bt_run: (offset_x: 0, offset_y: -114px, width: 468px, height: 112px),
+    bt_run2: (offset_x: 0, offset_y: 0, width: 556px, height: 110px),
+    sdu_1301_comm: (offset_x: 0, offset_y: -318px, width: 426px, height: 86px),
+    sdu_1301_comm2: (offset_x: -560px, offset_y: 0, width: 326px, height: 74px),
+    sdu_1301_review1: (offset_x: 0, offset_y: -230px, width: 500px, height: 84px),
+    sdu_1301_review2: (offset_x: 0, offset_y: -408px, width: 368px, height: 74px),
+    sdu_1301_tmony1: (offset_x: -560px, offset_y: -78px, width: 160px, height: 134px),
+    sdu_1301_tmony2: (offset_x: -724px, offset_y: -78px, width: 116px, height: 132px),
+);

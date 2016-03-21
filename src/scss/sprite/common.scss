@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+%sp-common {
+    background: url('../im/sp-common.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(650px/2) (582px/2);
+    -webkit-background-size:(650px/2) (582px/2);
+}
+
+@mixin sp-common($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-common, $filename);
+    @extend %sp-common;
+	@include sp-mosaic-base($sp-common, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-common: (
+    spritesheet_name: sp-common,
+    appdimmedlayer-bt_tmapp: (offset_x: 0, offset_y: 0, width: 540px, height: 152px),
+    appdimmedlayer-bt_tmapp2: (offset_x: 0, offset_y: -354px, width: 168px, height: 76px),
+    appdimmedlayer_h_txt: (offset_x: 0, offset_y: -156px, width: 426px, height: 86px),
+    appdownlayer-icon_app_down: (offset_x: -514px, offset_y: -198px, width: 26px, height: 26px),
+    arrow_category_recommend: (offset_x: -512px, offset_y: -270px, width: 8px, height: 14px),
+    category_index_001: (offset_x: -466px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_002: (offset_x: -482px, offset_y: -434px, width: 38px, height: 38px),
+    category_index_003: (offset_x: -440px, offset_y: -476px, width: 38px, height: 38px),
+    category_index_004: (offset_x: -482px, offset_y: -476px, width: 38px, height: 38px),
+    category_index_005: (offset_x: -424px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_006: (offset_x: -298px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_007: (offset_x: -256px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_008: (offset_x: -430px, offset_y: -156px, width: 38px, height: 38px),
+    category_index_009: (offset_x: -172px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_010: (offset_x: -386px, offset_y: -246px, width: 38px, height: 38px),
+    category_index_011: (offset_x: -440px, offset_y: -434px, width: 38px, height: 38px),
+    category_index_012: (offset_x: -214px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_013: (offset_x: -428px, offset_y: -246px, width: 38px, height: 38px),
+    category_index_014: (offset_x: -340px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_015: (offset_x: -382px, offset_y: -354px, width: 38px, height: 38px),
+    category_index_016: (offset_x: -472px, offset_y: -156px, width: 38px, height: 38px),
+    category_index_017: (offset_x: -430px, offset_y: -198px, width: 38px, height: 38px),
+    category_index_018: (offset_x: -472px, offset_y: -198px, width: 38px, height: 38px),
+    category_index_new: (offset_x: -590px, offset_y: -498px, width: 60px, height: 28px),
+    category_index_new2: (offset_x: -390px, offset_y: -396px, width: 12px, height: 16px),
+    category_index_shortcut: (offset_x: -516px, offset_y: -322px, width: 14px, height: 26px),
+    collection_share_ic_fb: (offset_x: -544px, offset_y: -330px, width: 106px, height: 106px),
+    collection_share_ic_kakao: (offset_x: -544px, offset_y: -220px, width: 106px, height: 106px),
+    collection_share_ic_kas: (offset_x: -544px, offset_y: -110px, width: 106px, height: 106px),
+    collection_share_ic_twitter: (offset_x: -544px, offset_y: 0, width: 106px, height: 106px),
+    defaultlayout-header-close: (offset_x: -544px, offset_y: -498px, width: 42px, height: 42px),
+    depth1-icon_new: (offset_x: -368px, offset_y: -396px, width: 18px, height: 16px),
+    depth2-icon_arrow_list_left: (offset_x: -524px, offset_y: -476px, width: 14px, height: 24px),
+    depth2-icon_arrow_list_right: (offset_x: -524px, offset_y: -434px, width: 14px, height: 24px),
+    depth3-icon_ctlst_arrow_down: (offset_x: -248px, offset_y: -396px, width: 32px, height: 20px),
+    depth3-icon_ctlst_arrow_up: (offset_x: -284px, offset_y: -396px, width: 32px, height: 20px),
+    depth3-icon_menu: (offset_x: -512px, offset_y: -246px, width: 28px, height: 20px),
+    depth3-icon_sort: (offset_x: -516px, offset_y: -300px, width: 22px, height: 18px),
+    sortlayer-bt_clse: (offset_x: -212px, offset_y: -396px, width: 32px, height: 32px),
+    sortlayer-ico_sort_checked: (offset_x: -320px, offset_y: -396px, width: 20px, height: 16px),
+    sortlayer-ico_sort_list: (offset_x: -344px, offset_y: -396px, width: 20px, height: 16px),
+    whitelayout-drawer-btn_close: (offset_x: 0, offset_y: -544px, width: 38px, height: 38px),
+    whitelayout-drawer-btn_login: (offset_x: -330px, offset_y: -434px, width: 106px, height: 106px),
+    whitelayout-drawer-btn_order_info: (offset_x: -220px, offset_y: -434px, width: 106px, height: 106px),
+    whitelayout-drawer-btn_shopping_bag: (offset_x: -110px, offset_y: -434px, width: 106px, height: 106px),
+    whitelayout-drawer-btn_vf_home: (offset_x: 0, offset_y: -434px, width: 106px, height: 106px),
+    whitelayout-drawer-tit_brand: (offset_x: -286px, offset_y: -300px, width: 226px, height: 50px),
+    whitelayout-drawer-tit_category: (offset_x: 0, offset_y: -246px, width: 382px, height: 50px),
+    whitelayout-drawer-tit_ticket: (offset_x: 0, offset_y: -300px, width: 282px, height: 50px),
+    whitelayout-header-back: (offset_x: -514px, offset_y: -156px, width: 22px, height: 36px),
+    whitelayout-header-hamberger: (offset_x: -172px, offset_y: -396px, width: 36px, height: 32px),
+    whitelayout-header-shoppingbag: (offset_x: -602px, offset_y: -440px, width: 44px, height: 42px),
+    whitelayout-header-toggle: (offset_x: -470px, offset_y: -246px, width: 38px, height: 38px),
+    whitelayout-zipcode_arr1: (offset_x: -544px, offset_y: -440px, width: 54px, height: 54px),
+    whitelayout-zipcode_del1: (offset_x: -508px, offset_y: -354px, width: 32px, height: 32px),
+);

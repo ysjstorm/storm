@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+    <title>TMON :: 고객센터 :: 자주 묻는 질문</title>
+    <link rel="stylesheet" href="../../css/m.css">
+</head>
+<body>
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+@@include('header_type2.html', {"title":"호텔·숙박 검색"})
+<hr>
+<div id="hotel_search">
+    @@include('hotel/search_filter.html')
+
+    <div class="no-res sch-res">
+        <div class="loading_img"></div>
+        <strong>딱 맞는 호텔이 없네요.</strong>
+        <span>다른 조건으로 찾아보시는 건 어떨까요?</span>
+    </div>
+</div>
+</body>
+</html>

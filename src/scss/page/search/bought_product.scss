@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+.search_bought {
+  position: relative;
+  padding: 11px 8px;
+  background-color: #d9e5e8;
+  .title {
+    margin: 6px 0;
+    padding-left: 6px;
+    font-size: 14px;
+    color: #1a1a1a;
+  }
+  .lst_bght {
+    overflow: hidden;
+    li {
+      position: relative;
+      min-height: 155px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #d6d6d6;
+    }
+    a {
+      display: block;
+      position: relative;
+      background-color: #fff;
+    }
+    .info {
+      position: relative;
+      min-height: 124px;
+      padding: 13px 10px 0 122px;
+      border-bottom: 1px solid #ededed;
+      color: #000;
+      box-sizing: border-box;
+    }
+    .thm {
+      overflow: hidden;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 101px;
+      height: 103px;
+      &:after {
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,.05);
+        content: '';
+      }
+      img {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+    .tit {
+      max-height: 40px;
+      overflow: hidden;
+      font-size: 1.15em;
+      line-height: 1.2em;
+      letter-spacing: -.07em;
+      text-overflow: ellipsis;
+    }
+    .summery {
+      margin-bottom: 72px;
+      padding: 3px 0 0;
+      width: 100%;
+      max-height: 36px;
+      overflow: hidden;
+      line-height: 1.2em;
+      font-size: .85em;
+      color: #9d9fa5;
+      text-overflow: ellipsis;
+    }
+    .price {
+      position: absolute;
+      left: 122px;
+      bottom: 36px;
+    }
+    .per {
+      display: inline-block;
+      color: #fc542e;
+      font-size: 1.3em;
+      em {
+        font-size: 0.8em;
+      }
+    }
+    .won {
+      display: inline-block;
+      position: relative;
+      padding-left: 6px;
+      .sale {
+        color: #000;
+        font-size: 15px;
+        line-height: 2em;
+        .no {
+          font-size: 17px;
+          font-weight: bold;
+          letter-spacing: 0;
+          vertical-align: -1px;
+        }
+      }
+    }
+    .ext {
+      height: 32px;
+      padding: 1px 10px 0;
+      color: #9d9fa5;
+      font-size: .8em;
+      line-height: 32px;
+    }
+    .when {
+      letter-spacing: -.05em;
+      font-family: Roboto;
+      .date {
+        font-size: 1.05em;
+      }
+    }
+    .tags {
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      font-size: .9em;
+      height: 32px;
+      color: #008ee0;
+      line-height: 32px;
+      span {
+        margin-right: 4px;
+      }
+      .free {
+        color: #008ee0;
+      }
+      .mart {
+        color: #a725c8;
+      }
+    }
+    .buy {
+      position: absolute;
+      left: 122px;
+      bottom: 45px;
+      height: 27px;
+      vertical-align: middle;
+      .amount {
+        display: inline-block;
+        float: left;
+        margin-right: 3px;
+        border: 1px solid #ccc;
+        width: 61px;
+        height: 25px;
+        border-radius: 3px;
+        &:after {
+          display: block;
+          position: absolute;
+          bottom: 7px;
+          left: 45px;
+          border: 4px solid;
+          width: 0;
+          height: 0;
+          border-color: #b2b2b2 transparent transparent transparent;
+          content: '';
+        }
+      }
+      .amount_sel {
+        display: inline-block;
+        border: 0;
+        padding: 5px 6px;
+        width: 100%;
+        font-size: 12px;
+        background: none;
+        font-family: Roboto;
+        color: #333;
+      }
+      .btn_cart {
+        display: inline-block;
+        float: left;
+        margin-right: 3px;
+        width: 56px;
+        height: 27px;
+        font-size: 13px;
+        border-radius: 3px;
+        background-color: #ff594b;
+        color: #fff;
+
+        &::after{
+          @include sp-search('ico_cart');
+          display:inline-block;
+          vertical-align: middle;
+          content:'';
+        }
+      }
+      .btn_direct {
+        display: inline-block;
+        float: left;
+        width: 76px;
+        height: 27px;
+        font-size: 13px;
+        letter-spacing: 0;
+        border-radius: 3px;
+        background-color: #ff594b;
+        color: #fff;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media(max-width: 359px) {
+  .search_bought {
+    .lst_bght .buy {
+      .amount {
+        width: 42px;
+        &:after {
+          left: 30px;
+        }
+      }
+      .btn_cart {
+        width: 48px;
+      }
+      .btn_direct {
+        width: 67px;
+        height: 27px;
+        font-size: 13px;
+        letter-spacing: 0;
+        border-radius: 3px;
+        background-color: #ff594b;
+        color: #fff;
+        overflow: hidden;
+      }
+    }
+  }
+}

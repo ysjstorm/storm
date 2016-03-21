@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.component.recommend_deal_list.type3 {
+  position:relative;
+  padding: 0 0 15px;
+  height: auto;
+  overflow-y: hidden;
+
+  .wrap_list{
+    height:228px;
+  }
+
+  .lst {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 250px;
+
+  }
+
+  .deal_item {
+    display: table-cell;
+    height: 238px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  .deal_item:nth-of-type(1) > .deal_item_anchor {
+    margin-left: 15px;
+  }
+
+  .deal_item:last-of-type > .deal_item_anchor {
+    margin-right: 15px;
+  }
+
+  .deal_item_anchor {
+    display: block;
+    width: 140px;
+    margin-right: 5px;
+    border: 1px solid #dfe2e6;
+  }
+
+  .deal_item_thumb {
+    height: 140px;
+  }
+
+  .deal_item_body_top {
+    white-space: normal;
+    text-overflow: initial;
+  }
+
+  .deal_item_body {
+    height: 85px;
+  }
+}

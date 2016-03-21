@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.lyrinr, .lyrinr2{overflow:hidden;background-color:#fff}
+.lyrqt{position:absolute;}
+.lyrqt:after,.lyrqt:before{display:inline-block;position:absolute;top:50%;left:50%;width:20px;height:3px;margin:-2px 0 0 -9px;background-color:#939598;border-radius:4px;content:''}
+
+.lyr_hotel_bnf .lyrinr{position:relative;text-align:center}
+.lyr_hotel_bnf .lyrqt{top:3px;right:2px;overflow:hidden;line-height:100em}
+.lyr_hotel_bnf .lyrqt:after,.lyr_hotel_bnf .lyrqt:before{height:2px;background-color:#666}
+.lyr_hotel_bnf .lyrqt.lev:after,.lyr_hotel_bnf .lyrqt.lev:before{height:2px;background-color:#fff}
+.lyr_hotel_bnf .tit{position:fixed;width:100%;height:109px;background:url(../img/hotel/bg_hotel_bnf_info.png) no-repeat center;background-size:100% 109px;text-align:left;font-size:1.57em;color:#fff;letter-spacing:-0.05em}
+.lyr_hotel_bnf .info_txt{position:absolute;top:23px;left:15px;font-size:0.63em;color:#7be7f6}
+.lyr_hotel_bnf .info_txt_sub{position:absolute;top:75px;left:15px;font-size:0.54em;font-weight:lighter;color:#fff;letter-spacing:-1px;}
+.lyr_hotel_bnf{
+  .deal_title{
+    width: 90%;
+    position:absolute;
+    top:43px;
+    left:14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.lyr_hotel_bnf .cont{padding:25px 0 20px;margin-top:109px;height:260px;text-align:center;overflow-y:scroll}
+.lyr_hotel_bnf .cont:after{position:absolute;z-index:10;right:10px;bottom:0;left:10px;height:25px;background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,0)),to(#fff));content:''}
+.lyr_hotel_bnf .cont .cont_tit{font-size:1.36em;color:#16181a;line-height:1em;}
+.lyr_hotel_bnf .cont .icons{display:inline-block;margin-top:15px;font-size:0;color:transparent}
+.lyr_hotel_bnf .cont .ico{display:inline-block;width:115px;height:115px;vertical-align:middle}
+.lyr_hotel_bnf .cont .ico.step1{background:url(../img/hotel/tx_hotel_bnf_cont1.png) no-repeat;background-size:115px 115px}
+.lyr_hotel_bnf .cont .ico.step2{background:url(../img/hotel/tx_hotel_bnf_cont2.png) no-repeat;background-size:115px 115px}
+.lyr_hotel_bnf .cont .arr{display:inline-block;margin:0 13px;width:17px;height:26px;background:url(../img/hotel/ic_hotel_bnf_arr.png) no-repeat;background-size:17px 26px;vertical-align:middle}
+.lyr_hotel_bnf .cont .btn{display:inline-block;margin:20px 0 10px;width:142px;height:34px;background:url(../img/hotel/bt_hotel_bnf_go.png) no-repeat;background-size:142px 34px;font-size:0;color:transparent}
+.lyr_hotel_bnf .cont .lst{position:relative;padding:0 27px;text-align: left}
+.lyr_hotel_bnf .cont .lst li{position:relative;padding:3px 0 3px 7px;font-size:.79em;color:#6c7580}
+.lyr_hotel_bnf .cont .lst li em{color:#16181a}
+.lyr_hotel_bnf .cont .lst li:before{position:absolute;display:block;top:10px;left:0;border-radius:1px;width:2px;height:2px;background-color:#7e858f;content:''}
+.lyr_hotel_bnf .btcyn{display:inline-block;margin:20px 0 30px;width:118px;height:41px;border-radius:1px;font-size:1.1em;font-weight:normal}

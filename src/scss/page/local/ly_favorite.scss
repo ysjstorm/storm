@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+body.show-ly_favorite {
+	position: fixed;
+	top: auto;
+	left: 0;
+	right: 0;
+	margin-top: 0;
+	backface-visibility: hidden;
+	
+	& .ly_favorite {
+		display:block;
+	}
+}
+.ly_favorite {
+	display: none;
+	position: relative;
+	z-index: 202;
+	
+	.bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+	}
+	.inner {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 198px;
+		margin: -174px 0 0 -115px;
+		padding: 15px;
+		background: #fff;
+		border: 1px solid #88919a;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+		
+		h3 {
+			@include txt_bold(14, #16181a);
+			line-height: 27px;
+			
+			em {
+				color: #fa5a44;
+			}
+		}
+		div {
+			height: 244px;
+			overflow: hidden;
+		}
+		ul {
+			width: 198px;
+			height: 244px;
+			padding-right: 30px;
+			margin-bottom: 3px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+		li {
+			border-bottom: 1px solid #e3e5e8;
+			
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		.local_name {
+			display: inline-block;
+			height: 48px;
+			padding-right: 23px;
+			line-height: 48px;
+			@include txt_bold(13, #151719);
+			
+			&:before {
+				content: "";
+				position: relative;
+				top: 4px;
+				left: 3px;
+				margin-right: 10px;
+				@include sp-local("ic_select_loc");
+			}
+		}
+		.favorite_delete {
+			float: right;
+			padding: 14px 15px;
+			margin-right: -13px;
+			
+			&:before {
+				content: "";
+				@include sp-local("btn_favorite_delete");
+			}
+		}
+		.btn_other {
+			display: block;
+			background: #fa6a56;
+			@include txt_bold(13, #fff);
+			line-height: 42px;
+			text-align: center;
+			
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				margin-left: 3px;
+				border: 2px solid #fff;
+				border-left: none;
+				border-bottom: none;
+				@include rotate(45deg);
+			}
+		}
+		.btn_close {
+			position: absolute;
+			top: 6px;
+			right: 2px;
+			padding: 15px;
+			
+			&:before {
+				content: "";
+				@include sp-local("btn_close_favorite");
+			}
+		}
+	}
+}

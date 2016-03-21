@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+.hotel-summery {
+    position: absolute; z-index: 5;
+    width: 100%; height: 290px;
+    .hotel-info {
+        position: absolute;
+        bottom: 72px; left: 0;
+        box-sizing: border-box;
+        padding: 0 15px;
+        width: 100%;
+        .grade {
+            margin-bottom: 6px;
+            span {
+                margin-left: 3px;
+                font-size: 13px;
+                color: #ffc716;
+            }
+            strong {
+                position: relative;
+                top: 1px;
+                display: inline-block;
+                @include sp-hotel('info_stars');
+                width: 0;
+                text-indent: -9999px;
+            }
+            &.g50 strong {width: 72px;}
+            &.g45 strong {width: 67px;}
+            &.g40 strong {width: 56px;}
+            &.g35 strong {width: 52px;}
+            &.g30 strong {width: 42px;}
+            &.g25 strong {width: 37px;}
+            &.g20 strong {width: 27px;}
+            &.g15 strong {width: 22px;}
+            &.g10 strong {width: 12px;}
+            &.g5 strong {width: 7px;}
+            &.g0 {display: none;}
+        }
+        .name {
+            width: 100%; height: 45px;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            // white-space: nowrap;
+            font-size: 23px; line-height: 23px;
+            color: #fff;
+        }
+    }
+    .price-info {
+        position: absolute;
+        bottom: 18px; left: 15px;
+        .price-detail{
+            float:left;
+            .high-rate {
+                margin-bottom: 3px;
+                font-size: 12px;
+                color: rgba(255, 255, 255, .4);
+                span {
+                    font-size: 14px;
+                    letter-spacing: -0.05em;
+                    color: rgba(255, 255, 255, .4);
+                    text-decoration: line-through;
+                }
+            }
+            .row-rate {
+                margin-top:20px;
+                font-size: 20px; line-height: 20px;
+                letter-spacing: -0.07em;
+                color: #fff;
+                span {
+                    font-weight: bold; font-size: 24px;
+                }
+                .rate-info {
+                    font-size: 11px;
+                    color: rgba(255, 255, 255, .7);
+                }
+            }
+            .high-rate + .row-rate{
+                margin-top:0;
+            }
+        }
+        .ean-pkg-tag{
+            position:relative;
+            float:left;
+            margin-left:8px;
+            margin-top:15px;
+            &:before{
+                position:absolute;
+                left:0;
+                top:0;
+                display:inline-block;
+                content:"";
+                border:{
+                    width:15px 13px 15px 0px;
+                    style:solid;
+                    color:transparent #12aec3;
+                }
+            }
+            .tag-txt{
+                position:absolute;
+                left:13px;
+                top:0;
+                width:71px;
+                height:30px;
+                padding:0 6px;
+                color:#fff;
+                border-radius:0 4px 4px 0;
+                background-color:#12aec3;
+                overflow:hidden;
+                .tit{
+                    display:block;
+                    font-size:11px;
+                    line-height:30px;
+                    letter-spacing:-1px;
+                    text-align:center;
+                }
+            }
+        }
+    }
+    .place-info {
+        position: absolute;
+        top: 20px; left: 15px;
+        font-size: 14px; font-weight: lighter;
+        line-height: 17px;
+        vertical-align: top;
+        color: rgba(255, 255, 255, .7);
+        .loc-ico {
+            padding-right:2px;
+            @include sp-hotel('loc_ico');
+        }
+    }
+}
+
+.hotel-images {
+    position: relative;
+    top: 0px;
+    width: 100%; height: 290px;
+    overflow: hidden;
+    background: url("../img/hotel/bg_spot.png") repeat;
+    background-size: 360px 290px;
+    &:before {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 290px;
+        background: -o-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* Opera 11.10+ */
+        background: -moz-linear-gradient(top, rgba(255,255,255,0) 40%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.6) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,rgba(255,255,255,0)), color-st3p(75%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0.6))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
+        background: -ms-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* IE10+ */
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* W3C */
+        content: '';
+    }
+    .flick-image-list {
+        display: inline-block;
+        width: 100%; height: 290px;
+        .list-item {
+            display: inline;
+            position: relative;
+            .img {
+                display: inline-block;
+                width: 360px; height: 290px;
+                background-position: center center;
+                background-size: cover;
+            }
+            .img::before {
+                position: absolute;
+                top: 0; left: 0;
+                // repeat-x 필요, sprite 이용하지 않고 사용하여야 함..?
+                // @include sp-hotel('deal_img_mask');
+                // width: 100%; min-height: 290px;
+                width: 100%; height: 290px;
+                background: -o-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* Opera 11.10+ */
+                background: -moz-linear-gradient(top, rgba(255,255,255,0) 40%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.6) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,rgba(255,255,255,0)), color-st3p(75%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0.6))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
+                background: -ms-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* IE10+ */
+                background: linear-gradient(to bottom, rgba(255,255,255,0) 40%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.6) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+                content: '';
+            }
+            .img::after {
+                position: absolute; z-index: 10;
+                top: 0; left: 0;
+                display: inline-block;
+                width: 100%; height: 290px;
+                content: '';
+            }
+        }
+    }
+    .pager {
+        position: absolute;
+        top: 20px; right: 15px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, .7);
+    }
+}

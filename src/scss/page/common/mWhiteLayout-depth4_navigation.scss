@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.depth4_w{
+	width:100%;
+	overflow:hidden;
+	padding:0 3px;
+	background:#333;
+	color:#fff;
+	box-sizing: border-box;
+	ul,li{
+		font-size:0;
+	}
+	ul{
+		height: 35px;
+		white-space: nowrap;
+	}
+	li{
+		display:inline;
+		a{
+			display:inline-block;
+			height:15px;
+			font-size:13px;
+			padding:10px 12px;
+			color:#fff;
+		}
+		&.on{
+			a{
+				color:#fe3b57;
+			}
+		}
+	}
+}

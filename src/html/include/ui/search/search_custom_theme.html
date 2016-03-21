@@ -1,0 +1,26 @@
+<!--
+    공통 클래스 : custom_theme ,
+    개별 테마 클래스 : theme_type_식별자
+-->
+<div class="custom_theme theme_type_a">
+    <!-- 컴포넌트 -->
+    @@include('ui/search/custom_theme/components/title/type1.html')
+    <!-- //컴포넌트 -->
+    <!-- 컴포넌트 -->
+    @@include('ui/search/custom_theme/components/recommend_deal_list/type1.html')
+    @@include('ui/search/custom_theme/components/recommend_deal_list/type2.html')
+    @@include('ui/search/custom_theme/components/recommend_deal_list/type3.html')
+    @@include('ui/search/custom_theme/components/recommend_deal_list/type4.html')
+    <!-- //컴포넌트 -->
+</div>
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+<script>
+    $('.type4>.lst').slick({
+        arrows: false,
+        centerMode: true
+    });
+</script>

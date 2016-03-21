@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+%sp-search {
+    background: url('../im/sp-search.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(720px/2) (696px/2);
+    -webkit-background-size:(720px/2) (696px/2);
+}
+
+@mixin sp-search($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-search, $filename);
+    @extend %sp-search;
+	@include sp-mosaic-base($sp-search, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-search: (
+    spritesheet_name: sp-search,
+    bg_cal_input: (offset_x: -324px, offset_y: -536px, width: 72px, height: 76px),
+    bg_search_filter: (offset_x: 0, offset_y: 0, width: 720px, height: 280px),
+    bg_search_obs: (offset_x: 0, offset_y: -284px, width: 348px, height: 108px),
+    bu_arrow_down: (offset_x: -548px, offset_y: -474px, width: 24px, height: 14px),
+    bu_arrow_recommand_more: (offset_x: -632px, offset_y: -576px, width: 12px, height: 20px),
+    bu_arrow_up: (offset_x: -520px, offset_y: -474px, width: 24px, height: 14px),
+    deallist_bottom_freedom: (offset_x: -640px, offset_y: -360px, width: 58px, height: 18px),
+    deallist_hotel_star: (offset_x: -358px, offset_y: -474px, width: 98px, height: 18px),
+    deallist_lbll_type1: (offset_x: -458px, offset_y: -396px, width: 100px, height: 32px),
+    deallist_lbll_type2: (offset_x: -562px, offset_y: -396px, width: 82px, height: 32px),
+    deallist_lbll_type3: (offset_x: -630px, offset_y: -432px, width: 82px, height: 32px),
+    deallist_lbll_type4: (offset_x: -544px, offset_y: -432px, width: 82px, height: 32px),
+    deallist_lbll_type5: (offset_x: -458px, offset_y: -432px, width: 82px, height: 32px),
+    deallist_lbll_type6: (offset_x: -272px, offset_y: -474px, width: 82px, height: 32px),
+    deallist_lblr_type1: (offset_x: -236px, offset_y: -536px, width: 84px, height: 84px),
+    deallist_mask_type1: (offset_x: -556px, offset_y: -284px, width: 100px, height: 60px),
+    deallist_mask_type2: (offset_x: -136px, offset_y: -396px, width: 132px, height: 136px),
+    deallist_mask_type3: (offset_x: -118px, offset_y: -536px, width: 114px, height: 114px),
+    deallist_mask_type4: (offset_x: -352px, offset_y: -360px, width: 140px, height: 28px),
+    ico_arrow_down_searchfilter: (offset_x: -576px, offset_y: -474px, width: 22px, height: 14px),
+    ico_arrow_down_searchfilter_disabled: (offset_x: -628px, offset_y: -474px, width: 22px, height: 14px),
+    ico_arrow_left_gray: (offset_x: -134px, offset_y: -654px, width: 22px, height: 36px),
+    ico_arrow_left_orange: (offset_x: -80px, offset_y: -654px, width: 24px, height: 38px),
+    ico_arrow_right_btn_more: (offset_x: -690px, offset_y: -474px, width: 8px, height: 14px),
+    ico_arrow_right_gray: (offset_x: -108px, offset_y: -654px, width: 22px, height: 36px),
+    ico_arrow_right_orange: (offset_x: -50px, offset_y: -654px, width: 26px, height: 38px),
+    ico_arrow_under_gray_associate_keywords: (offset_x: -490px, offset_y: -474px, width: 26px, height: 14px),
+    ico_arrow_up_gray_associate_keywords: (offset_x: -460px, offset_y: -474px, width: 26px, height: 14px),
+    ico_arrow_up_searchfilter: (offset_x: -602px, offset_y: -474px, width: 22px, height: 14px),
+    ico_btn_close_search_auto_complete: (offset_x: -576px, offset_y: -536px, width: 32px, height: 30px),
+    ico_cart: (offset_x: -518px, offset_y: -576px, width: 34px, height: 34px),
+    ico_check_delivery_pack_off: (offset_x: -480px, offset_y: -576px, width: 34px, height: 34px),
+    ico_check_delivery_pack_on: (offset_x: -594px, offset_y: -576px, width: 34px, height: 34px),
+    ico_check_orange: (offset_x: -606px, offset_y: -510px, width: 22px, height: 16px),
+    ico_check_searchfilter: (offset_x: -272px, offset_y: -510px, width: 26px, height: 22px),
+    ico_check_searchfilter_white: (offset_x: -696px, offset_y: -396px, width: 24px, height: 22px),
+    ico_circle_plus: (offset_x: -440px, offset_y: -576px, width: 36px, height: 36px),
+    ico_delivery_pack_off: (offset_x: -528px, offset_y: -536px, width: 44px, height: 30px),
+    ico_delivery_pack_on: (offset_x: -648px, offset_y: -396px, width: 44px, height: 30px),
+    ico_keyword_close: (offset_x: -654px, offset_y: -474px, width: 14px, height: 14px),
+    ico_location_orange: (offset_x: -556px, offset_y: -576px, width: 34px, height: 34px),
+    ico_new: (offset_x: -706px, offset_y: -536px, width: 14px, height: 18px),
+    ico_no_product: (offset_x: -352px, offset_y: -284px, width: 200px, height: 72px),
+    ico_recommand_adult: (offset_x: 0, offset_y: -536px, width: 114px, height: 114px),
+    ico_recommand_pconly: (offset_x: -496px, offset_y: -360px, width: 140px, height: 28px),
+    ico_recommand_soldout: (offset_x: 0, offset_y: -396px, width: 132px, height: 136px),
+    ico_reset_searchfilter: (offset_x: -674px, offset_y: -536px, width: 28px, height: 24px),
+    ico_result_no: (offset_x: -660px, offset_y: -284px, width: 52px, height: 54px),
+    ico_search: (offset_x: -400px, offset_y: -576px, width: 36px, height: 36px),
+    ico_search_back: (offset_x: 0, offset_y: -654px, width: 46px, height: 42px),
+    ico_search_del: (offset_x: -582px, offset_y: -510px, width: 20px, height: 20px),
+    ico_search_detail: (offset_x: -644px, offset_y: -536px, width: 26px, height: 26px),
+    ico_search_detail_close: (offset_x: -612px, offset_y: -536px, width: 28px, height: 28px),
+    ico_search_latest_del: (offset_x: -702px, offset_y: -360px, width: 18px, height: 18px),
+    ico_search_latest_no: (offset_x: -160px, offset_y: -654px, width: 6px, height: 36px),
+    ico_sub_category: (offset_x: -672px, offset_y: -474px, width: 14px, height: 14px),
+    ico_switch_off: (offset_x: -464px, offset_y: -536px, width: 60px, height: 36px),
+    ico_switch_on: (offset_x: -400px, offset_y: -536px, width: 60px, height: 36px),
+    logo_ean: (offset_x: -272px, offset_y: -396px, width: 182px, height: 74px),
+    num_popular1: (offset_x: -470px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular10: (offset_x: -414px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular2: (offset_x: -386px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular3: (offset_x: -358px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular4: (offset_x: -330px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular5: (offset_x: -554px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular6: (offset_x: -498px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular7: (offset_x: -526px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular8: (offset_x: -442px, offset_y: -510px, width: 24px, height: 20px),
+    num_popular9: (offset_x: -302px, offset_y: -510px, width: 24px, height: 20px),
+);

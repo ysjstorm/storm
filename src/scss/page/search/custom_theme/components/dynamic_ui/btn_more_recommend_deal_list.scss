@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.component.dynamic_ui.btn_more_recommend_deal_list{
+    position:absolute;
+    right:5px;
+    top:-2px;
+    padding:0;
+
+    .link{
+        padding:10px;
+
+        .txt{
+            font-size:12px;
+            color:#000;
+            line-height:1em;
+        }
+
+        .ico_arrow{
+            @include sp-search('ico_arrow_right_btn_more');
+            margin-left:2px;
+            vertical-align:1px;
+        }
+    }
+}

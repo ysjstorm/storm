@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+.user_guide{
+  header {
+	background-image: url("../img/wear/guide_bg_01.png");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+	height: 140px;
+	padding-top: 33px;
+	width: 100%;
+
+	h4 {
+	  @include sp-wear("guide_text_ticket3");
+	  display: block;
+	  margin: 0 auto 23px;
+	  text-indent: -200%;
+	}
+
+	small {
+	  color: #fff;
+	  display: block;
+	  font-size: 15px;
+	  letter-spacing: 0;
+	  text-align: center;
+	}
+  }
+}
+.user_guide{
+	section {
+	  display: block;
+	  padding-bottom: 33px;
+	
+	  h5 {
+		color: #fff;
+		font-size: 20px;
+		font-weight: bold;
+		letter-spacing: 0;
+		margin: 0;
+		padding: 34px 15px 10px;
+	  }
+	
+	  .content {
+		padding: 0 15px;
+	  }
+	
+	  &:before {
+		content: "";
+		position: absolute;
+		right: 0;
+	  }
+	
+	  &:after {
+		content: "";
+		position: absolute;
+		left: 0;
+	  }
+	
+	  &#buying_ticket {
+		background-image: url("../img/wear/guide_bg_02.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+	
+		div#ticket_sample {
+		  background-color: #fff;
+		  height: 149px;
+		  position: relative;
+		  max-width: 350px;
+		  margin: 0 auto;
+	
+		  div.image {
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: block;
+			width: 140px;
+			height: 149px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		  }
+	
+		  div#ticket_info {
+			display: block;
+			position: absolute;
+			left: 141px;
+			top: 0;
+			right: 0;
+			letter-spacing: 0;
+	
+			em, p, strong, a {
+			  display: block;
+			  margin: 0 15px;
+			}
+	
+			em {
+			  color: #000;
+			  font-size: 16px;
+			  font-weight: bold;
+			  padding-top: 15px;
+			}
+	
+			p {
+			  font-size: 11px;
+			  height: 26px;
+			  letter-spacing: 0;
+			}
+	
+			strong {
+			  color: #fe3b57;
+			  font-size: 25px;
+			}
+	
+			a {
+			  background: #fe3b57;
+			  border: 2px solid #000;
+			  color: #000;
+			  display: block;
+			  font-size: 14px;
+			  font-weight: bold;
+			  line-height: 28px;
+			  margin-top: 10px;
+			  text-align: center;
+			}
+		  }
+		}
+	
+		h6 {
+		  color: #fff;
+		  font-size: 20px;
+		  font-weight: bold;
+		  margin: 0;
+		  padding: 35px 0 2px;
+		}
+	
+		ol {
+		  color: #fff;
+		  font-size: 13px;
+	
+		  li {
+		  	letter-spacing: 0;
+			margin: 7px 0;
+		  }
+		}
+	
+		&:before {
+		  @include sp-wear("guide_pattern_01");
+		  top: 70px;
+		}
+	
+		&:after {
+		  @include sp-wear("guide_pattern_02");
+		  top: 205px;
+		}
+	  }
+	
+	  &#refund_ticket, &#attention {
+		padding-bottom: 0;
+	
+		h5 {
+		  color: #000;
+		}
+	
+		ul {
+		  border-bottom: 1px solid #cccccc;
+		  font-size: 12px;
+		  margin: 0 15px 0;
+		  padding: 0 0 25px 9px;
+	
+		  li {
+			letter-spacing: 0;
+			margin: 12px 0;
+			line-height: 1.4em;
+			text-indent: -8px;
+	
+			&:before {
+			  content: "-";
+			  padding-right: 5px;
+			}
+		  }
+		}
+	  }
+	
+	  &#attention {
+		ul {
+		  border-bottom: 0;
+		}
+	
+		&:before {
+		  @include sp-wear("guide_pattern_03");
+		  top: 599px;
+		}
+	
+		&:after {
+		  @include sp-wear("guide_pattern_04");
+		  top: 1175px;
+		}
+	  }
+	
+	  &#our_brands {
+		background-image: url("../img/wear/guide_bg_03.png");
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		height: 380px;
+		padding-top: 43px;
+	
+		h5 {
+		  @include sp-wear("guide_text_ourbrands");
+		  margin: 0 auto;
+		  padding: 0;
+		  text-indent: -200%;
+		  display: block;
+		}
+	
+		ul {
+		  li {
+			display: none;
+		  }
+		}
+	
+		&:before {
+		  @include sp-wear("guide_pattern_05");
+		  top: 1553px;
+		}
+	  }
+	}
+}

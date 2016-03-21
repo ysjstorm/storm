@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+// app download 레이어
+@import "../page/common/app_download";
+// 1depth
+@import "../page/common/depth1_navigation";
+// local
+@import "../page/common/local_top";
+// 2depth
+@import "../page/common/depth2_navigation";
+// 3depth
+@import "../page/common/depth3_navigation";
+// Sort 정렬 레이어
+@import "../page/common/ly_sort";
+// 카테고리 인덱스
+@import "../page/common/category_index";
+// 인벤토리 배너
+@import "../page/deallist/inventory";
+// 이미지배너
+@import "../page/deallist/image_banner";
+// 앱 딤드레이어
+@import "../page/common/app_dimmed";
+
+.app_header_ui_wrap{
+  position:relative;
+  width:100%;
+  z-index:100;
+
+  &.fixed{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    z-index:100;
+  }
+}
+
+.depth_menu{
+  width:100%;
+  position:relative;
+  z-index:10;
+  box-shadow:0 -1px 4px 2px rgba(0,0,0,.25);
+  &.fixed{
+    position:fixed;
+    left:0;
+    width:100%;
+    z-index:90;
+  }
+  .top_depth2,
+  .top_depth3{
+    box-shadow:none;
+    &:after,
+    &:before{
+      box-shadow:none;
+    }
+  }
+}
+
+.inven{
+	margin-bottom:10px;
+}
+
+.invenType{
+    background-color:#e7e7e7;
+    .inven{
+        margin-bottom:0;
+    }
+}
+
+.image_banner{
+	margin-bottom:10px;
+}
+
+// 슈퍼마트 배송안내
+.my{
+  &.comp{
+    .cplst2{
+      li{
+        margin-left:0;
+        padding-right:0;
+        list-style:none;
+
+        &:last-child{
+          padding-bottom:0;
+        }
+      }
+    }
+
+    .txt_caution{
+      padding-left:20px;
+      padding-bottom:5px;
+      font-size:0.95em;
+      color:#31333d;
+    }
+
+    .cplst{
+      & + .txt_caution{
+        margin-top:-10px;
+      }
+    }
+  }
+}

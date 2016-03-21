@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// 테마 공통 레퍼
+.custom_theme{
+    padding-top:17px;
+    padding-bottom:17px;
+    background-color:#fff;
+    border-bottom:1px solid #dfe2e6;
+    .component{
+        padding-left:15px;
+        padding-right:15px;
+    }
+    &>.component:last-child{
+        padding-bottom:0;
+    }
+
+
+    // 타이틀 컴포넌트
+    .component.title{
+        &.has_not_btn_more{
+            .btn_more_recommend_deal_list{
+                display:none;
+            }
+        }
+    }
+
+    &+.wrap_deal_list{
+        padding-top:10px;
+    }
+}
+
+.custom_border_top {
+    border-top:1px solid #dfe2e6;
+}
+
+// 테마 타입 A
+.theme_type_a{
+
+}
+
+// 테마 타입 B
+.theme_type_b{
+
+}

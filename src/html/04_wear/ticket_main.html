@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: Value Fashion</title>
+<link rel="stylesheet" href="../../css/wear.css"/>
+<link rel="stylesheet" href="../../css/l_w.css"/>
+</head>
+<body class="wear l_w">
+
+@@include('mWhiteLayout-header.html')
+<div id="ct">
+	@@include('ui/wear/ticket_main_deallist.html')
+</div>
+<script src="../../js/lib/swiper.min.js"></script>
+<script>
+var swiper = new Swiper(".relation_deal .deal_lst4", {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    spaceBetween: 5,
+    setWrapperSize: true    
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+%sp-deallist {
+    background: url('../im/sp-deallist.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(80px/2) (56px/2);
+    -webkit-background-size:(80px/2) (56px/2);
+}
+
+@mixin sp-deallist($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-deallist, $filename);
+    @extend %sp-deallist;
+	@include sp-mosaic-base($sp-deallist, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-deallist: (
+    spritesheet_name: sp-deallist,
+    ic_location: (offset_x: -60px, offset_y: 0, width: 20px, height: 22px),
+    inventory-title_icon: (offset_x: 0, offset_y: 0, width: 56px, height: 56px),
+);

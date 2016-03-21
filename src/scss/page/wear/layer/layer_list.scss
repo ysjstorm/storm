@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.layer_list {
+	padding: 20px;
+	
+	h3 {
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	ul {
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #efefef;
+		overflow: hidden;
+		
+		&:last-child {
+			border: none;
+		}
+		
+		li {
+			float: left;
+			width: 50%;
+			font-size: 13px;
+			color: #666;
+			
+			.check_box {
+				min-width: 60px;
+				padding: 8px 0;
+				
+				.checkbox_custom {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}

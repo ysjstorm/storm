@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+$search-latest-height:34px;
+
+// 최근 검색어
+.search_latest {
+  position: fixed;
+  top:62px;
+  bottom:0;
+  width:100%;
+  background: #fff;
+
+  .btn_area {
+	padding: 2px 15px 15px;
+  }
+}
+.search_home {
+  .hdr{
+	.search_latest {
+	  overflow-y:auto;
+	}
+  }
+  #ct{
+	.search_latest {
+	  position:initial;
+	}
+  }
+}
+
+.clse{
+  position:absolute;
+  top:11px;
+  right:0px;
+  padding:10px;
+  font-size:12px;
+  color:#a3a3a3;
+}
+.search_result{
+  .search_latest{
+	top:88px;
+	bottom:55px;
+	overflow-y:auto;
+  }
+}
+.noAssociatedKeyword{
+  .search_latest{
+	top:62px;
+  }
+}
+.btn_search_clear{
+	width:100%;
+	height:42px;
+	background:#fafafa;
+	border:1px solid #e5e5e5;
+	box-sizing:border-box;
+	text-align:center;
+	color:#010101;
+	font-size:14px;
+}
+.tit_search_latest{
+	position:relative;
+	padding-top:20px;
+	padding-bottom:8px;
+	line-height:14px;
+
+	h2{
+		padding-left:15px;
+		font-weight:bold;
+		font-size:15px;
+		color:$search-point-color;
+	}
+}
+.search_latest_lst{
+	li {
+		position:relative;
+		height:$search-latest-height;
+
+		a{
+			overflow:hidden;
+			display:block;
+			padding-right:45px;
+			padding-left:15px;
+			font-size:15px;
+			color:#000;
+			line-height:$search-latest-height;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+		}
+	}
+
+	.included_category2{
+		margin-left:7px;
+		font-size:12px;
+		color:#a3a3a3;
+		line-height:$search-latest-height;
+	}
+
+	.del{
+		position:absolute;
+		top:0;
+		right:4px;
+		height:$search-latest-height;
+		width:$search-latest-height;
+
+		&:after{
+			@include sp-search('ico_search_latest_del');
+
+			display:block;
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin-top:-5px;
+			margin-left:-4px;
+			content:'';
+		}
+	}
+}
+.search_latest_none{
+	padding:65px 0 25px;
+	color:#909090;
+	font-size:17px;
+	line-height:22px;
+	text-align:center;
+
+	.ico{
+		position:relative;
+		display:block;
+		width:40px;
+		height:40px;
+		margin:0 auto 8px;
+		border-radius:24px;
+		border:1px solid #909090;
+		content:'';
+
+		&:after{
+			@include sp-search('ico_search_latest_no');
+
+			display:block;
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin-top:-9px;
+			margin-left:-2px;
+			content:'';
+		}
+	}
+}
+
+.ios,
+.android {
+  &.app{
+	.search_latest{
+	  bottom:0 !important;
+	}
+  }
+}

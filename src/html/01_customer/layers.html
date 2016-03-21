@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<meta name="format-detection" content="telephone=no">
+<title>TMON</title>
+<link rel="stylesheet" href="../../css/m.css">
+<style>
+/* layout styles */
+#ct{position:relative;z-index:80;margin-top:-80px}
+.dv{position:relative;z-index:3000;margin:20px 0;padding:10px;background-color:#e27554;font-weight:bold;color:#fff}
+.dimmedbg + .dv{margin-top:11px}
+.whattt{display:block;position:relative;z-index:3000;padding:15px 20px 10px;font-size:1.1em;color:#fff}
+.dv + .whattt{padding-top:0}
+.layer_type{position:relative !important;margin:0 0 5px !important}
+</style>
+</head>
+<body class="main">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+<header class="hdr">
+	<a href="#" class="logo"><h1 class="sp_tcm">TMON</h1></a>
+	<nav class="top">
+		<a href="#" class="bt gocrt"><i class="sp_tcm"></i>카트</a>
+	</nav>
+	<div class="srchar">
+		<div class="srchbar">
+			<fieldset>
+				<legend>티몬검색</legend>
+				<input type="search" title="검색어 입력" placeholder="검색어를 입력해 주세요." value="양" class="inp">
+				<button type="button" class="del"><em class="sp_tcm">검색어 지우기</em></button>
+				<button type="button" class="go" id="check"><em class="sp_tcm">검색</em></button>
+			</fieldset>
+		</div>
+	</div>
+</header>
+<div id="ct">
+</div>
+
+<div class="dimmedbg" style="height:2000px"></div>
+<!-- [D] grouping set [title, layer] -->
+<div class="dv">명의도용 처리 프로세스</div>
+<div class="layer_type">
+	<h1>명의도용 접수안내</h1>
+	<div class="cont">
+		<ul class="txt_lst">
+			<li><i class="bu">&middot;</i>PC웹 마이페이지에서 <i>회원탈퇴</i>가 가능하나 탈퇴 후 30일 이내 <br>재가입 하실 수 없습니다.</li>
+			<li><i class="bu">&middot;</i>도용으로 확인되면 회원정보를 초기화 하여 즉시 재가입하실 수 <br>있도록  처리 해 드리나, 수사 의뢰 시 필요한 정보를 제공 받지 못할 <br>수  있습니다. </li>
+			<li><i class="bu">&middot;</i>수사는 사이버수사대로 직접 의뢰하셔야 합니다.</li>
+		</ul>
+	</div>
+	<button type="button" class="cls"><i class="sp_cs">닫기</i></button>
+</div>
+
+<!-- [D] test script -->
+<script src="../../js/jquery.js"></script>
+<script src="../../js/iscroll.js"></script>
+<script src="../../js/iscroll5.js"></script>
+<script>
+$('.dimmedbg').height( ($(document).height()+10)+'px' );
+var i=0;
+$('.bt_org2').click(function() {
+	(i<4) ? i++ : i=1 ;
+	$(this).parents('.layer_type3').removeClass().addClass('layer_type3 layer_itm'+i);
+});
+function loaded() {
+	var myScroll = new iScroll('scrollwp');
+	var myScroll2 = new iScroll('scrollwp2');
+	var myScroll3 = new iScroll('scrollwp3');
+	var myScroll4 = new iScroll('scrollwp4');
+	var myScroll5 = new iScroll('scrollwp5');
+
+	var myScroll51 = new IScroll('#scrollwp51');
+}
+window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+</script>
+</body>
+</html>

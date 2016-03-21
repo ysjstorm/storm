@@ -1,0 +1,595 @@
+@charset "UTF-8";
+
+//스프라이트 이미지
+@mixin sp_cp{
+	background:url(../img/benefit/sp_coupon.png) no-repeat;
+	background-size:400px 250px;
+}
+
+// vendorize
+@mixin vendorize($property, $value){
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+$fcw:#fff;
+
+// 프로모션 자동화
+.promotion_wrap{
+	overflow-x:hidden;
+}
+
+.prmt_header{
+	position:relative;
+	overflow:hidden;
+	h1{
+		display:none;
+	}
+	.header_bg{
+		display:block;
+		position:relative;
+		left:50%;
+		margin-left:-300px;
+	}
+	.prmt_coupon{
+		position:absolute;
+		bottom:0;
+		left:50%;
+		width:53.1%;
+		margin-left:-25%;
+	}
+}
+
+.prmt_cont{
+  	position:relative;
+	padding-bottom:20px;
+	text-align:center;
+	h2{
+		margin-bottom:-7px;
+		padding-top:23px;
+		color:#26252a;
+		line-height:22px;
+		letter-spacing:-3px;
+		font:{
+			size:25px;
+			weight:bold;
+		}
+		p{
+			color:#505054;
+			font:{
+				size:15px;
+				weight:normal;
+			}
+			letter-spacing:-1px;
+		}
+	}
+	h3 {
+	  padding-top: 13px;
+	  letter-spacing: -2px;
+	  font: {
+		size: 19px;
+		weight: bold;
+	  }
+	}
+    .inr{position:absolute;top:0;left:0;width:100%;margin:0 auto;
+      a{display:block;position:absolute}
+    }
+	.attn{
+		padding-bottom:0;
+		text-align:left;
+	}
+  	.cover{position:absolute;width:100%;height:100%;top:0;left:0;z-index:10}
+}
+
+//쿠폰 기본 세트
+.prmt_coupon{
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	height:138px;
+	background:#fff;
+	text-align:center;
+	.tit{
+		position:absolute;
+		top:25px;
+		left:0;
+		width:100%;
+		font:{
+			size:13px;
+			weight:normal;
+		}
+		letter-spacing:-1px;
+	}
+	.dcPrice{
+		position:absolute;
+		top:33px;
+		left:0;
+		width:100%;
+		font-weight:bold;
+		text-align:center;
+		em{
+			font:{
+			family:arial;
+			size:40px;
+			weight:bold;
+			}
+			letter-spacing:-3.5px;
+		}
+		.won{
+			position:relative;
+			top:-2px;
+			padding-left:2px;
+			font-size:22px;
+		}
+	}
+	.terms{
+		position:absolute;
+		top:79px;
+		left:0;
+		width:100%;
+		font:{
+			size:11px;
+		}
+		letter-spacing:-1px;
+	}
+	.sticker{
+		position:absolute;
+		top:0;
+		right:0;
+		width:41px;
+		height:41px;
+		@include sp_cp;
+		text-indent:-9000px;
+		&.every{
+			background-position:0 0;
+		}
+		&.limited{
+			background-position:-50px 0;
+		}
+		&.card_dc{
+			background-position:-100px 0;
+		}
+		&.cart_dc{
+			background-position:-150px 0;
+		}
+        &.app{
+            background-position:0 -145px;
+        }
+	  	&.everynight{
+		  	background-position: -50px -145px;
+		}
+	  	&.limitless{
+		  background-position: -100px -145px;
+		}
+		&.green{
+		  background-position:-150px -145px;
+		}
+		&.pink{
+		  background-position:-200px -145px;
+		}
+		&.blue{
+		  background-position:-250px -145px;
+		}
+	}
+	.pop_i{
+		position:absolute;
+		top:0;
+		left:50%;
+		width:43px;
+		height:21px;
+		margin-left:-21px;
+		@include sp_cp;
+	}
+	.cdlg{//cdlg : card logo
+		display:block;
+		width:75px;
+		height:16px;
+		margin:13px auto 0;
+		@include sp_cp;
+		&.lot{background-position:0 -55px}//롯데카드
+		&.kb{background-position:-80px -55px}//kb국민카드
+		&.nh{background-position:-160px -55px}//nh농협카드
+		&.hd{background-position:0 -75px}//현대카드
+		&.wr{background-position:-80px -75px}//우리카드
+		&.ibk{background-position:-160px -75px}//ibk기업은행
+		&.bc{background-position:0 -95px}//비씨카드
+		&.ss{background-position:-80px -95px}//삼성카드
+		&.hnsk{background-position:-240px -75px}//하나sk카드
+		&.hn{background-position:-160px -95px}//하나카드
+	  	&.keb{background-position:-240px -55px}// 외환카드
+		&.ct{background-position:0 -115px}//씨티카드
+		&.jb{background-position:-80px -115px}//jb카드
+		&.sh{background-position:-160px -115px}//신한카드
+		font-size:0;
+	}
+	[class^="bt"]{
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:38px;
+		border-bottom:2px solid;
+		box-sizing:border-box;
+		color:#fff;
+		line-height:38px;
+		font:{
+			size:18px;
+			weight:bold;
+		}
+		i{
+			display:inline-block;
+			*display:none;
+			width:12px;
+			height:20px;
+			margin-left:5px;
+			@include sp_cp;
+			background-position:-290px 8px;
+		}
+	}
+	.bt_dw{
+		border-bottom-color:#009aa0;
+		background:#00ced5;
+		&.bgco{//background color orange
+			border-bottom-color:#bf3c01;
+			background:#ff5001;
+		}
+	}
+	.bt_dwdn{
+		border-bottom-color:#3c414e;
+		background:#505768;
+	}
+	//cp_sdout : coupon soldout
+	.cp_sdout{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:138px;
+		background:rgba(38,37,42,.55);
+		color:#fff;
+		strong{
+			display:block;
+			padding-top:45px;
+			font-size:25px;
+		}
+		span{
+			position:absolute;
+			bottom:11px;
+			left:0;
+			width:100%;
+			font:{
+				size:13px;
+				weight:bold;
+			}
+			letter-spacing:-2px;
+		}
+		&.imgv{//이미지 버젼
+			text-indent:-9000px;
+			strong{
+				width:87px;
+				height:46px;
+				margin:82px auto 0;
+				@include sp_cp;
+				background-position:0 -280px;
+			}
+			span{
+				width:310px;
+				height:26px;
+				left:70px;
+				@include sp_cp;
+				background-position:0 -230px
+			}
+		}
+	}
+	//흰색 폰트 | fcw : font color white
+	&.fcw{
+		.tit{
+			color:$fcw;
+		}
+		.dcPrice{
+			color:$fcw;
+		}
+		.terms{
+			color:$fcw;
+		}
+		.pop_i{
+			background-position:-245px 0;
+		}
+	}
+	//검은색 폰트 | fcb : font color black
+	&.fcb{
+		.tit{
+			color:#383838;
+		}
+		.dcPrice{
+			color:#26252a;
+		}
+		.terms{
+			color:#5a5b61;
+		}
+		.pop_i{
+			background-position:-200px 0;
+		}
+	}
+}
+
+[class^="colm"]{
+	overflow:hidden;
+	margin:3px auto 15px;
+	.prmt_coupon{
+		float:left;
+	}
+}
+
+//1단 쿠폰
+.colm1{
+	width:62.5%;
+	.prmt_coupon{
+		margin:0;
+	}
+	&.cards_colm{
+		.dcPrice{
+			top:28px;
+		}
+		.terms{
+			top:73px;
+		}
+	}
+}
+
+//2단 쿠폰
+.colm2{
+	width:93.7%;
+	.prmt_coupon{
+		width:48%;
+		margin:0 1%;
+	}
+	//&.cards_colm{
+	//	width:640px;
+	//}
+}
+
+//3단 쿠폰
+.colm3{
+	width:93.7%;
+	.prmt_coupon{
+		width:32%;
+		height:117px;
+		margin:0 .6%;
+		.dcPrice{
+			top:33px;
+			em{
+				font-size:27px;
+				letter-spacing:-2px;
+			}
+			span{
+				font-size:13px;
+			}
+		}
+		.terms{
+			top:65px;
+		}
+		.tit{
+			top:23px;
+			font-size:11px;
+		}
+		[class^="bt"]{
+			height:35px;
+			font-size:14px;
+			line-height:36px;
+			i{
+				position:relative;
+				top:1px;
+			}
+		}
+	}
+	&.cards_colm{
+		.dcPrice{
+			top:28px;
+		}
+		.terms{
+			top:59px;
+		}
+	}
+	.cp_sdout{
+		height:117px;
+	}
+}
+
+//쿠폰하단 사용 조건
+.cpTerms{
+	width:91%;
+	margin:-8px auto 0;
+	padding:4px 0;
+	border-top:1px dashed #b6b6b6;
+	border-bottom:1px dashed #b6b6b6;
+	color:#6b6c73;
+	font:{
+		size:12px;
+	}
+	letter-spacing:-1px;
+	line-height:14px;
+	&.fcw{
+		color:$fcw;
+	}
+}
+
+//꼭 알아두세요. attn : attention
+.attn{
+	padding:25px 0;
+	.btn_toggle{
+		display:block;
+		position:relative;
+		width:93.7%;
+		height:41px;
+		margin:0 auto;
+		padding-left:38px;
+		color:#e8431e;
+		font:{
+			size:18px;
+			weight:bold;
+		}
+		text-align:left;
+		.arr{
+			position:absolute;
+			top:17px;
+			right:16px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 7px 6.5px 0 6.5px;
+			border-color: #e8431e transparent transparent transparent;
+		}
+		.ico_a{
+			position:absolute;
+			top:9px;
+			left:12px;
+			width:22px;
+			height:22px;
+			@include sp_cp;
+			background-position:-305px -30px;
+		}
+		&.on .arr{
+			border-width: 0 6.5px 7px 6.5px;
+			border-color: transparent transparent #e8431e transparent;
+		}
+		&.fcw{
+			color:$fcw;
+			.arr{
+				border-top-color:$fcw;
+			}
+			&.on .arr{
+				border-bottom-color:$fcw;
+			}
+			.ico_a{
+				background-position:-305px 0;
+			}
+		}
+	}
+	.lst_notice{
+		display:none;
+		position:relative;
+		width:93%;
+		margin:10px auto 0;
+		box-sizing:border-box;
+		li{
+			position:relative;
+			padding:3px 0 0 6px;
+			font-size:11px;
+			line-height:14px;
+			i{
+				position:absolute;
+				left:0;
+				top:2px;
+				font-size:20px;
+			}
+		}
+	}
+}
+
+//하단 추가 이미지 영역
+.bt_addimg{
+	overflow:hidden;
+	img{
+		display:block;
+		position:relative;
+		top:0;
+		left:50%;
+		margin-left:-300px;
+	}
+}
+
+.superpick{
+  position:relative;
+  width:100%;
+  a{display:inline-block;position:relative}
+  .inr{position:relative;width:100%;text-align:center}
+  .soldout{display:inline-block;position:absolute}
+}
+
+//sns 공유하기
+.share_sns{
+	padding:20px 0;
+	text-align:center;
+	h3{
+		font:{
+			size:18px;
+			weight:bold;
+		}
+		padding-bottom:10px;
+	}
+	button{
+		position:relative;
+		width:47px;
+		height:47px;
+		margin:0 3px;
+		border-radius:25px;
+		font-size:0;
+		i{
+            display:block;
+            position:absolute;
+            top:0;
+            left:0;
+			width:47px;
+			height:47px;
+			border-radius:25px;
+			background:url(http://img2.tmon.kr/promotion/m/sp_sns.png) no-repeat;
+			background-size:200px 30px;
+		}
+	}
+	.sns_katalk{
+        box-shadow:0 3px #c2bb00;
+		background-color:#fff600;
+		i{
+
+			background-position:9px 11px;
+		}
+	}
+	.sns_kastory{
+        box-shadow:0 3px #cb9900;
+		background-color:#ffc000;
+		i{
+
+			background-position:-34px 11px;
+		}
+	}
+	.sns_facebook{
+        box-shadow:0 3px #1d315c;
+		background-color:#3b5998;
+		i{
+
+			background-position:-86px 11px;
+		}
+	}
+	.sns_band{
+        box-shadow:0 3px #313038;
+		background-color:#5c5b65;
+		i{
+
+			background-position:-151px 11px;
+		}
+	}
+}
+
+.other_prmt_location{
+    width:100%;padding:25px 0;
+    .inr{overflow:hidden;width:93.7%;margin:0 auto}
+    .tit{display:block;text-align:center}
+    a{display:block;overflow:hidden;position:relative;padding-left:82px;height:74px;margin-top:10px;vertical-align:middle;
+        .thmb{float:left;margin-left:-82px;font-size:0;line-height:0;vertical-align:middle}
+        .title{display:block;overflow:hidden;width:90%;height:25px;margin-top:25px;font-size:23px;font-weight:400;line-height:25px;vertical-align:middle;white-space:nowrap;text-overflow:ellipsis}
+        .description{display:block;overflow:hidden;width:90%;height:16px;font-size:14px;line-height:16px;vertical-align:middle;white-space:nowrap;text-overflow:ellipsis}
+        .hasChild{margin-top:16px}
+        &:after{position:absolute;top:38px;right:10px;width:9px;height:3px;content:'';@include vendorize(transform, rotate(-45deg))}
+        &:before{position:absolute;top:33px;right:10px;width:9px;height:3px;content:'';@include vendorize(transform, rotate(-315deg))}
+    }
+    .fcw *{color:#fff}
+    a.fcw:after{background-color:#000}
+    a.fcw:before{background-color:#000}
+    .fcb *{color:#000}
+    a.fcb:after{background-color:#fff}
+    a.fcb:before{background-color:#fff}
+}

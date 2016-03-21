@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+.wear {
+    .sbag {
+        background-color: #f1f1f1;
+
+	    .fix_header {
+		    position: fixed;
+		    top: 0;
+	    }
+        .anc {
+            height: 69px;
+            line-height: 70px;
+            padding: 0 15px;
+            background-color: #fff;
+            border-bottom: 1px solid #dcdcdc;
+	        z-index: 10;
+            .anc-outer {
+                display: table;
+                width: 100%;
+                height: 100%;
+                .anc-inner {
+                    width: 100%;
+                    display: table-cell;
+                    vertical-align: middle;
+                    &.anc-ico {
+                        width: 15px;
+                    }
+                    .tit {
+                        font-size: 1.1em;
+                        line-height: 1.1em;
+                        color: #333;
+                        letter-spacing: 0;
+                    }
+                    .sub {
+                        margin-top: 7px;
+                        font-size: .9em;
+                        line-height: .9em;
+                        color: #999;
+                        letter-spacing: 0;
+                        .point {
+                            color: #fe3b57;
+                        }
+                    }
+                    .cnt {
+                        padding-right: 25px;
+                        text-align: right;
+                        font-size: 1.8em;
+                        color: #fe3b57;
+                        letter-spacing: 0;
+                    }
+                    .ico {
+                        @include sp-wear('shoppingbag-shape-closed');
+                    }
+                }
+            }
+            &.on {
+                border-bottom: 0;
+                background-color: #fe3b57;
+                .anc-outer {
+                    .anc-inner {
+                        .tit {
+                            color: #fff;
+                        }
+                        .sub {
+                            color: #ffc7d2;
+                            .point {
+                                color: #fff;
+                            }
+                        }
+                        .cnt {
+                            color: #fff;
+                        }
+                        .ico {
+                            @include sp-wear('shoppingbag-shape-opened');
+                        }
+                    }
+                }
+            }
+        }
+        .cnt-norm {
+            display: none;
+        }
+        .cnt-tkt {
+            display: none;
+            background-color: #fff;
+        }
+        .ct-area {
+            display: none;
+            //height: 157px;
+        }
+    }
+}

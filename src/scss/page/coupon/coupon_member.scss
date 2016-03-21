@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+.coupon_member{
+	background-color: #fff;
+	border-top: 1px solid #e0e3e5;
+	border-bottom: 1px solid #e0e3e5;
+
+	.btn_common{
+		display: inline-block;
+		height: 36px;
+		padding: 0 16px 0 20px;
+		background-color: #ff7461;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		font-size: 15px;
+		color:#fff;
+		line-height: 36px;
+		box-sizing: border-box;
+
+		i{
+			margin: -1px 0 2px 4px;
+			vertical-align: middle;
+			@include sp-coupon("bg_arw_r");
+		}
+
+		&.line{
+			background-color: #fff;
+			border: 1px solid #fa5a44;
+			color: #fa5a44;
+			margin-right: 5px;
+			i{
+				@include sp-coupon("bg_arw_r2");
+			}
+		}
+	}
+
+	.my_area{
+		text-align: center;
+		padding-bottom: 20px;
+		p{
+			font-size:16px;
+			color: #959da6;
+			padding: 9px 0 7px;
+		}
+	}
+
+	.login{
+		text-align: center;
+		padding:25px 0 27px;
+		background-color: #fff;
+
+		p{
+			font-size:16px;
+			color: #959da6;
+			line-height: 20px;
+			padding-bottom: 10px;
+		}
+	}
+
+	.member{
+		text-align: center;
+		color: #000;
+		font-size: 20px;
+		font-weight: 500;
+		padding-bottom: 7px;
+		
+		&:before{
+			content: "";
+			margin-top: -10px;
+		}
+		
+		strong{
+			display: inline-block;
+			margin-top: -2px;
+			font-size: 21px;
+			font-weight: 500;
+			letter-spacing: -0.05em;
+			vertical-align: middle;
+		}
+		
+		span{
+			display: inline-block;
+			max-width: 64px;
+			margin-top: -2px;
+			vertical-align: middle;
+			@include ellipsis;
+		}
+		
+		&.new{
+			strong, span{
+				color: #55a00c;
+			}
+			&:before{
+				@include sp-coupon("bg_mem_new");
+			}
+		}
+
+		&.silver{
+            strong, span{
+              color: #575d6e;
+            }
+            &:before{
+              @include sp-coupon("bg_mem_silver");
+            }
+		}
+
+		&.gold{
+		  strong, span{
+			color: #fe9412;
+		  }
+		  &:before{
+			@include sp-coupon("bg_mem_gold");
+		  }
+		}
+
+		&.vip{
+		  strong, span{
+			color: #4621a6;
+		  }
+		  &:before{
+			@include sp-coupon("bg_mem_vip");
+		  }
+		}
+
+		&.vvip{
+            strong, span{
+              color: #000;
+            }
+            &:before{
+              @include sp-coupon("bg_mem_vvip");
+            }
+		}
+
+        &.frst{
+            strong, span{
+              color: #550020;
+            }
+            &:before{
+              @include sp-coupon("bg_mem_1st");
+            }
+        }
+	}
+	
+	.w_coupon{
+		overflow: hidden;
+		
+		.coupon_lst{
+			position: relative;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 1;
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-transition-property: -webkit-transform;
+		    -moz-transition-property: -moz-transform;
+		    -o-transition-property: -o-transform;
+		    -ms-transition-property: -ms-transform;
+		    transition-property: transform;
+		    -webkit-box-sizing: content-box;
+		    -moz-box-sizing: content-box;
+		    box-sizing: content-box;
+		
+			li{
+				width: 100%;
+				box-sizing: border-box;				
+				display: -webkit-box;
+		        display: -ms-flexbox;
+		        display: -webkit-flex;
+		        display: flex;
+		        -webkit-box-pack: center;
+		        -ms-flex-pack: center;
+		        -webkit-justify-content: center;
+		        justify-content: center;
+		        -webkit-box-align: center;
+		        -ms-flex-align: center;
+		        -webkit-align-items: center;
+		        align-items: center;
+		        -webkit-flex-shrink: 0;
+			    -ms-flex: 0 0 auto;
+			    flex-shrink: 0;
+			    
+			    .coupon_area{
+			    	width: 100%;
+				    box-sizing: border-box;
+			    }
+			}
+		}//.coupon_lst
+		
+	}//.w_coupon
+	
+	.swipe_paging{
+	    text-align: center;
+	    padding: 10px 0 14px;
+	    font-size: 0;
+	    line-height: 0;
+	    
+	    a, .swiper-pagination-bullet{
+	        display: inline-block;
+	        width: 7px;
+	        height: 7px;
+	        margin-left: 5px;
+	        -webkit-border-radius: 50%;
+	        -moz-border-radius: 50%;
+	        border-radius: 50%;
+	        background-color: #ced2d6;
+	        
+	        &:first-child{
+	        	margin-left: 0;
+	        }
+	
+	        &.on, &.swiper-pagination-bullet-active{
+	            background-color: #ff6651;
+	        }
+	    }
+	    
+	}//.swipe_paging
+}
+

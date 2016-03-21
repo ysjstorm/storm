@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* 투어 통합검색(EANR) UI */
+.hotel_search {
+    background: #444b5e;
+    .inner_hotel_search {
+      padding: 11px 15px 20px;
+      .tit {
+        display:block;
+        overflow: hidden;
+        width: 91px;
+        height: 37px;
+        margin: 0 auto 13px;
+        @include sp-search('logo_ean');
+        font-size: 0;
+        line-height: 8888px;
+      }
+      .search_section {
+        width: 100%;
+        height: 38px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        background: #fff;
+        overflow: hidden;
+        #field_search_destination {
+          width: 94%;
+          height: 38px;
+          border: none;
+          padding: 0 3%;
+          line-height: 38px;
+          font-size: 1em;
+          color: #a7a7a7;
+          overflow: hidden;
+          text-overline: ellipsis;
+        }
+      }
+      .set_date {
+        margin-bottom: 15px;
+        .cal_input {
+          position: relative;
+          width: 100%;
+          height: 38px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          line-height: 38px;
+          border-radius: 3px;
+          overflow: hidden;
+          font-size: 1em;
+          background-color: #fff;
+          .desc {
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+          }
+          .date {
+            position: absolute;
+            color: #a7a7a7;
+            font-size: 12px;
+            border: none;
+            right: 50px;
+            top: 9px;
+            cursor: pointer;
+            text-align: right;
+          }
+          .inner_cal_input {
+            width: 94%;
+            height: 36px;
+            padding: 0 3%;
+          }
+          .bg_cal_input{
+            display:block;
+            position:absolute;
+            right:0;
+            top:0;
+            @include sp-search('bg_cal_input');
+
+            &:after{
+              position: absolute;
+              right: 10px;
+              top: 15px;
+              display: block;
+              content:'';
+              @include sp-search('bu_arrow_down');
+            }
+          }
+        }
+      }
+      #btn_ean_search {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        color: #fff;
+        border-radius: 3px;
+        background: #12aec3;
+        overflow: hidden;
+        font-weight: bold;
+      }
+    }
+}

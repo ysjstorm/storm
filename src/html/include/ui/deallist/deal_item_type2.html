@@ -1,0 +1,30 @@
+<@@element class="deal_item @@class">
+    <a href="#" class="deal_item_anchor">
+        @@include('ui/deallist/deal_item_label_type2.html')
+        <div class="deal_item_thumb">
+            <img src="http://d1.tmonc.net/~nbass/?260x266_donut_y_A4C2F4_100" width="130" height="133" alt="딜 썸네일">
+        </div>
+        <div class="deal_item_mask @@subclass_deal_item_mask"><span class="blind">@@txt_deal_item_mask</span></div>
+
+        <div class="deal_item_body">
+            @@include('ui/deallist/deal_item_body_top.html', {
+                "txt_deal_item_title" : "@@txt_deal_item_title",
+                "txt_deal_item_subtitle" : "@@txt_deal_item_subtitle"
+            })
+            @@include('ui/deallist/deal_item_body_bottom_percent.html', {
+                "txt_deal_item_price_cover" : "@@txt_deal_item_price_cover",
+                "txt_deal_item_discount" : "@@txt_deal_item_discount",
+                "txt_deal_item_price" : "@@txt_deal_item_price",
+                "subclass_deal_item_discount" : "@@subclass_deal_item_discount",
+                "subclass_deal_item_price" : "@@subclass_deal_item_price"
+            })
+        </div>
+
+        @@include('ui/deallist/deal_item_footer.html', {
+            "txt_deal_item_ftrl" : "@@txt_deal_item_ftrl",
+            "txt_deal_item_ftrr" : "@@txt_deal_item_ftrr",
+            "subclass_deal_item_ftrl" : "@@subclass_deal_item_ftrl",
+            "subclass_deal_item_ftrr" : "@@subclass_deal_item_ftrr"
+        })
+    </a>
+</@@element>

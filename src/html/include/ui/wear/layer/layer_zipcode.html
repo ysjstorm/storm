@@ -1,0 +1,198 @@
+<div class="ly_wrapper">
+	<div class="ly_header">
+		<h3>우편번호검색</h3>
+		<a href="#" class="btn_detail_cancel"><span class="blind">닫기</span></a>
+	</div>
+	<div class="ly_contents">
+		<div class="layer_zipcode">
+			<!-- 도로명 검색 -->
+			<ul class="tab">
+				<li class="on"><button type="button">도로명주소</button></li>
+				<li><button type="button">지번주소</button></li>
+			</ul>
+			<div class="srch_wrap">
+				<div class="srch_keywrap">
+					<div class="srch_keyword">
+						<label for="zip1" class="srch_lb">시/도</label>
+						<div class="srch_selbox">
+							<select id="zip1" name="zip1">
+								<option value="" selected>--시/도--</option>
+								<option value="서울특별시">서울특별시</option>
+								<option value="부산광역시">부산광역시</option>
+								<option value="대구광역시">대구광역시</option>
+								<option value="인천광역시">인천광역시</option>
+								<option value="광주광역시">광주광역시</option>
+								<option value="대전광역시">대전광역시</option>
+								<option value="울산광역시">울산광역시</option>
+								<option value="세종특별자치시">세종특별자치시</option>
+								<option value="경기도">경기도</option>
+								<option value="강원도">강원도</option>
+								<option value="충청북도">충청북도</option>
+								<option value="충청남도">충청남도</option>
+								<option value="전라북도">전라북도</option>
+								<option value="전라남도">전라남도</option>
+								<option value="경상북도">경상북도</option>
+								<option value="경상남도">경상남도</option>
+								<option value="제주특별자치도">제주특별자치도</option>
+							</select>
+							<span class="ico_arr"></span>
+						</div>
+					</div>
+					<div class="srch_keyword type2">
+						<label for="zip2" class="srch_lb">시/군/구</label>
+						<div class="srch_selbox">
+							<select id="zip2" name="zip2">
+								<option value="" selected>--시/군/구--</option>
+							</select>
+							<span class="ico_arr"></span>
+						</div>
+					</div>
+				</div>
+				<div class="srch_keyword">
+					<label for="zip3" class="srch_lb">주소명</label>
+					<input type="text" id="zip3" value="개포동" class="inp_keyword">
+					<button type="button" class="bt_del"><em class="sp_srch">검색어 지우기</em></button>
+					<button type="button" class="bt_srch">검색</button>
+				</div>
+				<div class="srch_method">
+					<strong>도로명 주소 검색방법</strong>
+					<ul>
+						<li>1. 도로명 입력 <span>(예: 올림픽로)</span></li>
+						<li>2. 도로명+건물번호 입력 <span>(예: 올림픽로 326)</span></li>
+						<li>3. 건물명 입력 <span>(예: 강남소방서)</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="result_wrap">
+				<p class="result_txt">검색결과: 0건</p>
+				<div class="inr">
+					<table cellspacing="0" border="0" class="result_tbl">
+						<caption>우편번호 검색결과</caption>
+						<colgroup>
+							<col style="width:20%"><col style="width:80%">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">우편번호</th>
+							<th scope="col">주소</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">135-010</th>
+							<td>
+								<a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+								<p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td>
+								<a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+								<p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td>
+								<a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+								<p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td>
+								<a href="#"><em class="lbl_st">도로명</em>서울특별시 강남구 영동대로 334 (대치동, 대치동 한성모터타워)</a>
+								<p class="txt_no"><em class="lbl_no">지번</em>서울특별시 강남구 대치동 1007</p>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<div class="inr empty">
+						검색 결과가 없습니다.
+					</div>
+				</div>
+			</div>
+
+			<!-- 지번 검색 -->
+			<ul class="tab">
+				<li><button type="button">도로명주소</button></li>
+				<li class="on"><button type="button">지번주소</button></li>
+			</ul>
+			<div class="srch_wrap">
+				<fieldset>
+					<legend>도로명주소</legend>
+					<p class="srch_how">* 동/읍면과 지번을 함께 입력해 주세요. <span>(예: 대치동 1004)</span></p>
+					<div class="srch_keyword">
+						<label for="zipcode" class="srch_lb">주소명</label>
+						<input type="text" id="zipcode" value="개포동" class="inp_keyword">
+						<button type="button" class="bt_del"><em class="sp_srch">검색어 지우기</em></button>
+						<button type="button" class="bt_srch">검색</button>
+					</div>
+				</fieldset>
+			</div>
+			<div class="result_wrap">
+				<p class="result_txt">검색결과: 0건</p>
+				<div class="inr empty">
+					검색 결과가 없습니다.
+				</div>
+				<div class="inr">
+					<table cellspacing="0" border="0" class="result_tbl">
+						<caption>우편번호 검색결과</caption>
+						<colgroup>
+							<col style="width:20%"><col style="width:80%">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">우편번호</th>
+							<th scope="col">주소</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+						</tr>
+						<tr>
+							<th scope="row">135-010</th>
+							<td><a href="#">서울특별시 강남구 개포로 617(개포동, 서울수서경찰서)</a></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

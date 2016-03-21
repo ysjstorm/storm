@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.coupon_bottom{
+	
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	
+	a{
+		float: left;
+		display: inline-block;
+		width: 50%;
+		height: 47px;
+		border: solid #e0e3e5;
+		border-width: 1px 0 1px 1px;
+		background-color: #fff;
+		font-size: 15px;
+		text-align: center;
+		line-height: 47px;
+		box-sizing: border-box;
+		
+		&:first-child{
+			border-left: 0;
+		}
+		
+		&:after{
+			content: "";
+			display: inline-block;
+			margin: -3px 0 0 8px;
+			vertical-align: middle;
+			@include sp-coupon("bg_arw_btm_r");
+		}
+		
+	}//a
+}

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.order_dest{
+	background-color:#fff;
+	
+	ul{
+		padding:8px 15px 12px;
+	}
+	
+	li{
+		position:relative;
+		margin-top:5px;
+		padding-left:60px;
+		font-size:12px;
+		color:#666;
+		line-height:16px;
+		word-break: break-all;
+		
+		strong{
+			position:absolute;
+			top:0;
+			left:0;
+			color:#333;
+		}//strong
+		
+	}//li
+}

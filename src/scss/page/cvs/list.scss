@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#list{
+	padding:10px;
+	.lst_cvs_top{
+		display:block;
+		.total{
+			display:block;
+			padding:8px 10px;
+			color:#b8bdc2;
+		}
+	}
+	li{
+		border-top:1px solid #f1f1f2;
+		&:first-child{
+			border-top:0;
+		}
+		a{
+			display:block;
+			overflow:hidden;
+			padding:16px 10px 15px;
+		}
+	}
+	.name{
+		color:#575e66;
+		overflow:hidden;
+	}
+	.number{
+		display:inline-block;
+		float:right;
+		color:#b8bdc2;
+		font-family:tahoma;
+		letter-spacing:-0.1px;
+		margin-top:1px;
+	}
+	.empty{
+		padding:16px 10px 15px;
+	}
+}

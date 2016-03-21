@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+$img-width: 90px; //썸네일 너비
+$img-height: 96px; //썸네일 높이, 리스트의 최소높이
+$list-padding: 15px; //리스트 기본 여백
+
+.deal_lst2 {
+	li {
+		position: relative;
+		min-height: $img-height;
+		padding: $list-padding 0;
+		border-bottom: 1px solid #ddd;
+		
+		&:last-child {
+			border-bottom: none;
+		}
+		
+		.left_area {
+			position: absolute;
+			top: $list-padding;
+			left: 0;
+			width: $img-width;
+			height: $img-height;
+			overflow: hidden;
+			background-size:cover;
+			background-position:50% 0;
+			background-repeat:no-repeat;
+			
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 90px;
+				height: auto;
+			}
+			p {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(254, 59, 87, 0.7);
+				line-height: 28px;
+				text-align: center;
+				color: #fff;
+			}
+		}
+		//label.left_area img {
+		//	z-index: -1;
+		//}
+		
+		.right_area {
+			position: relative;
+			min-height: $img-height;
+			overflow: hidden;
+			margin-left: $img-width + $list-padding;
+			
+			.product_name {
+				display: -webkit-box;
+				max-height: 36px;
+				margin: -2px 0 2px;
+				padding-right: 18px;
+				font-size: 14px;
+				line-height: 18px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+			.option_area {
+				position:relative;
+				color: #666;
+				height: 23px;
+				line-height: 22px;
+				padding:4px 50px 4px 0;
+
+				.option {
+					position:relative;
+					margin-right: 7px;
+					padding-left: 7px;
+					font-size: 12px;
+					&:before{
+						position:absolute;
+						top:2px;
+						left:0;
+						width:1px;
+						height:11px;
+						border-left:1px solid #aaa;
+						font-size:0;
+						content:'';
+						
+					}
+					&:first-child {
+						padding-left: 0;
+						&:before{
+							display:none;
+						}
+					}
+				}
+				button {
+					position:absolute;
+					top:0;
+					right:0;
+					background: #fff;
+					margin: 0;
+					padding: 0;
+					border: none;
+					font-size: 11px;
+					color: #999;
+					line-height: 30px;
+					text-decoration: underline;
+				}
+				.quantity{
+					float: right;
+				}
+			}
+			.price_area {
+				position: relative;
+				height: 30px;
+				margin-bottom: 10px;
+				
+				.select_box {
+					width: 60px;
+					
+					.select_dp{
+						line-height:27px;
+					}
+				}
+				.input_box {
+					display: inline-block;
+					width: 54px;
+					height: 30px;
+					margin-right: 5px;
+					vertical-align: top;
+					
+					input[type="text"] {
+						font-size: 1.16em;
+					}
+				}
+				input[type="button"] {
+					width: 59px;
+					font: {
+						size: 1em;
+						weight: normal;
+					}
+					vertical-align: top;
+				}
+				.price {
+					float: right;
+					font-size: 1.16em;
+					line-height: 30px;
+					letter-spacing: 0;
+				}
+			}
+			.ticket_goods{
+				display: -webkit-box;
+				max-height: 30px;
+				margin-top: 5px;
+				font-size: 0.9em;
+				color: #999;
+				line-height: 15px;
+				letter-spacing: -0.01em;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+			.ticket_date{
+				display: block;
+				margin-top: 10px;
+				font-size: 0.9em;
+				color: #666;
+				line-height: 15px;
+				letter-spacing: -0.01em;
+				
+				.date{
+					margin-left: 10px;
+				}
+			}
+		}
+		.btn_delete {
+			position: absolute;
+			top: 0;
+			right: -$list-padding;
+			padding: $list-padding;
+			z-index: 5;
+			
+			&:after {
+				content: "";
+				@include sp-wear('shoppingbag-btn_close');
+			}
+		}
+		.dimmed_w {
+			display: none;
+		}
+		&.sold_out {
+			.price_area, .btn_area {
+				display: none;
+			}
+			.mark_soldout {
+				position: absolute;
+				bottom: 0;
+				display: inline-block;
+				width: 74px;
+				height: 24px;
+				padding: 0;
+				background: #808080;
+				color: #fff;
+				line-height: 24px;
+				text-align: center;
+			}
+			.dimmed_w {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				opacity: 0.6;
+			}
+		}
+	}
+}
+

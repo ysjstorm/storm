@@ -1,0 +1,571 @@
+<!-- 테마 검색 -->
+<div class="search_theme">
+	<!-- 카테고리 -->
+	<nav class="theme_cate">
+		<ul class="theme_cate_lst">
+			<!-- [D] 활성화된 페이지에 on class 추가 -->
+			<li class="on">
+				<button onclick="$('.keyword_flick').slick('slickGoTo','0');">인기 검색어</button>
+				<!-- paging -->
+				<div class="pager_area">
+					<!-- [D] 활성화된 페이지에 on class 추가 -->
+					<span class="ico_pg on"><em class="blind">1페이지</em></span>
+				</div>
+				<!-- //paging -->
+			</li>
+			<li>
+				<button onclick="$('.keyword_flick').slick('slickGoTo','1');">테마 키워드</button>
+				<div class="pager_area">
+					<span class="ico_pg"><em class="blind">1페이지</em></span>
+					<span class="ico_pg"><em class="blind">2페이지</em></span>
+					<span class="ico_pg"><em class="blind">3페이지</em></span>
+				</div>
+			</li>
+			<li>
+				<button onclick="$('.keyword_flick').slick('slickGoTo','4');">싱글녀</button>
+				<div class="pager_area">
+					<span class="ico_pg"><em class="blind">1페이지</em></span>
+				</div>
+			</li>
+			<li>
+				<button onclick="$('.keyword_flick').slick('slickGoTo','5');">직장녀</button>
+				<div class="pager_area">
+					<span class="ico_pg"><em class="blind">1페이지</em></span>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	<!-- //카테고리 -->
+
+	<!-- [D] 1~3위일 경우 span.num에 num_type1 스타일 적용 / 4~8위일 경우 num_type2 적용 -->
+	<div class="keyword_flick">
+		<!-- 인기 검색어 -->
+		<div class="keyword_wrp">
+			<ul class="keyword_lst">
+				<!-- repeat -->
+				<li>
+					<a href="#">
+						<img src="../../img/search/thumb_default_theme_keyword.jpg" alt="" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">1</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<!-- //repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">2</em>
+								<span>플라워 레인코트 플라워 레인코트</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_donut_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">3</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">4</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">5</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">6</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">7</em>
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">8</em>
+								<span>플라워 레인코트</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //인기 검색어 -->
+
+		<!-- 테마 키워드 -->
+		<div class="keyword_wrp">
+			<ul class="keyword_lst">
+				<!-- [D] 테마 키워드 타이틀일 경우 tit_theme class 추가 -->
+				<li class="tit_theme">
+					<!--
+						[D] 테마에 따라 랜덤으로 bg 컬러 변경되므로 inline style로 사용하며,
+						#7275ee, #f2a859, #ec7374 / 3가지 예시 컬러가 있음
+					 -->
+					<!--<div class="keyword_area" style="background-color:#7275ee;">-->
+						<!--<span class="keyword_txt">키워드명 키워드명 태풍을 대비하는 센스있는 필수 아이템!</span>-->
+					<!--</div>-->
+					<div class="keyword_area" style="background-color:#7275ee;">
+						<p class="keyword_txt">
+							<span>키워드명 키워드명 태풍을 대비하는 센스있는 필수 아이템!</span>
+						</p>
+					</div>
+				</li>
+				<!-- repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<!-- //repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //테마 키워드 -->
+
+		<!-- 테마 키워드 -->
+		<div class="keyword_wrp">
+			<ul class="keyword_lst">
+				<li class="tit_theme">
+					<div class="keyword_area" style="background-color:#f2a859;">
+						<p class="keyword_txt">
+							<span>키워드명 키워드명 태풍을 대비하는 센스있는 필수 아이템!</span>
+						</p>
+					</div>
+				</li>
+				<!-- repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<!-- //repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //테마 키워드 -->
+
+		<!-- 테마 키워드 -->
+		<div class="keyword_wrp">
+			<ul class="keyword_lst">
+				<li class="tit_theme">
+					<div class="keyword_area" style="background-color:#ec7374;">
+						<p class="keyword_txt">
+							<span>키워드명 키워드명 태풍을 대비하는 센스있는 필수 아이템!</span>
+						</p>
+					</div>
+				</li>
+				<!-- repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<!-- //repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //테마 키워드 -->
+
+		<!-- 싱글녀 검색어 -->
+		<div class="keyword_wrp">
+			<ul class="keyword_lst">
+				<!-- repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_cosme_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">1</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<!-- //repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">2</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_donut_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">3</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">4</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">5</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">6</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">7</em>
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">8</em>
+								<span>플라워 레인코트</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //싱글녀 검색어 -->
+
+		<!-- 직장녀 검색어 -->
+		<div class="keyword_wrp">
+			<ul class="keyword_lst">
+				<!-- repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_cosme_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">1</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<!-- //repeat -->
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">2</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_donut_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type1">3</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">4</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">5</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">6</em>
+								<span>우산</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">7</em>
+								<span>레인부츠</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="http://d1.tmonc.net/~nbass/?162x164_bag_n_FFFFFF_100" alt="상품명" />
+						<div class="keyword_area">
+							<p class="keyword_txt">
+								<em class="num num_type2">8</em>
+								<span>플라워 레인코트</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //직장녀 검색어 -->
+	</div>
+	<p class="theme_date">2015.09.02 15:05</p>
+</div>
+<!-- //테마 검색 -->

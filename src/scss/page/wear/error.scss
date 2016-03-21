@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.error_num {
+  display: block;
+  padding-top: 118px;
+  text-align: center;
+
+  .dialog_error {
+	position: absolute;
+	top: 50%;
+	margin-top: -162px;
+	width: 100%;
+	line-height: 1.48em;
+
+	strong {
+	  display: block;
+	  font-size: 18px;
+	  letter-spacing: 0;
+	  margin-bottom: 46px;
+
+	  span.mark {
+		@include sp-wear("error_question_mark");
+		display: block;
+		margin: 0 auto 24px auto;
+		text-indent: -200%;
+	  }
+	}
+
+	p {
+	  color: #bdbdbd;
+	  font-size: 14px;
+	  letter-spacing: 0;
+	}
+  }
+
+  .dialog_error_btns {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 50px;
+
+	a {
+	  display: inline-block;
+	  font-weight: bold;
+	  font-size: 16px;
+	  letter-spacing: 0;
+	  &:before {
+		  border-left: 1px solid #d7d7d7;
+		  content: "";
+		  width: 1px;
+		  height: 14px;
+		  margin-left: 7px;
+		  padding-left: 8px;
+		  display: inline-block;
+		  vertical-align: -1px;
+		}
+	  &.to_home {
+		/*color: #fe3b57;*/
+		text-decoration: underline;
+	  }
+	  &:first-child{
+		  &:before{
+			  display:none;
+		  }
+	  }
+	}
+  }
+
+  &.error_501 {
+	.dialog_error {
+	  margin-left: -155px;
+	  width: 310px;
+	}
+  }
+  
+  &.deal_none{
+  	.dialog_error{
+		position: static;
+  		margin-top:0;	
+  	}
+  }
+}

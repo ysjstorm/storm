@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: 편의점 찾기</title>
+<link rel="stylesheet" href="../../css/cvs.css"/>
+</head>
+<body class="cvs ">
+
+<div class="app_header_ui_wrap">
+	<div class="skip"><a href="#ct">본문 바로가기</a></div>
+	<header class="hdr">
+		<h1 class="blind">TMON</h1>
+		<h2 class="title">편의점 찾기</h2>
+		<nav class="top">
+			<button type="button" class="bt prv"><span class="sp_tcm">이전페이지</span></button>
+			<button type="button" class="bt bt-close"><i class="i-close">닫기</i></button>
+		</nav>
+	</header>
+</div>
+
+<div id="ct">
+	<div class="noneapp-view">
+		<div id="search" class="search_cvs">
+	        <form id="conditionSearchForm" method="get" action="#">
+	            <div class="tab_cvs">
+	                <!-- 선택된 탭 label 에 .on 추가 -->
+	                <label class="btn_addr on"><span class="uio_rdo"><input type="radio" name="condition" checked="checked" value="ADDRESS" /><i>지번 주소</i></span></label>
+	                <label class="btn_street"><span class="uio_rdo"><input type="radio" name="condition" value="STREET" /><i>도로명 주소</i></span></label>
+	                <label class="btn_cvs_name"><span class="uio_rdo"><input type="radio" name="condition" value="CVS_NAME" /><i>편의점명</i></span></label>
+	            </div>
+	            <div class="search_input">
+	                <input type="text" name="address_keyword" placeholder="지번 주소 입력 (텍스트 확인 필요)">
+	                <input type="text" name="street_keyword" placeholder="도로명 주소 입력 (텍스트 확인 필요)" style="display:none">
+	                <input type="text" name="cvs_keyword" placeholder="찾으시려는 편의점명을 입력해 주세요." style="display:none">
+	                <div class="btn_group">
+	                	<button type="button" class="btn_remove" style="display:none"><i>검색어 지우기</i></button>
+						<button type="submit" class="btn_search"><i>검색</i></button>
+	                </div>
+	            </div>
+	        </form>
+	    </div>
+	    <div id="list" class="lst_cvs">
+	        <div class="lst_cvs_top">
+	            <span id="_addressCount" class="total">전체 : <em data-role="cvsTotalCount">0</em>건</span>
+	            <span id="_streetCount" class="total" style="display:none">전체 : <em data-role="cvsTotalCount">0</em>건</span>
+	            <span id="_cvsCount" class="total" style="display:none">전체 : <em data-role="cvsTotalCount">0</em>건</span>
+	            <!-- <span class="btn_wrap"><button type="button" class="btn_back"><i></i>돌아가기</button></span> -->
+	        </div>
+	        <!-- <div class="lst_cvs_top">
+	            <p>최대 100건까지 표시됩니다. (<span class="total">전체 <em data-role="cvsTotalCount">6,999</em>건</span>)<br>정확한 검색을 위해 건물명 또는 건물번호를<br>함께 검색해 주세요.</p>
+	        </div> -->
+	        <ul id="_addressList" class="_list" style="display:none">
+		        <li>
+			        <a href="#" data-index="0" data-cvs="01800">
+			        	<span class="number">02-5539-516</span>
+			            <span class="name">ＣＶＳ상품</span>
+			        </a>
+			    </li>
+			    <li>
+			        <a href="#" data-index="0" data-cvs="01800">
+			        	<span class="number">02-5539-516</span>
+			            <span class="name">ＣＶＳ상품</span>
+			        </a>
+			    </li>
+			    <li>
+			        <a href="#" data-index="0" data-cvs="01800">
+			        	<span class="number">02-5539-516</span>
+			            <span class="name">ＣＶＳ상품</span>
+			        </a>
+			    </li>
+	<li>
+			        <a href="#" data-index="0" data-cvs="01800">
+			        	<span class="number">02-5539-516</span>
+			            <span class="name">ＣＶＳ상품</span>
+			        </a>
+			    </li>
+			    <li>
+			        <a href="#" data-index="0" data-cvs="01800">
+			            <span class="number">02-5539-516</span>
+			            <span class="name">혹시 편의점 이름이 몹시 길다면 어떻게 되어야 할까? 물론 이런 편의점은 없겠지만 뚜뤃뚷뚷 뚜뤃뚷뚷 뚜뤃뚷-뚷 뚜뤃뚷-훗</span>
+			        </a>
+			    </li>
+	        </ul>
+	        <div class="empty" style="display:none">검색결과가 없습니다. (문구, 디자인, css 확인 필요)</div>
+	    </div>
+	    <div class="map_cvs">
+	        <div id="map"></div>
+	        <button type="button" id="_searchOnMapView" class="bt_search">지도내 편의점 재검색</button>
+	    </div>
+	    <div id="info" class="layer_cvs" style="display:block">
+		    <input type="hidden" name="cvs_branch_cd">
+		    <input type="hidden" name="cvs_branch_nm">
+		    <input type="hidden" name="cvs_cd">
+		    <input type="hidden" name="ji_no_addr">
+		    <input type="hidden" name="road_nm_addr">
+		    <input type="hidden" name="tel_no">
+		    <input type="hidden" name="zip_cd">
+		    <div class="info_cvs">
+		        <strong class="name">CU대치동부점</strong>
+		        <p class="addr">서울시 강남구 대치동 1004번지 동일타워 2층 3호</p>
+		        <span class="tel">023456789</span>
+		    </div>
+		    <div class="btn_area">
+		        <span><button type="button" class="btn_cancel" data-role="cancel">취소</button></span>
+		        <span><button type="button" class="btn_select" data-role="select">확인</button></span>
+		    </div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

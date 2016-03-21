@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+	<title>TMON</title>
+	<link rel="stylesheet" href="../../css/m.css">
+</head>
+<body class="delivery_wrap">
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+@@include('header_type2.html', {"title":"공통"})
+<hr>
+<div id="ct" style="min-height: 200px">
+    // #ct.ct_my<br>
+    // [기본] 배경 회색 #d8d8d8
+    <div class="my_inr">
+        // .my_inr<br>
+        // 외부여백만 있는 형태<br>
+        // 배경 색상 없음
+    </div>
+    <div class="my_pdr">
+        // .my_pdr<br>
+        // 외부여백 + 내부여백(15px 10px)<br>
+        // 배경 흰색 #fff<br><br>
+
+        // 포인트 컬러<br>
+        // .cl_point / $claim-color-point <em class="cl_point">#ff3800</em><br><br>
+
+        <div class="my_panel_gray">
+            // .my_panel_gray<br>
+            // 외곽선있는 회색 상자<br>
+            // border: 1px solid #ededf1;<br>
+            // background-color: #fbfbfb;
+        </div>
+    </div>
+    <div class="my_pdr2">
+        // .my_pdr2<br>
+        // 외부여백 + 내부여백(15px 14px)<br>
+        // 배경 흰색 #fff<br>
+        // 편의점 번호에서 사용
+    </div>
+    <br>
+    <a href="#" class="my_panel_arw">
+        // .my_panel_arw<br>
+        // 우측에 &gt; 있는 흰색 상자<br>
+        // 구매내역, 취소내역에 사용<br>
+        // border-top: 1px solid #ededf1;
+    </a>
+</div>
+<div id="ct" class="ct_my_w" style="min-height: 200px">
+    // #ct.ct_my_w<br>
+    // 배경 흰색 #fff
+</div>
+@@include('footer.html')
+<div class="tlbarwp">
+	<div class="tlbarinr">
+		<nav class="tlbar">
+			<a href="#" class="home"><i class="sp_tcm"></i>티몬 홈</a>
+			<a href="#" class="cate"><i class="sp_tcm"></i>카테고리</a>
+			<a href="#" class="srch"><i class="sp_tcm"></i>검색</a>
+			<a href="#" class="mytm on"><i class="sp_tcm"></i>마이티몬</a>
+		</nav>
+	</div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/markup_ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+%bold_imp {
+  font-weight: bold !important;
+}
+
+.tb_product_size {
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+
+  table{
+    width:100%;
+  }
+
+  th {
+    height: 24px;
+    line-height: 24px;
+    color: #999999;
+  }
+
+  td {
+    height: 45px;
+    line-height: 45px;
+  }
+
+  tr > th:first-child {
+    @extend %bold_imp;
+    color: #000;
+  }
+
+  tr > td:first-child {
+    @extend %bold_imp;
+  }
+
+  tbody > tr {
+    border-bottom: 1px solid #bcbcbc;
+
+    &:nth-of-type(even) {
+      background-color: #fcfcfc;
+    }
+  }
+}

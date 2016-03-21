@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+.search_recm {
+  margin-top: 15px;
+  background-color: #fff;
+  .about {
+    position: relative;
+    padding: 17px 15px 7px;
+    color: #333;
+    .keyword {
+      font-size: .85em;
+      color: #999;
+      letter-spacing: 0;
+      .hl {
+        padding: 3px 4px 0 0;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #ff5d35;
+        vertical-align: -2px;
+        &:before {
+          content: '"';
+        }
+        &:after {
+          content: '"';
+        }
+      }
+    }
+    .more {
+      position: absolute;
+      bottom: 4px;
+      right: 12px;
+      padding: 3px;
+      font-size: .95em;
+      color: #008cc7;
+      &:after{
+        display:inline-block;
+        margin-left: 6px;
+        content:'';
+        @include sp-search('bu_arrow_recommand_more');
+      }
+    }
+  }
+  .aboutv2 {
+    font-size: 1.1em;
+    .hl {
+      padding-right: 4px;
+      color: #ff5d35;
+    }
+  }
+  .recommended_deal {
+    position:relative;
+    padding-bottom: 15px;
+    background-color:#fff;
+    &:before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      z-index: 10;
+      width: 15px;
+      height: 100%;
+      background:-webkit-gradient(linear,0 0,100% 0,from(#fff),color-stop(30%,rgba(255,255,255,.5)),to(rgba(255,255,255,0)));
+      content: '';
+    }
+    &:after {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      z-index: 10;
+      width: 15px;
+      height: 100%;
+      background:-webkit-gradient(linear,100% 0,0 0,from(#fff),color-stop(30%,rgba(255,255,255,.5)),to(rgba(255,255,255,0)));
+      content: '';
+    }
+  }
+  .crslwp {
+    position:relative;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .crslinr {
+    overflow: hidden;
+    .itm {
+      width: 128px;
+      a {
+        display: inline-block;
+        padding: 4px;
+        color: #333;
+      }
+      .tit {
+        overflow: hidden;
+        width: 120px;
+        height: 32px;
+        margin-top: 7px;
+        font-size: .9em;
+        text-overflow: ellipsis;
+      }
+      .img {
+        width:100%;
+      }
+      .price {
+        padding-top: 2px;
+        .won {
+          padding-left: 3px;
+          font-weight: bold;
+          font-size: 1.2em;
+          &:after {
+            position: relative;
+            top: -1px;
+            margin-left: 1px;
+            font-size: .9rem;
+            content: '원';
+          }
+        }
+        .free {
+          display: inline-block;
+          padding: 2px 0 0 1px;
+          color: #ff5d35;
+          font-weight: bold;
+          font-size: 1em;
+        }
+        strong {
+          color: #ff5d35;
+        }
+        .per {
+          font-weight: bold;
+          font-size: 1.2em;
+          &:after {
+            padding-left: 1px;
+            font-size: .8rem;
+            content: '%';
+          }
+        }
+        .sp {
+          position: relative;
+          top: -1px;
+          font-size: .8rem;
+        }
+        .sp2 {
+          display: inline-block;
+          position: relative;
+          top: -2px;
+          font-size: .8em;
+          line-height: 1.05em;
+          vertical-align: middle;
+        }
+      }
+      .mask {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        left: 4px;
+        height: 123px;
+        &:after{
+          display:block;
+          position:absolute;
+          top:50%;
+          left:50%;
+          content:'';
+        }
+      }
+      .soon {
+        top: 97px;
+        height: 30px;
+        background: rgba(238,28,36,.7);
+        &:after{
+          margin: -8px 0 0 -28px;
+        }
+      }
+      .soldout {
+        width: auto;
+        padding: 0;
+        background: rgba(4,133,126,.8);
+        &:after{
+          @include sp-search('ico_recommand_soldout');
+          margin: -32px 0 0 -32px;
+        }
+      }
+      .adult {
+        background: rgba(0,0,0,.95);
+        &:after{
+          @include sp-search('ico_recommand_adult');
+          margin: -29px 0 0 -29px;
+        }
+      }
+      .pconly {
+        top: 97px;
+        height: 30px;
+        background: rgba(1,133,163,.8);
+        &:after{
+          @include sp-search('ico_recommand_pconly');
+          margin: -7px 0 0 -35px;
+        }
+      }
+    }
+  }
+}

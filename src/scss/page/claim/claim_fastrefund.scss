@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+// 빠른배송&바로환불
+.fni_nav {
+    @include after;
+    margin: 0 -10px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 6px 5px -2px #ddd;
+    box-shadow: 1px 6px 5px -2px #ddd;
+}
+.fni_nav_tab {
+    float: left;
+    display: block;
+    width: 50%;
+    padding: 16px 0 8px;
+    border-bottom: 4px solid #fff;
+    font-size: 13px;
+    line-height: ( 22.5 / 13 );
+    font-weight: bold;
+    text-align: center;
+}
+.fni_nav_tab:before {
+    @include sp-mosaic('fni_nav2');
+    position: relative;
+    top: -2px;
+    margin-right: 9px;
+    vertical-align: bottom;
+    content: '';
+}
+.fni_nav_tab:first-child:before {
+    @include sp-mosaic('fni_nav1');
+}
+.fni_nav_tab.on {
+    color: #fa5a44;
+    border-bottom-color: #fa5a44;
+}
+.fni_wrap {
+    padding: 0 10px;
+    background-color: #fff;
+
+    .my_panel_gray {
+        margin: 12px 10px 0;
+        font-size: 11px;
+        color: #555;
+    }
+}
+.fni_info {
+    padding: 15px 10px 17px;
+
+    & + & {
+        border-top: 1px solid #ccc;
+    }
+
+    &.type2 {
+        padding-bottom: 0;
+    }
+}
+.fni_high {
+    margin-bottom: 3px;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: bold;
+    color: #2bccc4;
+}
+.fni_title {
+    margin: 1px 0 7px;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: bold;
+}
+.fni_desc {
+    font-size: 12px;
+    line-height: 16px;
+
+    & + & {
+        margin-top: 6px;
+    }
+}
+.fni_reward {
+    position: relative;
+    display: table;
+    margin: -5px 10px 0;
+    padding: 14px 13px 13px;
+    min-height: 32px;
+    font-size: 11px;
+    border: 1px solid #fdd3c7;
+    background-color: #fff4f0;
+}
+.fni_reward_label {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    height: 32px;
+    margin: -16px 0 0 1px;
+    padding: 0 8px;
+    border-radius: 32px;
+    color: #fffd54;
+    font-size: em(10.5px, 11px);
+    line-height: 32px;
+    background-color: #f34d1c;
+}
+.fni_reward_desc {
+    display: table-cell;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 71px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.fni_refer_title {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.fni_refer {
+    @include after;
+    margin-top: -3px;
+    line-height: 17px;
+
+    dt {
+        float: left;
+        margin-right: 6px;
+        font-weight: bold;
+
+        &:before {
+            position: relative;
+            top: -1px;
+            display: inline-block;
+            width: 2px;
+            height: 2px;
+            margin-right: 5px;
+            border-radius: 2px;
+            vertical-align: middle;
+            background-color: #555;
+            content: '';
+        }
+    }
+    dd {
+        overflow: hidden;
+    }
+}
+.fni_btns {
+    margin: 15px 5px 20px;
+
+    .cl_btwrap {
+        button,
+        a {
+            height: 33px;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 31px;
+        }
+    }
+}
+.fni_banner {
+    display: block;
+    height: 34px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #b2b2b2;
+    font-size: em(12.5px, 14px);
+    line-height: 34px;
+    color: #fa5a44;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffffda;
+
+    &:before {
+        @include sp-mosaic('fni_banner_before');
+        position: relative;
+        top: -1px;
+        margin-right: 5px;
+        vertical-align: middle;
+        content: '';
+    }
+
+    &:after {
+        @include sp-mosaic('fni_banner_after');
+        position: relative;
+        top: -1px;
+        margin-left: 5px;
+        vertical-align: middle;
+        content: '';
+    }
+}

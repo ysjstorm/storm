@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.uio_select_box{
+	position: relative;
+    display: inline-block;
+    
+    .txt_area{
+    	display: inline-block;
+    	height: 30px;
+	    padding: 0 25px 0 10px;
+	    border: 1px solid #c2c7cc;
+	    font-size: 12px;
+	    line-height: 29px;
+	    letter-spacing: -0.03em;
+	    box-sizing: border-box;
+	    
+	    &:after{
+		    content: "";
+	    	position: absolute;
+		    top: 12px;
+		    right: 10px;
+		    border: 2px solid;
+		    border-color: #000 transparent transparent #000;
+		    transform: rotate(-135deg);
+		    -webkit-transform: rotate(-135deg);
+	    }
+	    
+    }//.txt_area
+    
+    select{
+    	position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    min-height: 30px;
+	    opacity: 0;
+    }
+}

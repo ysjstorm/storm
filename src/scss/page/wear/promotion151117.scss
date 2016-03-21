@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+@mixin bg($filename) {
+    background-image: url("../img/promotion151117/#{$filename}");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin clearfix {
+    &:after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+}
+
+.wear_wrap {
+	font-size: 13px;
+	color: #333;
+	text-align: center;
+	
+	.br {
+		display: inline-block;
+	}
+	
+	.header {
+		padding: 15px;
+		background: #333;
+		
+		.tit_wrap {
+			height: 143px;
+			border: 2px solid rgba(255, 255, 255, 0.5);
+		}
+		h1 {
+			display: block;
+			margin: 19px auto;
+			@include sp-wear("promotion151117-tit_h1");
+		}
+	}
+	
+	.content {
+		padding-top: 17px;
+		background: #f3f3ee;
+		
+		h2 {
+			margin-bottom: 10px;
+			font-size: 17px;
+			line-height: 22px;
+			color: #448f37;
+		}
+		p {
+			margin-bottom: 17px;
+			line-height: 18px;
+		}
+		ul {
+			@include clearfix;
+			overflow: hidden;
+		}
+		li {
+			float: left;
+			width: 50%;
+			padding-top: 60%;
+		}
+		li:nth-child(1) {
+			@include bg("__noti_man1.png");
+		}
+		li:nth-child(2) {
+			@include bg("__noti_man2.png");
+		}
+		li:nth-child(3) {
+			@include bg("__noti_man3.png");
+		}
+		li:nth-child(4) {
+			@include bg("__noti_man4.png");
+		}
+	}
+	
+	.event {
+		h2 {
+			@include sp-wear("promotion151117-tit_event");
+			margin: 20px auto 13px;
+		}
+		.info {
+			margin: 0 19px;
+			line-height: 17px;
+			
+			>li {
+				margin-bottom: 12px;
+				padding-left: 16px;
+			}
+			p {
+				font-size: 14px;
+			
+				strong {
+					display: inline-block;
+					width: 16px;
+					margin-left: -16px;
+					font-family: "Helvetica";
+				}
+				& +ul {
+					margin-top: 3px;
+				}
+			}
+		}
+		.btn_area {
+			height: 30px;
+			padding: 13px 0 25px;
+			text-align: center;
+			
+			a {
+				display: inline-block;
+				height: 26px;
+				padding: 0 17px;
+				border: 2px solid #448f38;
+				border-radius: 16px;
+				font-size: 12px;
+				font-weight: bold;
+				color: #448f38;
+				line-height: 26px;
+				
+				&:after {
+					content: "";
+					margin-left: 5px;
+					@include sp-wear("promotion151117-arrow_btn_go_event");
+				}
+			}
+		}
+		.man_list {
+			padding: 0 0.05%;
+			overflow: hidden;
+		
+			li {
+				float: left;
+				width: 33.3%;
+				padding-top: 49.95%;
+			}
+			li:nth-child(1) {
+				@include bg("__event_man01.png");
+			}
+			li:nth-child(2) {
+				@include bg("__event_man02.png");
+			}
+			li:nth-child(3) {
+				@include bg("__event_man03.png");
+			}
+			li:nth-child(4) {
+				@include bg("__event_man04.png");
+			}
+			li:nth-child(5) {
+				@include bg("__event_man05.png");
+			}
+			li:nth-child(6) {
+				@include bg("__event_man06.png");
+			}
+			li:nth-child(7) {
+				@include bg("__event_man07.png");
+			}
+			li:nth-child(8) {
+				@include bg("__event_man08.png");
+			}
+			li:nth-child(9) {
+				@include bg("__event_man09.png");
+			}
+			li:nth-child(10) {
+				@include bg("__event_man10.png");
+			}
+			li:nth-child(11) {
+				@include bg("__event_man11.png");
+			}
+			li:nth-child(12) {
+				@include bg("__event_man12.png");
+			}
+			li:nth-child(13) {
+				@include bg("__event_man13.png");
+			}
+			li:nth-child(14) {
+				@include bg("__event_man14.png");
+			}
+			li:nth-child(15) {
+				@include bg("__event_man15.png");
+			}
+			li:nth-child(16) {
+				@include bg("__event_man16.png");
+			}
+			li:nth-child(17) {
+				@include bg("__event_man17.png");
+			}
+			li:nth-child(18) {
+				@include bg("__event_man18.png");
+			}
+		}
+	}
+}

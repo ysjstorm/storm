@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.search_ppl {
+  overflow: hidden;
+  margin-top: 37px;
+  background-color: #fff;
+  .tit {
+    display: block;
+    padding: 0 20px;
+    border-top: 13px solid #fff;
+    color: #333;
+    font-size: 1.15em;
+    line-height: 36px;
+    .hl {
+      color: #ff5d35;
+    }
+  }
+  .pplst {
+    overflow: hidden;
+    margin-top: -3px;
+  }
+  .ppitm {
+    border-bottom: 1px solid #f2f2f2;
+    a {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      height: 39px;
+      padding: 0 50px 0 36px;
+      color: #333;
+      font-size: 1em;
+      line-height: 39px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .st {
+      display: inline-block;
+      overflow: hidden;
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 0;
+      line-height: 0;
+    }
+    .stup {
+      border-style: solid;
+      border-color: #f63f17 #fff;
+      border-width: 0 5px 5px;
+    }
+    .stdw {
+      border-style: solid;
+      border-color: #00cabb #fff;
+      border-width: 5px 5px 0;
+    }
+    .ststay {
+      width: 10px;
+      height: 3px;
+      background-color: #9697a4;
+    }
+    .stnew {
+      top: 15px;
+      right: 18px;
+      margin-right: 3px;
+      @include sp-search('ico_new');
+    }
+    i.num {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+    }
+    $popular-num:1;
+    @for $popular-num from 1 through 10 {
+      .no#{$popular-num} {
+        @include sp-search('num_popular' + $popular-num);
+      }
+    }
+  }
+}
+.search_pplv2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  .tit {
+    padding: 0 16px;
+    background-color: #f4f4f4;
+    border-color: #f4f4f4;
+  }
+  .pplst {
+    float: left;
+    width: 50%;
+    margin-top: 0;
+    box-sizing: border-box;
+    a {
+      height: 36px;
+      padding-right: 46px;
+      line-height: 36px;
+    }
+    &:nth-of-type(1) {
+      border-right: 1px solid #f2f2f2;
+    }
+  }
+  .ppitm {
+    .st {
+      right: 15px;
+    }
+    .stnew {
+      right: 13px;
+    }
+  }
+}

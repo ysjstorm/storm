@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* IOS App */
+.app {
+  &.ios {
+    //&.auto_complete_on{
+    //  #ct{
+    //    display:none;
+    //  }
+    //}
+    &.virtual_keyboard_on {
+      &.search_home {
+        .split_theme_keyword {
+          position: static;
+          margin-top: 62px;
+          border-top: none;
+        }
+        .theme_keyword {
+          position: static;
+          margin-top: 62px;
+          border-top: none;
+        }
+        .search_area {
+          border-bottom: 1px solid #bababa;
+        }
+      }
+      &.search_result {
+        padding-top: 0;
+        &.noAssociatedKeyword {
+          .hdr {
+            .search_area {
+              border-bottom: 1px solid #bababa;
+            }
+          }
+        }
+        .hdr {
+          .assoc_keywords {
+            border-bottom: 1px solid #bababa;
+          }
+        }
+      }
+      .hdr {
+        position: static !important;
+        border-bottom: none;
+        padding-bottom: 20px;
+        .search_latest {
+          position: relative;
+          top: 0;
+          bottom: 0;
+        }
+        .search_auto {
+          position: static;
+        }
+      }
+      //키보드 숨김시 ct제거
+      #ct {
+        display: none;
+      }
+    }
+
+    #ct {
+      padding-bottom: 20px;
+      .home_latest {
+        position: static;
+      }
+      .filter_btn_area {
+        bottom: 0px;
+      }
+    }
+
+    &.shown_keyboard {
+      #ct {
+        padding-bottom: 20px;
+        .home_latest {
+          position: static;
+        }
+        .filter_btn_area {
+          bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* android App */
+.app {
+  &.android {
+    .filter_btn_area {
+      bottom: 0px;
+    }
+  }
+}
+
+/* Android IOS Common */
+//.auto_complete_on{
+.virtual_keyboard_on {
+  #ct {
+    display: none;
+  }
+  &.search {
+    .tlbarwp {
+      position: fixed;
+      bottom: 0;
+    }
+  }
+}
+
+/* 검색 홈 */
+body {
+  &.search {
+    &.search_home {
+      background-color: #f6f6f6;
+    }
+  }
+}
+
+/* 검색 결과 */
+body {
+  &.search {
+    &.search_result {
+      #ct {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+.tab_card_benefit{
+	overflow:hidden;
+	display:block;
+	padding:20px 20px 0 20px;
+
+  .tab{
+	li{
+		float:left;
+		width:50%;
+		height:35px;
+		background-color:#e9e9e9;
+
+	  button{
+		display:block;
+		width:100%;
+		font-size:13px;
+		text-align:center;
+		line-height:35px;
+		color:#999;
+	  }
+	}
+	li.on{
+		background-color:#000;
+
+	  button{
+		color:#fff;
+	  }
+	}
+  }
+}
+
+.card_lst{
+	padding:20px;
+	
+	li{
+		&.none_benefit{
+			position: absolute;
+		    top: 55px;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    
+			span{
+				position: absolute;
+				top: 50%;
+			    width: 100%;
+			    margin-top: -10px;
+			    font-size: 16px;
+			    font-weight: 500;
+			    line-height: 20px;
+			    text-align: center;
+			}
+		}
+	}
+}
+.card_area{
+	padding-top:20px;
+	padding-bottom:12px;
+	border-top:1px solid #000;
+
+	&:first-child{
+		padding-top:0;
+		border-top:none;
+	}
+	&:last-child{
+		padding-bottom:0;
+	}
+}
+.card_info{
+	position:relative;
+
+	.card_name{
+		position:absolute;
+		top:0;
+		left:3px;
+
+		&.ss{
+			@include sp-wear('card-benefit_card_ss1');
+		}
+		&.sh{
+			@include sp-wear('card-benefit_card_sh1');
+		}
+		&.kb{
+			@include sp-wear('card-benefit_card_kb1');
+		}
+		&.bc{
+			@include sp-wear('card-benefit_card_bc1');
+		}
+		&.ct{
+			@include sp-wear('card-benefit_card_citi1');
+		}
+		&.hd{
+			@include sp-wear('card-benefit_card_hd1');
+		}
+		&.keb{
+			@include sp-wear('card-benefit_card_keb1');
+		}
+		&.lt{
+			@include sp-wear('card-benefit_card_lotte1');
+		}
+		&.nh{
+			@include sp-wear('card-benefit_card_nh1');
+		}
+		&.hn{
+			@include sp-wear('card-benefit_card_sk1');
+		}
+		&.tmon{
+			@include sp-wear('card-benefit_card_tmon1');
+		}
+		&.wr{
+			@include sp-wear('card-benefit_card_wr1');
+		}
+		&.ibk{
+			@include sp-wear('card-benefit_card_ibk');
+		}
+	}
+	.card_logo{
+		margin-bottom:3px;
+
+		&.bc{
+			@include sp-wear('card-benefit_logo_bc');
+		}
+		&.ct{
+			@include sp-wear('card-benefit_logo_ct');
+		}
+		&.hd{
+			@include sp-wear('card-benefit_logo_hd');
+		}
+		&.hn{
+			@include sp-wear('card-benefit_logo_hn');
+		}
+		&.kb{
+			@include sp-wear('card-benefit_logo_kb');
+		}
+		&.keb{
+			@include sp-wear('card-benefit_logo_keb');
+		}
+		&.lt{
+			@include sp-wear('card-benefit_logo_lt');
+		}
+		&.nh{
+			@include sp-wear('card-benefit_logo_nh');
+		}
+		&.sh{
+			@include sp-wear('card-benefit_logo_sh');
+		}
+		&.ss{
+			@include sp-wear('card-benefit_logo_ss');
+		}
+		&.wr{
+			@include sp-wear('card-benefit_logo_wr');
+		}
+		&.ibk{
+			@include sp-wear('card-benefit_logo_ibk');
+		}
+	}
+	.terms_area{
+		height:35px;
+		margin-bottom:17px;
+		padding-bottom:20px;
+		padding-left:65px;
+		border-bottom:1px dotted #eee;
+	}
+	.txt_terms1{
+		font-size:14px;
+		color:#333;
+
+		em{
+			color:#003aa3;
+		}
+	}
+	.txt_terms2{
+		padding-top:2px;
+		font-size:10px;
+		color:#999;
+	}
+}
+.benefit_lst{
+	li{
+		position:relative;
+		padding-bottom:4px;
+		padding-left:9px;
+		font-size:11px;
+		color:#333;
+		line-height:17px;
+
+		&:before{
+			@include sp-wear('card_bul_notice1');
+
+			display:block;
+			position:absolute;
+			top:7px;
+			left:3px;
+			content:'';
+		}
+	}
+}

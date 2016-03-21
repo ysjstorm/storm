@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: Coupon</title>
+<link rel="stylesheet" href="../../css/coupon.css"/>
+</head>
+<body>
+	<div class="coupon_banner">
+	    <div class="w_banner swiper-wrapper">
+	        <div class="panel swiper-slide">
+	            <a href="#"><img src="http://d1.tmonc.net/~nbass/?720x144_donut_y_FFB4B4_100"></a>
+	        </div>
+	        <div class="panel swiper-slide">
+	            <a href="#"><img src="http://d1.tmonc.net/~nbass/?720x144_donut_y_FFB4B4_100"></a>
+	        </div>
+	        <div class="panel swiper-slide">
+	            <a href="#"><img src="http://d1.tmonc.net/~nbass/?720x144_donut_y_FFB4B4_100"></a>
+	        </div>
+	        <div class="swiper-pagination" style="display:none"></div>
+	    </div>
+        <div class="paging">
+            <i class="bg"></i>
+            <span><strong>1</strong> / <em>9</em></span>
+        </div>
+	</div>
+	@@include('./ui/coupon/coupon_tab.html')
+	@@include('./ui/coupon/coupon_sort.html')
+	@@include('./ui/coupon/coupon_bottom.html')
+	<!-- @@include('./ui/coupon/coupon_banner.html') -->
+	@@include('./ui/coupon/coupon_lst.html')
+<script type="text/javascript" src="../../js/coupon/swiper.js"></script>
+<script type="text/javascript">
+var swiper = new Swiper('.coupon_banner', {
+	pagination: '.swiper-pagination',
+    paginationClickable: true,
+    spaceBetween: 0,
+  	centeredSlides: true,
+    //autoplay: 2500,
+    autoplayDisableOnInteraction: false
+});
+</script>
+</body>
+</html>

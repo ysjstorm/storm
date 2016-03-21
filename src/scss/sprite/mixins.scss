@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@function initPx($number){
+	$number : ($number * 1px);
+	@return $number;
+}
+@mixin sp-mosaic-base($sp-map, $dimension-map, $filename, $padding-top:0,$padding-right:0,$padding-bottom:0,$padding-left:0) {
+    @extend %#{map-get($sp-map, spritesheet_name)};
+
+    $offset-width : map-get($dimension-map, width)/2;
+    $offset-height : map-get($dimension-map, height)/2;
+    $offset-x : map-get($dimension-map, offset_x)/2;
+    $offset-y : map-get($dimension-map, offset_y)/2;
+
+    @if($offset-width == 0){
+	    $offset-width : initPx($offset-width);
+    }
+    @if($offset-height == 0){
+	    $offset-height : initPx($offset-height);
+    }
+    @if($offset-x == 0){
+	    $offset-x : initPx($offset-x);
+    }
+    @if($offset-y == 0){
+	    $offset-y : initPx($offset-y);
+    }
+
+    width: ($offset-width+$padding-left+$padding-right);
+    height: ($offset-height+$padding-top+$padding-bottom);
+    background-position: ($offset-x+$padding-left) ($offset-y+$padding-top);
+    -webkit-background-position: ($offset-x+$padding-left) ($offset-y+$padding-top);
+}
+@mixin sp-vertical($filename, $padding-top:0,$padding-right:0,$padding-bottom:0,$padding-left:0) {
+    $dimension-map: map-get($sp-vertical, $filename);
+
+    @extend %#{map-get($sp-vertical, spritesheet_name)};
+    $offset-x : map-get($dimension-map, offset_x)/2;
+    $offset-y : map-get($dimension-map, offset_y)/2;
+
+    @if($offset-x == 0){
+	    $offset-x : initPx($offset-x);
+    }
+    @if($offset-y == 0){
+	    $offset-y : initPx($offset-y);
+    }
+    background-position: ($offset-x+$padding-left) ($offset-y+$padding-top);
+    -webkit-background-position: ($offset-x+$padding-left) ($offset-y+$padding-top);
+}

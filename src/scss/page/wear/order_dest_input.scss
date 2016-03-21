@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.order_dest_input{
+	padding:15px;
+	background-color:#fff;
+	
+	.btn_area, .memo_box {
+		margin-top: 15px;
+		border-top: 1px solid #d8d8d8;
+	}
+
+	.btn_area {
+		padding-top:15px;
+		@include after;
+		
+		.btn{
+			width:49.4%;
+			height:36px;
+			line-height:36px;
+			font-weight:500;
+			
+			&.submit{
+				float:left;
+			}//.btn.submit
+			
+			&.sub{
+				float:right;
+			}//.btn.sub
+			
+		}//.btn
+		
+	}//.btn_area
+}

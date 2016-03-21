@@ -1,0 +1,202 @@
+    <!-- 첫번째 탭 활성화 tab1_active클래스 추가, 두번째 탭 활성화 tab2_active클래스 추가 -->
+    <div class="option-tab tab1_active">
+        <button class="tab" data-link="filter-options"> 상세조건 <span class="arr"> </span> </button>
+        <button class="tab" data-link="sort-options"> <span class="desc">인기순</span> <span class="arr"> </span> </button>
+    </div>
+
+    <!-- 상세검색 -->
+    <div class="filter-options options" style="display:block;">
+        <!-- 호텔명 검색 -->
+        <fieldset id="hotel_name_search" class="filter">
+            <p class="tit"> 호텔명 검색 </p>
+            <div class="input-uio">
+                <input type="text" name="" class="txt" placeholder="호텔명을 입력해 주세요."/>
+                <button class="search-btn inner-btn">검색</button>
+                <button class="clean-btn inner-btn" style="display:none;">삭제</button>
+                <!-- 호텔 검색어 자동완성 레이어 -->
+                <div class="ly_auto_hotel_search layer" style="display:none;">
+                    <div class="category_section">
+                        <ul class="list">
+                            <li class="list-item selected">
+                                <a href="">
+                                    <span class="result_item">
+                                        <strong class="keyword">힐튼</strong> 가든 인 아웃 샌프란시스코스트코/오클랜드 베이 아이비브리지 호텔
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="">
+                                    <span class="result_item">
+                                        <strong class="keyword">힐튼</strong> 가든 인 페어필드
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="">
+                                    <span class="result_item">
+                                        <strong class="keyword">힐튼</strong> 가든 인 콩코드
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="">
+                                    <span class="result_item">
+                                        더블트리 바이 <strong class="keyword">힐튼</strong> 버클리 마리나
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// 호텔 검색어 자동완성 레이어 -->
+            </div>
+            <!-- 취소 / 이동 -->
+            <div id="hotelSearchResult" class="filter">
+                <button class="cancel-btn btn"> 취소 </button>
+                <a class="move-btn btn"> 이동 </a>
+            </div>
+            <!--// 취소 / 적용 -->
+        </fieldset>
+        <!--// 호텔명 검색 -->
+
+        <!-- 호텔명 검색 이외 조건 검색 < 숨길 수 있게 감쌈 -->
+        <fieldset class="concealable">
+            <!-- 가격 -->
+            <div id="price" class="filter">
+                <p class="tit"> 가격 (1박) </p>
+                <div id="sliderWrap" class="wrap_price_range">
+                    <div class="background"></div>
+                    <div class="range"></div>
+                    <div class="leftSlider"></div>
+                    <div class="rightSlider"></div>
+                </div>
+            </div>
+            <div class="wrap_price_txt">
+                <span><em>0</em>원 ~ </span>
+                <span class="change_color"><em>1,000,000</em>원</span>
+            </div>
+            <!--// 가격 -->
+
+            <!-- 호텔 등급 -->
+            <div id="hotel_grade" class="filter">
+                <p class="tit"> 호텔 등급 </p>
+                <!-- 호텔 등급 리스트 -->
+                <ul class="inline-list">
+                    <li class="input-uio">
+                        <input type="checkbox" id="grade1" class="chk-btn" name="grade1">
+                        <label for="grade1" id="g1"> 1성 </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="grade2" class="chk-btn" name="grade2">
+                        <label for="grade2" id="g2"> 2성 </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="grade3" class="chk-btn" name="grade3">
+                        <label for="grade3" id="g3"> 3성 </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="grade4" class="chk-btn" name="grade4">
+                        <label for="grade4" id="g4"> 4성 </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="grade5" class="chk-btn" name="grade5">
+                        <label for="grade5" id="g5"> 5성 </label>
+                    </li>
+                </ul>
+                <!--// 호텔등급 리스트 -->
+            </div>
+            <!--// 호텔등급 -->
+
+            <!-- 숙박 유형 -->
+            <div id="room_type" class="filter">
+                <p class="tit"> 숙박 유형 </p>
+                <ul>
+                    <li class="input-uio">
+                        <input type="checkbox" id="rm_type1" class="chk" name="rm_type">
+                        <label for="rm_type1">
+                            호텔
+                        </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="rm_type2" class="chk" name="rm_type">
+                        <label for="rm_type2">
+                            리조트
+                        </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="rm_type3" class="chk" name="rm_type">
+                        <label for="rm_type3">
+                            캠핑/글램핑
+                        </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="rm_type4" class="chk" name="rm_type">
+                        <label for="rm_type4">
+                            게스트하우스
+                        </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="rm_type5" class="chk" name="rm_type">
+                        <label for="rm_type5">
+                            빌라
+                        </label>
+                    </li>
+                    <li class="input-uio">
+                        <input type="checkbox" id="rm_type6" class="chk" name="rm_type">
+                        <label for="rm_type6">
+                            아파트
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <!--// 숙박유형 -->
+
+            <!-- 취소 / 적용 -->
+            <div class="filter btn_box">
+                <div class="btn_wrap">
+                    <button class="cancel-btn btn"> 취소 </button>
+                </div>
+                <div class="btn_wrap">
+                    <button class="confirm-btn btn"> 적용 </button>
+                </div>
+            </div>
+            <!--// 취소 / 적용 -->
+        </fieldset>
+        <!--// 호텔명 검색 이외 조건 검색 < 숨길 수 있게 감쌈 -->
+    </div>
+    <!--// 상세검색 -->
+
+    <!-- 정렬 기준 -->
+    <div class="sort-options options" style="display:none;">
+        <ul>
+            <li class="input-uio">
+                <input type="radio" id="sort_type1" class="rdo" name="sort_type" checked>
+                <label for="sort_type1"> 인기순 </label>
+            </li>
+            <li class="input-uio">
+                <input type="radio" id="sort_type2" class="rdo" name="sort_type">
+                <label for="sort_type2"> 가격 낮은순 </label>
+            </li>
+            <li class="input-uio">
+                <input type="radio" id="sort_type3" class="rdo" name="sort_type">
+                <label for="sort_type3"> 가격 높은순 </label>
+            </li>
+            <li class="input-uio">
+                <input type="radio" id="sort_type4" class="rdo" name="sort_type">
+                <label for="sort_type4"> 호텔등급 낮은순 </label>
+            </li>
+            <li class="input-uio">
+                <input type="radio" id="sort_type5" class="rdo" name="sort_type">
+                <label for="sort_type5"> 호텔등급 높은순 </label>
+            </li>
+            <li class="input-uio">
+                <input type="radio" id="sort_type6" class="rdo" name="sort_type">
+                <label for="sort_type6"> 이용자 평점 낮은순 </label>
+            </li>
+            <li class="input-uio">
+                <input type="radio" id="sort_type7" class="rdo" name="sort_type">
+                <label for="sort_type7"> 이용자 평점 높은순 </label>
+            </li>
+        </ul>
+    </div>
+    <!--// 정렬 기준 -->

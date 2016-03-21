@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+// 편의점 반품 정보
+.my_cvs_num {
+    font-size: 17px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    letter-spacing: -.05em;
+
+    .num {
+        font-size: 20px;
+        color: #ff3800;
+
+        // 아이폰에서 숫자 전화번호로 인식하는 경우 대응
+        a[href^=tel] {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .num_info {
+        font-size: 10px;;
+        font-weight: normal;
+        color: #999;
+        white-space: nowrap;
+    }
+}
+
+.my_cvs_desc {
+    margin: 14px 0 23px;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.my_cvs_step {
+    padding: 9px 10px 1px;
+    counter-reset: my_cvs_step;
+    font-size: 12px;
+    line-height: 19px;
+
+    li:before {
+        margin-right: 5px;
+        font-weight: bold;
+        color: $claim-color-point;
+        counter-increment: my_cvs_step;
+        content: counter(my_cvs_step, decimal-leading-zero);
+    }
+
+    & ~ .my_caution {
+        padding: 5px 0 8px;
+    }
+}
+
+.my_cvs_btn.bt_gry {
+    display: block;
+    height: 33px;
+    margin: 0 8px;
+    line-height: 30px;
+    text-align: center;
+}

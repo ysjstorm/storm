@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.sbag_product_list {
+	padding: 5px 15px 20px;
+	background-color:#fff;
+	
+	h4 {
+		border-bottom: 1px solid #ddd;
+		font-size: 12px;
+		line-height: 32px;
+		color: #fe3b57;
+	}
+	
+	.subtotal_area {
+		border: 1px solid #ccc;
+		text-align: right;
+		line-height: 20px;
+		
+		span {
+			float: left;
+			font-size: 0.9em;
+		}
+		
+		.itemize {
+			padding: 9px 15px 10px;
+			font-size: 12px;
+			color: #666;
+			letter-spacing: 0;
+			
+			em {
+				&.noti{
+					margin-right: 8px;
+					font-size: 0.92em;
+					color: #999;
+				}
+			}
+		}
+		.subtotal {
+			padding: 11px 15px 11px;
+			border-top: 1px dashed #ccc;
+			background-color: #fbfbfb;
+			font-size: 17px;
+			color: #fe3b57;
+			
+			span {
+				color: #000;
+			}
+			
+			span, strong{
+				letter-spacing: 0;
+			}
+		}
+	}
+	.noti {
+		margin-top: 10px;
+		font-size: 0.83em;
+		color: #999;
+	}
+	
+	.deal_lst2 {
+		li {
+			.check_box {
+				.checkbox_custom {
+					position: relative;
+					z-index: 5;
+				}
+			}
+			.right_area {
+				a.product_name {
+					height: 36px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.cart{
+	height:100%;
+	background-color: #f2f4f5;
+	letter-spacing:-0.04em;
+	//카트 상단
+	.ct_header{
+		padding: 15px;
+	}
+	//카트 상품 wrap
+	.ct_prod_wp{
+		padding:0 15px 20px 47px;
+		margin-top:10px;
+		//묶음 배송 닫혔을때
+		&.close{
+			padding-bottom: 0;
+			.prod_w{
+				display: none;
+			}
+		}
+		//상품 상단
+		.prod_header{
+			padding: 15px 0;
+		}
+		//카트 상품
+		.prod_w{
+			.prod{
+				padding:18px 0 18px 102px;
+				.item{
+					padding: 12px 0;
+					&:last-child{
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+		//전체 주문금액
+		&.ct_total{
+			padding: 0 15px 25px 15px;
+			.prd_price{
+			}
+		}
+	}
+	//마트 배너
+	.bnr_mart{
+		margin-top: 10px;
+	}
+	//웨어웨어 배너
+	.bnr_where{
+		margin-top: 10px;
+	}
+}

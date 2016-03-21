@@ -1,0 +1,110 @@
+<!-- 딜리스트 UI 적용 예시 -->
+
+<!--
+	마스크: 로딩중(deal_item_mask_type1),
+	가격: 티몬가
+-->
+@@include('ui/deallist/deal_item_local_discount.html', {
+	"deal_item_body_bottom_type" : "normal",
+	"element" : "li",
+	"class" : "",
+	"txt_deal_item_mask" : "로딩중",
+	"txt_deal_item_title" : "[1+등급]안동한우 한마리 gg 골라담기 [1+등급]안동한우gg 한마리 골라담기 [1+등급]안동한우 한마리 골라담기",
+	"txt_deal_item_subtitle" : "입안에서 살살 녹는 바로 이맛♥ 입안에서 살살 녹는 바로 이맛♥ 입안에서 살살 녹는 바로 이맛♥",
+	"txt_deal_item_location" : "대치동",
+	"txt_deal_item_distance" : "5.23km",
+	"txt_deal_item_discount" : "티몬가",
+	"txt_deal_item_price" : "6,700",
+	"txt_deal_item_ftrl" : "28,268구매",
+	"txt_deal_item_lbll_sticker" : "바로사용",
+	"txt_deal_item_lbll_label" : "오늘마감",
+	"subclass_deal_item_mask" : "type1",
+	"subclass_deal_item_discount" : "",
+	"subclass_deal_item_price" : ""
+})
+
+<!--
+	마스크: 매진(deal_item_mask_type2),
+	할인율(txt_deal_item_discount, subclass_deal_item_discount는 percent) 표시,
+-->
+@@include('ui/deallist/deal_item_local_percent.html', {
+	"element" : "li",
+	"class" : "",
+	"txt_deal_item_mask" : "매진",
+	"txt_deal_item_title" : "[영등포동]  [마장동우량소 무한리필]",
+	"txt_deal_item_subtitle" : "[옵션] A: [점심] 국내산 소고기 무한리필 1인 이용권",
+	"txt_deal_item_location" : "대치동",
+	"txt_deal_item_distance" : "5.23km",
+	"txt_deal_item_discount" : "20",
+	"txt_deal_item_price_cover" : "20,000",
+	"txt_deal_item_price" : "15,900",
+	"txt_deal_item_ftrl" : "4,130구매",
+	"txt_deal_item_lbll_sticker" : "오늘오픈",
+	"txt_deal_item_lbll_label" : "오늘마감",
+	"subclass_deal_item_mask" : "type2",
+	"subclass_deal_item_discount" : "percent",
+	"subclass_deal_item_price" : ""
+})
+
+<!--
+	즉시할인가
+	마스크: 미성년자 열람 제한(deal_item_mask_type3),
+-->
+@@include('ui/deallist/deal_item_local_discount.html', {
+	"deal_item_body_bottom_type" : "discount",
+	"element" : "li",
+	"class" : "",
+	"txt_deal_item_mask" : "미성년자 열람 제한",
+	"txt_deal_item_title" : "[1+등급]안동한우 한마리 골라담기 [1+등급]안동한우 한마리 골라담기 [1+등급]안동한우 한마리 골라담기",
+	"txt_deal_item_subtitle" : "입안에서 살살 녹는 바로 이맛♥ 입안에서 살살 녹는 바로 이맛♥ 입안에서 살살 녹는 바로 이맛♥",
+	"txt_deal_item_location" : "대치동",
+	"txt_deal_item_distance" : "5.23km",
+	"txt_deal_item_discount" : "즉시할인가",
+	"txt_deal_item_price_cover" : "9,000",
+	"txt_deal_item_price" : "6,700",
+	"txt_deal_item_ftrl" : "28,268구매",
+	"txt_deal_item_lbll_sticker" : "바로사용",
+	"txt_deal_item_lbll_label" : "오늘마감",
+	"subclass_deal_item_mask" : "type3",
+	"subclass_deal_item_discount" : "",
+	"subclass_deal_item_price" : ""
+})
+
+<!--
+	공동기획가
+	마스크: PC전용상품(deal_item_mask_type3),
+-->
+@@include('ui/deallist/deal_item_local_discount.html', {
+	"deal_item_body_bottom_type" : "normal",
+	"element" : "li",
+	"class" : "",
+	"txt_deal_item_mask" : "PC전용상품",
+	"txt_deal_item_title" : "[1+등급]안동한우 한마리 골라담기 [1+등급]안동한우 한마리 골라담기 [1+등급]안동한우 한마리 골라담기",
+	"txt_deal_item_subtitle" : "입안에서 살살 녹는 바로 이맛♥ 입안에서 살살 녹는 바로 이맛♥ 입안에서 살살 녹는 바로 이맛♥",
+	"txt_deal_item_location" : "대치동",
+	"txt_deal_item_distance" : "5.23km",
+	"txt_deal_item_discount" : "공동기획가",
+	"txt_deal_item_price" : "6,700",
+	"txt_deal_item_ftrl" : "28,268구매",
+	"txt_deal_item_lbll_sticker" : "바로사용",
+	"txt_deal_item_lbll_label" : "오늘오픈",
+	"subclass_deal_item_mask" : "type4",
+	"subclass_deal_item_discount" : "",
+	"subclass_deal_item_price" : ""
+})
+
+<!--
+	FREE덤 딜
+-->
+@@include('ui/deallist/deal_item_local_freedom.html', {
+	"element" : "li",
+	"class" : "",
+	"txt_deal_item_title" : "[서교동]  아메리카노는 덤! [포트오브모카]",
+	"txt_deal_item_location" : "대치동",
+	"txt_deal_item_distance" : "5.23km",
+	"txt_deal_item_freedom" : "음료 주문 시 아메리카노 무료 증정 음료 주문 시 아메리카노 무료 증정",
+	"txt_deal_item_ftrl" : "300구매",
+	"txt_deal_item_lbll_sticker" : "바로사용",
+	"txt_deal_item_lbll_label" : "오늘오픈"
+})
+<!-- // 딜리스트 UI 적용 예시 -->

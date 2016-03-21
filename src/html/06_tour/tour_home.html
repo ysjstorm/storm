@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+<title>TMON :: Tour</title>
+<link rel="stylesheet" href="../../css/tour.css"/>
+</head>
+<body class="tour">
+<!-- [D] 여행홈은 header가 app 영역입니다 -->
+<header class="hdr">
+	<h1 class="blind">TMON</h1>
+	<h2 class="title">여행</h2>
+	<nav class="top">
+		<button type="button" class="bt prv"><span class="sp_tcm">이전페이지</span></button>
+		<a href="#" class="bt gocrt"><i class="sp_tcm"></i></a>
+	</nav>
+</header>
+
+<div class="skip"><a href="#ct">본문 바로가기</a></div>
+<div id="ct">
+	<!-- 여행 카테고리별 바로가기 -->
+	@@include('ui/tour/tour_banner.html')
+	<!-- //여행 카테고리별 바로가기 -->
+
+	<!-- 여행 검색 -->
+	@@include('ui/tour/tour_search.html')
+	<!-- //여행 검색 -->
+
+	<!-- 긴급모객 -->
+	@@include('ui/tour/tour_deal_now.html')
+	<!-- //긴급모객 -->
+
+	<!-- 여행 베스트 -->
+	@@include('ui/tour/tour_deal_best.html')
+	<!-- //여행 베스트 -->
+</div>
+</body>
+</html>
