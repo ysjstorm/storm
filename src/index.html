@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Index :: TMON</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<style type="text/css">
+	body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, select, textarea, a, button { margin: 0; padding: 0; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; margin: 0; padding: 0; }
+	body, input, select, textarea, button, table { font-size: 12px; font-family: '돋움',dotum,applegothic,sans-serif; }
+	img, fieldset { border: 0; }
+	li { list-style: none; }
+	em, i, address { font-style: normal; }
+	a { text-decoration: none; }
+	caption, legend, hr { display: none; }
+	table { table-layout:fixed; width:100%;}
+	table, th, td { border: 0; border-spacing: 0; border-collapse: collapse; word-break: break-all; }
+	button { border: 0; background-color: transparent; cursor: pointer; outline: none; }
+	input[type="checkbox"], input[type="radio"] { width: 13px; height: 13px; vertical-align: text-top; }
+
+	h1{padding:10px 20px;font-size:26px;border:solid #3a4452;border-width:1px 0;background-color:#1b1e1f;color:#fff;font-family:tahoma;}
+	#content{margin:20px 20px 100px}
+	h2{margin-top:50px;padding:10px 20px;font-size:14px;border:1px solid #cc400b;background-color:#ff6633;color:#fff;}
+	h2:first-child{margin-top:0;}
+	h2 i{font-family:verdana;font-size:13px;font-weight:normal;}
+	h2 span{font-size:13px;font-weight:normal;}
+	h3{margin:15px;font-family:'돋움',dotum;font-size:14px;color:#ff6633}
+	table{font-family:verdana;color:#8b8b8b;}
+	tr:hover{cursor:pointer;color:#ff8420;}
+	tr:hover th,tr:hover td{border-bottom:1px solid #ff8420;}
+	th{color:#333;}
+	th, td{padding:10px 20px;border-bottom:1px solid #ddd;text-align:left;}
+	dt{font-size:14px;font-weight:bold;margin:20px;}
+	.txt_lst{margin:0 25px;}
+	.txt_lst li{list-style:disc;margin-bottom:5px;font-family:'돋움',dotum;font-size:12px;line-height:18px;color:#555}
+</style>
+</head>
+<body>
+<header><h1>File List</h1></header>
+<div id="content">
+	<h2>common <i>[common]</i> <span>- template, UIO</span></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onclick="location.href='html/common/template.html'">
+			<th scope="row">레이아웃 template</th>
+			<td>template.html</td>
+		</tr>
+		</tbody>
+	</table>
+	<h3>- Guide -</h3>
+	<ul class="txt_lst">
+		<li>티몬 앱으로 보기 UI확인용 클릭시 &gt; dimmed UI show.</li>
+		<li>dimmed UI 확인 후 화면 클릭시 hide.</li>
+	</ul>
+	<h2>include <i>[include]</i></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onClick="location.href='html/include/header.html'">
+			<th scope="row">헤더영역</th>
+			<td>header.html</td>
+		</tr>
+		<tr onClick="location.href='html/include/footer.html'">
+			<th scope="row">푸터영역</th>
+			<td>footer.html</td>
+		</tr>
+		</tbody>
+	</table>
+	<h2>고객센터 <i>[01_customer]</i></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onClick="location.href='html/01_customer/cs_faq.html'">
+			<th scope="row">고객센터 - 홈 - 자주묻는 질문</th>
+			<td>cs_faq.html</td>
+		</tr>
+		<tr onclick="location.href='html/01_customer/cs_faq_none.html'">
+			<th scope="row">고객센터 - 홈 - 자주묻는 질문 (검색결과 없음)</th>
+			<td>cs_faq_none.html</td>
+		</tr>
+		<tr onclick="location.href='html/01_customer/cs_qna.html'">
+			<th scope="row">고객센터 - 1:1 문의하기</th>
+			<td>cs_qna.html</td>
+		</tr>
+		<tr onclick="location.href='html/01_customer/cs_qna_lst.html'">
+			<th scope="row">고객센터 - 1:1 문의목록</th>
+			<td>cs_qna_lst.html</td>
+		</tr>
+		<tr onclick="location.href='html/01_customer/cs_qna_mdf.html'">
+			<th scope="row">고객센터 - 1:1 문의등록/수정</th>
+			<td>cs_qna_mdf.html</td>
+		</tr>
+		<tr onclick="location.href='html/01_customer/cs_qna_view.html'">
+			<th scope="row">고객센터 - 1:1 문의내역 확인</th>
+			<td>cs_qna_view.html</td>
+		</tr>
+		<tr onclick="location.href='html/01_customer/layers.html'">
+			<th scope="row">고객센터 - 레이어</th>
+			<td>layers.html</td>
+		</tr>
+		</tbody>
+	</table>
+	<h2>마케팅 <i>[02_marketing]</i></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onClick="location.href='html/02_marketing/promotion.html'">
+			<th scope="row">프로모션 메인 (자동화)</th>
+			<td>promotion.html</td>
+		</tr>
+		</tbody>
+	</table>
+	<h2>SCSS <i>[scss]</i></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onclick="location.href='scss/common/reset.scss'">
+			<th scope="row">common &gt; reset</th>
+			<td>common/reset.scss</td>
+		</tr>
+		<tr onclick="location.href='scss/common/layout.scss'">
+			<th scope="row">common &gt; layout</th>
+			<td>common/layout.scss</td>
+		</tr>
+		<tr onclick="location.href='scss/common/common.scss'">
+			<th scope="row">common &gt; common</th>
+			<td>common/common.scss</td>
+		</tr>
+		<tr onclick="location.href='scss/mixins/mixins.scss'">
+			<th scope="row">mixins &gt; mixins</th>
+			<td>mixins/mixins.scss</td>
+		</tr>
+		<tr onclick="location.href='scss/page/reset.scss'">
+			<th scope="row">page &gt; reset</th>
+			<td>page/reset.scss</td>
+		</tr>
+		<tr onclick="location.href='scss/page/customer.scss'">
+			<th scope="row">page &gt; customer [고객]</th>
+			<td>page/customer.scss</td>
+		</tr>
+		<tr onclick="location.href='scss/page/marketing.scss'">
+			<th scope="row">page &gt; marketing [마케팅]</th>
+			<td>page/marketing.scss</td>
+		</tr>
+		</tbody>
+	</table>
+	<h3>- Guide -</h3>
+	<ul class="txt_lst">
+		<li>작성 방법은 Nesting 방식으로 한다.</li>
+		<li>scss 파일 최상단에 charset을 반드시 선언한다.</li>
+		<li>주석은 css에 컴파일 되지 않는 한줄 주석을 지향한다.</li>
+		<li>초기 sass 작업 방식이 익숙하지 않아 실수가 잦을 수도 있고 이 실수를 모르고 넘어갈 수 있으니 각 작업자의 세밀하고 꼼꼼한 작업을 요한다. (scss의 컴파일 후 css 수시 확인도 필요하다.)</li>
+		<li><strong>common/reset.scss</strong> - tag에 대한 기본 style을 선언하며, 초기에 작업자들의 논의를 통해 update 할 수 있도록 한다. (수정 및 추가는 반드시 협의 후에 진행 하도록 한다.)</li>
+		<li><strong>common/layout.scss</strong> - layout의 style을 선언하며 페이지 전역에 사용되는 UIO 또한 추가 할 수 있다.</li>
+		<li><strong>common/common.scss</strong> - 페이지 전역까지는 아니지만 여러 페이지에서 사용되는 공통 UIO의 내용을 담는다. 추후 UIO 양에 따라 성향/용도에 맞게 분리한다.</li>
+		<li><strong>mixins/mixins.scss</strong> - mixin의 내용을 담으며 추후 페이지가 많아 질 경우 용도에 맞게 확장할 수 있다. mixin이 사용되는 scss에 import 한다. (기본적으로 모든 scss에 import 하여도 무방하다.)</li>
+		<li><strong>page/각 페이지에 맞는 scss</strong> - 각 scss 상황에 맞게 import와 image path를 선언한다.</li>
+	</ul>
+	<h2>CSS <i>[css]</i> <span>- 절대경로 : http://img1.tmon.kr/resources/m/css/</span></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onclick="location.href='css/common/reset.css'">
+			<th scope="row">reset</th>
+			<td>reset.css</td>
+		</tr>
+		<tr onclick="location.href='css/page/customer.css'">
+			<th scope="row">customer [고객센터]</th>
+			<td>customer.css</td>
+		</tr>
+		<tr onclick="location.href='css/page/marketing.css'">
+			<th scope="row">marketing [마케팅]</th>
+			<td>marketing.css</td>
+		</tr>
+		</tbody>
+	</table>
+	<h3>- Guide -</h3>
+	<ul class="txt_lst">
+		<li>실제 html 파일에 link되는(External) css는 reset.css와 각 페이지 용도에 맞는 css 만을 link 한다. <br>
+			ex) 고객센터의 페이지에는 customer.css 만 link가 된다. (reset.css는 scss에서 import 한다.) <br>
+			ex) reset.css의 용도는 윈도우팝업 페이지에 link 하고, 윈도우팝업의 컨텐츠 style은 head 태그안에 Internal stlyle로 작업한다. (layout이 고유한 단발 페이지에 대해서도 상황에 따라 reset.css 를 사용하게 될 것으로 예상된다.)</li>
+		<li>실제 link 하는 css라 할지라도 css의 작업은 없다. 모든 style 작업은 scss에서 작업되며 css는 scss를 컴파일하여 link로 사용될 뿐이다.</li>
+	</ul>
+	<h2>JS <i>[js]</i> <span>- 절대경로 : http://img1.tmon.kr/resources/m/js/</span></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onclick="location.href='js/jquery.js'">
+			<th scope="row">jquery</th>
+			<td>jquery.js</td>
+		</tr>
+		<tr onclick="location.href='js/markup_ui.js'">
+			<th scope="row">UI 확인용</th>
+			<td>markup_ui.js</td>
+		</tr>
+		</tbody>
+	</table>
+	<h3>- Guide -</h3>
+	<ul class="txt_lst">
+		<li>마크업 산출물에 사용되는 js는 단순 산출물 용도이며, 리얼 환경의 js는 절대경로의 js를 호출한다.</li>
+		<li>UI 확인 용도의 js는 상황에 맞게 수시 업데이트하여 사용한다. (내부 주석 참고)</li>
+	</ul>
+	<h2>IMAGE <i>[img]</i> <span>- 절대경로 : http://img1.tmon.kr/resources/m/img/</span></h2>
+	<table border="1">
+		<colgroup>
+			<col style="width:40%"><col>
+		</colgroup>
+		<tbody>
+		<tr onclick="location.href='img/'">
+			<th scope="row">전체 이미지</th>
+			<td>imgs</td>
+		</tr>
+		</tbody>
+	</table>
+	<h3>- Guide -</h3>
+	<ul class="txt_lst">
+		<li>모바일은 페이지별로 따로 폴더를 생성하지 않는다.</li>
+		<li>psd 폴더 구조는 동일하며 sprite 이미지를 관리한다.</li>
+	</ul>
+</div>
+</body>
+</html>
